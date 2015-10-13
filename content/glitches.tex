@@ -11,8 +11,14 @@
 \chapter{Glitches}\label{chap.glitch}
 
 \section{Definition Glitches}\label{sect.glitch_def}
-Im technischem Bereich bedeutet ein Glitch, eine ungewollte, flüchtige Signalspitze, die ein Fehlverhalten im System verursacht (vlg.Cambridge Dictionaire in: \ref{chap.anhang_dictionaire} Definitionen Glitch in english).
-Am intuitivsten ist die bildliche Darstellung des Fehlverhaltens (siehe Abbildung \ref{fig.glitch.def}).
+Im technischem Bereich bedeutet gemäss Cambridge Dictionaire ein \textit{glitch}, eine ungewollte, flüchtige Signalspitze, die ein Fehlverhalten im System verursacht. Im Anhang \ref{chap.anhang_dictionaire} befindet sich der Originaltext wie auch noch eine weitere Defintion aus dem englischen Sprachraum.\\
+\newline
+In der digitalen Signalverarbeitung ist das Glitch ein bekannter Begriff und wird dort unter anderem leicht sarkastisch beschrieben:\\
+\newline
+\textit{''Als ''Glitch''  wird eine ungewollte, flüchtige ''Signalspitze'' bezeichnet, die Zähler aufwärts zählt, Register löscht oder einen ungewollten Prozess startet.}'' (Fletcher, Digital design, 472)\\
+\newline
+Am intuitivsten ist die bildliche Darstellung des soeben beschriebenen Fehlverhaltens (Abbildung \ref{fig.glitch.def}). In dieser Signalabfolge treten zwei mal Glitches auf, die eigentlich nicht dort hingehören.\\
+\todo{besseres Bild def Glitch}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{images/def_glitch_1.png}
@@ -20,43 +26,50 @@ Am intuitivsten ist die bildliche Darstellung des Fehlverhaltens (siehe Abbildun
 	\label{fig.glitch.def}
 \end{figure}
 
+Auf den ersten Blick scheinen solch temporäre Spannungsspitzen nicht zu stören. Doch wenn man Pech hat, sind Glitches der Auslöser für Abstürze oder zumindest für ein Fehlverhalten eines Gerätes. Aus diesem Grund, wird nun der Ursache dieser Spitzen nachgegangen.\\ 
 
-Das Glitch ist in der digitalen Signalverarbeitung ein bekannter Begriff und wird dort unter anderem leicht sarkastisch beschrieben:\\
-Als "Glitch" wird eine ungewollte, flüchtige "Signalspitze" bezeichnet, die Zähler aufwärts zählt, Register löscht oder einen ungewollten Prozess startet." (Fletcher, Digital design, 472).\\
-
-Aus diesem Grund ist es wichtig, diesen Begriff und seine Ursache zu kennen.\\
 
 
 \section{Ursache für Glitches}\label{sect.glitch_ursache}
-Die Urache f\"ur der flüchtigen Spannungsspitzen sind asynchrone Inputs. Alle Prozesse, die nicht getaktet werden (z.B. In- und Output-Logik, direkte Signalzuweisungen) können ungewollte Spannungsspitzen verursachen.In Abbilung \ref{fig.glitch.bild1} verursacht das ungetaktete Eingangssingal Q die Spannungsspitzen, weil das Singal Q zu lange anhält. \\
+Der Auslöser der flüchtigen Spannungsspitzen sind asynchrone Inputs vor einem asynchronen Bauteil oder verzögerte Signale. Trifft z. B. vor einem Dekoder von vier Leitungen, das Signal einer Leitung zu spät an, entschlüsselt der Dekoder kurzfristig einen falschen Wert. Obwohl die Störung nur kurz ist, übermittelt ein asynchroner den falschen Wert direkt an seinen Ausgang. \\
+
+\subsection{Asynchroner Input}
+Das ungleichzeitige Eintreffen von Signalen kann z.B. durch lange Signalpfade (Leitungen), unterschiedliche Durchlaufverzögerungen der vorangehenden Flip-Flops oder unterschiedliche Logik-Zeiten entstehen. Grundsätzlich gelten alle nicht-getakteten Prozesse als potenzielles Risiko für Glitches, da man bei ungetakteten Prozessen nicht weiss, wie lange sie dauern.\\
+
+\subsection{Nachteil getakteter Prozesse}
+Jeder getaktete Prozess verzögert die Verarbeitung. Aus diesem Grund wird abgewogen, wo Prozesse getaktet und wo sie asynchron getätig werden. In VHDL gibt es viele asynchrone Vorgänge (wie ungetaktete Prozesse oder Singalzuweisungen), deshalb ist es vorteilhaft, wenn das Risiko asynchroner Prozesse bekannt ist.\\
+
+
+Abbilung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes (getaktetes) enable-Signal zu einem anders verzögerten (getakteten) Flip-Flop-Eingangssignal Q. Der Ausgang des Flip-Flops weist kurzzeitig Glitches auf. \\
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{images/def_glitch_2.png}
-	\caption{Ursache f\"ur Glitches}
+	\includegraphics[width=0.8\textwidth]{images/def_glitch_3.png}
+	\caption{Mögliches Bsp. für Glitches}
 	\label{fig.glitch.bild1}
 \end{figure}
 
 
 
 \section{Glitches erzeugen}\label{sect.glitch_detect}
-Die erste Aufgabe der Projektarbeit ist, Glitches zu detektieren, um das Phänomen besser verstehen zu können. \\
+Was in Glitch ist, ist relativ einfach zu beschreiben. Ein Glitch jedoch mit moderner Digitaltechnik  zu erzeugen, erweist sich als etwas schwerer. Hier zwei Ansätze, die getestet werden. \\
+
 \subsection{Glitches Aufgrund von Bauteiltoleranzen}\label{sect.glitch_toleranzen}
 
-Der erste Ansatz war, ein Zähler aus 4 Flipflops mit asynchronem Dekoder zu implementieren. Die Erwartung war, dass durch die Bauteiltoleranzen der Flip-Flops die vier Ausgänge an den FlipFlops nicht genau der zu erwartenden nächsten Zahl entspricht, sondern kurzzeitig eine falsche Zahl am Dekoder anliegt.
-Dadurch zählt der Dekoder falsch.
+Der erste Ansatz ist, ein Zähler aus vier Flipflops mit asynchronem Dekoder zu implementieren. 
 
 \subsubsection{Konzept}
-Um die Chance eines falschen Wertes zu erhöhen, werden vier Werte dekodiert: dezimal 3,7,11 und 15. Diese vier Werte folgen in denselben Abständen von 80 ns. Erscheint an den Ausgängen ungewollte eine dieser 4 Zahlen, so werden diese falscherweise dekodiert. Dies falschen Peaks sollten \textit{zwischen} den regelmässigen Abständen auftreten. 
-\todo {Totalüberarbeitung  Text Bild: Deodieren 3,7,11,15. Kein RESET.(Blick auf Endlösung)}
+Die Erwartung ist, dass aufgrund der \textit{Bauteiltoleranzen} der Flip-Flops die vier Ausgänge an den Flip-Flops nicht gleichzeitg ihren Wert übermitteln. Die einen sind leicht schneller, die anderen leicht verzögert. Dadurch ergibt sich kurzzeitig am asynchronen Dekoder einen falschen Wert.\\
+Damit ein abnormaler Wert in einem Zähler erkannt wird, sendet der Dekoder bei der Zahl 7 einen Peak. Ohne Glitch entschlüsselt der Dekoder in regelmässigen Abständen von 160 ns diese Zahl. Aufgrund der Flip-Flop-Bauteiltolereanzen ist ein kurzzeitiges Dekodieren einer 7 \textit{ausserhalb der Periode T} zu erwarten. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.3\textwidth]{images/4_FF.png}
-	\caption{RTL Zahler mit asynchronem Dekoder}
+	\includegraphics[width=0.6\textwidth]{images/Ansatz_1.png}
+	\caption{Ausnutzen der Bauteilverzögerung}
 	\label{fig.glitch.counter2}
 \end{figure}
 
 
 \subsubsection{Implementation}
+\todo{Bild anpassen}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{images/RTL_counter_2.png}
