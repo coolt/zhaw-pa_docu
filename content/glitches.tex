@@ -81,8 +81,7 @@ Damit ein abnormaler Wert in einem Zähler erkannt wird, sendet der Dekoder bei 
 Um die gewollten Zahlenwerte von den Glitches zu unterschieden, wird das asynchrone Singnal getaktet. Dadurch erscheint der korrekte Zählwert mit einem Takt Verzögerung. Die Periode ist 20 ns (CLK = 50 MHz).\\
 
 
-\subsubsection{Result}
-Der Ansatz, dass die Bauteiltoleranzen der Flip-flops eine Ursache für asynchrone Inputs in den Dekoder sind ist korrekt. Die Umsetzung zeigte sich jedoch als schwierig, da die heutigen Flip-Flops zu schnell sind bzw. ihre Toleranzen zu klein um sichtbar zu werden. \todo {Timeanalyse für FF} Aus diesem Grund entschlüsselte der asynchrone Dekoder trotz kleinen Verzögerungen die Werte stets korrekt.\\
+
 
 
 \subsection{Glitches Aufgrund von Pfadverzögerung}\label{sect.glitch_toleranzen}
@@ -113,7 +112,16 @@ Auf dem KO wird das asynchrone Glitch-Signal und das synchrone Zählersignal neb
 \end{figure}
 Im RTL-Diagramm sieht man deutlich den Unterschied zwischen dem asynchronen Zähler, der über das Gate \textit{reset\_{counter}} beim Wert 15 einen Impuls an den Ausgang glitch gibt und dem synchronisierten Zähler \textit{cnt\_{sync}} der dem asynchronen Ausgang nachgeschaltet ist und dieses Signal taktet. Das getaktete Zähl-Signal geht an den Ausgang \textit{count}.
 
-\subsubsection{Result} 
+
+	
+\section{Resultat Glitches provozieren}\label{sect.glitch_resultat}
+
+\subsection{Erzeugen über Bauteiltoleranzen}
+Der Ansatz, dass die Bauteiltoleranzen der Flip-flops eine Ursache für asynchrone Inputs in den Dekoder sind ist korrekt. Die Umsetzung zeigte sich jedoch als schwierig, da die heutigen Flip-Flops zu schnell sind bzw. ihre Toleranzen zu klein um sichtbar zu werden. \todo {Timeanalyse für FF} Aus diesem Grund entschlüsselte der asynchrone Dekoder trotz kleinen Verzögerungen die Werte stets korrekt.\\
+
+
+
+\subsection{Erzeugen über Routing} 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/Glitch_2_good_kommentar.png}
@@ -128,4 +136,3 @@ Typisch ist, dass der synchrone Zähler eine Signalbreite von genau einer Period
 	\item{Wie hängen die Zählständen mit dem gewählten Routing zusammen?}
 
 \end{enumerate}
-	
