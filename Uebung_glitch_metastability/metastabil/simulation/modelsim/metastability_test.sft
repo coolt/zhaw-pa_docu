@@ -1,0 +1,5 @@
+set tool_name "QuestaSim (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {metastability_test.vho metastability_test_vhd.sdo}}
+	{{"Fast Model"} {metastability_test_fast.vho metastability_test_vhd_fast.sdo}}
+}

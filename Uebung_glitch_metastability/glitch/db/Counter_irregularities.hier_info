@@ -1,0 +1,34 @@
+|top_glitch_detection
+CLOCK_50 => glitch_detection:inst_counter.clk
+CLOCK_50 => GPIO_1_8.DATAIN
+GPIO_0_0 <= glitch_detection:inst_counter.glitch
+GPIO_1_14 <= glitch_detection:inst_counter.count
+GPIO_1_8 <= CLOCK_50.DB_MAX_OUTPUT_PORT_TYPE
+GPIO_1_0 <= glitch_detection:inst_counter.q_0_out
+GPIO_1_2 <= glitch_detection:inst_counter.q_1_out
+GPIO_1_4 <= glitch_detection:inst_counter.q_2_out
+GPIO_1_6 <= glitch_detection:inst_counter.q_3_out
+GPIO_1_1 => glitch_detection:inst_counter.q_0_in
+GPIO_1_3 => glitch_detection:inst_counter.q_1_in
+GPIO_1_5 => glitch_detection:inst_counter.q_2_in
+GPIO_1_7 => glitch_detection:inst_counter.q_3_in
+
+
+|top_glitch_detection|glitch_detection:inst_counter
+clk => cnt_sync.CLK
+clk => cnt_async[0].CLK
+clk => cnt_async[1].CLK
+clk => cnt_async[2].CLK
+clk => cnt_async[3].CLK
+glitch <= reset_counter.DB_MAX_OUTPUT_PORT_TYPE
+count <= cnt_sync.DB_MAX_OUTPUT_PORT_TYPE
+q_0_out <= cnt_async[0].DB_MAX_OUTPUT_PORT_TYPE
+q_1_out <= cnt_async[1].DB_MAX_OUTPUT_PORT_TYPE
+q_2_out <= cnt_async[2].DB_MAX_OUTPUT_PORT_TYPE
+q_3_out <= cnt_async[3].DB_MAX_OUTPUT_PORT_TYPE
+q_0_in => reset_counter.IN0
+q_1_in => reset_counter.IN1
+q_2_in => ~NO_FANOUT~
+q_3_in => ~NO_FANOUT~
+
+
