@@ -1,0 +1,1221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v1.png"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
+   sodipodi:docname="Audio_Codec.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.03"
+     inkscape:cx="192.13649"
+     inkscape:cy="809.62546"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1855"
+     inkscape:window-height="1176"
+     inkscape:window-x="1345"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3225"
+       width="35"
+       height="55"
+       x="5"
+       y="167.36218" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3773"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:8px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3775"><rect
+           id="rect3777"
+           width="20.259132"
+           height="17.64505"
+           x="180.37163"
+           y="143.31531" /></flowRegion><flowPara
+         id="flowPara3779" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3781"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:8px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3783"><rect
+           id="rect3785"
+           width="25.487295"
+           height="16.338011"
+           x="207.81949"
+           y="145.27586" /></flowRegion><flowPara
+         id="flowPara3787" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3799"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:8px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3801"><rect
+           id="rect3803"
+           width="111.75199"
+           height="89.532295"
+           x="-139.19984"
+           y="21.760506" /></flowRegion><flowPara
+         id="flowPara3805" /></flowRoot>    <rect
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:1.04621434;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3905"
+       width="259.9538"
+       height="151.3678"
+       x="74.023109"
+       y="282.38528"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 326.88449,307.36218 33.50294,0"
+       id="path3907"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 54.256133,342.75668 30.245307,0"
+       id="path3909"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 55.21588,370.90876 29.5211,0"
+       id="path3911"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 191.30522,427.15736 0,15"
+       id="path3913"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 135.2008,422.55336 0,20.97644"
+       id="path3915"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 261,428.36218 0,15"
+       id="path3917"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="364"
+       y="307.36218"
+       id="text3831-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3833-5"
+         x="364"
+         y="307.36218">GPIO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="118"
+       y="452.36218"
+       id="text3813-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3815-7"
+         x="118"
+         y="452.36218">Volumen</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="174"
+       y="452.36218"
+       id="text3825-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3827-7"
+         x="174"
+         y="452.36218">Modulation</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="250"
+       y="452.36218"
+       id="text3821-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3823-9"
+         x="250"
+         y="452.36218">Reset</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="5"
+       y="357.36218"
+       id="text3769-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3771-6"
+         x="5"
+         y="357.36218">Audio Codec</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="85"
+       y="297.36218"
+       id="text3761-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3763-1"
+         x="85"
+         y="297.36218">FPGA</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.0524205;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4066"
+       width="72.119301"
+       height="29.94758"
+       x="254.33261"
+       y="292.3884"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4068"
+       width="75"
+       height="30"
+       x="164.84863"
+       y="292.36218"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="170"
+       y="302.36218"
+       id="text4070"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4072"
+         x="170"
+         y="302.36218">Taktgenerator</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="260"
+       y="302.36218"
+       id="text4074"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4076"
+         x="260"
+         y="302.36218">Synchronisation</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 261,409.33923 c 0,0 0,-16.10884 0,-16.10884"
+       id="path4114"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 135.4016,408.95078 0,-29.57926"
+       id="path4116"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 191.30522,410.52869 0,-27.31696"
+       id="path4505"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4078"
+       width="195"
+       height="20"
+       x="131.211"
+       y="408.69775"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="139"
+       y="422.36218"
+       id="text4080"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4082"
+         x="139"
+         y="422.36218">Synchronisation</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.04496503;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4084"
+       width="60.134609"
+       height="34.955036"
+       x="85.022476"
+       y="312.38464"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03456807;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4086"
+       width="58.949718"
+       height="24.965431"
+       x="85.017281"
+       y="357.37946"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="90"
+       y="327.36218"
+       id="text4088"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4090"
+         x="90"
+         y="327.36218">Audio Daten </tspan><tspan
+         sodipodi:role="line"
+         x="90"
+         y="337.36218"
+         id="tspan4092">Interface</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="90"
+       y="367.36218"
+       id="text4094"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4096"
+         x="90"
+         y="367.36218">Codec </tspan><tspan
+         sodipodi:role="line"
+         x="90"
+         y="377.36218"
+         id="tspan4098">Control</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4100"
+       width="74.977722"
+       height="60.302742"
+       x="164.84863"
+       y="333.0845"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="170"
+       y="347.36218"
+       id="text4102"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4104"
+         x="170"
+         y="347.36218">Tongenerator</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 155,342.36218 10,0"
+       id="path4108"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 115,347.36218 0,10"
+       id="path4110"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 285,322.36218 0,10"
+       id="path4112"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 240,342.36218 15,0"
+       id="path4325"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.98007149;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4100-1"
+       width="71.995316"
+       height="60.32267"
+       x="254.29643"
+       y="333.07452"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="260"
+       y="347.36218"
+       id="text4319"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4321"
+         x="260"
+         y="347.36218">Signal-</tspan><tspan
+         sodipodi:role="line"
+         x="260"
+         y="357.36218"
+         id="tspan4323">steuerung</tspan></text>
+    <rect
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4367"
+       width="147.01974"
+       height="165.23259"
+       x="107.45398"
+       y="69.83625"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 165,297.36218 -30,0 0,15"
+       id="path4371"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 230,322.36218"
+       id="path4373"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 230,322.36218 0,10"
+       id="path4375"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 225,332.36218 5,5 5,-5"
+       id="path4377"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 130,312.36218 5,5 5,-5"
+       id="path4379"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 145,342.36218 20,0"
+       id="path4381"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="264"
+       y="150.36218"
+       id="text4387"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4389"
+         x="264"
+         y="150.36218">digitale Audio Daten</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 85,337.36218 -30,0"
+       id="path4413"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4415"
+       width="124.89793"
+       height="79.355766"
+       x="120.05103"
+       y="82.413216"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.03158867;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 238.48392,141.1654 112.14862,0"
+       id="path4383"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4417"
+       width="125"
+       height="60"
+       x="120"
+       y="167.36218"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="130"
+       y="92.362183"
+       id="text4088-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4090-1"
+         x="130"
+         y="92.362183">Audio Daten </tspan><tspan
+         sodipodi:role="line"
+         x="130"
+         y="102.36218"
+         id="tspan4092-9">Interface</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="130"
+       y="167.36218"
+       id="text4094-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4096-6"
+         x="130"
+         y="167.36218" /><tspan
+         sodipodi:role="line"
+         x="130"
+         y="177.36218"
+         id="tspan4098-3">Control </tspan><tspan
+         sodipodi:role="line"
+         x="130"
+         y="187.36218"
+         id="tspan4680">Interface</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 234.86994,92.367738 0,-14.93079 120.59345,0"
+       id="path4471"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4473"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:8px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4475"><rect
+           id="rect4477"
+           width="40.963856"
+           height="46.184738"
+           x="194.77911"
+           y="87.301941" /></flowRegion><flowPara
+         id="flowPara4479" /></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4481"
+       width="44.930878"
+       height="62.963005"
+       x="196.23938"
+       y="93.019234"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4483"
+       width="59.831562"
+       height="48.486179"
+       x="130.08423"
+       y="107.4464"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="200"
+       y="102.36218"
+       id="text4485"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4487"
+         x="200"
+         y="102.36218">Audio</tspan><tspan
+         sodipodi:role="line"
+         x="200"
+         y="112.36218"
+         id="tspan4489">Control</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="135.74297"
+       y="117.82403"
+       id="text4491"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4493"
+         x="135.74297"
+         y="117.82403">I2S Master</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 230.63856,93.607163 5,5 5,-5"
+       id="path4469"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="265"
+       y="87.362183"
+       id="text4495"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4497"
+         x="265"
+         y="87.362183">Audio Clk</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -45,142.36218 50,0"
+       id="path4710"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4499"
+       width="85.014153"
+       height="165.19489"
+       x="2.9929242"
+       y="70.166351"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01833880000000021;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3139"
+       width="79.785858"
+       height="54.589352"
+       x="4.943666"
+       y="167.76366" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="12.048193"
+       y="84.892303"
+       id="text4501"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4503"
+         x="12.048193"
+         y="84.892303">Audio Codec</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 311,428.36218 0,15"
+       id="path3917-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 311,409.33923 c 0,0 0,-16.10884 0,-16.10884"
+       id="path4114-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="292"
+       y="452.36218"
+       id="text4528"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4530"
+         x="292"
+         y="452.36218">Polyphonie</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 260,402.36218 -30,0 0,-10"
+       id="path4532"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="210"
+       y="257.36218"
+       id="text4536"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4538"
+         x="210"
+         y="257.36218">Volumen</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 130.25217,130.60985 -42.130848,0"
+       id="path4540"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.91788197;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:0.91788196, 1.83576391;stroke-dashoffset:0"
+       d="m 197.95338,141.36218 4.21254,0 c 4.21253,0 37.91283,0 37.91283,0"
+       id="path4562"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.81939793px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 189.83571,141.36218 6.71413,0"
+       id="path4566"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 190,131.36218 5,0"
+       id="path4568"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1,2;stroke-dashoffset:0"
+       d="m 235.93236,98.216971 0,33.077569 -40.08561,0"
+       id="path4570"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.70836991px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 130.24911,202.36218 -42.65198,0"
+       id="path4540-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.70836991px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 130.24911,213.36218 -42.65198,0"
+       id="path4542-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="93"
+       y="209.36218"
+       id="text4572-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4574-6"
+         x="93"
+         y="209.36218">scl</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="92"
+       y="222.36218"
+       id="text4576-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4578-1"
+         x="92"
+         y="222.36218">sda</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 55.256133,375.75668 30.245307,0"
+       id="path3909-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v2.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 87.552209,135.74571 -5,-5 5,-5"
+       id="path4633"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 129.85721,141.32599 -42.130844,0"
+       id="path4540-14"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 129.56944,151.78788 -42.130849,0"
+       id="path4540-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 85,317.36218"
+       id="path4660"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 85,317.36218 -30,0"
+       id="path4662"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 2;stroke-dashoffset:0"
+       d="m 129.19679,130.76379 60,0"
+       id="path4664"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="46"
+       y="143.36218"
+       id="text4666"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4668"
+         x="46"
+         y="143.36218">DAC data</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="46"
+       y="155.36218"
+       id="text4670"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4672"
+         x="46"
+         y="155.36218">DAC lrck</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4674"
+       width="60.330242"
+       height="25.0359"
+       x="129.68771"
+       y="197.34424"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 2;stroke-dashoffset:0"
+       d="m 189.75233,141.35284 -60,0"
+       id="path4676"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4678"
+       width="45"
+       height="50"
+       x="195"
+       y="172.36218"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="135"
+       y="207.36218"
+       id="text4682"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4684"
+         x="135"
+         y="207.36218">I2C Master</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="200"
+       y="182.36218"
+       id="text4686"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4688"
+         x="200"
+         y="182.36218">Codec</tspan><tspan
+         sodipodi:role="line"
+         x="200"
+         y="192.36218"
+         id="tspan4690">Control</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 189.91996,202.36218 19.53957,0"
+       id="path4692"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 189.55103,207.36218 17.49958,0"
+       id="path4694"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 190.26586,212.36218 17.86735,0"
+       id="path4696"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 189.88146,217.44388 22.55783,0"
+       id="path4698"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="283.82535"
+       y="213.02174"
+       id="text4702"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4704"
+         x="283.82535"
+         y="213.02174" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-45"
+       y="137.36218"
+       id="text4706"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4708"
+         x="-45"
+         y="137.36218">Line out</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.0603323px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.3225348,172.36218 78.7013172,0"
+       id="path3143"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.05815864px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.6471026,177.36218 78.3789884,0"
+       id="path3145"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.0603323px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.4859361,182.36218 78.7013219,0"
+       id="path3147"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.06250143px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.1613659,187.36218 79.0236551,0"
+       id="path3149"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.06250143px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.3247673,192.36218 79.0236587,0"
+       id="path3151"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.06358445px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 4.9990808,197.36218 79.1848222,0"
+       id="path3153"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.05489123px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.3168403,202.36218 77.8956907,0"
+       id="path3155"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.97680342px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 4.8371272,207.28048 79.8355348,0"
+       id="path3157"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.06141746px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.323651,212.36218 78.862489,0"
+       id="path3159"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.06250143px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.1613659,217.36218 79.0236551,0"
+       id="path3161"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.95197493px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 14.836597,168.36086 0,54.37537"
+       id="path3163"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.78567851px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 19.836597,167.38616 0,55.01754"
+       id="path3165"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9589774px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 25,167.2241 0,55.17826"
+       id="path3167"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.95757973px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 30,167.38616 0,55.01754"
+       id="path3169"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.95757973px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 35,167.38616 0,55.01754"
+       id="path3171"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9589774px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 40,167.2241 0,55.17826"
+       id="path3173"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.95618004px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 45,167.54823 0,54.85681"
+       id="path3175"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.96036476px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 50,167.06251 0,55.33804"
+       id="path3177"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9589774px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 55,167.2241 0,55.17826"
+       id="path3179"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.82417452px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 59.876167,167.27533 0,55.12703"
+       id="path3181"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.95429438px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 65,167.76617 0,54.64067"
+       id="path3183"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.95641929px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 70,167.52054 0,54.88427"
+       id="path3185"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.95853949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 75,167.2749 0,55.12788"
+       id="path3187"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.78567851px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 9.836597,167.73255 0,55.01754"
+       id="path3165-3"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.95853949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 80.29441,167.76582 0,55.12788"
+       id="path3187-2"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 88.430649,197.68899 -5,5 5,5"
+       id="path4700"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:0.80161905;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3995"
+       sodipodi:cx="217.5"
+       sodipodi:cy="209.86218"
+       sodipodi:rx="12.5"
+       sodipodi:ry="7.5"
+       d="m 230,209.86218 a 12.5,7.5 0 1 1 -25,0 12.5,7.5 0 1 1 25,0 z"
+       transform="matrix(0.99010099,0,0,1.5717536,4.6040856,-121.62349)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 220,222.36218"
+       id="path4001"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="212"
+       y="210.36218"
+       id="text4018"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4020"
+         x="212"
+         y="210.36218">FSM</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.05108607px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 220,219.69024 0,27.61955"
+       id="path4022"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
