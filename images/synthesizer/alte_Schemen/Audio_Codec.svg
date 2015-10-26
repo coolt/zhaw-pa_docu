@@ -13,13 +13,114 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Uebersicht_FPGA_v1.png"
    inkscape:export-xdpi="150"
    inkscape:export-ydpi="150"
    sodipodi:docname="Audio_Codec.svg">
   <defs
-     id="defs4" />
+     id="defs4">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker4851"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart">
+      <path
+         transform="scale(0.6) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         id="path4853" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker4793"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         id="path4795" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mstart"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4357"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker4691"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4693"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4342"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4360"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4339"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) translate(10,0)" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -27,17 +128,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.03"
+     inkscape:zoom="2.18"
      inkscape:cx="192.13649"
      inkscape:cy="809.62546"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1855"
-     inkscape:window-height="1176"
-     inkscape:window-x="1345"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1">
+     inkscape:window-width="959"
+     inkscape:window-height="996"
+     inkscape:window-x="1"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
        id="grid2985" />
@@ -597,14 +698,6 @@
          x="130"
          y="187.36218"
          id="tspan4680">Interface</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 234.86994,92.367738 0,-14.93079 120.59345,0"
-       id="path4471"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4473"
@@ -637,7 +730,7 @@
        inkscape:export-ydpi="150" />
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        x="200"
        y="102.36218"
        id="text4485"
@@ -648,11 +741,15 @@
          sodipodi:role="line"
          id="tspan4487"
          x="200"
-         y="102.36218">Audio</tspan><tspan
+         y="102.36218">Link</tspan><tspan
          sodipodi:role="line"
          x="200"
          y="112.36218"
-         id="tspan4489">Control</tspan></text>
+         id="tspan4993">Audio</tspan><tspan
+         sodipodi:role="line"
+         x="200"
+         y="122.36218"
+         id="tspan4489">Data</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -760,20 +857,6 @@
        d="m 260,402.36218 -30,0 0,-10"
        id="path4532"
        inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="210"
-       y="257.36218"
-       id="text4536"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan4538"
-         x="210"
-         y="257.36218">Volumen</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 130.25217,130.60985 -42.130848,0"
@@ -807,14 +890,6 @@
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1,2;stroke-dashoffset:0"
-       d="m 235.93236,98.216971 0,33.077569 -40.08561,0"
-       id="path4570"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
        style="fill:none;stroke:#000000;stroke-width:0.70836991px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 130.24911,202.36218 -42.65198,0"
        id="path4540-1"
@@ -823,7 +898,7 @@
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.70836991px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:0.70836991px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4793);marker-start:url(#marker4851)"
        d="m 130.24911,213.36218 -42.65198,0"
        id="path4542-8"
        inkscape:connector-curvature="0"
@@ -980,7 +1055,7 @@
          y="207.36218">I2C Master</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        x="200"
        y="182.36218"
        id="text4686"
@@ -989,41 +1064,17 @@
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
-         id="tspan4688"
          x="200"
-         y="182.36218">Codec</tspan><tspan
+         y="182.36218"
+         id="tspan4690">Set Audio</tspan><tspan
          sodipodi:role="line"
          x="200"
          y="192.36218"
-         id="tspan4690">Control</tspan></text>
+         id="tspan3527">Register</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 189.91996,202.36218 19.53957,0"
-       id="path4692"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 189.55103,207.36218 17.49958,0"
-       id="path4694"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.78;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#Arrow2Mstart);marker-end:url(#marker4691)"
        d="m 190.26586,212.36218 17.86735,0"
        id="path4696"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 189.88146,217.44388 22.55783,0"
-       id="path4698"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/audio_Codec_v0.png"
        inkscape:export-xdpi="150"
@@ -1212,10 +1263,17 @@
          id="tspan4020"
          x="212"
          y="210.36218">FSM</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1.05108607px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 220,219.69024 0,27.61955"
-       id="path4022"
-       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="5.4128442"
+       y="163.32549"
+       id="text3521"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3523"
+         x="5.4128442"
+         y="163.32549"
+         style="font-size:8px">Register</tspan></text>
   </g>
 </svg>

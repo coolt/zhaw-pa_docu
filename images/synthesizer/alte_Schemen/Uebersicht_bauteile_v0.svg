@@ -17,7 +17,7 @@
    inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/Ubersicht_Bauteile.png"
    inkscape:export-xdpi="150"
    inkscape:export-ydpi="150"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="Uebersicht_bauteile_v0.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -27,16 +27,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.5098587"
-     inkscape:cx="250.20392"
-     inkscape:cy="966.41356"
+     inkscape:zoom="2.18"
+     inkscape:cx="199.60346"
+     inkscape:cy="976.48431"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1855"
-     inkscape:window-height="1176"
-     inkscape:window-x="1345"
-     inkscape:window-y="24"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -58,95 +58,146 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect2987"
+       width="260"
+       height="140"
+       x="20"
+       y="21.015701"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 134,122.36218 0,20"
+       id="path3845"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 50,122.36218 0,20"
+       id="path3835"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3793"
+       width="10"
+       height="20"
+       x="45.364353"
+       y="140.78635"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3819"
+       width="10"
+       height="20"
+       x="128.89015"
+       y="141.0157"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 164,122.36218 0,20"
+       id="path3847"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3817"
+       width="10"
+       height="20"
+       x="159.08257"
+       y="141.0157"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
     <g
-       id="g3856">
-      <rect
-         y="21.015701"
-         x="20"
-         height="140"
-         width="260"
-         id="rect2987"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+       id="g3060"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
       <path
          inkscape:connector-curvature="0"
-         id="path3845"
-         d="m 134,122.36218 0,20"
+         id="path3044"
+         d="m 210,42.362183 70,0"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
          inkscape:connector-curvature="0"
-         id="path3835"
-         d="m 50,122.36218 0,20"
+         id="path3046"
+         d="m 210,52.362183 70,0"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <rect
-         y="140.78635"
-         x="45.364353"
-         height="20"
-         width="10"
-         id="rect3793"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <rect
-         y="141.0157"
-         x="128.89015"
-         height="20"
-         width="10"
-         id="rect3819"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
       <path
          inkscape:connector-curvature="0"
-         id="path3847"
-         d="m 164,122.36218 0,20"
+         id="path3048"
+         d="m 210,62.362183 70,0"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <rect
-         y="141.0157"
-         x="159.08257"
-         height="20"
-         width="10"
-         id="rect3817"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
       <path
          inkscape:connector-curvature="0"
-         id="path3849"
-         d="m 200,122.36218 0,20"
+         id="path3050"
+         d="m 210,72.362183 70,0"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <rect
-         y="141.0157"
-         x="195.56616"
-         height="20"
-         width="10"
-         id="rect3789"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3052"
+         d="m 210,82.362183 70,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3054"
+         d="m 210,92.362183 70,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3056"
+         d="m 210,102.36218 70,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3058"
+         d="m 210,112.36218 70,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
-    <g
-       id="g3851">
-      <rect
-         y="33.151405"
-         x="121.62856"
-         height="89.27227"
-         width="89.604721"
-         id="rect3757"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.87701505;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <rect
-         y="32.326805"
-         x="32.269012"
-         height="90.070755"
-         width="77.65387"
-         id="rect3759"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.92924649;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <rect
-         y="32.362183"
-         x="230"
-         height="90"
-         width="40"
-         id="rect3829"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-    </g>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.87701505;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3757"
+       width="89.604721"
+       height="89.27227"
+       x="121.62856"
+       y="33.151405"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.92924649;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3759"
+       width="77.65387"
+       height="90.070755"
+       x="32.269012"
+       y="32.326805"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="130"
        y="52.362183"
        id="text3761"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3763"
          x="130"
@@ -157,7 +208,10 @@
        x="20"
        y="12.362183"
        id="text3765"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3767"
          x="20"
@@ -168,7 +222,10 @@
        x="40"
        y="52.362183"
        id="text3769"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3771"
          x="40"
@@ -183,7 +240,7 @@
            height="17.64505"
            x="180.37163"
            y="143.31531" /></flowRegion><flowPara
-         id="flowPara3779"></flowPara></flowRoot>    <flowRoot
+         id="flowPara3779" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3781"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:8px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
@@ -193,13 +250,16 @@
            height="16.338011"
            x="207.81949"
            y="145.27586" /></flowRegion><flowPara
-         id="flowPara3787"></flowPara></flowRoot>    <text
+         id="flowPara3787" /></flowRoot>    <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="35"
        y="172.36218"
        id="text3795"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3797"
          x="35"
@@ -214,42 +274,16 @@
            height="89.532295"
            x="-139.19984"
            y="21.760506" /></flowRegion><flowPara
-         id="flowPara3805"></flowPara></flowRoot>    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3807"
-       width="110"
-       height="90"
-       x="310"
-       y="32.362183" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="320"
-       y="52.362183"
-       id="text3809"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3811"
-         x="320"
-         y="52.362183">Midi Keyboard</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="195"
-       y="172.36218"
-       id="text3813"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3815"
-         x="195"
-         y="172.36218">Volumen</tspan></text>
-    <text
+         id="flowPara3805" /></flowRoot>    <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="120"
        y="172.36218"
        id="text3821"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3823"
          x="120"
@@ -260,41 +294,131 @@
        x="155"
        y="172.36218"
        id="text3825"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3827"
          x="155"
          y="172.36218">Modus</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="240"
-       y="52.362183"
-       id="text3831"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3833"
-         x="240"
-         y="52.362183">GPIO</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1.07024443px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 110.42962,52.397305 11.53526,0"
        id="path3837"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.07024443px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 110.42962,62.327061 11.53526,0"
        id="path3839"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.96667945px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 211.34338,52.362183 18.68939,0"
-       id="path3841"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 270,52.362183 40,0"
-       id="path3843"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       id="g3148"
+       transform="translate(-0.39816934,0)"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-280.50232"
+         x="108.34454"
+         height="20"
+         width="10"
+         id="rect3817-1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-280.50232"
+         x="98.247536"
+         height="20"
+         width="10"
+         id="rect3817-1-7"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-280.50232"
+         x="88.150543"
+         height="20"
+         width="10"
+         id="rect3817-1-4"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-280.50232"
+         x="67.956566"
+         height="20"
+         width="10"
+         id="rect3817-1-0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-280.50232"
+         x="57.85955"
+         height="20"
+         width="10"
+         id="rect3817-1-9"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-280.50232"
+         x="37.665527"
+         height="20"
+         width="10"
+         id="rect3817-1-48"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-280.50232"
+         x="47.762558"
+         height="20"
+         width="10"
+         id="rect3817-1-8"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-280.50232"
+         x="78.053543"
+         height="20"
+         width="10"
+         id="rect3817-1-2"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="140"
+       y="182.36218"
+       id="text3158"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3160"
+         x="140"
+         y="182.36218"
+         style="font-size:8px">Keys</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="-97.362183"
+       y="290"
+       id="text3162"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_bauteile_v0.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3164"
+         x="-97.362183"
+         y="290"
+         style="font-size:8px">Switches</tspan></text>
   </g>
 </svg>
