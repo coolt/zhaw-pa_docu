@@ -26,7 +26,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="3.959798"
      inkscape:cx="402.24526"
-     inkscape:cy="788.81749"
+     inkscape:cy="930.23885"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -103,24 +103,24 @@
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="210"
-       y="122.36218"
+       y="77.362183"
        id="text3005"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3007"
          x="210"
-         y="122.36218">rx_data [8]</tspan></text>
+         y="77.362183">rx_data [8]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="215"
-       y="102.36218"
+       x="205"
+       y="57.362183"
        id="text3009"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3011"
-         x="215"
-         y="102.36218">rx_data_valid</tspan></text>
+         x="205"
+         y="57.362183">rx_data_valid</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3013"
@@ -145,7 +145,7 @@
          sodipodi:role="line"
          id="tspan3019"
          x="270"
-         y="392.36218">Abtaster</tspan></text>
+         y="392.36218">read midi</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -240,7 +240,7 @@
          sodipodi:role="line"
          id="tspan3053"
          x="290"
-         y="62.362183">Abtaster</tspan></text>
+         y="62.362183">read midi</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot3055"
@@ -291,7 +291,7 @@
          sodipodi:role="line"
          id="tspan3067-9"
          x="275"
-         y="287.36218">Tickgenerator</tspan></text>
+         y="287.36218">bit sampling generator</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -324,7 +324,7 @@
          sodipodi:role="line"
          id="tspan3968"
          x="230"
-         y="317.36218">baud_tick</tspan></text>
+         y="317.36218">bit_tick</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -402,13 +402,17 @@
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="450"
-       y="72.362183"
+       y="67.362183"
        id="text3065"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3067"
          x="450"
-         y="72.362183">Tickgenerator</tspan></text>
+         y="67.362183">bit sampling</tspan><tspan
+         sodipodi:role="line"
+         x="450"
+         y="77.362183"
+         id="tspan3104">generator</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 520,132.36218 20,0"
@@ -429,7 +433,7 @@
          sodipodi:role="line"
          id="tspan4052"
          x="390"
-         y="62.362183">baud_tick</tspan></text>
+         y="62.362183">bit_tick</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
