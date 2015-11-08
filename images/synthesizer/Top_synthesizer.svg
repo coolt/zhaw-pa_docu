@@ -13,8 +13,8 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_syntehsizer.png"
+   inkscape:version="0.91 r13725"
+   inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer_alles.png"
    inkscape:export-xdpi="150"
    inkscape:export-ydpi="150"
    sodipodi:docname="Top_synthesizer.svg">
@@ -27,16 +27,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.88034795"
-     inkscape:cx="573.20422"
-     inkscape:cy="712.41935"
+     inkscape:zoom="1.245"
+     inkscape:cx="227.05139"
+     inkscape:cy="668.18806"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1280"
-     inkscape:window-height="1000"
-     inkscape:window-x="0"
-     inkscape:window-y="200"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,6 +58,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3905"
+       width="459.28479"
+       height="216.62628"
+       x="171.99329"
+       y="81.663643"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot3773"
@@ -88,44 +98,34 @@
            height="89.532295"
            x="-139.19984"
            y="21.760506" /></flowRegion><flowPara
-         id="flowPara3805" /></flowRoot>    <rect
-       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3905"
-       width="441.69778"
-       height="216.64595"
-       x="171.98346"
-       y="71.653809"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
+         id="flowPara3805" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="404.53516"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="594.34985"
        y="322.36218"
        id="text3831-1"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3833-5"
-         x="404.53516"
+         x="594.34985"
          y="322.36218">GPIO_10</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="224.53516"
-       y="322.36218"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="239.30205"
+       y="322.93015"
        id="text3821-8"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3823-9"
-         x="224.53516"
-         y="322.36218">Key_0</tspan></text>
+         x="239.30205"
+         y="322.93015">Key_0</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
@@ -133,7 +133,7 @@
        y="147.36218"
        id="text3769-3"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
@@ -147,69 +147,27 @@
        y="92.362183"
        id="text3761-7"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3763-1"
          x="204.53516"
          y="92.362183">FPGA</tspan></text>
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.82040244;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect4078"
-       width="213.58015"
-       height="20.179598"
-       x="211.65636"
-       y="253.60794"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 284.53516,137.36218 65,0"
        id="path3973"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 282.83129,161.90584 65,0"
-       id="path3975"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 419.53516,162.36218 c 10,0 105,0 105,0"
-       id="path4017"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 418.52074,113.73121 c 10,0 105,0 105,0"
-       id="path4017-90"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 415.56934,128.27486 c 10,0 105,0 105,0"
+       d="m 415.56934,138.27486 c 10,0 105,0 105,0"
        id="path4017-97"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 419.43343,149.86712 c 10,0 105,0 105,0"
-       id="path4017-6"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <rect
@@ -219,23 +177,23 @@
        height="60.302742"
        x="347.83301"
        y="107.99319"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="354.53516"
-       y="122.36218"
+       style="font-style:normal;font-weight:bold;font-size:8px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="351.02429"
+       y="127.36218"
        id="text4102"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan4104"
-         x="354.53516"
-         y="122.36218">Tongenerator</tspan></text>
+         x="351.02429"
+         y="127.36218">tone generator</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4100-4"
@@ -243,70 +201,66 @@
        height="60.302742"
        x="208.04636"
        y="107.03726"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="219.35443"
-       y="128.08508"
+       style="font-style:normal;font-weight:bold;font-size:8px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="212"
+       y="127.36218"
        id="text3117"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
-         id="tspan3119"
-         x="219.35443"
-         y="128.08508">Audio</tspan><tspan
-         sodipodi:role="line"
-         x="219.35443"
-         y="138.08508"
-         id="tspan3121">Interface</tspan></text>
+         x="212"
+         y="127.36218"
+         id="tspan3121">audio interface</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 239.53516,272.36218 0,35"
        id="path3891"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 414.78803,274.06605 0,35"
+       d="m 601.19497,272.36218 0,35"
        id="path3893"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="101.24219"
+       x="104.10938"
        y="122.36218"
        id="text3913"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3915"
-         x="101.24219"
+         x="104.10938"
          y="122.36218">aud_dac_data </tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="104.91406"
+       x="107.26563"
        y="132.36218"
        id="text3917"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3919"
-         x="104.91406"
+         x="107.26563"
          y="132.36218">aud_dac_lrck</tspan></text>
     <text
        xml:space="preserve"
@@ -315,7 +269,7 @@
        y="147.36218"
        id="text3921"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
@@ -325,117 +279,79 @@
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="119.53516"
+       x="120.9375"
        y="157.36218"
        id="text3925"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3927"
-         x="119.53516"
+         x="120.9375"
          y="157.36218">i2c_sdata</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="619.53516"
-       y="262.36218"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="551.74475"
+       y="321.99768"
        id="text3929"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3931"
-         x="619.53516"
-         y="262.36218">clk_50</tspan></text>
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.79514951;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3945"
-       width="75.070473"
-       height="19.036299"
-       x="502.47791"
-       y="252.48941"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
+         x="551.74475"
+         y="321.99768">clk_50</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="505.53516"
-       y="262.36218"
-       id="text3933"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3935"
-         x="505.53516"
-         y="262.36218">Infrastrucutre</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="564.53516"
-       y="242.36218"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="532.30872"
+       y="182.83592"
        id="text3937"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3939"
-         x="564.53516"
-         y="242.36218">clk_12M5</tspan></text>
+         x="532.30872"
+         y="182.83592">clk_12M5</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="254.53516"
-       y="262.36218"
-       id="text3941"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3943"
-         x="254.53516"
-         y="262.36218">Synchronisation</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="124.53516"
-       y="202.36218"
+       x="118.39063"
+       y="112.36218"
        id="text3947"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3949"
-         x="124.53516"
-         y="202.36218">aud_b_clk</tspan></text>
+         x="118.39063"
+         y="112.36218">aud_b_clk</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="124.53516"
-       y="212.36218"
+       x="125"
+       y="102.36218"
        id="text3951"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3953"
-         x="124.53516"
-         y="212.36218">aud_xls</tspan></text>
+         x="125"
+         y="102.36218">aud_xls</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 159.53516,157.36218 c 5,0 50,0 50,0"
        id="path3955"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
@@ -443,7 +359,7 @@
        d="m 159.53516,147.36218 50,0"
        id="path3957"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
@@ -451,7 +367,7 @@
        d="m 159.53516,132.36218 50,0"
        id="path3959"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
@@ -459,31 +375,9 @@
        d="m 159.53516,122.36218 c 5,0 50,0 50,0"
        id="path3961"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 284.53516,122.36218 60,0"
-       id="path3963"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="284.53516"
-       y="117.36218"
-       id="text3965"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3967"
-         x="284.53516"
-         y="117.36218">dac_dat_l [16]</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -491,77 +385,27 @@
        y="132.36218"
        id="text3969"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3971"
          x="284.53516"
-         y="132.36218">dac_dat_r[16]</tspan></text>
+         y="132.36218">dacdat</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="284.53516"
-       y="162.36218"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="278.58374"
+       y="183.3766"
        id="text3977"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3979"
-         x="284.53516"
-         y="162.36218">clk_12M5</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="430"
-       y="112.36218"
-       id="text3983"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3985"
-         x="430"
-         y="112.36218">note_value (range)</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 414.53516,252.36218 0,-50 120,0 0,-35"
-       id="path3987"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="429.19141"
-       y="127.36218"
-       id="text3989"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3991"
-         x="429.19141"
-         y="127.36218">note on</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="429.19141"
-       y="149.36218"
-       id="text3997"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3999"
-         x="429.19141"
-         y="149.36218">Polyphonie_status</tspan></text>
+         x="278.58374"
+         y="183.3766">clk_12M5</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.98007149;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4100-1"
@@ -569,85 +413,65 @@
        height="60.32267"
        x="519.54993"
        y="105.8027"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 574.53516,262.36218 45,0"
-       id="path4007"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 554.53516,167.36218 0,85"
-       id="path4009"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="429.53516"
-       y="162.36218"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="407.95279"
+       y="182.24068"
        id="text4013"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan4015"
-         x="429.53516"
-         y="162.36218">clk_12_M5</tspan></text>
+         x="407.95279"
+         y="182.24068">clk_12_M5</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="529.53516"
-       y="122.36218"
+       style="font-style:normal;font-weight:bold;font-size:8px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="524.32043"
+       y="127.0782"
        id="text3109"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
-         id="tspan3111"
-         x="529.53516"
-         y="122.36218">Midi-</tspan><tspan
-         sodipodi:role="line"
-         x="529.53516"
-         y="132.36218"
-         id="tspan3113">interface</tspan></text>
+         x="524.32043"
+         y="127.0782"
+         id="tspan3113">midi interface</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
-       x="405"
-       y="337.36218"
+       style="font-style:normal;font-weight:bold;font-size:8px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="594.8147"
+       y="334.5224"
        id="text3500"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3502"
-         x="405"
-         y="337.36218">Midi Signal</tspan></text>
+         x="594.8147"
+         y="334.5224">Midi Signal</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="500"
-       y="182.36218"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="599.81757"
+       y="131.62744"
        id="text3504"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan3506"
-         x="500"
-         y="182.36218">serial_in</tspan></text>
+         x="599.81757"
+         y="131.62744">midi_in</tspan></text>
     <rect
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:1.23996854;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3905-9"
@@ -655,6 +479,16 @@
        height="251.74736"
        x="142.10344"
        y="476.43243"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4100-4-5-8"
+       width="138.96555"
+       height="155.12172"
+       x="311.07251"
+       y="498.10773"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
@@ -714,20 +548,6 @@
          id="tspan3763-1-4"
          x="140"
          y="472.36218">FPGA</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="324.53516"
-       y="562.36218"
-       id="text4102-9"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan4104-7"
-         x="324.53516"
-         y="562.36218">Tongenerator</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
@@ -932,62 +752,6 @@
          y="632.36218">clk_12M5</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="465"
-       y="512.36218"
-       id="text3983-7"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3985-8"
-         x="465"
-         y="512.36218">note_value (range)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="465"
-       y="527.36218"
-       id="text3989-5"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3991-0"
-         x="465"
-         y="527.36218">note on</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="465"
-       y="542.36218"
-       id="text3997-8"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3999-8"
-         x="465"
-         y="542.36218">polyphonie_status</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="465"
-       y="637.36218"
-       id="text4013-8"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan4015-4"
-         x="465"
-         y="637.36218">clk_12_M5</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
        x="450"
        y="782.36218"
@@ -1014,16 +778,6 @@
          id="tspan3506-3"
          x="550"
          y="672.36218">serial_in</tspan></text>
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect4100-4-5-8"
-       width="138.96555"
-       height="155.12172"
-       x="311.07251"
-       y="498.10773"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.93678123px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 400.04114,527.36218 -35.10236,0"
@@ -1112,12 +866,12 @@
        id="path4760"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4100-4-5-0"
-       width="147.73531"
-       height="156.52473"
-       x="563.41852"
-       y="496.67197"
+       width="216.24908"
+       height="156.31569"
+       x="494.8002"
+       y="496.77649"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
@@ -1217,53 +971,53 @@
        id="path4820"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4826"
-       width="129.78111"
-       height="44.645451"
-       x="570.10944"
-       y="507.6073" />
+       width="80.29641"
+       height="44.85701"
+       x="619.69989"
+       y="507.50153" />
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
-       x="575"
-       y="517.36218"
+       style="font-style:normal;font-weight:bold;font-size:8px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="630.65979"
+       y="519.06604"
        id="text4822"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4824"
-         x="575"
-         y="517.36218">detect byte</tspan></text>
+         x="630.65979"
+         y="519.06604">detect byte</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="610"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="630"
        y="562.36218"
        id="text4832"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4834"
-         x="610"
+         x="630"
          y="562.36218">byte</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="655"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="659"
        y="562.36218"
        id="text4836"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4838"
-         x="655"
+         x="659"
          y="562.36218">data_valid</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 600,552.36218 0,20"
+       d="m 626,552.36218 0,20"
        id="path4840"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 645,552.36218 0,20"
+       d="m 655,552.36218 0,20"
        id="path4842"
        inkscape:connector-curvature="0" />
     <path
@@ -1350,11 +1104,6 @@
        y="507.45474" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 570,512.36218 -125,0"
-       id="path4866"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 320,527.36218 -90,0"
        id="path4872"
        inkscape:connector-curvature="0" />
@@ -1378,11 +1127,6 @@
        d="m 570,527.36218 -125,0"
        id="path4876"
        inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 570,542.36218 -120,0"
-       id="path4878"
-       inkscape:connector-curvature="0" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect3982"
@@ -1401,5 +1145,540 @@
          id="tspan4884"
          x="370"
          y="527.36218">note_on</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 210,112.36218 -50,0"
+       id="path3186"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3192"
+       width="403.22821"
+       height="24.914225"
+       x="206.83992"
+       y="246.60187"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="325"
+       y="262.36218"
+       id="text3933"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3935"
+         x="325"
+         y="262.36218">infrastrucutre block</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="182.31429"
+       y="53.893337"
+       id="text3194"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3196"
+         x="182.31429"
+         y="53.893337">top level synthesier</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="242.3465"
+       y="237.88977"
+       id="text5001"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5003"
+         x="242.3465"
+         y="237.88977">reset_n</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 570,307.36218 0,-35"
+       id="path5005"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 510,217.36218 -105,0 0,-50"
+       id="path5009"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.98526543px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 404.99633,217.36583 -131.03166,0 0,-50.00737"
+       id="path5011"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 239,247.36218 0,-80"
+       id="path5013"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="241.92882"
+       y="182.86969"
+       id="text5001-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5003-6"
+         x="241.92882"
+         y="182.86969">reset_n</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="365.71997"
+       y="182.46808"
+       id="text5001-1-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5003-6-8"
+         x="365.71997"
+         y="182.46808">reset_n</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.91893977px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 239.25863,227.38228 122.36264,0 0,-5.00338 8.4388,0 0,-10.00676 -8.4388,0 0,-45.03039"
+       id="path5055"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.03008139px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 529.36381,167.36976 0,44.98872 10.61334,0 0,9.9975 -10.61334,0 0,4.99874 -169.81339,0"
+       id="path5057"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="497.32547"
+       y="181.21454"
+       id="text5001-1-6-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5003-6-8-5"
+         x="497.32547"
+         y="181.21454">reset_n</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 570,167.36218 0,50 -60,0"
+       id="path5077"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 570,217.36218 0,30"
+       id="path5079"
+       inkscape:connector-curvature="0" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#131212;stroke-width:0.31586969;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path5081"
+       cx="238.69736"
+       cy="227.95026"
+       r="1.5793483" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#131212;stroke-width:0.31586969;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path5081-8"
+       cx="361.01697"
+       cy="227.17885"
+       r="1.5793483" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#131212;stroke-width:0.31586969;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path5081-0"
+       cx="404.58719"
+       cy="217.19861"
+       r="1.5793483" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#131212;stroke-width:0.31586969;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path5081-9"
+       cx="569.95312"
+       cy="217.88806"
+       r="1.5793483" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="535.32086"
+       y="237.92778"
+       id="text3937-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\zhaw-pa_docu\images\synthesizer\top_synthesizer.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3939-1"
+         x="535.32086"
+         y="237.92778">clk_12M5</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 600,247.36218 0,-110 -10,0"
+       id="path5146"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="163.03337"
+       y="349.73575"
+       id="text5148"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5150"
+         x="163.03337"
+         y="349.73575">event_ctr</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="178.36821"
+       y="373.2551"
+       id="text5152"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5154"
+         x="178.36821"
+         y="373.2551">init</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="147.01895"
+       y="362.24069"
+       id="text5156"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5158"
+         x="147.01895"
+         y="362.24069">audio_mode</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="206.10628"
+       y="348.59982"
+       id="text5160"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5162"
+         x="206.10628"
+         y="348.59982">SW_17</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="204.4024"
+       y="361.43961"
+       id="text5164"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5166"
+         x="204.4024"
+         y="361.43961">SW_16</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="206.56261"
+       y="375.07062"
+       id="text5168"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5170"
+         x="206.56261"
+         y="375.07062">SW</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 230,247.36218 0,-80"
+       id="path5172"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 220,247.36218 0,-80"
+       id="path5174"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 210,247.36218 0,-80"
+       id="path5176"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 220,307.36218 0,-35"
+       id="path5178"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="178.51936"
+       y="325.20197"
+       id="text5180"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5182"
+         x="178.51936"
+         y="325.20197">SW_[17-15]</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 330,132.36218 -5,10"
+       id="path5184"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="320.91269"
+       y="153.38647"
+       id="text5186"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5188"
+         x="320.91269"
+         y="153.38647">16</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="468.83533"
+       y="151.1172"
+       id="text3578"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3580"
+         x="468.83533"
+         y="151.1172">25</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 478,132.36218 -5,10"
+       id="path5184-1"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="579"
+       y="522.36218"
+       id="text3983-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3985-8"
+         x="579"
+         y="522.36218">note_out</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="579"
+       y="537.36218"
+       id="text3989-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/top_synthesizer.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3991-0"
+         x="579"
+         y="537.36218">note valid</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="455.74033"
+       y="522.36218"
+       id="text4397"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4399"
+         x="455.74033"
+         y="522.36218">notes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="481.35913"
+       y="538.38647"
+       id="text4401"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4403"
+         x="481.35913"
+         y="538.38647">25</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4405"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Arial;font-style:normal;font-weight:normal;font-size:8px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion4407"><rect
+           id="rect4409"
+           width="60"
+           height="40"
+           x="500"
+           y="502.36218" /></flowRegion><flowPara
+         id="flowPara4411" /></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4413"
+       width="75.054573"
+       height="44.658981"
+       x="499.97272"
+       y="507.7305" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="509.14807"
+       y="517.47382"
+       id="text4415"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4417"
+         x="509.14807"
+         y="517.47382"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold'">polyphone out</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 575,522.36218 45,0"
+       id="path4419"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 575,537.36218 45,0"
+       id="path4421"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 485,522.36218 -5,10"
+       id="path4423"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g4473"
+       transform="translate(40.040986,-4.8276366)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4425"
+         y="568.60974"
+         x="373.56567"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="568.60974"
+           x="373.56567"
+           id="tspan4427"
+           sodipodi:role="line">......</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4425-3"
+         y="603.60974"
+         x="373.56567"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="603.60974"
+           x="373.56567"
+           id="tspan4427-9"
+           sodipodi:role="line">......</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4425-3-3"
+         y="580.27637"
+         x="373.56567"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="580.27637"
+           x="373.56567"
+           id="tspan4427-9-6"
+           sodipodi:role="line">......</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4425-3-1"
+         y="591.94312"
+         x="373.56567"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="591.94312"
+           x="373.56567"
+           id="tspan4427-9-5"
+           sodipodi:role="line">......</tspan></text>
+    </g>
+    <g
+       transform="translate(-44.949129,-5.5467303)"
+       id="g4473-4">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4425-1"
+         y="568.60974"
+         x="373.56567"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="568.60974"
+           x="373.56567"
+           id="tspan4427-3"
+           sodipodi:role="line">......</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4425-3-5"
+         y="603.60974"
+         x="373.56567"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="603.60974"
+           x="373.56567"
+           id="tspan4427-9-51"
+           sodipodi:role="line">......</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4425-3-3-3"
+         y="580.27637"
+         x="373.56567"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="580.27637"
+           x="373.56567"
+           id="tspan4427-9-6-8"
+           sodipodi:role="line">......</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4425-3-1-9"
+         y="591.94312"
+         x="373.56567"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="591.94312"
+           x="373.56567"
+           id="tspan4427-9-5-7"
+           sodipodi:role="line">......</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="450"
+       y="132.36218"
+       id="text4522"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4524"
+         x="450"
+         y="132.36218">notes</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 520,152.36218 -30,0 0,60 10,0 0,20 -10,0 0,10"
+       id="path5059"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 490,272.36218 0,40"
+       id="path5061"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="473.3735"
+       y="321.55896"
+       id="text5063"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5065"
+         x="473.3735"
+         y="321.55896">LEDG[0]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="468.39359"
+       y="334.33005"
+       id="text5067"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5069"
+         x="468.39359"
+         y="334.33005">keyboard out of range</tspan></text>
   </g>
 </svg>
