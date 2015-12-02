@@ -1,0 +1,68 @@
+# //  Questa Sim
+# //  Version 10.2a linux Mar 15 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Project file /home/katrin/Documents/a_PA_synthesizer/Synthesizer_PA/simulation/test_uart.mpf was not found.
+# Unable to open project.
+# Loading project uart
+do ./script/compile_midi_uart.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# QuestaSim vcom 10.2a Compiler 2013.03 Mar 15 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package STD_LOGIC_TEXTIO
+# -- Compiling package body STD_LOGIC_TEXTIO
+# -- Loading package STD_LOGIC_TEXTIO
+# QuestaSim vcom 10.2a Compiler 2013.03 Mar 15 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity edge_detector
+# -- Compiling architecture rtl of edge_detector
+# QuestaSim vcom 10.2a Compiler 2013.03 Mar 15 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bit_sampling_generator
+# -- Compiling architecture rtl of bit_sampling_generator
+# QuestaSim vcom 10.2a Compiler 2013.03 Mar 15 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity read_midi
+# -- Compiling architecture rtl of read_midi
+# QuestaSim vcom 10.2a Compiler 2013.03 Mar 15 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity uart_top
+# -- Compiling architecture behav of uart_top
+# QuestaSim vcom 10.2a Compiler 2013.03 Mar 15 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package STD_LOGIC_TEXTIO
+# -- Compiling entity tb_midi_uart
+# -- Compiling architecture struct of tb_midi_uart
+# vsim -lib work -t 1ps work.tb_midi_uart 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.std_logic_textio(body)
+# Loading work.tb_midi_uart(struct)#1
+# ** Note: data valid falsch bei DATEN 0
+#    Time: 704240 ns  Iteration: 0  Instance: /tb_midi_uart
+quit

@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="polyphonie.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="424.85663"
+     inkscape:cy="670.8927"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="1000"
+     inkscape:window-x="0"
+     inkscape:window-y="200"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3055"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:8px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3057"><rect
+           id="rect3059"
+           width="64.285713"
+           height="82.85714"
+           x="216.42857"
+           y="61.290752" /></flowRegion><flowPara
+         id="flowPara3061" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4121"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:8px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4123"><rect
+           id="rect4125"
+           width="250"
+           height="165.71428"
+           x="-24.285715"
+           y="253.07646" /></flowRegion><flowPara
+         id="flowPara4127" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="621"
+       y="407.36221"
+       id="text4071-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4073-6"
+         x="621"
+         y="407.36221">note valid</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="623"
+       y="447.36221"
+       id="text4079-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4081-7"
+         x="623"
+         y="447.36221">note_out </tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4101-1"
+       width="372.64819"
+       height="155.50533"
+       x="246.46162"
+       y="364.96667"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="250"
+       y="332.36218"
+       id="text4103-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4105-8"
+         x="250"
+         y="332.36218">polyphone_out</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="410"
+       y="542.36218"
+       id="text3001-4-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3003-0-2"
+         x="410"
+         y="542.36218">reset_n</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="410"
+       y="342.36218"
+       id="text3984-2-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3986-45-3"
+         x="410"
+         y="342.36218">clk_12M5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="180"
+       y="447.36221"
+       id="text4079-1-12"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4081-5-6"
+         x="180"
+         y="447.36221">note </tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 245,447.36221 -70,0"
+       id="path4100-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 235.64461,441.29899 -5,9.99999"
+       id="path3972-2-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="228.57143"
+       y="457.36221"
+       id="text3087-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3089-8"
+         x="228.57143"
+         y="457.36221">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="180.42857"
+       y="432.36221"
+       id="text4079-1-1-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4081-5-1-5"
+         x="180.42857"
+         y="432.36221">note </tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 245.42857,432.3622 -70,0"
+       id="path4100-0-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.07318,426.29899 -5,9.99999"
+       id="path3972-2-2-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="229"
+       y="442.36221"
+       id="text3087-6-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3089-3-5"
+         x="229"
+         y="442.36221">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="180.42857"
+       y="417.36221"
+       id="text4079-1-1-6-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4081-5-1-2-27"
+         x="180.42857"
+         y="417.36221">note </tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 245.42857,417.3622 -70,0"
+       id="path4100-0-0-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.07318,411.29899 -5,9.99999"
+       id="path3972-2-2-3-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="229"
+       y="427.36221"
+       id="text3087-6-0-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3089-3-8-9"
+         x="229"
+         y="427.36221">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="180.42857"
+       y="402.36221"
+       id="text4079-1-1-6-1-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4081-5-1-2-2-5"
+         x="180.42857"
+         y="402.36221">note </tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 245.42857,402.3622 -70,0"
+       id="path4100-0-0-1-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.07318,396.29899 -5,9.99999"
+       id="path3972-2-2-3-4-86"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="229"
+       y="412.36221"
+       id="text3087-6-0-7-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3089-3-8-1-8"
+         x="229"
+         y="412.36221">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="180.42857"
+       y="387.36221"
+       id="text4079-1-1-6-1-9-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4081-5-1-2-2-0-9"
+         x="180.42857"
+         y="387.36221">note </tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 245.42857,387.36221 -70,0"
+       id="path4100-0-0-1-1-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.07318,381.29899 -5,10"
+       id="path3972-2-2-3-4-8-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="229"
+       y="397.36221"
+       id="text3087-6-0-7-4-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3089-3-8-1-4-1"
+         x="229"
+         y="397.36221">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="180.42857"
+       y="463.36221"
+       id="text4079-1-1-6-1-9-0-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4081-5-1-2-2-0-5-8"
+         x="180.42857"
+         y="463.36221">note </tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 245.42857,463.3622 -70,0"
+       id="path4100-0-0-1-1-8-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.07318,457.29898 -5,10"
+       id="path3972-2-2-3-4-8-8-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="229"
+       y="473.36221"
+       id="text3087-6-0-7-4-4-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3089-3-8-1-4-6-9"
+         x="229"
+         y="473.36221">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="181"
+       y="477.36221"
+       id="text4079-1-1-6-1-9-0-8-32"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4081-5-1-2-2-0-5-7-8"
+         x="181"
+         y="477.36221">note </tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 246,477.3622 -70,0"
+       id="path4100-0-0-1-1-8-8-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.64461,471.29898 -5,10"
+       id="path3972-2-2-3-4-8-8-0-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="229.57143"
+       y="487.36221"
+       id="text3087-6-0-7-4-4-9-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3089-3-8-1-4-6-4-6"
+         x="229.57143"
+         y="487.36221">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="180.42857"
+       y="492.36221"
+       id="text4079-1-1-6-1-9-0-8-3-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan4081-5-1-2-2-0-5-7-7-8"
+         x="180.42857"
+         y="492.36221">note </tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 245.42857,492.3622 -70,0"
+       id="path4100-0-0-1-1-8-8-6-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.07318,486.29898 -5,10"
+       id="path3972-2-2-3-4-8-8-0-5-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="229"
+       y="502.36221"
+       id="text3087-6-0-7-4-4-9-1-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3089-3-8-1-4-6-4-8-8"
+         x="229"
+         y="502.36221">9</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 670,448.36221 -5,9.99999"
+       id="path3322-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="666.60718"
+       y="459.86221"
+       id="text3324-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/synthesizer/midi_interface.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan3326-9"
+         x="666.60718"
+         y="459.86221">9</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 618,412.36218 70,0"
+       id="path3357"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 690,452.36218 -70,0"
+       id="path3359"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

@@ -21,7 +21,7 @@ Am intuitivsten ist die bildliche Darstellung des soeben beschriebenen Fehlverha
 \todo{besseres Bild def Glitch}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{images/def_glitch_1.png}
+	\includegraphics[width=\textwidth]{images/glitch/def_glitch_1.png}
 	\caption{Glitch-Signalspitzen}
 	\label{fig.glitch.def}
 \end{figure}
@@ -43,7 +43,7 @@ Jeder getaktete Prozess verzögert die Verarbeitung. Aus diesem Grund wird abgew
 Abbilung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes (getaktetes) enable-Signal zu einem anders verzögerten (getakteten) Flip-Flop-Eingangssignal Q. Der Ausgang des Flip-Flops weist kurzzeitig Glitches auf. \\
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{images/def_glitch_3.png}
+	\includegraphics[width=0.8\textwidth]{images/glitch/def_glitch_3.png}
 	\caption{Mögliches Bsp. für Glitches}
 	\label{fig.glitch.bild1}
 \end{figure}
@@ -62,7 +62,7 @@ Die Erwartung ist, dass aufgrund der \textit{Bauteiltoleranzen} der Flip-Flops d
 Damit ein abnormaler Wert in einem Zähler erkannt wird, sendet der Dekoder bei der Zahl 7 einen Peak. Ohne Glitch entschlüsselt der Dekoder in regelmässigen Abständen von 160 ns diese Zahl. Aufgrund der Flip-Flop-Bauteiltolereanzen ist ein kurzzeitiges Dekodieren einer 7 \textit{ausserhalb der Periode T} zu erwarten. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{images/Ansatz_1.png}
+	\includegraphics[width=0.6\textwidth]{images/glitch/Ansatz_1.png}
 	\caption{Ausnutzen der Bauteilverzögerung}
 	\label{fig.glitch.counter2}
 \end{figure}
@@ -72,7 +72,7 @@ Damit ein abnormaler Wert in einem Zähler erkannt wird, sendet der Dekoder bei 
 \todo{Bild anpassen}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{images/RTL_counter_2.png}
+	\includegraphics[width=\textwidth]{images/glitch/RTL_counter_2.png}
 	\caption{RTL Zahler mit asynchronem Dekoder}
 	\label{fig.glitch.counter2}
 \end{figure}
@@ -97,7 +97,7 @@ Die Pfad\textit{verlängerung} wird über das Routing über die GPIO-Pins des He
 Signal\textit{verkürzung} ist eine direkte Signalzuweisung \todo {korrektes Wort ?(Concourent Assignment)} .\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.3\textwidth]{images/GPIO_Belegung.png}
+	\includegraphics[width=0.3\textwidth]{images/glitch/GPIO_Belegung.png}
 	\caption{GPIO Anschlüsse}
 	\label{fig.glitch.routing}
 \end{figure}
@@ -106,7 +106,7 @@ Auf dem KO wird das asynchrone Glitch-Signal und das synchrone Zählersignal neb
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{images/RTL_glitch_detection_bemalt.png}
+	\includegraphics[width=\textwidth]{images/glitch/RTL_glitch_detection_bemalt.png}
 	\caption{Zähler mit Signal-Routing über GPIO}
 	\label{fig.glitch.routing}
 \end{figure}
@@ -124,7 +124,7 @@ Der Ansatz, dass die Bauteiltoleranzen der Flip-flops eine Ursache für asynchro
 \subsection{Erzeugen über Routing} 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{images/Glitch_2_good_kommentar.png}
+	\includegraphics[width=0.8\textwidth]{images/glitch/Glitch_2_good_kommentar.png}
 	\caption{Glitch (gelb), Zähler (grün) und Takt (orange)}
 	\label{fig.glitch.result_1}
 \end{figure}
