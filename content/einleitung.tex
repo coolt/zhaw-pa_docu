@@ -18,9 +18,21 @@ Der zweiten Teil der Projektarbeit beinhaltet eine Weiterentwicklung des Synthes
 
 Eine Projektarbeit verdient nicht ihren Namen, wenn am Schluss der Arbeit nicht ausführlich die Resultate diskutiert und die verwendete Literatur genannt wird. Es folgt deshalb ein ausführlicher Anhang, in dem unter anderem auch der verwendete VHDL-Code abgebildet ist.\\
 
+------------------------------------------ALT \\
+
+
 \section{Ausgangslage}\label{sect.einleitung_ausgangslage}
 Nennt bestehende Arbeiten zu diesem Thema (Literaturrecherche)\\
 Stand der Technik: Bisherige Lösungen des Problems und deren Grenzen\\
+\\
+\\
+MIDI bedeutet \textit{musical instrument digital interface} und ist ein Standard, der sowohl die genaue Beschaffenheit der erforderlichen Hardware wie auch das Kommunikationsprotokoll der zu übermittelnden Daten festlegt (\textbf{Christian Braut: Das MIDI-Buch. Sybex, Düsseldorf u. a. 1993,}).\\
+\textbf{The MIDI Manufacturers Association, MIDI 1.0 Detailed Specification, Document Version 4.2, Revised September 1995, Los Angeles (1995) }\\
+\\
+Im Modul DTP2 entwickeln Studentinnen und Studenten ihren eignenen Synthesizer. Eine Option in diesem Projekt ist es, den Synthesier über ein Keyboard per MIDI steuern zu können. \\
+Am Institut for Embedded Systems bestand bereits die MIDI UART und die Aufgabe im zweiten Teil dieser Projektarbeit ist es, eine MIDI Steuerung zu entwickeln, die für das Modul DTP2 verwendet werden kann. Bild Top im Anhang\\
+Am Institut for Embedded System bestand bereits die Hardware wie auch die MIDI UART. Diese detektiert die empfangenen Bytes und sendet ein valid-Flag, wenn das Byte korrekt ist. Das Byte wird als logic Vetor übermittelt.\\
+
 
 \section{Zielsetzung Aufgabenstellung Anforderungen}\label{sect.einleitung_ziele}
 Formulierte Ziele der Arbeit\\

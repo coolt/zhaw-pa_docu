@@ -9,25 +9,94 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{MIDI Steuerung}\label{chap.midi}
+Die Abbildung \ref{fig.top_synthesizer_block} (im Anhang \ref{chap.anhang_top_synthesizer}) zeigt, wie das zu entwickelnde MIDI Interface in die bestehenden Blöcke des Synthesizer-Projektes eingebaut wird. Die im Anhang direkt anschliessende Abbildung \ref{fig.top_synthesizer_detail} zeigt dann die geplante Umsetzung detaillierter.\\
+\newline
+Im folgenden wird nur auf den Block \textit{midi interface} eingegangen, der die Umsetzung der MIDI Steuerung darstellt. Als erstes die Zusammenfassung der internen Blöcke (siehe Abbildung \ref{fig.midi_interface_block} ).\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_interface/midi_interface_block.png}
+	\caption{Blockschaltbild MIDI Interface}
+	\label{fig.midi_interface_block}
+\end{figure}
 
-\section{Einleitung}\label{sect.einleitung_midi}
-Im Modul DTP2 entwickeln Studentinnen und Studenten ihren eignenen Synthesizer. Eine Option in diesem Projekt ist es, den Synthesier über ein Keyboard per Midi steuern zu können. \\
-Am Institut bestand bereits die MIDI UART und die Aufgabe im zweiten Teil dieser Projektarbeit ist es, die MIDI Steuerung zu entwickeln, die sowohl einezelne Töne weiterleitet wie auch polyphoniefähig ist (siehe nächstes Kapitel). \\
+Gegeben ist der UART Block, in der Abbildung als uart top bezeichnet. Dieser detektiert MIDI Bytes und sagt, ob diese gültig sind. Zu entwickeln sind die zwei Blöcke "\textbf{midi control}" und "\textbf{polyphonie out}".\\
+
+Als erstes wird kurz generall auf das MIDI Kommunikationsprotokoll eingegegangen, damit man die Kriterien bei der Umsetzung versteht. Danach wird die Umsetzung des \textit{midi control}-Blocks erklärt und zum Schluss die Implementation des \textit{polyphone out}-Blocks.\\
+
+%\textbf{EV. Anforderung steht im Anhang.\}\
+
+\newpage
+\section{Das MIDI Kommunikationsprotokoll}\label{sect.midi_spezification}
+Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten (Detailierte Spezifikation S. 11 - 12 ).
+\subsection{\textit{status bytes}}
+\textit{status bytes} sind 8 Bit lang und das MSB ist immer logisch '1'. Die Status Bytes dienen dem Identifizerein der nachfolgenden \textit{data bytes}. Das \textit{status byte} sagt, von welcher Art und mit welcher Datenstruktur die folgenden \textit{data bytes} sein werden.\\
+MIDI behält einen Status so lange, bis ein neues \textit{status byte} folgt. Dieses Verhalten wird als \textit{running status} bezeichnet. Dieses Verhalten ist vor allem für die Polyphonie interessant, da dieser Zustand bleibt und viele \textit{Data Bytes} (im Sinn von Noten) folgen können, ohne dass es eines neuen Status Bytes bedarf.\\
+
+\subsection{\textit{data bytes}}
+Gemäss Spezifikation folgen einem \textit{Status Byte} exakt ein oder zwei Bytes. Das MSB ist immer logisch '0'. Die Werte können von 0x00 bis 0x7F sein. Das bedeutet, dass MIDI maximal 128 Noten unterscheiden kann.\\
+\textit{data bytes} sind Noten, Geschwindigkeit des Anschalges und ...\\
+Je nachdem welches \textit{status byte} im Voraus gesetzt wurde, werden die Attribute anders interpretiert.\\
+Ist z.B. Polyphonie gesetzt, so bedeutet ein \textit{data byte} mit einer Geschwindigkeit von 0, Note abstellen. Diese und andere Spezifikationen werden detailliert in \textbf{Detailierte Spezifikation} beschrieben.
+\\
+"Empfänger sollen so konzipiert sein, dass zuerst alle\textit{data bytes} empfangen werden und ein neues \textit{status byte} kommt. Danach werden ungültige Daten verworfen. Einzige Ausnahme ist der \textit{running status}. Bei dem nicht bis zum Ende gewartet wird." (Spezifikation, S. 6).\\
+
+\subsection{Ungültige Bytes}
+"Alle \textit{status bytes}, die nicht implementierte Funktionen enthalten und alle ihnen folgenden \textit{Data Byte}s sollen vom Empfänger verworfen werden."\textbf{(Spezifikation, 6)}.\\ MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden \textbf{(ebd)}.\\
+Diese Anforderung ist wichtig beim Implementieren einer Finate State Machine und der Testbench (\textbf{siehe Kapitel ......}). \\
+
+
+
+
+\section{Umsetzung "midi control"-Block}\label{sect.midi_umsetzung}
+Ausgehend von der Spezifikation sind drei Eckpunkte für die \textit{finite state machine} zu berücksichtigen:\\
+\begin{enumerate}
+	\item Unterscheiden von \textit{status byte} und \textit{data byte}
+	\item Unterschiedliche Interpretation der \textit{data bytes} abhängig vom \textit{status byte}.
+	\item Verwerfen aller falschen \textit{status byte} oder \textit{data bytes}
+\end{enumerate}
+
+Zu beachten in der Verarbeitung der Daten ist, dass im \textit{single mode} zuerst gesagt wird, ob eine Note an oder ab und diese Reihenfolge im \textit{polyphony mode} gerade umgekehrt ist: zuerst kommt die Note, dann die Angabe, ob sie an oder ab ist.
+
+Aus diesen Anforderungen ergab sich folgende \textit{finite state machine}:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{images/idle.png}
-	\caption{blabla}
-	\label{fig.bluetooth_}
+	\includegraphics[width=1\textwidth]{images/midi_control/fsm_midicontrol.png}
+	\caption{fsm Übergänge}
+	\label{fig.midi_fsm_inksape}
+\end{figure}
+Alle drei Anforderungen sind implementiert:\\
+Vor jedem \textit{data byte} muss zuerst ein \textit{status byte} eingegangen sein. Die \textit{finite state machine} fragt im \textit{idle} Zustand nur nach den \textit{status bytes}. So weisen die oberen Nibbel mit den Werten "1001" für NOTE AN und "1000" für NOTE AUS auf den  \textit{single mode} hin und der Wert "1010" auf den \textit{polyphony mode}. Nach diesen \textit{status bytes} erwartet die \textit{finate state machine} \textit{data bytes}.\\ 
+Die unterschiedliche Reihenfolge von Noten-Byte und Angaben zu an oder ab, wurde statusabhängig umgesetzt:\\
+%fig.midi_fsm_inksape
+%(siehe Abbildung fig.midi_fsm_inksape )
+Im \textit{single mode} wird das vierte Bit des \textit{status nibbel} zum Setzen von AN und AB verwendet . Im polyphony mode wird das zweite \textit{data byte}, das ueblicherweise die Geschwindigkeit der Note bestimmt, für das Setzen von AN und AUS genommen. Ist der Wert der Geschwindigkeit gleich NULL, dann soll in diesem Zustand die Note als AUS gelten.\\
+Gut sichtbar ist, dass die \textit{finite state machine} bei ungültigen \textit{bytes}, die Daten verwirft und in den \textit{idle} Zustand zurückgeht.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_control/fsm_midi_control_inkskape.png}
+	\caption{fsm Übergangsbedingungen}
+	\label{fig.midi_fsm_quartus}
 \end{figure}
 
+Das Umsetzung der \textit{fsm} sieht man in der simulation in den zweit unteren Abbildungen gut. Nach dem Zustand \textit{idle} folgt das \textit{status byte} "single" (Abbildung \ref{fig.midicontrol_singlet} )oder "polyphonie" (Abbildung \ref{fig.midicontrol_polyphonie} )\\  
 
-\section{Spezifikation Midi Protokoll}\label{sect.midi_spezification}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_control/wave_single.png}
+	\caption{fsm für single mode}
+	\label{fig.midicontrol_singlet}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_control/wave_polyphonie.png}
+	\caption{fsm im polyphony mode}
+	\label{fig.midicontrol_polyphonie}
+\end{figure}
+
+Die Simulation wurde mit möglichen Fehlübertragungen angereichert, damit man sieht, ob der \textit{midi control} weiter korrekt funktionert. Eine detaillierte Beschreibung zum Aufbau der Simulation befindet sich im Kapitel \textbf{testbench}.\\
 
 
-
-\section{Umsetzung Midi Interface}\label{sect.midi_umsetzung}
-\subsection{Aufbau der Blöcke}
-\subsection{Schnittstellen}
-\subsection{Inhalt des zu entwickelnden Midi Controllers}
-\subsection{Inhalt des zu entwickelnden Polyphonie Blocks}
+\section{Umsetzung "polyphonie out"-Block}\label{sect.polyphonie_umsetzung}

@@ -15,16 +15,7 @@
 
 
 
-\chapter{Anhang: Englische Definitionen Glitches}\label{chap.anhang_dictionaire}
-%\begin{quote}A sudden, usually temporary malfunction or irregularity of equipment\end{quote},
- %oxford Dictionaries, (oxforddictionaries.com \textslach{de}\textslach{defintion}\textslach {englischusa}\textslach{glitch, 11.okt.2015)}\\
- 
- 
-%\newline
-%\begin{quote}A ​sudden ​unexpected ​increase in ​electrical ​power, ​especially one that ​causes a ​%fault in an ​electronic ​system\end{quote}, %http://dictionary.cambridge.org/de/worterbuch/englisch/glitch\\
-%\newline
 
-%\begin{quote}The \textit{glitch} is that unwanted \textit{spike} or transient output that increments some counter, clears some register, or starts some unwanted process at precisely the most undesirable time. This transient an undesirable spike is generally issued form any decoder that is addressed with a sequence of NON-UNIT-DISTANCE-CODED inputs.\end{quote}(Fletcher, Digital design, 472).\\
 
 
 \section{Offizielle Aufgabenstellung}\label{sect.verzeichnis_literatur}
@@ -32,303 +23,25 @@ Projektauftrag
 
 \section{CD mit vollständigem Bericht}\label{sect.verzeichnis_literatur}
 
-\newpage
-\chapter{Anhang: VHDL-Code Glitch detect }\label{chap.anhang_2.vhdl_glitch}
-%-------------------------------------------------------------------------------
-%-- Project     : Glitches detect through long logic paths
-%-- Description : glitch_detection.vhd    
-%-- 				: Detect value 15. Once asynchronous (= glitch), once synchronous (cnt)         
-%-- Author      : Katrin Bächli
-%-------------------------------------------------------------------------------
-%-- Change History
-%-- Date     |Name      |Modification
-%------------|----------|-------------------------------------------------------
-%-- 05.10.15	| baek     | init
-%-- 06.10.15 | baek     | add cnt-singal and clock
-%-------------------------------------------------------------------------------
-%
-%
-%library ieee;
-%use ieee.std_logic_1164.all;
-%use ieee.numeric_std.all;
-%
-%
-%entity glitch_detection is
-%	port(	clk: 				in std_logic;
-%			glitch:			out std_logic; 
-%			count:			out std_logic;	
-%			-- Routing
-%			q_0_out:			out std_logic;
-%			q_1_out:			out std_logic;
-%			q_2_out:			out std_logic;
-%			q_3_out:			out std_logic;
-%			------
-%			q_0_in:			in  std_logic;
-%			q_1_in:			in  std_logic;
-%			q_2_in:			in  std_logic;
-%			q_3_in:			in  std_logic
-%	);
-%end entity;
-%
-%
-%
-%architecture rtl of glitch_detection is 
-%
-%----------------------------------------------------------------------------------
-%-- signal
-%----------------------------------------------------------------------------------
-%
-%signal  cnt_async: 		integer range 0 to 15 		  := 0;
-%signal  next_cnt_async: integer range 0 to 15 		  := 0;
-%signal  detect_15_async: std_logic 						  := '0';  
-%
-%signal  cnt_sync:			std_logic						  := '0';
-%signal  cnt_sync_next:	std_logic						  := '0';  
-%
-%
-%signal  rout_out:       std_logic_vector(7 downto 0) := "00000000";
-%signal  rout_in:        std_logic_vector(7 downto 0) := "00000000";
-%
-%
-%
-%begin
-%
-%------------------------------------------------------
-%-- input
-%------------------------------------------------------	
-%		
-%	count_up: process(ALL)	
-%	begin
-%		next_cnt_async <= cnt_async + 1;
-%	end process;
-%
-%	
-%------------------------------------------------------
-%-- clocked processes
-%------------------------------------------------------	
-%	ff: process(clk)	
-%	begin			
-%		if (rising_edge(clk)) then		
-%				cnt_async 		<= next_cnt_async;
-%				cnt_sync 		<= cnt_sync_next;					
-%		end if;
-%	end process;
-%
-%	
-%------------------------------------------------------
-%-- delay
-%------------------------------------------------------
-% 
-%	rout_out <= std_logic_vector(to_unsigned(cnt_async, 8));
-%   q_0_out  <=  rout_out(0);   
-%   q_1_out  <=  rout_out(1);
-%   q_2_out  <=  rout_out(2);
-%   q_3_out  <=  rout_out(3);  
-%   ------------------
-%	rout_in(0)	  <=  q_0_in;   
-%   rout_in(1)	  <=  q_1_in;
-%   rout_in(2)	  <=  q_2_in;		
-%		
-%		
-%------------------------------------------------------
-%-- output
-%------------------------------------------------------	
-%	
-%	reset_counter: process(ALL)	
-%	begin	
-%	   -- asynchronous
-%		if ( rout_in(0) = '1' AND rout_in(1) = '1' AND rout_out(2) = '1' AND rout_out(3) = '1') then  
-%			detect_15_async <= '1';
-%			cnt_sync_next <= '1';
-%		else 
-%			detect_15_async <= '0';
-%			cnt_sync_next <= '0';
-%		end if;	
-%	end process;
-%		
-%	-- set outputs
-%	count  <= cnt_sync;
-%	glitch <= detect_15_async;
-%
-%end rtl;
+
+\chapter{Anhang: Top Synthesizer}\label{chap.anhang_top_synthesizer}
+
+In die bestehenden Blöcke und Signale wird das MIDI Interface wiefolgt eingebaut:\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_interface/top_synthesizer_block.png}
+	\caption{Top Synthesizer mit MIDI Interface: Blockschaltbild}
+	\label{fig.top_synthesizer_block}
+\end{figure}
+
+Hier ist das Konzept der Umsetzung des MIDI Interface detaillierter beschrieben:\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_interface/top_synthesizer_detail.png}
+	\caption{Top Synthesizer mit MIDI Interface: Detailansicht}
+	\label{fig.top_synthesizer_detail}
+\end{figure}
 
 
 
 
-
-\newpage
-\chapter{Anhang: VHDL-Code Metastability detect }\label{chap.anhang_2.vhdl_metastability}
-%library IEEE;
-%use IEEE.STD_LOGIC_1164.ALL;
-%use IEEE.NUMERIC_STD.ALL;
-%
-%ENTITY metastability_2 IS
-%
-%port (CLOCK_27 : 	in std_logic;
-%		CLOCK_50 : 	in std_logic;
-%		KEY_1 : 		in std_logic; 		-- reset-button
-%      GPIO_0_0 :  out std_logic;		-- KO: state 
-%		GPIO_0_1 :  out std_logic;    -- KO: async. pulse 
-%		SW_17:      in std_logic;     -- synchronisation-switch
-%		LEDR_0:		out std_logic;
-%		LEDR_1:		out std_logic;
-%		LEDG_7:		out std_logic			
-%  );
-%end metastability_2; 
-%
-%
-%----------------------------------------------------------------------------------
-%-- Architecture 
-%----------------------------------------------------------------------------------
-%architecture behavioral of metastability_2 is
-%
-%--------------------------------------------
-%-- Signals and Constants
-%--------------------------------------------
-%constant s0			: std_logic_vector(2 downto 0) := "001";
-%constant s1 		: std_logic_vector(2 downto 0) := "010";
-%constant unstable : std_logic_vector(2 downto 0) := "000";
-%
-%signal state: 			std_logic_vector(2 downto 0);  
-%signal next_state: 	std_logic_vector(2 downto 0);
-%
-%signal cnt: 			integer range 0 to 15 := 0;  
-%signal next_cnt: 		integer range 0 to 15 := 0; 
-%signal cnt_reset:		std_logic     := '0'; 
-%
-%signal pulse_async: 	std_logic     := '0';
-%signal pulse_sync1: 	std_logic     := '0';
-%signal pulse_sync2: 	std_logic     := '0';
-%signal pulse: 			std_logic     := '0';
-%
-%
-%begin
-%
-%--------------------------------------------
-%-- Clocked Process
-%--------------------------------------------
-%	fsm: process (all)
-%	begin
-%		if (KEY_1 = '0') then
-%			state <= s0;
-%		elsif (rising_edge(CLOCK_50)) then
-%		   state <= next_state;
-%			-- synchronistaion of async. pulse
-%		   pulse_sync1 <= pulse_async;
-%		   pulse_sync2 <= pulse_sync1;
-%		end if;
-%	end process;
-%
-%
-%	counter: process (all)
-%	begin
-%		if (KEY_1 = '0') then
-%			cnt <= 0;
-%		elsif(rising_edge(CLOCK_27)) then
-%		   cnt <= next_cnt;   			
-%		end if;
-%	end process;
-%	
-%
-%	
-%--------------------------------------------
-%-- Asynynchronous Pulse Counter
-%-------------------------------------------- 
-%	counter_input: process (all)	
-%	begin			
-%			next_cnt <= cnt + 1; 
-%	end process;
-%
-%	
-%--------------------------------------------
-%-- Test Metastable State Machine Logic
-%-------------------------------------------- 	
-%	fsm_input: process (all)		
-%	begin 	
-%	  case state is
-%	  	 when s0 => 
-%			 if(pulse ='1') then
-%				 next_state <= s1;
-%			 else
-%				 next_state <= s0;
-%			 end if;  
-%			
-%		 when s1 =>    
-%			 if(pulse ='1') then
-%				 next_state <= s0;
-%			 else
-%				 next_state <= s1;
-%			 end if;
-%			 
-%		 when others => 
-%				next_state <= unstable;
-%				
-%	  end case;		
-%end process;	
-%
-%--------------------------------------------
-%-- Synchronisation by Switch
-%--------------------------------------------
-%	multiplexer_synchro: process (all)
-%	begin
-%		if (SW_17 = '1') then
-%			pulse <= pulse_sync2;
-%		else 
-%			pulse <= pulse_async;
-%		end if;
-%	end process;
-%	
-%
-%--------------------------------------------
-%-- Output Process
-%--------------------------------------------
-%
-%	decode_cnt_max: process (all)
-%	begin
-%		if (cnt = 15) then
-%			pulse_async <= '1';
-%		else 
-%			pulse_async <= '0';
-%		end if;
-%	end process;	
-%
-%	
-%	fsm_output: process (all)
-%	
-%	begin
-%	
-%	-- Default Values
-%	LEDR_0   <= '0';
-%	LEDR_1   <= '0';
-%	LEDG_7   <= '0';  
-%	GPIO_0_0 <= '0';
-%	
-%		case state is
-%			when s0 =>   
-%					LEDR_0  <= '1'; 
-%			when s1 =>   
-%					LEDR_1  <= '1'; 
-%					GPIO_0_0 <= '1';
-%			when unstable => 
-%			      LEDG_7  <= '1';
-%			when others =>   
-%					LEDG_7 <= '1';		 
-%		end case;			
-%	end process;	
-%	
-%   -- Set Output	
-%	GPIO_0_1 <= pulse_async;
-%	
-%end behavioral;
-
-
-
-
-\section{Bliblibli}\label{sect.anhang.ah}
-
-
-
-\begin{itemize}
-	\item sfasdfasdfasfasf
-\end{itemize}
-\newpage

@@ -16,3 +16,6 @@ John A. Camara, Engineering Reference Manual, Belmont 2010.
 
 Altera, Cyclone IV Device Handbook, Volume 1, San Jose (2014).
 
+
+The MIDI Manufacturers Association, MIDI 1.0 Detailed Specification, Document Version 4.2, Revised September 1995, Los Angeles (1995)
+
