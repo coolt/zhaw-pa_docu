@@ -17,6 +17,9 @@
 \usepackage{float}
 \usepackage[toc,page]{appendix}
 \usepackage[autostyle=true,german=quotes]{csquotes} % quotes
+%\usepackage{natbib}
+%\usepackage[square,sort,comma,numbers]{natbib}
+%\usepackage{harvard}
 %\usepackage[latin1]{inputenc}    %Umlaute
 
 %\renewcommand{\contentsname}{Inhaltsverzeichnis}
@@ -50,6 +53,7 @@
 	\include{content/metastabilitat} 
 	\include{content/midicontrol} 	
 	\include{content/polyphonie} 
+	\include{content/testbench} 
 	\include{content/resultate}
 	\include{content/diskusion}
 	\include{content/verzeichnis}
@@ -57,9 +61,9 @@
 	
 	
 	% add Bibliography to TOC
-	\addcontentsline{toc}{chapter}{\bibname}              
-	\bibliographystyle{IEEEtran}
-	\bibliography{BibTex/references}
+	%\addcontentsline{toc}{chapter}{\bibname}              
+	%\bibliographystyle{plain}
+	%\bibliography{BibTex/references}
 
 \end{document}
 %---------------------------------------------------------------------
