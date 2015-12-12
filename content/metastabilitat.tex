@@ -49,7 +49,7 @@ Als Alternative bietet sich eine Synchronisierungsschaltung an. Zwischen den zwe
 
 \section{Metastabilität erzeugen}\label{sect.meatastabil_erzeugen}
 \subsection{Ansatz}\label{sect.metastabil_ansatz}
-Aufgebaut wird ein System mit zwei Takten. Der zentrale Block hat eine Taktfrequenz von 50 MHz und beinhaltet eine State Machine. Diese wechselt bei jedem Impuls von einem Zustand in den anderen (Abbild: \ref{fig.metastabil.statemachine} Um die zwei Zustände zu erkennen, werden beiden Zuständen ein logischer Pegel zugefügt:\\
+Aufgebaut wird ein System mit zwei Takten. Der zentrale Block hat eine Taktfrequenz von 50 MHz und beinhaltet eine State Machine. Diese wechselt bei jedem Impuls von einem Zustand in den anderen (Abbild: \ref{fig.metastabil.erzeugen} Um die zwei Zustände zu erkennen, werden beiden Zuständen ein logischer Pegel zugefügt:\\
 \newline
 - Zustand 1:  s0  = Logisch '0'\\
 - Zustand 2:  s1  = Logisch '1'\\
@@ -58,7 +58,7 @@ Aufgebaut wird ein System mit zwei Takten. Der zentrale Block hat eine Taktfrequ
 	\centering
 	\includegraphics[width=0.2\textwidth]{images/metastability/statemachine_s0_s1.png}
 	\caption{Statemachine im zentralen Block}
-	\label{fig.metastabil.statemachine}
+	\label{fig.metastabil.fsm}
 \end{figure}
 
 Der Inpuls, der die Statemachine steuert ist asynchron. Er wird von einem Zähler generiert, der mit der Taktfrequenz von 27 MHz läuft. Alle 37 ns sendet der Zähler einen Puls an die State Machine. Die State Machine selbst arbeitet mit einer Taktfrequenz von 20 ns. Der Impuls ist ihr gegenüber asynchron.\\

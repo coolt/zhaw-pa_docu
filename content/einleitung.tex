@@ -35,13 +35,30 @@ Ein Ansatz, wie ein glitch detektiert und ein metastabiler Zustand aufgebaut wer
 	\item "Erzeugung von Glitches mit einem Zähler und nachgeschaltetem Dekoder. Sichtbarmachung der Glitches mit einem Oszilloskop. Betätigen des asynchronen Resets vom Decoder aus." 
 
 	\item "Provozieren und sichtbarmachung von Metastabilen Zuständen. Hierfür kann z.B. eine Schaltung mit zwei asynchronen externen Takten aufgebaut werden." 
-\end{itemize}  \\
+\end{itemize}  
 
+Der Fokus des zweiten Teils liegt im Projektausschrieb bei der Entwicklung vielfälltiger Klangfarben für das Synthesizer-Projekt: \\
+"Im zweiten Teil soll mit dem dem Direct Digital Synthesis Verfahren ein Synthesizer mit vielfältigen Klangfarben entwickelt werden. Damit kann anspruchsvolle digitale Schaltungstechnik umgesetzt werden. Zum erreichen der Klangvielfalt können mehrere DDS Generatoren gleichzeitig, mit unterschiedlichen Frequenzen und Phasen betrieben werden. Möglich ist auch eine Frequenzmodulation mit einem zweiten Generator oder Ändern des Volumens mit einer Hüllkurve. \\
+Die Ansteuerung soll mit Hilfe eines MIDI Interfaces, welches Polyphonie (mehrere Klaviertasten gleichzeitig gedrückt) unterstützt. Die Implementierung soll im FPGA erfolgen. In der Implementierungsphase der Arbeit soll das Timing der FPGA Implementierung genau betrachtet werden. \\
+Am Ende soll eine Referenzimplementierung in Anlehnung an den Yamaha DX7 für das Modul DTP2 entstehen."
 
+Da die Entwicklung des ersten Teils länger dauerte, als vorausgedacht, wurde zu Beginn des zweiten Teils die neuen Anforderungen besprochen, da absehbar wurde, dass alle Anforderungen nicht realistisch sind (siehe Anhang \ref{chap.anhang_aufgabenstellung_neu}) 
 
+Gemäss der Spezifikation des zweiten Teiles sind die nächsten Schritte:
+\begin{itemize}
+\item "Midi Interface for Keyboard für Polyphonie nach Konzept von gelk\\
+o   10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators\\
+o   10 On/Off Ausgänge Ton on/off\\
+o   UART wird geliefert von gelk\\
+o   VHDL wird von Grund auf neu erstellt.
+\item 10 DDS implementieren und mit Mischer Mischen
+\item Script basierte Testbench. Testbench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
+\item Testbench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. Midi Poliphony Spec muss durch die Testbench unterstützt werden können. Velocity muss nicht unterstützt werden."
+...
+\item "Kein VHDL code ohne Testbench.
+\item Block level testbench. Unit Tests."
+\bigskip
+Im Anhang \ref{chap.anhang_hans_midicontrol} und \ref{chap.anhang_hans_polyphonie} finden sich die vorgegebene Umsetzung des \textit{midi interfaces}. Auf der CD befindet sich das Synthesizer-Referenz-Projekt, in welches das \textit{midi interface} eingebaut wird.
 
-Formulierte Ziele der Arbeit\\
-EV.Pflichtenheft, Spezifikation\\
-EV. übersicht über die Arbeit: stellt die folgenden Teile kurz vor.\\
 
 
