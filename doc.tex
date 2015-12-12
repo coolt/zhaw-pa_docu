@@ -1,9 +1,5 @@
 % Style template ines (july 2015)
 \documentclass[ngerman]{zhawines}
-%\documentclass[german]{scrreprt}
-%\newcommand{\headings}{}
-%\newcommand{\email}{}
-%\sloppy
 
 % Include
 \usepackage[ngerman]{babel}
@@ -17,9 +13,8 @@
 \usepackage{float}
 \usepackage[toc,page]{appendix}
 \usepackage[autostyle=true,german=quotes]{csquotes} % quotes
-%\usepackage{natbib}
-%\usepackage[square,sort,comma,numbers]{natbib}
-%\usepackage{harvard}
+\usepackage{cite}
+
 %\usepackage[latin1]{inputenc}    %Umlaute
 
 %\renewcommand{\contentsname}{Inhaltsverzeichnis}
@@ -30,7 +25,7 @@
 	\hbadness 10000
 	\author{Katrin Bächli }
 	\betreuer{Prof. Hans Joachim Gelke }
-	\nebenbetreuer{Dr. Matthias Rosenthal }
+	\betreuer{Dr. Matthias Rosenthal }
 	\title{PA15\_gelk\_1 Polyphonic DDS Synthesizer mit MIDI Steuerung}
 	\subtitle{PA15\_gelk\_1 Polyphonic DDS Synthesizer mit MIDI Steuerung}
 	\email{katrin.baechli@zhaw.ch}
@@ -40,14 +35,18 @@
 	
 	\headings
 	
-	% Inhaltsverzeichnis	
-	\tableofcontents
-				
+	
 	
 	% To Do-Liste 
 	\listoftodos     % TO DEL am Ende
 	
+	\include{content/zusammenfassung}		
+	\include{content/abstract}		
+	\include{content/vorwort}	
 	
+	
+	% Inhaltsverzeichnis	
+	\tableofcontents				
 	\include{content/einleitung}		
 	\include{content/glitches} 	
 	\include{content/metastabilitat} 
@@ -57,13 +56,13 @@
 	\include{content/resultate}
 	\include{content/diskusion}
 	\include{content/verzeichnis}
-	\include{content/anhang}
-	
+	\include{content/anhang}	
 	
 	% add Bibliography to TOC
 	%\addcontentsline{toc}{chapter}{\bibname}              
 	%\bibliographystyle{plain}
 	%\bibliography{BibTex/references}
+	
 
 \end{document}
 %---------------------------------------------------------------------

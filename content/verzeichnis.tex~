@@ -22,19 +22,19 @@
 
 
 \section{Glossar}\label{sect.verzeichnis_glossar}
-Das Glossar dient interessierten Software-Entwicklern, die elektrotechnik-spezifischen Worte zu verstehen.
 
-\textbf{glitch}
-
-
-\textbf{finate state machine}
+glitch
 
 
+finate state machine
 
-\textbf{clock domain}
 
 
-\textbf{textbasierte testbench}
+
+clock domain
+
+
+
 
 
 \textbf{Durchlaufverzögerung}\\

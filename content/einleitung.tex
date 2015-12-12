@@ -9,35 +9,38 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Einleitung}\label{chap.einleitung}
+Nennt bestehende Arbeiten zu diesem Thema (Literaturrecherche)
 
-Die Projektarbeitet bietet die Möglichkeit, sich vertieft in VHDL einzuarbeiten. Mit vertieft ist das Erstellen eines eignen Projektes wie auch  das Kennenlernen der Eigenheiten der Sprache VHDL gemeint.\\
-
-Der erste Teil der Projektarbeit umfasst die Auseinandersetzung mit der Sprache VHDL und deren eigenen Herausforderungen. Die zwei Fehlerquellen \textit{Glitches} und \textit{Metastabilität} werden künstlich erzeugt, damit ihre Ursache verstanden wird. \\
-
-Der zweiten Teil der Projektarbeit beinhaltet eine Weiterentwicklung des Synthesizer-Projektes aud der Vorlesung Digitale Technik II. Konkret soll die Frequenzmodulation vertieft  und der Midianschluss implementiert werden.\\
-
-Eine Projektarbeit verdient nicht ihren Namen, wenn am Schluss der Arbeit nicht ausführlich die Resultate diskutiert und die verwendete Literatur genannt wird. Es folgt deshalb ein ausführlicher Anhang, in dem unter anderem auch der verwendete VHDL-Code abgebildet ist.\\
-
-------------------------------------------ALT \\
+Stand der Technik: Bisherige Lösungen des Problems und deren Grenzen
 
 
 \section{Ausgangslage}\label{sect.einleitung_ausgangslage}
-Nennt bestehende Arbeiten zu diesem Thema (Literaturrecherche)\\
-Stand der Technik: Bisherige Lösungen des Problems und deren Grenzen\\
-\\
-\\
-MIDI bedeutet \textit{musical instrument digital interface} und ist ein Standard, der sowohl die genaue Beschaffenheit der erforderlichen Hardware wie auch das Kommunikationsprotokoll der zu übermittelnden Daten festlegt (\textbf{Christian Braut: Das MIDI-Buch. Sybex, Düsseldorf u. a. 1993,}).\\
-\textbf{The MIDI Manufacturers Association, MIDI 1.0 Detailed Specification, Document Version 4.2, Revised September 1995, Los Angeles (1995) }\\
-\\
-Im Modul DTP2 entwickeln Studentinnen und Studenten ihren eignenen Synthesizer. Eine Option in diesem Projekt ist es, den Synthesier über ein Keyboard per MIDI steuern zu können. \\
-Am Institut for Embedded Systems bestand bereits die MIDI UART und die Aufgabe im zweiten Teil dieser Projektarbeit ist es, eine MIDI Steuerung zu entwickeln, die für das Modul DTP2 verwendet werden kann. Bild Top im Anhang\\
-Am Institut for Embedded System bestand bereits die Hardware wie auch die MIDI UART. Diese detektiert die empfangenen Bytes und sendet ein valid-Flag, wenn das Byte korrekt ist. Das Byte wird als logic Vetor übermittelt.\\
+Für den ersten Teil der Arbeit, die zwei ungewollten Effekte von \textit{glitch} und einem metastabilen Zustand herzustellen gibt es selbsterklärend wenige Referenzprojekte. Beide Zustände sind nicht gewollt und finden als solche wohl oft Erwähnung in der Literatur \cite{ReferenceManual} \cite{F_glitches} \cite{F_metastability}, doch wie man diese Zustände provoziert, scheint bis auf eine gefundene \cite{Metastabil}, nicht von Interesse zu sein.
+Aus diesem Grund bestehen die ersten zwei Schritte vorwiegend aus eigenen Überlegungen, bzw. aus der Erfahrung von Prof. Hans-Joachim Gelke und seinen Anregungen.
+
+
+Im zweiten Teil geht es um den Aufbau eines \textit{midi interfaces}. MIDI bedeutet \textit{musical instrument digital interface} und ist ein Standard, der sowohl die genaue Beschaffenheit der erforderlichen Hardware wie auch das Kommunikationsprotokoll der zu übermittelnden Daten festlegt \cite{Midi_Braut}. Die MIDI Manufacturers Association dokumentiert die mehrfachen Erweitungen des MIDI 1.0 Standard \cite{Midi_specification}. Diese Spezifikationen sind relevant in der Entwicklung des Blocks \textit{midi control}.
+
+Am Institut for Embedded Systems bestand bereits die MIDI UART von Armin Weiss. Diese detektiert die empfangenen Bytes und sendet ein valid-Flag, wenn das Byte korrekt ist. Das Byte wird als logic Vetor übermittelt. In dieser Projektarbeit zu entwickeln sind deshalb die zwei Einheiten \textit{midi control}  und \textit{polyphony out}. Und anschliessend diese Blocks in das bestehende Synthesizer-Projekt einzubauen.
+
 
 Jeder zu entwickelnde Block wird mit einer textbasierten \textit{testbench} getestet. 
 
 \section{Zielsetzung Aufgabenstellung Anforderungen}\label{sect.einleitung_ziele}
+Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabenstellung} unter ref{sect.aufgabenstellung}. Alle Zitate beziehen sich aus diesem Text.\\
+
+Von Anfang an war die Projektarbeit in zwei Teile geteilt:\\Im ersten Teil sollten "Timing Artifakte demonstriert werden", die zu einem "zu einem vertieften Verständnis der digitalen Design Grundlagen führen." 
+Ein Ansatz, wie ein glitch detektiert und ein metastabiler Zustand aufgebaut werden kann ist gegeben:\\
+\begin{itemize}
+	\item "Erzeugung von Glitches mit einem Zähler und nachgeschaltetem Dekoder. Sichtbarmachung der Glitches mit einem Oszilloskop. Betätigen des asynchronen Resets vom Decoder aus." 
+
+	\item "Provozieren und sichtbarmachung von Metastabilen Zuständen. Hierfür kann z.B. eine Schaltung mit zwei asynchronen externen Takten aufgebaut werden." 
+\end{itemize}  \\
+
+
+
+
 Formulierte Ziele der Arbeit\\
-Verweist auf die \textbf{offizielle Aufgabenstellung des/der Dozenten im Anhang}\\
 EV.Pflichtenheft, Spezifikation\\
 EV. übersicht über die Arbeit: stellt die folgenden Teile kurz vor.\\
 
