@@ -25,59 +25,56 @@
 Das Glossar dient interessierten Software-Entwicklern, die elektrotechnik-spezifischen Worte zu verstehen.
 
 \textbf{Asynchrone Signale}\\
-Alle nicht-getakteten Prozesse, da man bei ungetakteten Signalen nicht weiss, wann sie ihren Zustand ändern.
+Werden Signale in zugewiesen sind sie vorerst ungetaktet, asynchron. Es ist nicht definiert, \textit{wann} exakt das Signal den neuen Wert erhält. Erst wenn ein Signal durch ein Flip-Flop geführt wird, wird es getaktet und seine Signalzuweisung dadurch determinierbar.\\
 
-<<<<<<< HEAD
-tokens
-=======
+\textbf{Clock Domain}\\
+Ein Bereich der Hardware, der mit demselben Takt läuft.\\
+
 \textbf{Dekoder}\\
->>>>>>> develop
+Bezeichnet ein Bauteil, das einen odere mehrere Eingangswert(e) gemäss implementierter Logik in einen Ausganswert wandelt. \\
 
-\textbf{Flip-Flops}
+\textbf{Durchlaufverzögerung}\\
+Wird englisch \textit{propagation delay} genannt und bezeichnet die Zeit, die Daten vom Eingang bis zum Ausgang des Bauteils brauchen.\\
+Die Durchlaufverzögerung beträgt beim Cylone IV 4 ns \cite{Handbook_Altera}.\\
+
+\textbf{Finate State Machine (fsm)}\\
+''A model of a computational system, consisting of a set of states, a set of possible inputs, and a rule to map each state to another state, or to itself, for any of the possible inputs.''\cite{fsm}\\
+Auf deutsch''Ein Model in Rechensystemen, das aus einem Satz aus Zuständen, möglichen Eingängen und Regeln wie man von einem Zustand zum nächsten, oder zu sich selbst, für alle möglichen Eingänge gelangt. ''\\
+
+\textbf{Flip-Flops}\\
+Grundbaustein der Digitalen Logik. Das Flip-Flop speichert seinen Wert, den es am Eingang erhält am Ausgang.\\
 
 \textbf{Glitch}\\
 Im technischem Bereich bedeutet \textit{glitch} gemäss Cambridge Dictionaire ''a sudden unexpected increase in electrical power, especially one that causes a fault in an electronic system ''\cite{dictionair},\\
 auf deutsch ''eine plötzliche, unerwartete Spannungserhöhung, die insbesondere ein Fehlverhalten im elektronischen System verursacht''.\\
 
-
-\textbf{Finate State Machine}\\
-''A model of a computational system, consisting of a set of states, a set of possible inputs, and a rule to map each state to another state, or to itself, for any of the possible inputs.''\cite{fsm}\\
-Auf deutsch''Ein Model in Rechensystemen, das aus einem Satz aus Zuständen, möglichen Eingängen und Regeln wie man von einem Zustand zum nächsten, oder zu sich selbst, für alle möglichen Eingänge gelangt. ''\\
-
-
-KO
-Abkürzung für Kathondenstrahl Oszilloskop, bezeichnet die analoge Signalausgabe am Bildschirm.
-
-\textbf{Clock Domain}
-
-
-\textbf{Textbasierte Testbench}
-
-
-\textbf{Durchlaufverzögerung}\\
-
-Wird englisch \textit{propagation delay} genannt und bezeichnet die Zeit, die Daten vom Eingang bis zum Ausgang des Bauteils brauchen.\\
-Die Durchlaufverzögerung beträgt beim Cylone IV 4 ns (Device Handbook, S. 8-19).\\
-
-
 \textbf{Hold Time}\\
 Ist die minimale Zeit, in der die Inputdaten \textit{nach} der Taktflanke stabil sein müssen.\\
-Die hold-Zeit beträgt beim  Cyclone IV E 0 ns (Device Handbook, S. 8-19).\\
+Die hold-Zeit beträgt beim  Cyclone IV E 0 ns \cite{Handbook_Altera}.\\
+
+\textbf{Hot Plug}\\
+Bezieht sich auf die Hardware-Umsetzung einer \textit{finate state machine}. Gewöhnlich braucht es für \begin{math} 2^n \end{math} Zustände n Flip-Flops. Bei Hot Plug braucht es für n Zustände n Flip-Flops, denn jeder neue Zustand wird durch eine '1' am n-ten Flip-Flop detektiert. Alle anderen Flip-Flop-Werte sind auf '0'. Die logische Schaltung für eine \textit{Hot Plug fsm} wird durch den direkten Bezug einer gesetzten '1' zum Zustand einfach.
 
 
-Pfadzeit\\
-... (Unter 3.2. Metastabilität Ratschläge erwähnt)\\
+\textbf{Kathodenstrahl Osziloskop, KO}\\
+Bezeichnet ein elektronisches Messgerät, das ein Signale analog als Spannungen mit deren zeitlichem Verlauf am Bildschirm ausgibt.\\
 
+\textbf{Pfadzeit}\\
+Bezeichnet die Zeit, die ein Signal von einem Flip-Flop zum nächsten braucht.\\
 
+\textbf{Setup Time} \\
+Minimale Zeit, in der Inputdaten stabil sein müssen be\textit{vor} ein Taktflanke die Daten triggert.\\
+Die setup-Zeit beträgt beim Cyclone IV E 10 ns \cite{Handbook_Altera}\\
+
+\textbf{State}\\
+Bezeichnet den aktuellen Zustan einer finale state machine. \\
+
+\textbf{Textbasierte Testbench}
+In VHDL wird die Simulation der Signale in einer Testbench aufgesetzt. In der Testbench werden die Signalanregungen, stimuli, definiert, und die zeitlichen Abläufe unter Signalen. Für eine Testbench ist eine eigene Software notwendig.\\
+Eine textbasierte Testbench liest die stimuli aus einem File ein. Zudem können im File die zu erwartenden Ergebnisse definiert sein.\\
+
+\textbf{Token}\\
+Bezeichnen Elemente in einer Reihe von strukturierten Daten.\\
 
 \textbf{Quartus}\\
 IDE von altera zum Kompilieren, Synthesizieren und einbauen von IPs für die altera FPGAs.\\
-
-
-\textbf{Setup Time} \\
-minimale Zeit, in der Inputdaten stabil sein müssen be\textit{vor} ein Taktflanke die Daten triggert.\\
-Die setup-Zeit beträgt beim Cyclone IV E 10 ns (Device Handbook, S. 8-19)\\
-
-
-
-
