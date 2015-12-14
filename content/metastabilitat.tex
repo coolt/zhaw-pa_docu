@@ -57,54 +57,81 @@ Aufgebaut wird ein System mit zwei \textit{clock domains}. Eine \textit{clock do
 
 
 \subsection{Umsetzung}\label{sect.metastabil_implementation}
-Als Hardware wird das altera development board De2 genommen und mit der Software quartus 13osp0 gearbeitet. Die die zwei Takte nicht Vielfache voneinander sein dürfen, wure für den Zähler ein Takt von 27 MHz und für die fsm ein Takt von 50 MHz. Der Takt des Zählers ist leicht schneller als die Hälfte der fsm und schiebt sich langsam vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der \textit{setup time} ist somit nur eine Frage der Zeit.
+Als Hardware wird das altera development board De2 genommen und mit der Software quartus 13osp0 gearbeitet. Die die zwei Takte nicht Vielfache voneinander sein dürfen, wure für den Zähler ein Takt von 27 MHz und für die \textit{fsm} ein Takt von 50 MHz. Der Takt des Zählers ist leicht schneller als die Hälfte der fsm und schiebt sich  vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der \textit{setup time} ist eine Frage der Zeit.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{images/metastability/2_takte.png}
+	\includegraphics[width=1\textwidth]{images/metastability/2_takte.png}
 	\caption{Die zwei Taktzeiten}
 	\label{fig.metastabil.takte}
 \end{figure}
 
-Die Zustandsüberprüfung erfolgt über das Ausgaben des aktuellen Zustands auf den zwei roten LEDs. 
+Die Zustandsüberprüfung erfolgt über das Ausgeben des aktuellen Zustands auf den zwei roten LEDs. 
 \begin{itemize}
 	\item Zustand = s0
-		  -> LED 0 ist an
-	\item Zustand = s1
-		  -> LED 1 ist an
+	\newline Rote LED 0 ist an
+	\item Zustand = s1\\
+	 Rote LED 1 ist an
+	\item Zustand = \textit{others}\\
+	 Grüne LED 17 ist an\\
 \end{itemize}
-Funktioniert die fsm fehlerfrei, blinken die zwei roten LEDs abwechslungsweise. Zu erwarten ist, dass die LEDs ab und zu in einem der zwei Zustände hängen bleiben. Die fsm also nicht mehr korrekt funktioniert.
-Aus diesem Grund wurde ein Reset-Knopf implementiert.
 
+Funktioniert die \textit{fsm}, blinken die zwei roten LEDs abwechslungsweise. Fällt die \textit{fsm} in einen undefinierten Zustand, leuchtet die grüne LED. Um die Ursache der Metastabilität, das Verletzten der \textit{setup time} zu verhindern, wird eine optionale Synchronisation durch Switch 17 eingebaut. Ist Swicht 17  auf '1', wird der Puls der \textit{clock domain} 27 MHz durch ein Flip-Flop auf 50 MHz synchronisiert.
 
-
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/metastability/RtL_metastaibility.png}
+	\caption{RTL mit Synchronisations-Switch}
+	\label{fig.metastabil.RtL}
+\end{figure}
 
 
 
 \section{Resultat Metastabilität provozieren}\label{sect.meatastabil_proozieren}
+Das Resultat ist, dass das Board unmittelbar nach Einstellen in den metastabilen Zustand fällt und die grüne LED leuchtet. Wird Reset gedrückt, folgt ein kurzes Aufblinken der zwei roten LEDs und wieder die grüne LED.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/idle.png}
+	\caption{Metastbiler Zustand}
+	\label{fig.metastabil.Ergebnis_Boardasynchron}
+\end{figure}
 
 
+Wird die Synchronisations-Schaltung betätigt, leuchten beide roten LEDs auf. Die \textit{fsm} wechselt zwischen den states s0 und s1 hin und her. Das Verbleiben in den zwei definierten Zuständen s0 und s1 funktioniert auch nach einem Tag noch. \\
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/idle.png}
+	\caption{Switchschalter ON: Rote LEDs leuchten}
+	\label{fig.metastabil.Ergebnis_BoardSynchron}
+\end{figure}
 
-\textbf{Was ist das Ergebnis beim Verletzen der setup Zeit?}
-Beide Ausgänge immer an?
-Keiner von beiden?
-aufhängen des Systems? (Keine LED geht mehr).
+\newpage
+Wird das Wechseln zwischen den zwei states am KO ausgegeben, so erkennt man, da - weil der Takt 27 MHz kein Bruchteil von 50 Mhz - kein wiederkehrendes Muster der Wechsel zwischen den zwei Zuständen auftritt. \\
+CH 1 = Rote LED
+CH 2 = Synchronisierter Puls\\
 
-\textbf{Synchronisation Schaltung erhärtet die These b\\}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/metastability/synchron_eng_2.png}
+	\caption{Unregelmässiger Wechsel zwischen Zustand s0 und Zustand s1}
+	\label{fig.metastabil.Ergebnis_1}
+\end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/metastability/synchron_eng_3.png}
+	\caption{Unregelmässiger Wechsel zwischen Zustand s0 und Zustand s1}
+	\label{fig.metastabil.Ergebnis_2}
+\end{figure}
 
+\newpage
+Im Zustand der Metastabilität sind die Pulse nicht synchronisier und die rote LED geht nicht an.\\
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/metastability/asynchron_en_.png}
+	\caption{Metastabiler Zustand}
+	\label{fig.metastabil.Metastabil}
+\end{figure}
 
-Systems wirDer zentrale Block hat eine Taktfrequenz von 50 MHz und beinhaltet eine \textit{finate state machine}. Diese wechselt bei jedem Impuls von einem Zustand in den anderen (Abbild: \ref{fig.metastabil.erzeugen} Um die zwei Zustände zu erkennen, werden beiden Zuständen ein logischer Pegel zugefügt:\\
-\newline
-
-
-
-Der Inpuls, der die Statemachine steuert ist asynchron. Er wird von einem Zähler generiert, der mit der Taktfrequenz von 27 MHz läuft. Alle 37 ns sendet der Zähler einen Puls an die State Machine. Die State Machine selbst arbeitet mit einer Taktfrequenz von 20 ns. Der Impuls ist ihr gegenüber asynchron.\\
-\newline
-Erwartet wird, dass die setup-Zeit der State Machine-Flip-Flops regelmässig verletzt werden. \\
-
-
-\todo{ einsetzen setup zeit gemäss glossar für ..}
