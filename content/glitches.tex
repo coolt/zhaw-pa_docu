@@ -8,90 +8,45 @@
 %																%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{\textit{glitches}}\label{chap.glitch}
+\chapter{Glitches}\label{chap.glitch}
 
-\section{Definition Glitches}\label{sect.glitch_def}
-
-Im technischem Bereich bedeutet gemäss Cambridge Dictionaire ein \textit{glitch}, eine ungewollte, flüchtige Signalspitze, die ein Fehlverhalten im System verursacht. Im Anhang  befindet sich der Originaltext wie auch noch eine weitere Defintion aus dem englischen Sprachraum.
-
-In der digitalen Signalverarbeitung ist das Glitch ein bekannter Begriff und wird dort unter anderem leicht sarkastisch beschrieben:
-
-\textit{''Als ''Glitch''  wird eine ungewollte, flüchtige ''Signalspitze'' bezeichnet, die Zähler aufwärts zählt, Register löscht oder einen ungewollten Prozess startet.}'' 
-\cite{F_glitches}
+\section{Glitche in der Digitalen Signalverarbeitung}\label{sect.glitch_def}
+In der Digitalen Signalverarbeitung ist glitch ein bekannter Fehler, den William I. Fletscher folgendermassen beschreibt: ''Als \textit{glitch}  wird eine ungewollte, flüchtige ''Signalspitze'' bezeichnet, die Zähler aufwärts zählt, Register löscht oder einen ungewollten Prozess startet.'' \cite{F_glitches} \\
 
 
-Am intuitivsten ist die bildliche Darstellung des soeben beschriebenen Fehlverhaltens (Abbildung \ref{fig.glitch.def}). In dieser Signalabfolge treten zwei mal Glitches auf, die eigentlich nicht dort hingehören.\\
-\todo{besseres Bild def Glitch}
+Abbildung \ref{fig.glitch.def} zeigt zwei \textit{glitches} in einem Ausgangssignal.\\
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{images/glitch/def_glitch_1.png}
-	\caption{Glitch-Signalspitzen}
+	\caption{Zwei Glitches im Ausgangssignal}
 	\label{fig.glitch.def}
 \end{figure}
 
-Auf den ersten Blick scheinen solch temporäre Spannungsspitzen nicht zu stören. Doch wenn man Pech hat, sind Glitches der Auslöser für Abstürze oder zumindest für ein Fehlverhalten eines Gerätes. Aus diesem Grund, wird nun der Ursache dieser Spitzen nachgegangen.\\ 
-
-
 
 \section{Ursache für Glitches}\label{sect.glitch_ursache}
-Der Auslöser der flüchtigen Spannungsspitzen sind asynchrone Inputs vor einem asynchronen Bauteil oder verzögerte Signale. Trifft z. B. vor einem Dekoder von vier Leitungen, das Signal einer Leitung zu spät an, entschlüsselt der Dekoder kurzfristig einen falschen Wert. Obwohl die Störung nur kurz ist, übermittelt ein asynchroner den falschen Wert direkt an seinen Ausgang. \\
-
-\subsection{Asynchroner Input}
-Das ungleichzeitige Eintreffen von Signalen kann z.B. durch lange Signalpfade (Leitungen), unterschiedliche Durchlaufverzögerungen der vorangehenden Flip-Flops oder unterschiedliche Logik-Zeiten entstehen. Grundsätzlich gelten alle nicht-getakteten Prozesse als potenzielles Risiko für Glitches, da man bei ungetakteten Prozessen nicht weiss, wie lange sie dauern.\\
-
-\subsection{Nachteil getakteter Prozesse}
-Jeder getaktete Prozess verzögert die Verarbeitung. Aus diesem Grund wird abgewogen, wo Prozesse getaktet und wo sie asynchron getätig werden. In VHDL gibt es viele asynchrone Vorgänge (wie ungetaktete Prozesse oder Singalzuweisungen), deshalb ist es vorteilhaft, wenn das Risiko asynchroner Prozesse bekannt ist.\\
-
+Der Auslöser sind ungleichzeitig eintreffende Signale, die durch \\
+1.) unterschiedlich lange Signalpfade, \\
+2.) unterschiedliche Durchlaufverzögerungen der vorangehenden Flip-Flops oder \\
+3.) unterschiedliche Logik-Zeiten \\
+entstehen, und die in ein asynchrones Bauteil geführt werden.\\
+Der Dekoder im asynchronen Bauteil entschlüsselt dadurch kurzfristig einen falschen Wert. \\
 
 Abbilung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes (getaktetes) enable-Signal zu einem anders verzögerten (getakteten) Flip-Flop-Eingangssignal Q. Der Ausgang des Flip-Flops weist kurzzeitig Glitches auf. \\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{images/glitch/def_glitch_3.png}
-	\caption{Mögliches Bsp. für Glitches}
+	\caption{Asynchrone Eingangssignale führen zu Glitches}
 	\label{fig.glitch.bild1}
 \end{figure}
 
 
-
-\section{Glitches erzeugen}\label{sect.glitch_detect}
-Was in Glitch ist, ist relativ einfach zu beschreiben. Ein Glitch jedoch mit moderner Digitaltechnik  zu erzeugen, erweist sich als etwas schwerer. Hier zwei Ansätze, die getestet werden. \\
-
-\subsection{Glitches Aufgrund von Bauteiltoleranzen}\label{sect.glitch_toleranzen}
-
-Der erste Ansatz ist, ein Zähler aus vier Flipflops mit asynchronem Dekoder zu implementieren. 
+\newpage
+\section{Glitches durch Pfadverzögerung erzeugen}\label{sect.glitch_detect}
+Die Pfade eines asynchronen Dekoders werden durch Routing verlängert.
 
 \subsubsection{Konzept}
-Die Erwartung ist, dass aufgrund der \textit{Bauteiltoleranzen} der Flip-Flops die vier Ausgänge an den Flip-Flops nicht gleichzeitg ihren Wert übermitteln. Die einen sind leicht schneller, die anderen leicht verzögert. Dadurch ergibt sich kurzzeitig am asynchronen Dekoder einen falschen Wert.\\
-Damit ein abnormaler Wert in einem Zähler erkannt wird, sendet der Dekoder bei der Zahl 7 einen Peak. Ohne Glitch entschlüsselt der Dekoder in regelmässigen Abständen von 160 ns diese Zahl. Aufgrund der Flip-Flop-Bauteiltolereanzen ist ein kurzzeitiges Dekodieren einer 7 \textit{ausserhalb der Periode T} zu erwarten. 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{images/glitch/Ansatz_1.png}
-	\caption{Ausnutzen der Bauteilverzögerung}
-	\label{fig.glitch.counter3}
-\end{figure}
-
-
-\subsubsection{Implementation}
-\todo{Bild anpassen}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{images/glitch/RTL_counter_2.png}
-	\caption{RTL Zahler mit asynchronem Dekoder}
-	\label{fig.glitch.counter2}
-\end{figure}
-\todo {Bild Asynchronem Zähler besser beschreiben}
-
-Um die gewollten Zahlenwerte von den Glitches zu unterschieden, wird das asynchrone Singnal getaktet. Dadurch erscheint der korrekte Zählwert mit einem Takt Verzögerung. Die Periode ist 20 ns (CLK = 50 MHz).\\
-
-
-
-
-
-\subsection{Glitches Aufgrund von Pfadverzögerung}\label{sect.glitch_toleranz}
-Der zweite Ansatz ist die gesuchte Bauteilverzögerungen über längere Signalpfade zu simulieren.Der Dekoder des Zählers bleibt asynchron. 
-
-\subsubsection{Konzept}
-Dekodiert wird die Zahl 15. Durch intelligentes Routing (FF 1 wird verzögert, FF 2 wird beschleunigt) wird der Zustand der Zahl 11 forcier \todo {Bild FF1 verzögert, FF2 schneller}
+Dekodiert wird die Zahl 15. Durch intelligentes Routing (FF 1 wird verzögert, FF 2 wird beschleunigt) wird der Zustand der Zahl 11 forcier 
 
 \subsubsection{Implementation} 
 Cyclone II, Board De2. Quartus 13.0sp.
