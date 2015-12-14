@@ -61,12 +61,12 @@ Die Verzögerung der zwei Bits, wird über Routing umgesetzt.
 \subsubsection{Implementation} 
 Die Hardware ist das altera board De2 mit dem FPGA Cyclone II. Kompiliert wird das Projekt mit Quartus 13.0sp, der ältsten Quartus-Version, die den Cyclone II unterstützt.
 
-Die Pfad\textit{verlängerung} wird über das Routing über die GPIO-Pins des Headers 1 gemacht (siehe Abbildung \ref{fig.glitch.routing}. Dekodiert die asynchrone Logik die Zahl 15, wird das  Reset-Signal an den Zähler gesendet und der Zähler beginnt wieder von 0 an zu zählen. Produziert der Dekoder zur falschen Zeit einen Reset, so ist dies eine Fehlkodierung: ein \textit{glitch}.\\
+Die Pfad\textit{verlängerung} wird über das Routing über die GPIO-Pins des Headers 1 gemacht (siehe Abbildung \ref{fig.glitch.GPIO}. Dekodiert die asynchrone Logik die Zahl 15, wird das  Reset-Signal an den Zähler gesendet und der Zähler beginnt wieder von 0 an zu zählen. Produziert der Dekoder zur falschen Zeit einen Reset, so ist dies eine Fehlkodierung: ein \textit{glitch}.\\
 
 Das RTL-Diagramm des asynchronen Zählers sieht wiefolgt aus:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{images/glitch/glitch_RTL_nurGlitch.png}
+	\includegraphics[width=1\textwidth]{images/glitch/RTL_asynchron.png}
 	\caption{Asynchroner Zähler mit Routing erzeugt Glitch}
 	\label{fig.glitch.RTL_nurGlitch}
 \end{figure}
@@ -74,7 +74,7 @@ Das RTL-Diagramm des asynchronen Zählers sieht wiefolgt aus:
 Um die Lösung gegen \textit{glitches} aufzuzeigen, wird dem asynchronen Zähler zur Synchronisation ein Flip-Flop nachgeschalten. Dadurch werden die asychronen Zustände übersehen. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{images/glitch/glitch_RTL.png}
+	\includegraphics[width=\textwidth]{images/glitch/glitch_asynch_new.png}
 	\caption{Glitch-Zähler und synchroner Zähler dazu}
 	\label{fig.glitch.RTL_mit_synchr.Zaehler}
 \end{figure}
