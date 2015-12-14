@@ -57,8 +57,8 @@
 
 	\cfoot{\thepage}
 	\ifoot{\the\day.\the\month.\the\year}
-	\setfootsepline{0.4pt}
-	\setheadsepline{0.4pt}
+	%\setfootsepline{0.4pt}
+	%\setheadsepline{0.4pt}
 }
 
 
