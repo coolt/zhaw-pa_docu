@@ -110,7 +110,7 @@ type t\_token\_line is record\\
 type t\_note\_array is array (0 to 9) of std\_logic\_vector(8 downto 0);\\
 
 \subsection*{Prozessstruktur}
-Strukturmässig über Allem steht bei der textbasierten \textit{testbench} das Ein- und Auslesen der Dateien. Nach dem Grunsatz in der Software, dass Prozesse möglichst kurz und nur etwas erledigen sollen, begann ich den Prozess zu unterteilen in einen \textit{read file}-Prozess und einen \textit{execute file}-Prozess. Die zwei Prozesse sind über das Signal-Flag s\_read\_input\_finished synchronisiert, das im \textit{execute file}-Prozess mit dem Befehl \textit{wait until} (s_read_input_finished <= '1') umgesetzt ist.\\
+%Strukturmässig über Allem steht bei der textbasierten \textit{testbench} das Ein- und Auslesen der Dateien. Nach dem Grunsatz in der Software, dass Prozesse möglichst kurz und nur etwas erledigen sollen, begann ich den Prozess zu unterteilen in einen \textit{read file}-Prozess und einen \textit{execute file}-Prozess. Die zwei Prozesse sind über das Signal-Flag s\_read\_input\_finished synchronisiert, das im \textit{execute file}-Prozess mit dem Befehl \textit{wait until} (s_read_input_finished <= '1') umgesetzt ist.\\
 
 Durch das Aufteilen der Prozesse ergab sich auch die Unterscheidung zwischen lokalen Variablen und Signalen.
 
