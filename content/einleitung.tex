@@ -9,69 +9,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Einleitung}\label{chap.einleitung}
-Nennt bestehende Arbeiten zu diesem Thema (Literaturrecherche)
-
-Stand der Technik: Bisherige Lösungen des Problems und deren Grenzen
 
 
 \section{Ausgangslage}\label{sect.einleitung_ausgangslage}
-Für den ersten Teil der Arbeit, die zwei ungewollten Effekte von \textit{glitch} und einem metastabilen Zustand herzustellen gibt es selbsterklärend wenige Referenzprojekte. Beide Zustände sind nicht gewollt und finden als solche wohl oft Erwähnung in der Literatur \cite{ReferenceManual} \cite{F_glitches} \cite{F_metastability}, doch wie man diese Zustände provoziert, scheint bis auf eine gefundene \cite{Metastabil}, nicht von Interesse zu sein.
-Aus diesem Grund bestehen die ersten zwei Schritte vorwiegend aus eigenen Überlegungen, bzw. aus der Erfahrung von Prof. Hans-Joachim Gelke und seinen Anregungen.
+Für den ersten Teil der Arbeit, die Timing Artifakte  \textit{glitch} und \textit{metastability} zu demonstrieren, gibt es wenige Referenzprojekte. Da die Zustände ungewollt sind, finden sie als Fehlerquellen Erwähnung in der Literatur\cite{ReferenceManual},  \cite{F_glitches}, \cite{F_metastability}. Nur ein Dokument ist gefunden, das die Erzeugung von \textit{ metastability} behandelt\cite{Metastabil}. Aus diesem Grund sich der Nachweis der Timing Artifakte auf Anregungen und der Erfahrung von Prof. Hans-Joachim Gelke.
 
 
-Im zweiten Teil geht es um den Aufbau eines \textit{midi interfaces}. MIDI bedeutet \textit{musical instrument digital interface} und ist ein Standard, der sowohl die genaue Beschaffenheit der erforderlichen Hardware wie auch das Kommunikationsprotokoll der zu übermittelnden Daten festlegt \cite{Midi_Braut}. Die MIDI Manufacturers Association dokumentiert die mehrfachen Erweitungen des MIDI 1.0 Standard \cite{Midi_specification}. Diese Spezifikationen sind relevant in der Entwicklung des Blocks \textit{midi control}.
-
-Am Institut for Embedded Systems bestand bereits die MIDI UART von Armin Weiss. Diese detektiert die empfangenen Bytes und sendet ein valid-Flag, wenn das Byte korrekt ist. Das Byte wird als logic Vetor übermittelt. In dieser Projektarbeit zu entwickeln sind deshalb die zwei Einheiten \textit{midi control}  und \textit{polyphony out}. Und anschliessend diese Blocks in das bestehende Synthesizer-Projekt einzubauen.
+Im zweiten Teil geht es um den Aufbau eines \textit{midi interfaces}. MIDI bedeutet \textit{musical instrument digital interface} und ist ein Standard, der die Beschaffenheit der Hardware wie auch das Kommunikationsprotokoll festlegt\cite{Midi_Braut}. Die MIDI Manufacturers Association dokumentiert die mehrfachen Erweitungen des MIDI 1.0 Standard\cite{Midi_specification}. Diese Spezifikationen bildet die Grundlage für den Block \textit{midi control}. Am Institut for Embedded Systems besteht ein \textit{midi uart top}-Block in VHDL von Armin Weiss. In dieser Projektarbeit zu entwickeln sind die zwei Einheiten \textit{midi control}  und \textit{polyphony out}. Und anschliessend diese Blocks in das bestehende Synthesizer-Projekt einzubauen. Bei beiden Blocks basiert die Entwicklung auf einer textbasierten \textit{testbench}.
 
 
 Jeder zu entwickelnde Block wird mit einer textbasierten \textit{testbench} getestet. 
 
-\section{Zielsetzung Aufgabenstellung Anforderungen}\label{sect.einleitung_ziele}
-Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabenstellung} unter ref{sect.aufgabenstellung}. Alle Zitate beziehen sich aus diesem Text.\\
+\section{Aufgabenstellung}\label{sect.einleitung_ziele}
+Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabenstellung}. 
 
-
-Von Anfang an war die Projektarbeit in zwei Teile geteilt:\\Im ersten Teil sollten "Timing Artifakte demonstriert werden", die zu einem "zu einem vertieften Verständnis der digitalen Design Grundlagen führen." 
-Ein Ansatz, wie ein glitch detektiert und ein metastabiler Zustand aufgebaut werden kann ist gegeben:\\
+ 
 \begin{itemize}
-	\item "Erzeugung von Glitches mit einem Zähler und nachgeschaltetem Dekoder. Sichtbarmachung der Glitches mit einem Oszilloskop. Betätigen des asynchronen Resets vom Decoder aus." 
+	\item Erzeugung von Glitches mit einem Zähler und nachgeschaltetem Dekoder. Sichtbarmachung der Glitches mit einem Oszilloskop. Betätigen des asynchronen Resets vom Decoder aus.
 
-	\item "Provozieren und sichtbarmachung von Metastabilen Zuständen. Hierfür kann z.B. eine Schaltung mit zwei asynchronen externen Takten aufgebaut werden." 
+	\item Provozieren und sichtbarmachung von metastabilen Zuständen. Hierfür kann z.B. eine Schaltung mit zwei asynchronen externen Takten aufgebaut werden.
 \end{itemize}  
 
-Der Fokus des zweiten Teils liegt im Projektausschrieb bei der Entwicklung vielfälltiger Klangfarben für das Synthesizer-Projekt: \\
-"Im zweiten Teil soll mit dem dem Direct Digital Synthesis Verfahren ein Synthesizer mit vielfältigen Klangfarben entwickelt werden. Damit kann anspruchsvolle digitale Schaltungstechnik umgesetzt werden. Zum erreichen der Klangvielfalt können mehrere DDS Generatoren gleichzeitig, mit unterschiedlichen Frequenzen und Phasen betrieben werden. Möglich ist auch eine Frequenzmodulation mit einem zweiten Generator oder Ändern des Volumens mit einer Hüllkurve. \\
-Die Ansteuerung soll mit Hilfe eines MIDI Interfaces, welches Polyphonie (mehrere Klaviertasten gleichzeitig gedrückt) unterstützt. Die Implementierung soll im FPGA erfolgen. In der Implementierungsphase der Arbeit soll das Timing der FPGA Implementierung genau betrachtet werden. \\
-Am Ende soll eine Referenzimplementierung in Anlehnung an den Yamaha DX7 für das Modul DTP2 entstehen."
 
-Da die Entwicklung des ersten Teils länger dauerte, als vorausgedacht, wurde zu Beginn des zweiten Teils die neuen Anforderungen besprochen, da absehbar wurde, dass alle Anforderungen nicht realistisch sind (siehe Anhang \ref{chap.anhang_aufgabenstellung_neu}) 
-
-Gemäss der Spezifikation des zweiten Teiles sind die nächsten Schritte:
+Nach der Fertigstellen des ersten Teils, wird die Aufgabenstellung für den zweiten Teil präzisiert (siehe Anhang \ref{chap.anhang_aufgabenstellung_neu}).\\ 
 \begin{itemize}
-\item "Midi Interface for Keyboard für Polyphonie nach Konzept von gelk\\
+\item Midi Interface for Keyboard für Polyphonie nach Konzept von gelk\\
 o   10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators\\
 o   10 On/Off Ausgänge Ton on/off\\
 o   UART wird geliefert von gelk\\
 o   VHDL wird von Grund auf neu erstellt.
-\item 10 DDS implementieren und mit Mischer Mischen
+\item 10 DDS implementieren und mit Mischer mischen
 \item Script basierte Testbench. Testbench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
-\item Testbench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. Midi Poliphony Spec muss durch die Testbench unterstützt werden können. Velocity muss nicht unterstützt werden."
-...
-\item "Kein VHDL code ohne Testbench.
-\item Block level testbench. Unit Tests."
+\item Testbench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. Midi Poliphony Spec muss durch die Testbench unterstützt werden können. Velocity muss nicht unterstützt werden.
+\item Kein VHDL code ohne Testbench.
+\item Block level testbench. Unit Tests.
 \end{itemize}
-\bigskip
-
-Im Anhang \ref{chap.anhang_hans_midicontrol} und \ref{chap.anhang_hans_polyphonie} finden sich die vorgegebene Umsetzung des \textit{midi interfaces}. Auf der CD befindet sich das Synthesizer-Referenz-Projekt, in welches das \textit{midi interface} eingebaut wird.
-
-\section{Aufbau der Arbeit}\label{sect.einleitung_aufbau}
-Der erste Teil der Projektarbeit befasst sich mit zwei Herausforderungen der hardwarenahen Sprache VHDL. 
-
-Als Erstes werden sogenannte \textit{glitches}, ungewollte Signalspitzen, künstlich herbeigeführt. Dies geschieht, in dem man die Signalpfade über externes Routing verlängert und dadurch der logische Wert verzögert beim nächsten Bautei, einem \textit{decoder}, eintrifft. Wird der \textit{decoder} asynchron betrieben, so verarbeitet dieser kurzzeitig falsche Werte, was in einem \textit{glitch} sichtbar gemacht wird. 
-
-Als Zweites wird in einer Schaltung ein metastabiler Zustand provoziert. Damit dies erreicht wird, muss die \textit{hold} - oder die\textit{ setup time} eines Flip-Flops verletzt werden. Erzeugt wird die Metastabilität durch unterschiedliches Takten zweier Logiken. Der Ausgang der ersten \textit{clock domain} wird als asynchron Inpuls auf eine \textit{finate state machine} einer anderen \textit{clock domain} geführt. Die \textit{finate state machine} fällt nach kürzester Zeit in einen undefinierten Zustand, einen Zustand, den sie nicht implementiert hat.
-
-
-
-Der zweiten Teil der Projektarbeit beinhaltet das Entwickeln eines polyphonen \textit{midi interface} für das Synthesizer-Projektes der Vorlesung Digitaltechnik II. Gemäss dem MIDI 1.0 Standard wird ein Controller implementiert, der auch das Drücken mehrer Tasten zuverlässig detektiert. Um die Entwicklung effizient zu gestalten, wird von Beginn weg mit einer textbasierten \textit{testbench} gearbeitet. 
-Für die Ausgabe der maxibal 10 gleichzeitig ertönenden Noten wird ein zweiter Block für das Händeln der ein und aus der einzelnen NOten geschrieben. Beide Blocks sind eingehend mit der testbench getestet und deren Verhalten gut dokumentiert.
 
