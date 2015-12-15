@@ -72,7 +72,7 @@ Die Zustandsüberprüfung erfolgt über das Ausgeben des aktuellen Zustands auf 
 	\newline Rote LED 0 ist an
 	\item Zustand = s1\\
 	 Rote LED 1 ist an
-	\item Zustand = \textit{others}\\
+	\item Zustand = \textit{OTHERS}\\
 	 Grüne LED 17 ist an\\
 \end{itemize}
 
@@ -86,12 +86,12 @@ Funktioniert die \textit{fsm}, blinken die zwei roten LEDs abwechslungsweise. F�
 \end{figure}
 
 
-
+\newpage
 \section{Resultat Metastabilität provozieren}\label{sect.meatastabil_proozieren}
 Das Resultat ist, dass das Board unmittelbar nach Einstellen in den metastabilen Zustand fällt und die grüne LED leuchtet. Wird Reset gedrückt, folgt ein kurzes Aufblinken der zwei roten LEDs und wieder die grüne LED.\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{images/idle.png}
+	\includegraphics[width=1\textwidth]{images/metastability/metastabil.JPG}
 	\caption{Metastbiler Zustand}
 	\label{fig.metastabil.Ergebnis_Boardasynchron}
 \end{figure}
@@ -101,7 +101,7 @@ Wird die Synchronisations-Schaltung betätigt, leuchten beide roten LEDs auf. Di
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{images/idle.png}
+	\includegraphics[width=1\textwidth]{images/metastability/synchronized.JPG}
 	\caption{Switchschalter ON: Rote LEDs leuchten}
 	\label{fig.metastabil.Ergebnis_BoardSynchron}
 \end{figure}
