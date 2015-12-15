@@ -10,15 +10,13 @@
 
 \chapter*{Zusammenfassung}
 
-Die hardwarenahe Programmiersprache VHDL ist in der heutigen Zeit ein wichtiger Bestandteil der digitale Signalverarbeitung. ((Im Institut for Embedded Systems, entwickelt die Abteilung High Performance Multi Media, VHDL-basierte Projekte zur Implementation neuer Multi Media Standards.))\\
-
-Bestandteil dieser Projektarbeit sind zwei VHDL-Themen: Das Erforschen zweier hardwarenahen Fehlerquellen, \textit{glitches} und \textit{metastability}, und ein über \textit{texbasierte testbench} zu entwickelndes \textit{midi interface}.\\
+Die hardwarenahe Programmiersprache VHDL ist in der heutigen Zeit ein wichtiger Bestandteil der digitale Signalverarbeitung. Bestandteil dieser Projektarbeit sind zwei VHDL-Themen: Das Erforschen zweier hardwarenahen Fehlerquellen, \textit{glitches} und \textit{metastability}, und ein über \textit{texbasierte testbench} zu entwickelndes \textit{midi interface}.\\
 
 Im Fokus der \textit{glitches} steht das Provozieren der ungewollten Signalspitze. Dies gelingt, in dem man in VHDL mit einem Cylcone II einzelne Signalpfade künstlich verlängert: Das Eintreffen dieser Signale verzögert sich. Dadurch entschlüsselt der asynchrone Dekoder kurzzeitig falsche Werte, die als \textit{glitches} auf die Signalleitung gelangen.\\
 
 Zum Provozieren eines metastabilen Zustandes wird in VHDL ein System mit zwei \textit{clock domains} aufgebaut. Kein Clock ist ein Vielfaches des anderen. In eine \textit{clock domain} sendet Impulse an die andere. Diese verarbeitet diese in einer \textit{finate state machine}. Die aktuellen Zustände der \textit{fsm} werden an LEDs ausgegeben. Tritt keiner der vordefinierten Zustände ein, ist das System in ein undefinierten Zustand gefallen. Metastabilität tritt ein.\\
 
-Das zweite VHDL-Thema ist die Entwickeln eines \textit{midi interface} über eine \textit{texbasierte Testbench}. Bevor einzelne Einheiten des \textit{midi interfaces} in VHDL geschrieben werden, wird die \textit{testbench} erstellt. Die \textit{testbench} enthält Fehlerquellen gemäss MIDI 1.0 Spezifikation. Ziel der VHDL-Codierung ist, einen Fehler nach dem anderen zu lösen. \\
+Das zweite VHDL-Thema ist die Entwickeln eines \textit{midi interface} über eine \textit{texbasierte testbench}. Bevor einzelne Einheiten des \textit{midi interfaces} in VHDL geschrieben werden, wird die \textit{testbench} erstellt. Die \textit{testbench} enthält Fehlerquellen gemäss MIDI 1.0 Spezifikation. Ziel der VHDL-Codierung ist, einen Fehler nach dem anderen zu lösen. \\
 
 Das \textit{midi interface} wird für einen Cyclone IV kompiliert. Die MIDI \textit{status bytes} NOTE ON, NOTE OFF und POLYPHONY sollen detektiert und die \textit{data bytes} gemäss Spezifikation verarbeitet werden. Nach der Dekodierung folgt eine VHDL-Einheit, die die 10 gedrückten MIDI-Noten parallel mit inklusive ihrem Zustand ON oder OFF ausgibt. 
 

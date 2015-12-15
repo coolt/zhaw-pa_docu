@@ -8,39 +8,69 @@
 %																%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{\textit{testbench}}\label{chap.testen}
-Inspiriert vom Konzept des \textit{test driven development} wird stets parallel zur Entwicklung einer \textit{unit} (im folgenden als Block genannt) der \textit{unit-test} entwickelt \cite{Testdriven}.
+\chapter{Testbench}\label{chap.testen}
+ \textit{Test Driven Development} bedeutet, dass vor oder parallel zur Entwicklung einer \textit{unit} (im Folgenden Block genannt) der \textit{unit-test} entwickelt wird\cite{Testdriven}. Beim textbasierten Testen stammen die Befehle aus einer Input-Datei, und die Ergebnisse werden in einer Datei abgelegt. 
+ 
+ 
+\section{Struktur der Input-Datei}\label{sec.testbench_inputdatei} 
 
-Nachdem im Voraus die Schnittstellen zwischen den Blocks geklärt sind (\textbf{siehe Kapitel xXX}) wird eine leere Hülle für jeden zu entwickelnden Block erstellt. Die \textit{testbench} geht von Beginn weg vom Ziel, eines funktionstüchtigen \textit{midi interface} aus. Solange ein Block noch nicht fertig entwickelt ist, führend erst partiell korrekt führende Signale an den Ausgang der DUT. Mit jeder zusätzlichen Implementation, wird das Verhalten der Signale korrekter.\\
+Eine Test-Datei ist zeilenweise strukturiert.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{images/midi_interface/testbench_midiinterface.png}
-	\caption{Blockschaltbild Device under Test}
-	\label{fig.testbench}
-\end{figure}
+\subsubsection{Verarbeitungsmodus} 
+Jede Zeile beginnt mit dem Verabreitungsmodus. Hier einem abgekürzten Wort aus fünf Buchstaben.\\
 
-Eine Bedingung an die Projektarbeit ist, dass die Tests textbasiert ablaufen sollen (siehe Aufgabenstellung im Anhang \ref{chap.anhang_aufgabenstellung_neu}). Diese zusätzliche Spezifikation wird hier kurz zusammengefasst.
+reset	\hspace{2mm} 00 \hspace*{2mm} 	00 \hspace*{2mm} 	..\\
+singl	\hspace{2mm} 90 \hspace*{2mm} 	27 \hspace*{2mm} 	..\\
+polyp	\hspace{1mm} 71 \hspace*{2mm} 	55 \hspace*{2mm} 	.. 
 
-\section{Textbasierte Testbench}\label{sec.testbench}
-Die zu testenden Befehle stammen aus der Datei input\_midi.txt. Der Inhalt ist aufgelisten im Anhang \ref{chap.anhang_midi_input}.
-\subsection{Struktur der Testserie}
-Ausgehend von der MIDI 1.0 Spezifikation, wird die Funktion des \textit{single modes} und des \textit{polyphony modes} getestet. Der Testablauf hängt von dem zu testenden Fall ab: Weil die \textit{data bytes} im \textit{polyphony mode} anders sind, als im \textit{single mode}, baut sich der Test auch anders auf.\\
-\subsubsection{Setzen des Testmodus} 
-Damit das Programm weiss, nach welchem Aufbau es die Signale senden muss, wird zuerst der Testmode eingestellt. Dies ist das erste Wort jeder Zeile im Testscript.\smallskip
-\begin{tabbing}
 
-\textbf{reset} 	 \= 00  \= 00  \=....\\
-\textbf{check} \>00	\>00 \>....\\
-\textbf{singl} \>  55 \>90 \>....\\
-\end{tabbing}
+\subsubsection{Tokenstruktur} 
+Nach dem Verarbeitungsmodus folgen die Daten. Jede Zeile hat gleichviele Datenpackete (Tokens). 
+Die \textit{testbench} ortet jedem Datenpaket innerhalb der Zeile eine Bedeutung zu. Je nach Verarbeitungsmodus ist die Bedeutung der Token eine andere.\\ 
+In der \textit{testbench midi control} haben Tokens folgende Bedeutung:
 
-Den Testmodus \textbf{reset} braucht es, da keine manuellen Tests in die \textit{testbench} eingeführt werden. Den Testmodus \textbf{check} beinhaltet die zu erwartenden Ergebniswerte, wenn der vorhin gesetzte Testmode korrekt abläuft.\\
-Da das Testmodus Kommando-Wort immer gleich lang sein muss (hier 5 Buchstaben) sind die Wörter grammatikalisch nicht korrekt. Aus polyphony wurde polyp. 
+
+polyp	\hspace{2mm} Note \hspace*{4mm} 	Velocity	\hspace*{2mm} Note \hspace*{2mm}  Velocity \hspace*{2mm} 	Note \hspace*{2mm} 	Velocity \hspace*{2mm} 	Note \hspace*{2mm} 	Velocity \hspace*{2mm}  Anzahl Noten an
+
+singl	\hspace{3mm} Dummy \hspace*{2mm} 	Status	\hspace*{2mm} Note \hspace*{2mm}  Status \hspace*{4mm} 	Note \hspace*{2mm} 	Status \hspace*{3mm} 	Note \hspace*{3mm} 	Dummy \hspace*{2mm}  Dummy\\
+
+Dummy wird gesetzt, um die Verarbeitungsstruktur zu vereinfachen. Jeder Dummywert wird beim Einlesen verworfen.\\
+ 
+\section{Aufstellen der Fehler}\label{sec.testbench_fehler} 
+
+
+Ausgehend von der MIDI 1.0 Daten-Struktur, werden die Funktionen \textit{single mode} und  \textit{polyphony mode} getestet. Die Verarbeitung der Datenbytes hängt vom MIDI status byte ab \ref{};
+Der Testablauf hängt von dem zu testenden Fall ab: Weil die \textit{data bytes} im \textit{polyphony mode} anders sind als im \textit{single mode}, baut sich der Test auch anders auf.\\
+
+
+
+
+
+
+
+\subsection*{Basisfunktion 1: Erkennen von Single Note und Polyphonie}
+ 
+
+
+polyp 71 55
+check 71 00
+
+\subsection*{Basisfunktion 2: Erkennen von An und Abstellen der Noten}
+
+singl 90 27 80 27 
+check 00 27 00 00 
+
+polyp 71 55 71 00 
+check 71 00 00 00 
+
+
+
 
 Der Tokenaufbau der zwei Testmodes \textit{single mode} und \textit{polyphony mode }
 wird nun genauer erklärt:
 
+\subsection{Erweiterte Tests: Note an AB,}
+ 
 \subsubsection{Einzelne Noten testen }
 Das Testen einer einzelnen Note ist einfach. Da gemäss Spezifikation zuerst ein \textit{status byte} mit der Meldung Note on (0x90) oder Note off (0x80) kommt. Und dann das \textit{data byte} mit dem Notenwert folgt. Die Geschwindigkeit ist für das An- oder Abstellen der Note nicht relevant und wird deshalb nicht als Befehl eingelesen. Die \textit{testbench} hängt selbständig im single mode nach jeder Note einen Dummy-Geschwindigkeitswert von 0x55 an. \bigskip
 
@@ -74,8 +104,14 @@ Beim Überprüfen des Ausganges des \textit{midi interfaces} muss nach der erste
 
 
 
+%??????????????
+ stammen aus der Datei input\_midi.txt. Der Inhalt ist aufgelisten im Anhang \ref{chap.anhang_midi_input}.
 
+% check: zum Testen des ERgebnissses
 
+\underline{Bsp. zweier Zeilen der Input-Datei}\\
+polyp \hspace*{2mm} 71 \hspace*{4mm} 55 \hspace*{12mm}  02 \hspace*{6mm} 55 \hspace*{10mm} 33 \hspace*{6mm} 55 \hspace*{10mm} 08 \hspace*{6mm} 00 \hspace*{12mm} 00\\
+check \hspace*{2mm} 71 \hspace*{4mm} 00 \hspace*{12mm}  02 \hspace*{6mm} 00 \hspace*{10mm} 33 \hspace*{6mm} 00 \hspace*{10mm} 00 \hspace*{6mm} 00 \hspace*{12mm} 03\\
 
 
 \section{code der testbench}\label{sec.code_testbench}

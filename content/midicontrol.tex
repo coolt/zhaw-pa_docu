@@ -11,6 +11,16 @@
 \chapter{MIDI Steuerung}\label{chap.midi}
 
 \section{Einteilen der Blöcke und definieren der Schnittstelen}
+
+Nachdem im Voraus die Schnittstellen zwischen den Blocks geklärt sind (\textbf{siehe Kapitel xXX}) wird eine leere Hülle für jeden zu entwickelnden Block erstellt. Die \textit{testbench} geht von Beginn weg vom Ziel, eines funktionstüchtigen \textit{midi interface} aus. Solange ein Block noch nicht fertig entwickelt ist, führend erst partiell korrekt führende Signale an den Ausgang der DUT. Mit jeder zusätzlichen Implementation, wird das Verhalten der Signale korrekter.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_interface/testbench_midiinterface.png}
+	\caption{Blockschaltbild Device under Test}
+	\label{fig.testbench}
+\end{figure}
+
 Beschreiben der Schnittstellen\\
 Vor Programmieren der units (blöcke) und unit test, schnittstellen klären \\
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!\\
@@ -33,24 +43,40 @@ Als erstes wird kurz generall auf das MIDI Kommunikationsprotokoll eingegegangen
 
 \newpage
 \section{Das MIDI Kommunikationsprotokoll}\label{sect.midi_spezification}
-Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten (Detailierte Spezifikation S. 11 - 12 ).
-\subsection{\textit{status bytes}}
-\textit{status bytes} sind 8 Bit lang und das MSB ist immer logisch '1'. Die Status Bytes dienen dem Identifizerein der nachfolgenden \textit{data bytes}. Das \textit{status byte} sagt, von welcher Art und mit welcher Datenstruktur die folgenden \textit{data bytes} sein werden.\\
-MIDI behält einen Status so lange, bis ein neues \textit{status byte} folgt. Dieses Verhalten wird als \textit{running status} bezeichnet. Dieses Verhalten ist vor allem für die Polyphonie interessant, da dieser Zustand bleibt und viele \textit{Data Bytes} (im Sinn von Noten) folgen können, ohne dass es eines neuen Status Bytes bedarf.\\
+Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \ref{Midi_specification}.
 
-\subsection{\textit{data bytes}}
-Gemäss Spezifikation folgen einem \textit{Status Byte} exakt ein oder zwei Bytes. Das MSB ist immer logisch '0'. Die Werte können von 0x00 bis 0x7F sein. Das bedeutet, dass MIDI maximal 128 Noten unterscheiden kann.\\
+\subsection{MIDI Daten Typen}
+\subsubsection*{Status Bytes}
+\textit{Status bytes} sind 8 Bit lang und das MSB ist immer logisch '1'. Die \textit{status bytes} dienen dem Identifizerein der nachfolgenden \textit{data bytes}. Das \textit{status byte} sagt, von welcher Art und mit welcher Datenstruktur die folgenden \textit{data bytes} sein werden.\\
+MIDI behält einen Status so lange, bis ein neues \textit{status byte} folgt. Dieses Verhalten wird als \textit{running status} bezeichnet. Dieses Verhalten ist vor allem für die Polyphonie interessant, da dieser Zustand bleibt und viele \textit{Data Bytes} (im Sinn von Noten) folgen können, ohne dass es eines neuen status bytes bedarf.\\
+
+\subsubsection*{Data Bytes}
+Gemäss Spezifikation folgen einem \textit{status byte} exakt ein oder zwei Bytes. Das MSB ist immer logisch '0'. Die Werte können von 0x00 bis 0x7F sein. Das bedeutet, dass MIDI maximal 128 Noten unterscheiden kann.\\
 \textit{data bytes} sind Noten, Geschwindigkeit des Anschalges und ...\\
 Je nachdem welches \textit{status byte} im Voraus gesetzt wurde, werden die Attribute anders interpretiert.\\
 Ist z.B. Polyphonie gesetzt, so bedeutet ein \textit{data byte} mit einer Geschwindigkeit von 0, Note abstellen. Diese und andere Spezifikationen werden detailliert in \textbf{Detailierte Spezifikation} beschrieben.
 \\
-"Empfänger sollen so konzipiert sein, dass zuerst alle\textit{data bytes} empfangen werden und ein neues \textit{status byte} kommt. Danach werden ungültige Daten verworfen. Einzige Ausnahme ist der \textit{running status}. Bei dem nicht bis zum Ende gewartet wird." (Spezifikation, S. 6).\\
+"Empfänger sollen so konzipiert sein, dass zuerst alle\textit{data bytes} empfangen werden und ein neues \textit{status byte} kommt. Danach werden ungültige Daten verworfen. Einzige Ausnahme ist der \textit{running status}. Bei dem nicht bis zum Ende gewartet wird." \ref{Midi_specification}.\\
 
-\subsection{Ungültige Bytes}
-"Alle \textit{status bytes}, die nicht implementierte Funktionen enthalten und alle ihnen folgenden \textit{Data Byte}s sollen vom Empfänger verworfen werden."\textbf{(Spezifikation, 6)}.\\ MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden \textbf{(ebd)}.\\
-Diese Anforderung ist wichtig beim Implementieren einer Finate State Machine und der Testbench (\textbf{siehe Kapitel ......}). \\
+\subsubsection*{Ungültige Bytes}
+"Alle \textit{status bytes}, die nicht implementierte Funktionen enthalten und alle ihnen folgenden \textit{Data Byte}s sollen vom Empfänger verworfen werden."\ref{Midi_specification}.\\ MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden\ref{Midi_specification}.\\
+Diese Anforderung ist wichtig beim Implementieren einer \textit{finate state machine} und der \textit{testbench} (\textbf{siehe Kapitel ......}). \\
 
-
+\subsection{Die zwei Noten Mode}
+\subsubsection*{single mode}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_interface/MIDI_Spezifikation.png}
+	\caption{Blockschaltbild Device under Test}
+	\label{fig.testbench_single_Mode}
+\end{figure}
+\subsubsection*{polyphony mode}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_interface/MIDI_Spezifikation_Datenfolge.png}
+	\caption{Blockschaltbild Device under Test}
+	\label{fig.testbench_polypphon_mode}
+\end{figure}
 
 
 \section{Umsetzung "midi control"-Block}\label{sect.midi_umsetzung}

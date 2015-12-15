@@ -44,6 +44,7 @@
 	author={Altera},
 	title={Cyclone IV Device Handbook},
 	year={2014},
+    pages = {8-19},
 	publisher={San Jose}
 }
 @inbook{Midi_specification,
@@ -60,11 +61,21 @@
 	publisher={Sybex},
 	pages = {10},
 }
+
+
+@inbook{Testdriven,
+	author={Kent Beck},
+	title={Test-Driven Development, By Example},
+	year={2013},
+	publisher={Addsion Wesley Signature},
+	pages = {ix},
+}
+
 @inbook{dictionair,
 	author={Cambridge Dictionaries Online},
 	title={glitch, specialzed electronics},
 	year={02.11.2015},
-	publisher={www.dictionary.cambridge.org/dictionary/english/glitch},
+	publisher={\burl{www.dictionary.cambridge.org/dictionary/english/glitch}},
 }
 
 @inbook{fsm,
@@ -75,3 +86,4 @@
 }
 
 
+>>>>>>> develop
