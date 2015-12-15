@@ -10,18 +10,19 @@
 
 \chapter*{Zusammenfassung}
 
-Der erste Teil der Projektarbeit befasst sich mit zwei Herausforderungen der hardwarenahen Sprache VHDL. 
+Die hardwarenahe Programmiersprache VHDL ist in der heutigen Zeit ein wichtiger Bestandteil der digitale Signalverarbeitung. ((Im Institut for Embedded Systems, entwickelt die Abteilung High Performance Multi Media, VHDL-basierte Projekte zur Implementation neuer Multi Media Standards.))\\
 
-Als Erstes werden sogenannte \textit{glitches}, ungewollte Signalspitzen, künstlich herbeigeführt. Dies geschieht, in dem man die Signalpfade über externes Routing verlängert und dadurch der logische Wert verzögert beim nächsten Bautei, einem \textit{decoder}, eintrifft. Wird der \textit{decoder} asynchron betrieben, so verarbeitet dieser kurzzeitig falsche Werte, was in einem \textit{glitch} sichtbar gemacht wird. 
+Bestandteil dieser Projektarbeit sind zwei VHDL-Themen: Das Erforschen zweier hardwarenahen Fehlerquellen, \textit{glitches} und \textit{metastability}, und ein über \textit{texbasierte testbench} zu entwickelndes \textit{midi interface}.\\
 
-Als Zweites wird in einer Schaltung ein metastabiler Zustand provoziert. Damit dies erreicht wird, muss die \textit{hold} - oder die\textit{ setup time} eines Flip-Flops verletzt werden. Erzeugt wird die Metastabilität durch unterschiedliches Takten zweier Logiken. Der Ausgang der ersten \textit{clock domain} wird als asynchron Inpuls auf eine \textit{finate state machine} einer anderen \textit{clock domain} geführt. Die \textit{finate state machine} fällt nach kürzester Zeit in einen undefinierten Zustand, einen Zustand, den sie nicht implementiert hat.
+Im Fokus der \textit{glitches} steht das Provozieren der ungewollten Signalspitze. Dies gelingt, in dem man in VHDL mit einem Cylcone II einzelne Signalpfade künstlich verlängert: Das Eintreffen dieser Signale verzögert sich. Dadurch entschlüsselt der asynchrone Dekoder kurzzeitig falsche Werte, die als \textit{glitches} auf die Signalleitung gelangen.\\
+
+Zum Provozieren eines metastabilen Zustandes wird in VHDL ein System mit zwei \textit{clock domains} aufgebaut. Kein Clock ist ein Vielfaches des anderen. In eine \textit{clock domain} sendet Impulse an die andere. Diese verarbeitet diese in einer \textit{finate state machine}. Die aktuellen Zustände der \textit{fsm} werden an LEDs ausgegeben. Tritt keiner der vordefinierten Zustände ein, ist das System in ein undefinierten Zustand gefallen. Metastabilität tritt ein.\\
+
+Das zweite VHDL-Thema ist die Entwickeln eines \textit{midi interface} über eine \textit{texbasierte Testbench}. Bevor einzelne Einheiten des \textit{midi interfaces} in VHDL geschrieben werden, wird die \textit{testbench} erstellt. Die \textit{testbench} enthält Fehlerquellen gemäss MIDI 1.0 Spezifikation. Ziel der VHDL-Codierung ist, einen Fehler nach dem anderen zu lösen. \\
+
+Das \textit{midi interface} wird für einen Cyclone IV kompiliert. Die MIDI \textit{status bytes} NOTE ON, NOTE OFF und POLYPHONY sollen detektiert und die \textit{data bytes} gemäss Spezifikation verarbeitet werden. Nach der Dekodierung folgt eine VHDL-Einheit, die die 10 gedrückten MIDI-Noten parallel mit inklusive ihrem Zustand ON oder OFF ausgibt. 
 
 
 
-Der zweiten Teil der Projektarbeit beinhaltet das Entwickeln eines polyphonen \textit{midi interface} für das Synthesizer-Projektes der Vorlesung Digitaltechnik II. Gemäss dem MIDI 1.0 Standard wird ein Controller implementiert, der auch das Drücken mehrer Tasten zuverlässig detektiert. Um die Entwicklung effizient zu gestalten, wird von Beginn weg mit einer textbasierten \textit{testbench} gearbeitet. 
-Für die Ausgabe der maxibal 10 gleichzeitig ertönenden Noten wird ein zweiter Block für das Händeln der ein und aus der einzelnen NOten geschrieben. Beide Blocks sind eingehend mit der testbench getestet und deren Verhalten gut dokumentiert.
-
-(weglassen ??? Erst am Schluss nennen.... )
-Als offener Punkt besteht die Implementation des \textit{midi interfaces} in das bestehende Synthesizer-Projekt. Die Schnittstellen sind im Anhang festgehalten und die notewnigen Implementationsschritte, wie das Ausweiten des bestehenden DDS auf 10 DDS sind im Projekt als Blöcke eingebaut. Aus zeitlichen Gründen konnte dieser letzte Schritt nicht mehr während der Projektarbeit zu Ende gebracht werden. 
 
 

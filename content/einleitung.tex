@@ -29,6 +29,7 @@ Jeder zu entwickelnde Block wird mit einer textbasierten \textit{testbench} gete
 \section{Zielsetzung Aufgabenstellung Anforderungen}\label{sect.einleitung_ziele}
 Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabenstellung} unter ref{sect.aufgabenstellung}. Alle Zitate beziehen sich aus diesem Text.\\
 
+
 Von Anfang an war die Projektarbeit in zwei Teile geteilt:\\Im ersten Teil sollten "Timing Artifakte demonstriert werden", die zu einem "zu einem vertieften Verständnis der digitalen Design Grundlagen führen." 
 Ein Ansatz, wie ein glitch detektiert und ein metastabiler Zustand aufgebaut werden kann ist gegeben:\\
 \begin{itemize}
@@ -62,5 +63,15 @@ o   VHDL wird von Grund auf neu erstellt.
 
 Im Anhang \ref{chap.anhang_hans_midicontrol} und \ref{chap.anhang_hans_polyphonie} finden sich die vorgegebene Umsetzung des \textit{midi interfaces}. Auf der CD befindet sich das Synthesizer-Referenz-Projekt, in welches das \textit{midi interface} eingebaut wird.
 
+\section{Aufbau der Arbeit}\label{sect.einleitung_aufbau}
+Der erste Teil der Projektarbeit befasst sich mit zwei Herausforderungen der hardwarenahen Sprache VHDL. 
 
+Als Erstes werden sogenannte \textit{glitches}, ungewollte Signalspitzen, künstlich herbeigeführt. Dies geschieht, in dem man die Signalpfade über externes Routing verlängert und dadurch der logische Wert verzögert beim nächsten Bautei, einem \textit{decoder}, eintrifft. Wird der \textit{decoder} asynchron betrieben, so verarbeitet dieser kurzzeitig falsche Werte, was in einem \textit{glitch} sichtbar gemacht wird. 
+
+Als Zweites wird in einer Schaltung ein metastabiler Zustand provoziert. Damit dies erreicht wird, muss die \textit{hold} - oder die\textit{ setup time} eines Flip-Flops verletzt werden. Erzeugt wird die Metastabilität durch unterschiedliches Takten zweier Logiken. Der Ausgang der ersten \textit{clock domain} wird als asynchron Inpuls auf eine \textit{finate state machine} einer anderen \textit{clock domain} geführt. Die \textit{finate state machine} fällt nach kürzester Zeit in einen undefinierten Zustand, einen Zustand, den sie nicht implementiert hat.
+
+
+
+Der zweiten Teil der Projektarbeit beinhaltet das Entwickeln eines polyphonen \textit{midi interface} für das Synthesizer-Projektes der Vorlesung Digitaltechnik II. Gemäss dem MIDI 1.0 Standard wird ein Controller implementiert, der auch das Drücken mehrer Tasten zuverlässig detektiert. Um die Entwicklung effizient zu gestalten, wird von Beginn weg mit einer textbasierten \textit{testbench} gearbeitet. 
+Für die Ausgabe der maxibal 10 gleichzeitig ertönenden Noten wird ein zweiter Block für das Händeln der ein und aus der einzelnen NOten geschrieben. Beide Blocks sind eingehend mit der testbench getestet und deren Verhalten gut dokumentiert.
 
