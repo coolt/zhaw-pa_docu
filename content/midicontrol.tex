@@ -14,12 +14,7 @@
 
 Nachdem im Voraus die Schnittstellen zwischen den Blocks geklärt sind (\textbf{siehe Kapitel xXX}) wird eine leere Hülle für jeden zu entwickelnden Block erstellt. Die \textit{testbench} geht von Beginn weg vom Ziel, eines funktionstüchtigen \textit{midi interface} aus. Solange ein Block noch nicht fertig entwickelt ist, führend erst partiell korrekt führende Signale an den Ausgang der DUT. Mit jeder zusätzlichen Implementation, wird das Verhalten der Signale korrekter.\\
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{images/midi_interface/testbench_midiinterface.png}
-	\caption{Blockschaltbild Device under Test}
-	\label{fig.testbench}
-\end{figure}
+
 
 Beschreiben der Schnittstellen\\
 Vor Programmieren der units (blöcke) und unit test, schnittstellen klären \\
@@ -45,7 +40,7 @@ Als erstes wird kurz generall auf das MIDI Kommunikationsprotokoll eingegegangen
 \section{Das MIDI Kommunikationsprotokoll}\label{sect.midi_spezification}
 Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \ref{Midi_specification}.
 
-\subsection{MIDI Daten Typen}
+\subsection{MIDI Daten Typen}\label{datenytpen}
 \subsubsection*{Status Bytes}
 \textit{Status bytes} sind 8 Bit lang und das MSB ist immer logisch '1'. Die \textit{status bytes} dienen dem Identifizerein der nachfolgenden \textit{data bytes}. Das \textit{status byte} sagt, von welcher Art und mit welcher Datenstruktur die folgenden \textit{data bytes} sein werden.\\
 MIDI behält einen Status so lange, bis ein neues \textit{status byte} folgt. Dieses Verhalten wird als \textit{running status} bezeichnet. Dieses Verhalten ist vor allem für die Polyphonie interessant, da dieser Zustand bleibt und viele \textit{Data Bytes} (im Sinn von Noten) folgen können, ohne dass es eines neuen status bytes bedarf.\\
@@ -62,22 +57,27 @@ Ist z.B. Polyphonie gesetzt, so bedeutet ein \textit{data byte} mit einer Geschw
 "Alle \textit{status bytes}, die nicht implementierte Funktionen enthalten und alle ihnen folgenden \textit{Data Byte}s sollen vom Empfänger verworfen werden."\ref{Midi_specification}.\\ MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden\ref{Midi_specification}.\\
 Diese Anforderung ist wichtig beim Implementieren einer \textit{finate state machine} und der \textit{testbench} (\textbf{siehe Kapitel ......}). \\
 
-\subsection{Die zwei Noten Mode}
-\subsubsection*{single mode}
+\subsection{Die zwei Noten Mode}\label{note_modes}
+\subsubsection{single mode}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{images/midi_interface/MIDI_Spezifikation.png}
 	\caption{Blockschaltbild Device under Test}
 	\label{fig.testbench_single_Mode}
 \end{figure}
-\subsubsection*{polyphony mode}
+
+Im Fall der einzelnen Note passt die Tokenstruktur, die sich am schwierigsten Fall, der Polyphonie orientierte, nicht ganz. Im Gegensatz zur Polyphonie muss bei der einzlenen Note VOR dem Notenwert ein status byte kommen. Damit dies in der Tokenstruktur umsetzbar ist, wird zuerst ein Dummy-Wert (55) zum Verwerfen der \textit{testbench} übergeben. Erst dann folgt das \textit{status byte} und dann, analog zur Polyphony-Sturktur folgt die erste Note. Im Nachhinein erscheint mir dieser Aufbau als zu kompliziert und ich würde ein nächstes Mal mehr mode-spezifisch die Datenauswertung gestalten.
+
+
+\subsubsection{polyphony mode}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{images/midi_interface/MIDI_Spezifikation_Datenfolge.png}
 	\caption{Blockschaltbild Device under Test}
 	\label{fig.testbench_polypphon_mode}
 \end{figure}
-
+Danach werden die Token gemäss der Polyphonie-Spezifikation interpretiert: Die \textit{data bytes} wechseln sich ständig mit dem Notenwert und der dazugehörenden Geschwindigkeit ab. Hier in der Testdatei hält die erste Note den Wert 71 und wird gefolgt von irgendeiner Geschwindigkeit (hier Dummy-Wert 55), usw.. Kommt ein Geschwindigkeitswert von 0, so bedeutet dies, dass die Note abgestellt wird.
+Danach werden die Token gemäss der Polyphonie-Spezifikation interpretiert: Die \textit{data bytes} wechseln sich ständig mit dem Notenwert und der dazugehörenden Geschwindigkeit ab. 
 
 \section{Umsetzung "midi control"-Block}\label{sect.midi_umsetzung}
 Ausgehend von der Spezifikation sind drei Eckpunkte für die \textit{finite state machine} zu berücksichtigen:\\
