@@ -207,7 +207,7 @@ Das ist die in quartus generierte \textit{fsm} des Blocks \textit{midi control}.
 \subsection{Simulation Single Mode}
 
 \textbf{Input Daten} (Zeile 3, siehe Anhang \ref{chap.anhang_midi_input})\\
-55 90 27 80 27 90 02 00 00
+singl 55 90 27 80 27 90 02 00 00
 
 \textbf{Beschreibung der Befehle}\\
 - 55 als Dummy-Velocity für alle Noten\\
@@ -244,8 +244,8 @@ Die Simulation zeigt, dass die Notenwerte korrekt gespeichert sind und dass das 
 
 
 \subsection{Simulation Polyphony Mode}
-\textbf{Input Daten} (Zeile 11, siehe Anhang \ref{chap.anhang_midi_input})\\
-02 55 03 00 20 00 40 55 00
+\textbf{Input Daten} (Zeile 9, siehe Anhang \ref{chap.anhang_midi_input})\\
+polyp 02 55 03 00 20 00 40 55 00
 
 \textbf{Beschreibung der Befehle}\\
 - Notenwert 02\\
@@ -323,6 +323,64 @@ Die Werte aller 10 Register werden am Ausgang parallel ausgegeben.
 
 
 \subsection{Resultat Polyphonie Out-Block}
+Das Ziel dieses Blocks ist, dass jeder Notenwert in ein anderes Register gespeichert wird und kein Notenwert zweimal abgelegt wird.\\
+An und Ab müssen in dasselbe Register gespeichert werden.\\
+Dieses Konzept ist unabdingbar für den \textit{polyphony mode} und stört die Notenausgabe im \textit{single mode} nicht. 
+\subsection{Simulation parallel Noten ausgeben}
+\textbf{Input Daten} (Zeile 3, 5, 7 und 9 siehe Anhang \ref{chap.anhang_midi_input})\\
+singl 55 90 27 80 27 90 05 00 00
+singl 55 90 73 80 73 90 16 00 00
+polyp 71 55 02 55 33 55 08 00 00
+polyp 20 55 03 00 20 00 40 55 00
+
+\textbf{Beschreibung der Befehle}\\
+- Dummywert Velocity 0x55
+- Note an \\
+- Notenwert 27\\
+- Note ab \\
+- Notenwert 27\\
+- Note an\\
+- Notenwert 05\\
+
+- Dummywert Velocity 0x55
+- Note an\\
+- Notenwert 73\\
+- Note ab\\
+- Notenwert 73\\
+- Note an\\
+- Notenwert 16\\
+
+- Notenwert 71\\
+- Note an\\
+- Notenwert 02\\
+- Note an\\
+- Notenwert 33\\
+- Note an\\
+- Notenwert 08\\
+- Note ab\\
+
+- Notenwert 20\\
+- Note an\\
+- Notenwert 03\\
+- Note ab\\
+- Notenwert 20\\
+- Note ab\\
+- Notenwert 40\\
+- Note an\\
+
+\textbf{Erwartetes Resultat}\\
+Note 27 wird angestellt (Vektor ist 127), Note 27 wird abgestellt (Vektor ist 027). An und Abstellen sind in demselben Register abgelegt.\\
+Note 05 wird angestellt und in neuem Register abgelegt, da dieses Register unbenutzt ist.\\
+Note 73 wird angestellt und nachher abgestellt. Beides in neuem Register.\\
+Note 16 wird angestellt und in neues Register gelegt.\\
+Note 71 wird angestellt und in neues Register gelegt.\\
+Note 02 wird angestellt und in neues Register gelegt.\\
+Note 33 wird angestellt und in neues Register gelegt.\\
+Note 08 wird abgestellt. (Neues Register stört nicht)\\
+Note 20 wird angestellt und in neues Register gelegt.\\
+Note 03 wird abgestellt. (Neues Register stört nicht)\\
+Note 20 wird abgestellt. Muss im 20-Notenregister sein.\\
+Note 40 wird angestellt und in neues Register gelegt.\\
 
 \begin{figure}[H]
 	\centering
@@ -330,3 +388,5 @@ Die Werte aller 10 Register werden am Ausgang parallel ausgegeben.
 	\caption{Simulation des Blocks Polyphonie Out }
 	\label{fig.polyphnie_simulation}
 \end{figure}
+
+Die Simulation verhält sich exakt nach Spezifikation.
