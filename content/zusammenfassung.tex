@@ -11,20 +11,20 @@
 \chapter*{Zusammenfassung}
 
 
-Die hardwarenahe Programmiersprache VHDL ist in der heutigen Zeit ein wichtiger Bestandteil der digitale Signalverarbeitung.Die Projektarbeit befasst sich mit zwei Themen von VHDL:\\
+Die hardwarenahe Programmiersprache VHDL ist ein wichtiger Bestandteil der digitale Signalverarbeitung. Die Projektarbeit setzt zwei unabhängige Aufgaben in VHDL um.\\
 \begin{itemize}
-\item Das Erforschen zweier hardwarenahen Fehlerquellen, \textit{glitches} und \textit{metastability}, und 
-	\item das Entwickeln eines \textit{midi interfaces}, bei dem die Entwicklung von einer \textit{texbasierten testbench} begleitet wird.
+\item Bilden zweier hardwarenahen Fehlerquellen: \textit{glitches} und \textit{metastability}
+	\item I)mplementation eines \textit{midi interfaces}, dessen Entwicklung auf einer \textit{texbasierten testbench} basiert
 \end{itemize} 
 
 
-Im Fokus der VHDL-Arbeit steht das künstlich Herbeiführen von \textit{glitches}. Dies gelingt mit einem Cylcone II-FPGA in dem Pfade einzelner Signale künstlich verlängert sind. Dadurch treffen Werte verzögert ein und der asynchrone \textit{decoder} verarbeitet falsche Werte. Es gelangen falsche Signale auf die Leitung, sogenannte \textit{glitch}. 
+ \textit{Glitches} werden künstlich Herbeigeführt in dem auf einem Cylcone II-FPGA die Pfade einzelner Signale verlängert sind. Dadurch treffen Werte verzögert ein und der asynchrone \textit{decoder} verarbeitet falsche Werte. Falsche Signale gelangen auf die Leitung und sogenannte \textit{glitch} entstehen. 
 
 
-Um einen metastabilen Zustand in einem System zu provozieren, sind zwei VHDL-Logik-Blöcke unterschiedlich getaktet. Kein Takt wird als Vielfaches des anderen implementiert. Das Ausgangssignal des ersten Logik-Blocks wird als asynchron Inpuls auf den zweiten Logik-Block geführt. Dekodiert die \textit{finate state machine} keinen definierten Zustände, ist das System in einen undefinierten Zustand gefallen. Metastabilität trifft ein.\\
+Der metastabilen Zustand in einem System entsteht, durch das unterschiedliche Takten zweier VHDL-Logik-Blöcke. Kein Takt ist das Vielfaches des anderen. Das Ausgangssignal des ersten Logik-Blocks ist als asynchron Inpuls auf den zweiten Logik-Block geführt. Dekodiert die \textit{finate state machine} keinen definierten Zustände, befindet sich das System in einen undefinierten Zustand. Metastabilität trifft ein.\\
 
 
-Der zweiten Teil der Projektarbeit entwickelt \textit{midi interface}, das Polyphonie detektiert. Die textbasierte \textit{testbench} begleitet die Entwicklung des \textit{midi controller}. Das \textit{midi interface} detektiert die \textit{status bytes} NOTE ON, NOTE OFF und POLYPHONY und die VHDL-Einheit \textit{polyphony} out gibt 10 gedrückte Noten parallel aus.\\
+Der zweiten Teil der Projektarbeit beinhaltet ein \textit{midi interface}, das Polyphonie detektiert. Die textbasierte \textit{testbench} begleitet die Entwicklung des \textit{midi controller}. Das \textit{midi interface} detektiert die \textit{status bytes} NOTE ON, NOTE OFF und POLYPHONY und die VHDL-Einheit \textit{polyphony} out gibt 10 gedrückte Noten parallel aus.\\
 
 
 

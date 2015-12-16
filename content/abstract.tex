@@ -10,5 +10,12 @@
 
 \chapter*{Abstract}\label{chap.abstract}
 
-???
-ou  ou englisch....  mhhhmmmmmmm
+An important part in digital signal processing is the hardware-related programming language VHDL. In this thesis, two independent tasks have been drawn up and implemented using VHDL.
+
+On the one hand was the inducing of hardware-related glitches and metastability, and on the other hand the implementation of a MIDI-interface, whose development is built on a text-based testbench.
+
+By extending the paths of individual signals on a Cyclone II-FPGA it is possible to generate artificial glitches. Hence, some signals arrive delayed at the asynchronous decoder. Wrong information will be processed and put on the signal lines, which occurs in so-called glitch.
+
+Metastable states are caused by clocking two VHDL logic blocks with two independent clocks, where no clock is a multiple of the other one. The output signal of the first block is connected as a asynchronous input of the second block. Since the two blocks work in a different clock domain, the finite state machine can fall in undefined state, in other words the finite state machine is in a metastable state.
+
+--- letzter Teil fehlt... 

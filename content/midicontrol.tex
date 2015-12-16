@@ -35,19 +35,19 @@ Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Date
 
 \subsection{MIDI Daten Typen}\label{datenytpen}
 \subsubsection*{Status Bytes}
-\textit{Status bytes} sind 8 Bit lang und das MSB ist immer logisch '1'. Die \textit{status bytes} dienen dem Identifizerein der nachfolgenden \textit{data bytes}. Das \textit{status byte} sagt, von welcher Art und mit welcher Datenstruktur die folgenden \textit{data bytes} sein werden.
+\textit{Status bytes} sind 8 Bit lang und das MSB ist immer logisch '1'.  \textit{Status bytes} dienen dem Identifizerein der nachfolgenden \textit{data bytes}. Das \textit{status byte} definiert die Datenstruktur der folgenden \textit{data bytes}.
 \newline
 \newline
-MIDI behält einen Status so lange, bis ein neues \textit{status byte} folgt. Dieses Verhalten wird als \textit{running status} bezeichnet. Dieses Verhalten ist vor allem für die Polyphonie interessant, da dieser Zustand bleibt und viele \textit{Data Bytes} (im Sinn von Noten) folgen können, ohne dass es eines neuen status bytes bedarf.
+MIDI behält einen Status, bis ein neues \textit{status byte} folgt. Dieses Verhalten ist als \textit{running status} bezeichnet. Dieses Verhalten ist für Polyphonie relevant, da der Zustand bleibt, bis dass ein neues \textit{status byte} folgt..
 
 \subsubsection*{Data Bytes}
 Gemäss Spezifikation folgen einem \textit{status byte} exakt ein oder zwei Bytes. Das MSB ist immer logisch '0'. Die Werte können von 0x00 bis 0x7F sein. Das bedeutet, dass MIDI maximal 128 Noten unterscheiden kann.
 \newline
 \newline
-\textit{Data bytes} können unterschiedliche Informationen erhalten. Im Kontroller sind Notenwerte, Geschwindigkeit des Anschalges releant
+\textit{Data bytes} können unterschiedliche Informationen erhalten. Im Kontroller sind Notenwerte, Geschwindigkeit des Anschalges relevant
 \newline
 \newline
-Je nachdem welches \textit{status byte} im Voraus gesetzt wurde, werden die Attribute anders interpretiert.Ist z.B. Polyphonie gesetzt, so bedeutet ein \textit{data byte} mit einer Geschwindigkeit von 0, Note abstellen. Diese und andere Spezifikationen werden detailliert in \textbf{Detailierte Spezifikation} beschrieben.
+Je nachdem \textit{status byte} werden die \textit{data byte} anders interpretiert. 
 \newline
 \newline
 ''Empfänger sollen so konzipiert sein, dass zuerst alle\textit{data bytes} empfangen werden und ein neues \textit{status byte} kommt. Danach werden ungültige Daten verworfen. Einzige Ausnahme ist der \textit{running status}. Bei dem nicht bis zum Ende gewartet wird.''\ref{Midi_specification}.\\
@@ -56,62 +56,150 @@ Je nachdem welches \textit{status byte} im Voraus gesetzt wurde, werden die Attr
 ''Alle \textit{status bytes}, die nicht implementierte Funktionen enthalten und alle ihnen folgenden \textit{Data Byte}s sollen vom Empfänger verworfen werden.''\ref{Midi_specification}.\\ MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden\ref{Midi_specification}.\\
 Diese Anforderung ist wichtig beim Implementieren der \textit{finate state machine} und der \textit{testbench} (siehe \ref{polyphonitest}) \\
 
-\subsection{Zwei MIDI Note Modes}\label{note_modes}
-\subsubsection{single mode}
+\subsubsection*{Midi Bytes binär}\label{midi_binaer}
+\begin{itemize}
+	\item ''0xxx xxxx'': \hspace*{10mm}Definition \textit{data byte}
+	\item ''1xxx xxxx'': \hspace*{10mm}Definition \textit{status byte}		
+	\item ''1000 xxxx'': \hspace*{10mm}Definition NOTE OFF
+	\item ''1001 xxxx'': \hspace*{10mm}Definition NOTE ON
+	\item ''1010 xxxx'': \hspace*{10mm}Definition POLYPHONY
+	\item ''100x xxx'' \hspace*{11mm}Erste drei Bits der \textit{status bytes} NOTE ON (0x90) und NOTE OFF (0x80)
+\end{itemize}
+%---5.2-----------------------------------------------------------------------
+\newpage
+\subsection{Zwei MIDI-Noten-Modi}\label{note_modes}
+\subsubsection{Datenstruktur}
+Die Datenstruktur der zwei MIDI-Noten-Modi beginnt mit dem \textit{status byte} (grau in der Abbildung \ref{fig.testbench_single_Mode}). Es folgt der Notenwert (hier einen Dummy-Wert von 0x11 eingetragen) und die Geschwindigkeit. Letztere hat im \textit{single mode} keine spezfiische Bedeutung, im \textit{polyphony mode} bestimmt die Geschwindigkeit, ob die Note an oder ab ist.\\
+
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{images/midi_interface/MIDI_Spezifikation.png}
-	\caption{Blockschaltbild Device under Test}
+	\caption{MIDI Spezifikation für Datenstruktur einzelne Note und Polyphonie}
 	\label{fig.testbench_single_Mode}
 \end{figure}
 
-Im Fall der einzelnen Note passt die Tokenstruktur, die sich am schwierigsten Fall, der Polyphonie orientierte, nicht ganz. Im Gegensatz zur Polyphonie muss bei der einzlenen Note VOR dem Notenwert ein status byte kommen. Damit dies in der Tokenstruktur umsetzbar ist, wird zuerst ein Dummy-Wert (55) zum Verwerfen der \textit{testbench} übergeben. Erst dann folgt das \textit{status byte} und dann, analog zur Polyphony-Sturktur folgt die erste Note. Im Nachhinein erscheint mir dieser Aufbau als zu kompliziert und ich würde ein nächstes Mal mehr mode-spezifisch die Datenauswertung gestalten.
+Unterschiedlich zu behandeln ist die Funktion des \textit{status bytes}. Im \textit{single mode} wird mit dem \textit{status byte} der Zustand an oder ab mitgegeben. Im \textit{polyphony mode} wird nur der Noten-Modus mitgeteilt und das \textit{status byte} hat keine weiteren Funktionalitäten. In der Abbildung wird der Platz von Note an oder ab bezüglich dem Noten-Byte durch graue Markierung veranschaulicht. Die zeitliche Reihenfolge der ist umgekehrt, was in der Token-Verarbeitung berücksichtigt werden muss.\\
 
-
-\subsubsection{polyphony mode}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{images/midi_interface/MIDI_Spezifikation_Datenfolge.png}
+	\includegraphics[width=0.7\textwidth]{images/midi_interface/MIDI_Spezifikation_Datenfolge.png}
 	\caption{Blockschaltbild Device under Test}
 	\label{fig.testbench_polypphon_mode}
 \end{figure}
-Danach werden die Token gemäss der Polyphonie-Spezifikation interpretiert: Die \textit{data bytes} wechseln sich ständig mit dem Notenwert und der dazugehörenden Geschwindigkeit ab. Hier in der Testdatei hält die erste Note den Wert 71 und wird gefolgt von irgendeiner Geschwindigkeit (hier Dummy-Wert 55), usw.. Kommt ein Geschwindigkeitswert von 0, so bedeutet dies, dass die Note abgestellt wird.
-Danach werden die Token gemäss der Polyphonie-Spezifikation interpretiert: Die \textit{data bytes} wechseln sich ständig mit dem Notenwert und der dazugehörenden Geschwindigkeit ab. 
 
-\section{Umsetzung "midi control"-Block}\label{sect.midi_umsetzung}
-Ausgehend von der Spezifikation sind drei Eckpunkte für die \textit{finite state machine} zu berücksichtigen:\\
+Wegen der unterschiedlichen Bedeutung der eingegangenen Token, behandelt die \textit{fsm} die zwei Noten-Modi und deren Noten- und Geschwindigkeitszustände unabhängig voneinander.
+
+
+
+%------5.3-------------------------------------------------------------
+\newpage
+\section{Umsetzung Midi Control-Block}\label{sect.midi_umsetzung}
+
+\subsection{Anforderung an die Finate State Machine und Skizze}\label{anforderung_fsm}
+Der Controller wird über eine \textit{finite state machine} implementiert. Ausgehend von der Spezifikation \ref{sect.midi_spezification} sind drei Eckpunkte berücksichtigt:
 \begin{enumerate}
 	\item Unterscheiden von \textit{status byte} und \textit{data byte}
 	\item Unterschiedliche Interpretation der \textit{data bytes} abhängig vom \textit{status byte}.
 	\item Verwerfen aller falschen \textit{status byte} oder \textit{data bytes}
 \end{enumerate}
+\smallskip
+Vereinfacht verhält sich die \textit{fsm} wie in Abbildung \ref{fig.midi_fsm_skizze} gezeigt. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\textwidth]{images/midi_control/fsm_grob_2.png}
+	\caption{Skizze der fsm}
+	\label{fig.midi_fsm_skizze}
+\end{figure}
 
-Zu beachten in der Verarbeitung der Daten ist, dass im \textit{single mode} zuerst gesagt wird, ob eine Note an oder ab und diese Reihenfolge im \textit{polyphony mode} gerade umgekehrt ist: zuerst kommt die Note, dann die Angabe, ob sie an oder ab ist.
+Startpunkt der Verarbeitung ist das \textit{status byte} (grau hinterlegt). Danach führt die Verarbeitung durch die zwei \textit{data bytes}. \\
+In jedem Zustand, werden ungültige Daten verworfen, und führen zurück zu idle. Die Verarbeitung wird fortgesetzt, wenn das nächste \textit{status byt}e folgt.\\
+\newline
+Nicht angeschrieben sind die Übergangsbedingungen: data\_valid = '1' wechselt zwischen den Zustänen und data\_valid = '0' verbleibt im Zustand. Die breiteren Pfeile heben die fehlerfreie Datenverarbeitung hervor.\\
 
-Aus diesen Anforderungen ergab sich folgende \textit{finite state machine}:
+\subsection{Implementation Finate State Machine}
+Aufgrund der unterschiedlichen Datenstruktur für den \textit{polyphony mode} und den \textit{single mode} besitzen beide Noten-Modi ihre eigenen Zustände (siehe Abbildung \ref{fig.midi_fsm_detail}). \\ 
+\newline
+Die implementierten Zustände sind
+\begin{itemize}
+	\item idle: \hspace*{19mm}Alle nicht näher spezifizierten Vorfälle verwerfen
+	\item single: \hspace*{16mm}Eintreten in  \textit{single mode} durch \textit{status bytes} 0x80 oder 0x90
+	\item note\_s: \hspace*{15mm}Erstes \textit{data byte} im  \textit{single mode}
+	\item velocity\_s: \hspace*{10mm}Zweites \textit{data byte} im \textit{single mode}
+	\item polyphonie: \hspace*{8mm}Eintreten in polyphony mode durch status byte 0xA0
+	\item note\_v:  \hspace*{15mm}Erstes \textit{data byte} im  \textit{polyphony mode}
+	\item velocity\_v:  \hspace*{10mm}Zweites \textit{data byte} im  \textit{polyphony mode}
+\end{itemize}
 
+
+\newpage
+Abbildung \ref{fig.midi_fsm_detail} definiert die Übergangsbedingungen. Drei generelle Verhaltensweisen sind vereinfacht angegeben:
+
+\begin{itemize}
+	\item data\_valid = '0'\hspace*{10mm}Im akutellen Zustand bleiben.\\
+	 \hspace*{34mm}Dargestellt mit Pfeil an Ort
+	\item data\_valid = '1'\hspace*{10mm}Grundbedingung für Zustandswechsel\\
+	\hspace*{34mm}Gilt implizit zu jedem Pfeil und dessen Bedingung dazu
+	\item data(7) = '1' and (data(7 downto 5) /=''100'' or data(7 downto 4)/= ''1010'') \hspace*{5mm} \\
+	\hspace*{34mm}\textit{Status bytes}, die nicht \textit{polyphony} oder \textit{single mode} bedeuten, verworfen\\
+	\hspace*{34mm}Dargestellt durch Pfeil oben rechts zu idle. Gilt für jeden Zustand
+\end{itemize}
+\bigskip
+
+Die Übergangsbedingungen detektiert die Binärstruktur der MIDI Daten, die im Unterkapitel \ref{midi_binaer} aufgelistet ist.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_control/fsm_detailliert.png}
+	\caption{Übergänge der fsm}
+	\label{fig.midi_fsm_detail}
+\end{figure}
+
+Alle drei Anforderungen \ref{anforderung_fsm}, die sich aus der Midi Spezifkation ergeben, sind implementiert:
+\begin{enumerate}
+	\item Vor jedem \textit{data byte} muss ein \textit{status byte} eingegangen sein. Die \textit{finite state machine} fragt im \textit{idle} Zustand nur nach den \textit{status bytes}. Nach dem \textit{status bytes} erwartet die \textit{finate state machine} \textit{data bytes}. 
+	\item Die unterschiedliche Datenstruktur der zwei Noten-Modi ist mode-spefifisch implementiert:\\
+Im \textit{single mode} wird das vierte Bit des \textit{status bytes} zum Setzen von an und ab verwendet . \\
+Im \textit{polyphony mode} wird das zweite \textit{data byte}, die Geschwindigkeit zum Setzen der Note auf an oder ab verwendet. \\ Geschwindigkeit = NULL ist als Note aus implementiert.\\
+	\item Ungültige Bytes sind verworfen, und die \textit{fsm }kehrt in den   \textit{idle} Zustand zurück.
+\end{enumerate}
+
+
+%------5.4------------------------------------------------------------
+\newpage
+\section{Resultat Midi Control-Block}\label{sect.midi_resultat}
+
+\subsection{Implementierte Finate State Machine}
+Das ist die in quartus generierte \textit{fsm} des Blocks \textit{midi control}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{images/midi_control/fsm_midicontrol.png}
-	\caption{fsm Übergänge}
-	\label{fig.midi_fsm_inksape}
-\end{figure}
-Alle drei Anforderungen sind implementiert:\\
-Vor jedem \textit{data byte} muss zuerst ein \textit{status byte} eingegangen sein. Die \textit{finite state machine} fragt im \textit{idle} Zustand nur nach den \textit{status bytes}. So weisen die oberen Nibbel mit den Werten "1001" für NOTE AN und "1000" für NOTE AUS auf den  \textit{single mode} hin und der Wert "1010" auf den \textit{polyphony mode}. Nach diesen \textit{status bytes} erwartet die \textit{finate state machine} \textit{data bytes}.\\ 
-Die unterschiedliche Reihenfolge von Noten-Byte und Angaben zu an oder ab, wurde statusabhängig umgesetzt:\\
-%fig.midi_fsm_inksape
-%(siehe Abbildung fig.midi_fsm_inksape )
-Im \textit{single mode} wird das vierte Bit des \textit{status nibbel} zum Setzen von AN und AB verwendet . Im polyphony mode wird das zweite \textit{data byte}, das ueblicherweise die Geschwindigkeit der Note bestimmt, für das Setzen von AN und AUS genommen. Ist der Wert der Geschwindigkeit gleich NULL, dann soll in diesem Zustand die Note als AUS gelten.\\
-Gut sichtbar ist, dass die \textit{finite state machine} bei ungültigen \textit{bytes}, die Daten verwirft und in den \textit{idle} Zustand zurückgeht.\\
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{images/midi_control/fsm_midi_control_inkskape.png}
-	\caption{fsm Übergangsbedingungen}
-	\label{fig.midi_fsm_quartus}
+	\caption{Implementierte fsm im Block Midi Control}
+	\label{fig.midi_fsm_quartus_}
 \end{figure}
 
-Das Umsetzung der \textit{fsm} sieht man in der simulation in den zweit unteren Abbildungen gut. Nach dem Zustand \textit{idle} folgt das \textit{status byte} "single" (Abbildung \ref{fig.midicontrol_singlet} )oder "polyphonie" (Abbildung \ref{fig.midicontrol_polyphonie} )\\  
+
+\subsection{Simulation Single Mode}
+
+\textbf{Input Daten} (Zeile 3, siehe Anhang \ref{chap.anhang_midi_input})\\
+55 90 27 80 27 90 02 00 00
+
+\textbf{Beschreibung der Befehle}\\
+- 55 als Dummy-Velocity für alle Noten\\
+- Note an\\
+- Notenwert 27\\
+- Note ab\\
+- Notenwert 27\\
+- Note an\\
+- Notenwert 02\\
+- Dummywerte\\
+
+\textbf{Erwartetes Resultat}\\
+Der Kontroller erkennt die Note 27, schaltet diese an und gibt am Ausgang den Vektor ''Note-27-AN'' aus. Dieselbe Note wird nochmals detektiert, diesmal als ab und der Vektor am Ausgang zeigt ''Note-27-AB'' an. Die nächste Note hat den Wert 2 und wird auf AN gesetzt. Der Ausgang gibt ''Note-2-AN'' aus.\\
+
+
+\newpage
 
 \begin{figure}[H]
 	\centering
@@ -120,6 +208,34 @@ Das Umsetzung der \textit{fsm} sieht man in der simulation in den zweit unteren 
 	\label{fig.midicontrol_singlet}
 \end{figure}
 
+\begin{itemize}
+	\item Das Signal rx\_data detektiert die Befehle (0x90) und (0x80).
+	\item Der Controller interpretiert  \textit{single modus}. 
+	\item Die Zustandsabfolge ist korrekt: single, note\_s, velocity\_s.
+	\item Zustände werden bei rx\_data\_valid = '1' die Zustände geändert.
+\end{itemize}
+
+Die Simulation zeigt, dass die Notenwerte korrekt gespeichert sind und dass das An- und Abstellen der Noten funktioniert. Am Ausgang erscheint der zusammengesetzer Vektor aus den 8 Notenbits und einem vorangestellten Bit, das detektiert, ob die aktuelle Note an oder ab ist. 
+
+
+
+\subsection{Simulation Polyphony Mode}
+\textbf{Input Daten} (Zeile 11, siehe Anhang \ref{chap.anhang_midi_input})\\
+02 55 03 00 20 00 40 55 00
+
+\textbf{Beschreibung der Befehle}\\
+- Notenwert 02\\
+- Note an\\
+- Notenwert 03\\
+- Note ab\\
+- Notenwert 02\\
+- Note ab\\
+- Notenwert 40\\
+- Note an\\
+
+\textbf{Erwartetes Resultat}\\
+Der Kontroller erkennt die Note 02, schaltet diese an und gibt am Ausgang den Vektor ''Note-02-AN'' aus. Die Note 03 wird detektiert, auf ab gesetzt und der Vektor am Ausgang zeigt ''Note-03-AB'' aus. Die nächste Note hat den Wert 2 und wird auf ab gesetzt. Der Ausgang gibt ''Note-2-Ab'' aus. Als letztes folgt die Note 40, die angestellt wird.\\
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{images/midi_control/wave_polyphonie.png}
@@ -127,7 +243,16 @@ Das Umsetzung der \textit{fsm} sieht man in der simulation in den zweit unteren 
 	\label{fig.midicontrol_polyphonie}
 \end{figure}
 
-Die Simulation wurde mit möglichen Fehlübertragungen angereichert, damit man sieht, ob der \textit{midi control} weiter korrekt funktionert. Eine detaillierte Beschreibung zum Aufbau der Simulation befindet sich im Kapitel \textbf{testbench}.\\
+
+\begin{itemize}
+	\item Das Signal rx\_data detektiert den Befehle (0xA0).
+	\item Der Controller interpretiert  \textit{polyphony mode}. 
+	\item Die Zustandsabfolge ist korrekt: polyphonie, note\_v, velocity\_v.
+	\item Der Controller wartet mit dem Setzen der Note am Ausgang, bis klar ist, ob die Note an oder ab ist. \\
+	Keine kurzfristig falschen Noten am Ausgang, die ab sind.
+	\item Zustände werden bei rx\_data\_valid = '1' die Zustände geändert.
+	\item Noten können beliebig an- und abgestellt werden
+\end{itemize}
 
 
 \section{Umsetzung "polyphonie out"-Block}\label{sect.polyphonie_umsetzung}
