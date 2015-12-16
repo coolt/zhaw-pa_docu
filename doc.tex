@@ -14,8 +14,12 @@
 \usepackage[toc,page]{appendix}
 \usepackage[autostyle=true,german=quotes]{csquotes} % quotes
 \usepackage{cite}
+\usepackage[justification=raggedright,singlelinecheck=false]{caption}
+%\usepackage[pdfauthor={Katrin Bächli}, pdftitle={Projektarbeit HS15 Studiengang Elektrotechnik - Polyphonic DDS Synthesizer mit MIDI Steuerung}, colorlinks=true,linkcolor=black,citecolor=black,plainpages=false]{hyperref}
+\usepackage{breakurl}
 
-%\usepackage[latin1]{inputenc}    %Umlaute
+
+% \usepackage[latin1]{inputenc}    %Umlaute  -> Fehler: "option clash for package inputenc
 
 %\renewcommand{\contentsname}{Inhaltsverzeichnis}
 
@@ -23,22 +27,18 @@
 \begin{document}
 
 	\hbadness 10000
-	\author{Katrin Bächli }
-	\betreuer{Prof. Hans-Joachim Gelke }
-	\betreuer{Dr. Matthias Rosenthal }
+%	\author{Katrin Bächli }  -> Fehler: Error: unicode char \u8:äch not set up for use with LaTeX \maketitle
+	\renewcommand{\betreuer}{Prof. Hans-Joachim Gelke}
+	\renewcommand{\nebenbetreuer}{Dr. Matthias Rosenthal}
 	\title{PA15\_gelk\_1 Polyphonic DDS Synthesizer mit MIDI Steuerung}
 	\subtitle{PA15\_gelk\_1 Polyphonic DDS Synthesizer mit MIDI Steuerung}
 	\email{katrin.baechli@zhaw.ch}
 
 
-%	\maketitle
+	\maketitle
 	
 	\headings
 	
-	
-	
-	% To Do-Liste 
-	\listoftodos     % TO DEL am Ende
 	
 	\include{content/zusammenfassung}		
 	\include{content/abstract}		
@@ -56,10 +56,7 @@
 	\include{content/verzeichnis}
 	\include{content/anhang}	
 	
-	% add Bibliography to TOC
-	%\addcontentsline{toc}{chapter}{\bibname}              
-	%\bibliographystyle{plain}
-	%\bibliography{BibTex/references}
+
 	
 
 \end{document}
