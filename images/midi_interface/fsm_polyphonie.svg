@@ -17,7 +17,7 @@
    inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Uebersicht_FPGA_v4.png"
    inkscape:export-xdpi="150"
    inkscape:export-ydpi="150"
-   sodipodi:docname="fsm_midi_polyphonie.svg">
+   sodipodi:docname="fsm_polyphonie.svg">
   <defs
      id="defs4">
     <marker
@@ -154,8 +154,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.085"
-     inkscape:cx="242.02344"
-     inkscape:cy="195.37318"
+     inkscape:cx="244.96749"
+     inkscape:cy="785.23493"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -214,523 +214,7 @@
            height="89.532295"
            x="-139.19984"
            y="21.760506" /></flowRegion><flowPara
-         id="flowPara3805" /></flowRoot>    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1.33818698;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect5442"
-       width="475.66873"
-       height="205.02644"
-       x="50.312012"
-       y="191.61035"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 218,226.36218 0,20"
-       id="path5697"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="130"
-       y="266.36218"
-       id="text5486"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan5488"
-         x="130"
-         y="266.36218">FSM</tspan><tspan
-         sodipodi:role="line"
-         x="130"
-         y="276.36218"
-         id="tspan5490" /></text>
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect5500"
-       width="39.890907"
-       height="49.337914"
-       x="459.92285"
-       y="196.90057"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <g
-       id="g5846"
-       transform="translate(236,-506)"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <path
-         inkscape:connector-curvature="0"
-         id="path5450"
-         d="m 270,727.36218 55,0"
-         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <g
-         transform="translate(-8,0)"
-         id="g5466">
-        <text
-           xml:space="preserve"
-           style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-           x="336.86636"
-           y="718.8783"
-           id="text5454"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan5456"
-             x="336.86636"
-             y="718.8783">5 V</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-           x="336.83902"
-           y="728.24237"
-           id="text5458"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan5460"
-             x="336.83902"
-             y="728.24237">Signal-Pegel:</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-           x="336.77261"
-           y="738.3714"
-           id="text5462"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan5464"
-             x="336.77261"
-             y="738.3714">GND</tspan></text>
-      </g>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5474"
-         y="728.36218"
-         x="378"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="728.36218"
-           x="378"
-           id="tspan5476"
-           sodipodi:role="line">std_logic_vector(7 downto 0)</tspan></text>
-      <g
-         id="g5835">
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.80893624px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 289.18203,717.36218 35.99078,0"
-           id="path5448"
-           inkscape:connector-curvature="0" />
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.80383378px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 289.63874,737.36218 35.53819,0"
-           id="path5452"
-           inkscape:connector-curvature="0" />
-        <text
-           xml:space="preserve"
-           style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-           x="235"
-           y="712.36218"
-           id="text5502"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan5504"
-             x="235"
-             y="712.36218">MUX</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-           x="235"
-           y="722.36218"
-           id="text5506"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan5508"
-             x="235"
-             y="722.36218">'1'</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-           x="235"
-           y="737.36218"
-           id="text5510"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan5512"
-             x="235"
-             y="737.36218">'0'</tspan></text>
-        <path
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 245,722.36218 20,5 10,0"
-           id="path5514"
-           inkscape:connector-curvature="0" />
-      </g>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="220"
-       y="236.36218"
-       id="text5520"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan5522"
-         x="220"
-         y="236.36218">status-nibbel</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="305"
-       y="246.36218"
-       id="text5524"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan5526"
-         x="305"
-         y="246.36218">tone-byte </tspan></text>
-    <g
-       id="g5611"
-       transform="translate(125,-481)"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <path
-         transform="matrix(1.3404326,0,0,1.3404326,46.104069,-157.4671)"
-         d="m 95,712.36218 c 0,30.37566 -26.862915,55 -60,55 -33.137085,0 -60,-24.62434 -60,-55 0,-30.37566 26.862915,-55 60,-55 33.137085,0 60,24.62434 60,55 z"
-         sodipodi:ry="55"
-         sodipodi:rx="60"
-         sodipodi:cy="712.36218"
-         sodipodi:cx="35"
-         id="path5484"
-         style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text5530"
-         y="737.36218"
-         x="80"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="737.36218"
-           x="80"
-           id="tspan5532"
-           sodipodi:role="line">&quot;1000&quot;</tspan><tspan
-           id="tspan5534"
-           y="747.36218"
-           x="80"
-           sodipodi:role="line">Note aus</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5536"
-         y="762.36218"
-         x="45"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="762.36218"
-           x="45"
-           id="tspan5538"
-           sodipodi:role="line">&quot;1001&quot; </tspan><tspan
-           id="tspan5552"
-           y="772.36218"
-           x="45"
-           sodipodi:role="line">Note an </tspan><tspan
-           id="tspan5550"
-           y="782.36218"
-           x="45"
-           sodipodi:role="line" /><tspan
-           id="tspan5548"
-           y="792.36218"
-           x="45"
-           sodipodi:role="line" /><tspan
-           id="tspan5546"
-           y="802.36218"
-           x="45"
-           sodipodi:role="line" /></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5554"
-         y="792.36218"
-         x="25"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="792.36218"
-           x="25"
-           id="tspan5556"
-           sodipodi:role="line">&quot;1010&quot; </tspan><tspan
-           id="tspan5562"
-           y="802.36218"
-           x="25"
-           sodipodi:role="line">Polyphonie </tspan><tspan
-           id="tspan5566"
-           y="812.36218"
-           x="25"
-           sodipodi:role="line">mit Nachhall</tspan><tspan
-           id="tspan5564"
-           y="822.36218"
-           x="25"
-           sodipodi:role="line" /><tspan
-           id="tspan5560"
-           y="832.36218"
-           x="25"
-           sodipodi:role="line" /><tspan
-           id="tspan5558"
-           y="842.36218"
-           x="25"
-           sodipodi:role="line" /></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5568"
-         y="832.36218"
-         x="55"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="832.36218"
-           x="55"
-           id="tspan5570"
-           sodipodi:role="line">&quot;1011&quot; </tspan><tspan
-           id="tspan5572"
-           y="842.36218"
-           x="55"
-           sodipodi:role="line">Control </tspan><tspan
-           id="tspan5594"
-           y="852.36218"
-           x="55"
-           sodipodi:role="line">change</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5574"
-         y="832.36218"
-         x="105"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="832.36218"
-           x="105"
-           id="tspan5576"
-           sodipodi:role="line">&quot;1100&quot; </tspan><tspan
-           id="tspan5578"
-           y="842.36218"
-           x="105"
-           sodipodi:role="line">Program </tspan><tspan
-           id="tspan5592"
-           y="852.36218"
-           x="105"
-           sodipodi:role="line">change</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5580"
-         y="792.36218"
-         x="120"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="792.36218"
-           x="120"
-           id="tspan5582"
-           sodipodi:role="line">&quot;1101&quot; </tspan><tspan
-           id="tspan5584"
-           y="802.36218"
-           x="120"
-           sodipodi:role="line">Kanal </tspan><tspan
-           id="tspan5596"
-           y="812.36218"
-           x="120"
-           sodipodi:role="line">Nachhall</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5586"
-         y="762.36218"
-         x="115"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="762.36218"
-           x="115"
-           id="tspan5588"
-           sodipodi:role="line">&quot;1111&quot; </tspan><tspan
-           id="tspan5590"
-           y="772.36218"
-           x="115"
-           sodipodi:role="line">Pitch wheel</tspan></text>
-    </g>
-    <g
-       id="g5703"
-       transform="translate(120,-501)"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <rect
-         y="772.4046"
-         x="190.04243"
-         height="44.915123"
-         width="100.23034"
-         id="rect5478"
-         style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1.08487618;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text5480"
-         y="787.36218"
-         x="195"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="787.36218"
-           x="195"
-           id="tspan5482"
-           sodipodi:role="line">Buffer 1</tspan><tspan
-           y="797.36218"
-           x="195"
-           sodipodi:role="line"
-           id="tspan5741">Töne und Attribute</tspan><tspan
-           id="tspan5498"
-           y="807.36218"
-           x="195"
-           sodipodi:role="line">(7 downto 0)</tspan></text>
-    </g>
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect5645"
-       width="85"
-       height="20"
-       x="200"
-       y="206.36218"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="205"
-       y="216.36218"
-       id="text5647"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan5649"
-         x="205"
-         y="216.36218">split byte to nibbel</tspan></text>
-    <g
-       id="g5689"
-       transform="translate(140,-521)"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <rect
-         y="717.26483"
-         x="-70.097336"
-         height="45.194668"
-         width="54.890091"
-         id="rect5478-2"
-         style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text5480-8"
-         y="732.36218"
-         x="-65"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="732.36218"
-           x="-65"
-           id="tspan5482-2"
-           sodipodi:role="line">Buffer </tspan><tspan
-           y="742.36218"
-           x="-65"
-           sodipodi:role="line"
-           id="tspan5815">Ton-Kanal</tspan><tspan
-           id="tspan5498-8"
-           y="752.36218"
-           x="-65"
-           sodipodi:role="line">(3 downto 0)</tspan></text>
-    </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 199.44333,216.36218 -73.96691,0"
-       id="path5695"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <g
-       id="g5703-9"
-       transform="translate(225,-501)"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <rect
-         y="772.4046"
-         x="190.04243"
-         height="44.915123"
-         width="100.23034"
-         id="rect5478-0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1.08487618;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text5480-7"
-         y="787.36218"
-         x="195"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="787.36218"
-           x="195"
-           id="tspan5482-8"
-           sodipodi:role="line">Buffer 2   (??)</tspan><tspan
-           y="797.36218"
-           x="195"
-           sodipodi:role="line"
-           id="tspan5743">Velocity und Attribute</tspan><tspan
-           id="tspan5498-1"
-           y="807.36218"
-           x="195"
-           sodipodi:role="line">(7 downto 0)</tspan></text>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="135"
-       y="211.36218"
-       id="text5817"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan5819"
-         x="135"
-         y="211.36218">channel-nibbel</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 345,256.36218 120,0 0,15"
-       id="path5833"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 285,216.36218 175,0"
-       id="path5872"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 460,231.36218 -115,0 0,40"
-       id="path5874"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <flowRoot
+         id="flowPara3805" /></flowRoot>    <flowRoot
        style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
        id="flowRoot8034"
        xml:space="preserve"><flowRegion
@@ -740,246 +224,7 @@
            height="56.047173"
            width="46.271503"
            id="rect8038" /></flowRegion><flowPara
-         id="flowPara8040" /></flowRoot>    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect9981"
-       width="200"
-       height="50"
-       x="310"
-       y="336.36218"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="320"
-       y="356.36218"
-       id="text9983"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan9985"
-         x="320"
-         y="356.36218">Buffer Controll</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 283.63806,356.36218 26.20677,0"
-       id="path9987"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 340,316.36218 0,20"
-       id="path9989"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 340,326.36218 230,0"
-       id="path9991"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="575"
-       y="331.36218"
-       id="text9993"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan9995"
-         x="575"
-         y="331.36218">Ton und Attribute aus</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-       x="63.216"
-       y="173.9025"
-       id="text9997"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan9999"
-         x="63.216"
-         y="173.9025"
-         style="font-weight:bold;-inkscape-font-specification:Arial Bold">Midi-Interface: Skizze</tspan></text>
-    <g
-       id="g5611-2"
-       transform="translate(75,-710)"
-       inkscape:export-filename="C:\Users\katrin\Documents\Dokumente\ZHAW\5Jahr\PA_docu\images\synthesizer\Midi-Interface_Skizze.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <path
-         transform="matrix(1.3404326,0,0,1.3404326,46.104069,-157.4671)"
-         d="m 95,712.36218 c 0,30.37566 -26.862915,55 -60,55 -33.137085,0 -60,-24.62434 -60,-55 0,-30.37566 26.862915,-55 60,-55 33.137085,0 60,24.62434 60,55 z"
-         sodipodi:ry="55"
-         sodipodi:rx="60"
-         sodipodi:cy="712.36218"
-         sodipodi:cx="35"
-         id="path5484-4"
-         style="fill:#ffffff;fill-opacity:1;stroke:#131212;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text5530-5"
-         y="737.36218"
-         x="80"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="737.36218"
-           x="80"
-           id="tspan5532-5"
-           sodipodi:role="line">&quot;1000&quot;</tspan><tspan
-           id="tspan5534-9"
-           y="747.36218"
-           x="80"
-           sodipodi:role="line">Note aus</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5536-5"
-         y="762.36218"
-         x="45"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="762.36218"
-           x="45"
-           id="tspan5538-0"
-           sodipodi:role="line">&quot;1001&quot; </tspan><tspan
-           id="tspan5552-1"
-           y="772.36218"
-           x="45"
-           sodipodi:role="line">Note an </tspan><tspan
-           id="tspan5550-1"
-           y="782.36218"
-           x="45"
-           sodipodi:role="line" /><tspan
-           id="tspan5548-2"
-           y="792.36218"
-           x="45"
-           sodipodi:role="line" /><tspan
-           id="tspan5546-7"
-           y="802.36218"
-           x="45"
-           sodipodi:role="line" /></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5554-3"
-         y="792.36218"
-         x="25"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="792.36218"
-           x="25"
-           id="tspan5556-0"
-           sodipodi:role="line">&quot;1010&quot; </tspan><tspan
-           id="tspan5562-8"
-           y="802.36218"
-           x="25"
-           sodipodi:role="line">Polyphonie </tspan><tspan
-           id="tspan5566-7"
-           y="812.36218"
-           x="25"
-           sodipodi:role="line">mit Nachhall</tspan><tspan
-           id="tspan5564-8"
-           y="822.36218"
-           x="25"
-           sodipodi:role="line" /><tspan
-           id="tspan5560-3"
-           y="832.36218"
-           x="25"
-           sodipodi:role="line" /><tspan
-           id="tspan5558-8"
-           y="842.36218"
-           x="25"
-           sodipodi:role="line" /></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5568-2"
-         y="832.36218"
-         x="55"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="832.36218"
-           x="55"
-           id="tspan5570-1"
-           sodipodi:role="line">&quot;1011&quot; </tspan><tspan
-           id="tspan5572-5"
-           y="842.36218"
-           x="55"
-           sodipodi:role="line">Control </tspan><tspan
-           id="tspan5594-6"
-           y="852.36218"
-           x="55"
-           sodipodi:role="line">change</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5574-1"
-         y="832.36218"
-         x="105"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="832.36218"
-           x="105"
-           id="tspan5576-7"
-           sodipodi:role="line">&quot;1100&quot; </tspan><tspan
-           id="tspan5578-8"
-           y="842.36218"
-           x="105"
-           sodipodi:role="line">Program </tspan><tspan
-           id="tspan5592-5"
-           y="852.36218"
-           x="105"
-           sodipodi:role="line">change</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5580-7"
-         y="792.36218"
-         x="120"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="792.36218"
-           x="120"
-           id="tspan5582-0"
-           sodipodi:role="line">&quot;1101&quot; </tspan><tspan
-           id="tspan5584-0"
-           y="802.36218"
-           x="120"
-           sodipodi:role="line">Kanal </tspan><tspan
-           id="tspan5596-9"
-           y="812.36218"
-           x="120"
-           sodipodi:role="line">Nachhall</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5586-0"
-         y="762.36218"
-         x="115"
-         style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
-         xml:space="preserve"><tspan
-           y="762.36218"
-           x="115"
-           id="tspan5588-4"
-           sodipodi:role="line">&quot;1111&quot; </tspan><tspan
-           id="tspan5590-5"
-           y="772.36218"
-           x="115"
-           sodipodi:role="line">Pitch wheel</tspan></text>
-    </g>
-    <flowRoot
+         id="flowPara8040" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3464"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:8px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
@@ -989,482 +234,7 @@
            height="248.95372"
            x="32.585567"
            y="523.17261" /></flowRegion><flowPara
-         id="flowPara3470" /></flowRoot>    <g
-       id="g3694"
-       transform="translate(166.91245,-19.009216)"
-       style="fill:#cccccc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <path
-         transform="matrix(0.75057298,0,0,1.0033053,123.4368,60.517496)"
-         d="m 290,582.36218 c 0,11.0457 -20.14719,20 -45,20 -24.85281,0 -45,-8.9543 -45,-20 0,-11.04569 20.14719,-20 45,-20 24.85281,0 45,8.95431 45,20 z"
-         sodipodi:ry="20"
-         sodipodi:rx="45"
-         sodipodi:cy="582.36218"
-         sodipodi:cx="245"
-         id="path3634-9"
-         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text3472"
-         y="646.3714"
-         x="293.08755"
-         style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           y="646.3714"
-           x="293.08755"
-           id="tspan3474"
-           sodipodi:role="line">single</tspan></text>
-    </g>
-    <g
-       id="g3704"
-       transform="translate(138.78342,12.211975)"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <path
-         transform="matrix(0.75057298,0,0,1.0033053,141.57045,103.85851)"
-         d="m 290,582.36218 c 0,11.0457 -20.14719,20 -45,20 -24.85281,0 -45,-8.9543 -45,-20 0,-11.04569 20.14719,-20 45,-20 24.85281,0 45,8.95431 45,20 z"
-         sodipodi:ry="20"
-         sodipodi:rx="45"
-         sodipodi:cy="582.36218"
-         sodipodi:cx="245"
-         id="path3634-490"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text3482"
-         y="690.15021"
-         x="309.21658"
-         style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           y="690.15021"
-           x="309.21658"
-           id="tspan3484"
-           sodipodi:role="line">note_s</tspan></text>
-    </g>
-    <g
-       id="g3714"
-       transform="translate(-102.39632,-2.9031982)"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <path
-         transform="matrix(0.75057298,0,0,1.0033053,-26.586235,78.351596)"
-         d="m 290,582.36218 c 0,11.0457 -20.14719,20 -45,20 -24.85281,0 -45,-8.9543 -45,-20 0,-11.04569 20.14719,-20 45,-20 24.85281,0 45,8.95431 45,20 z"
-         sodipodi:ry="20"
-         sodipodi:rx="45"
-         sodipodi:cy="582.36218"
-         sodipodi:cx="245"
-         id="path3634-4"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text3490"
-         y="665.26538"
-         x="142.39632"
-         style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           y="665.26538"
-           x="142.39632"
-           id="tspan3492"
-           sodipodi:role="line">note_v</tspan></text>
-    </g>
-    <g
-       id="g3709"
-       transform="translate(-111.40553,-102.46545)"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <path
-         transform="matrix(0.75057298,0,0,1.0033053,-24.765957,113.0751)"
-         d="m 290,582.36218 c 0,11.0457 -20.14719,20 -45,20 -24.85281,0 -45,-8.9543 -45,-20 0,-11.04569 20.14719,-20 45,-20 24.85281,0 45,8.95431 45,20 z"
-         sodipodi:ry="20"
-         sodipodi:rx="45"
-         sodipodi:cy="582.36218"
-         sodipodi:cx="245"
-         id="path3634-2"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text3494"
-         y="699.82764"
-         x="136.40553"
-         style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           y="699.82764"
-           x="136.40553"
-           id="tspan3496"
-           sodipodi:role="line">velocity_v</tspan></text>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="-50"
-       y="632.36218"
-       id="text3498-6-2"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan3500-9-7"
-         x="-50"
-         y="632.36218">data_valid = '1'</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 345.19566,558.79017 c 12.12045,0 29.5436,-4.99005 78.02542,0 13.19725,1.35835 30.51924,-0.1965 48.4818,19.96019 17.81786,19.99431 12.12046,14.97016 14.10896,27.1334"
-       id="path3764"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cssc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 488,642.36218 c 0,20 -1.95671,24.19912 -5,40"
-       id="path3764-9"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
-       d="m 303.8924,570.68795 c -1.9123,9.83503 0.99765,26.72178 -4.032,36.67466 -5.02964,9.95287 -12.84418,17.90048 -25.84155,19.99571 -15.50494,2.49947 -61.86382,-0.0754 -72.35637,4.99893 -10.33662,4.99893 -5.55945,3.57309 -10.33662,14.99678"
-       id="path3786"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="csssc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 180,652.36218 c -14.88136,11.35921 -29.70779,21.22597 -95,15"
-       id="path3788"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <g
-       id="g3719"
-       transform="translate(25,70)"
-       style="fill:#cccccc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <path
-         transform="matrix(0.75057298,0,0,1.0033053,-32.577018,12.752518)"
-         d="m 290,582.36218 c 0,11.0457 -20.14719,20 -45,20 -24.85281,0 -45,-8.9543 -45,-20 0,-11.04569 20.14719,-20 45,-20 24.85281,0 45,8.95431 45,20 z"
-         sodipodi:ry="20"
-         sodipodi:rx="45"
-         sodipodi:cy="582.36218"
-         sodipodi:cx="245"
-         id="path3634-29"
-         style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text3476"
-         y="597.36218"
-         x="130"
-         style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           y="597.36218"
-           x="130"
-           id="tspan3478"
-           sodipodi:role="line">polyphonie</tspan><tspan
-           id="tspan3480"
-           y="607.36218"
-           x="130"
-           sodipodi:role="line" /></text>
-    </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 25,652.36218 c -8.255901,-8.04508 -5,-25 0,-40"
-       id="path3790"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 75,607.36218 c 10.029527,11.34753 13.487902,21.27933 10,40"
-       id="path3792"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);stroke-miterlimit:4;stroke-dasharray:none"
-       d="M 31.112413,577.33281 C 22.257326,538.02503 17.176074,507.96202 55.631913,482.40483 93.2184,457.42539 199.71344,462.42127 293.67968,462.42127 c 61.08354,0 146.26273,14.74808 175.4036,39.96709 33.68488,29.15147 42.62322,60.79449 23.78097,104.94796"
-       id="path3796"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="csssc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 500,612.36218 c 15,-20 45,5 10,15"
-       id="path6652"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#ffe680;fill-opacity:1;stroke:#000000;stroke-width:0.77962028999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="path3634-49"
-       sodipodi:cx="245"
-       sodipodi:cy="582.36218"
-       sodipodi:rx="45"
-       sodipodi:ry="20"
-       d="m 290,582.36218 a 45,20 0 1 1 -90,0 45,20 0 1 1 90,0 z"
-       transform="matrix(1.3769512,0,0,1.194855,-48.895957,-147.25531)"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 280.29631,525.05741 c -10.26458,-22.79558 26.11768,-36.98469 17.9645,-1.50898"
-       id="path6652-7"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:transform-center-x="-7.345161"
-       inkscape:transform-center-y="-1.555644"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="M 13.221175,591.59728 C -10.590525,583.98132 3.195312,547.44434 24.11484,577.23316"
-       id="path6652-0"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 65.843901,679.43313 c 12.009326,21.92661 -23.156926,38.90703 -17.792331,2.90396"
-       id="path6652-05"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 493.75031,689.82595 c 20.46508,-14.35899 41.22789,18.71526 4.85249,17.36241"
-       id="path6652-16"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <g
-       id="g3699"
-       transform="translate(66.364044,-14.585266)"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
-      <path
-         transform="matrix(0.75057298,0,0,1.0033053,120.78704,134.94146)"
-         d="m 290,582.36218 c 0,11.0457 -20.14719,20 -45,20 -24.85281,0 -45,-8.9543 -45,-20 0,-11.04569 20.14719,-20 45,-20 24.85281,0 45,8.95431 45,20 z"
-         sodipodi:ry="20"
-         sodipodi:rx="45"
-         sodipodi:cy="582.36218"
-         sodipodi:cx="245"
-         id="path3634"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text3486"
-         y="721.94745"
-         x="286.63596"
-         style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           y="721.94745"
-           x="286.63596"
-           id="tspan3488"
-           sodipodi:role="line">velocity_s</tspan></text>
-    </g>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 366.17029,684.14451 c -7.34531,-23.89657 30.52098,-33.44353 18.01255,0.74037"
-       id="path6652-1"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:transform-center-x="-7.7610174"
-       inkscape:transform-center-y="-7.8780364"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 153.54372,652.18412 c -16.19241,-19.04748 14.81705,-42.78381 16.83845,-6.43944"
-       id="path6652-3"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 473,717.36218 c -8.95084,35.16137 -71.90974,44.96993 -110,5"
-       id="path3784"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="350"
-       y="572.36218"
-       id="text7063"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7065"
-         x="350"
-         y="572.36218">data( 7 downto 5) = &quot;100&quot;</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="85"
-       y="622.36218"
-       id="text7063-5"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7065-4"
-         x="85"
-         y="622.36218">data(7) = '0'</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="130"
-       y="592.36218"
-       id="text7174"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7176"
-         x="130"
-         y="592.36218">data(7 downto 4) = &quot;1010&quot;</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="150"
-       y="477.36218"
-       id="text7063-8"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7065-5"
-         x="150"
-         y="477.36218">data( 7 downto 5) = &quot;100&quot;</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="480"
-       y="472.36218"
-       id="text7063-8-0"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7065-5-7"
-         x="480"
-         y="472.36218">data( 7 downto 5) /= &quot;100&quot; and</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="480"
-       y="462.36218"
-       id="text7063-5-6"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7065-4-0"
-         x="480"
-         y="462.36218">data(7) = '1' and</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="438"
-       y="667.36218"
-       id="text7063-5-7"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7065-4-9"
-         x="438"
-         y="667.36218">data(7) = '0'</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="398"
-       y="737.36218"
-       id="text7063-5-4"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7065-4-4"
-         x="398"
-         y="737.36218">data(7) = '0'</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="90"
-       y="677.36218"
-       id="text7063-5-7-2"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7065-4-9-40"
-         x="90"
-         y="677.36218">data(7) = '0'</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-19)"
-       d="m 355,722.36218 c -23.9808,8.09394 -113.83455,4.96923 -141.93472,4.96923 -16.98385,0 -45.29026,-4.99256 -50.27323,-41.11381"
-       id="path7772"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="csc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <path
+         id="flowPara3470" /></flowRoot>    <path
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-19);stroke-miterlimit:4;stroke-dasharray:none"
        d="m 363,727.36218 c 12.00039,20.40467 8.34278,12.17403 25,30 24.71326,26.44727 70,25 150,25 26.55035,0 54.66349,-11.26207 54.66349,-41.26207 0,-27.1573 3.90054,-51.03329 -18.81702,-82.13153 C 558.59134,638.08573 552.29151,632.79484 508,632.36218"
        id="path7970"
@@ -1487,41 +257,9 @@
          id="tspan7065-57"
          x="453"
          y="767.36218">data( 7 downto 5) = &quot;100&quot;</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="210"
-       y="717.36218"
-       id="text7174-6"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7176-5"
-         x="210"
-         y="717.36218">data(7 downto 4) = &quot;1010&quot;</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="280"
-       y="552.36218"
-       id="text8446"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan8448"
-         x="280"
-         y="552.36218">idle</tspan><tspan
-         sodipodi:role="line"
-         x="280"
-         y="562.36218"
-         id="tspan7207">error</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="M 36.07828,783.95831 C 19.88587,764.91083 50.89533,741.1745 52.91673,777.51887"
+       d="m 226.07828,143.95831 c -16.19241,-19.04748 14.81705,-42.78381 16.83845,-6.43944"
        id="path6652-3-7"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -1531,8 +269,8 @@
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="67.281105"
-       y="774.48199"
+       x="257.2811"
+       y="134.48199"
        id="text8474"
        sodipodi:linespacing="125%"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
@@ -1540,13 +278,13 @@
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan8476"
-         x="67.281105"
-         y="774.48199"> data_valid = '0'</tspan></text>
+         x="257.2811"
+         y="134.48199"> data_valid = '0'</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="29.032257"
-       y="804.89673"
+       x="219.03226"
+       y="164.89673"
        id="text8478"
        sodipodi:linespacing="125%"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
@@ -1554,16 +292,16 @@
        inkscape:export-ydpi="150"><tspan
          sodipodi:role="line"
          id="tspan8480"
-         x="29.032257"
-         y="804.89673">ansonsten bei jedem Wechsel der states    data_valid = '1'</tspan></text>
+         x="219.03226"
+         y="164.89673">ansonsten bei jedem Wechsel der states    data_valid = '1'</tspan></text>
     <g
        id="g5902"
-       transform="translate(30,10)"
+       transform="translate(220,-630)"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_grob_2.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150">
       <path
-         d="m 80,912.36218 a 40,30 0 1 1 -80,0 40,30 0 1 1 80,0 z"
+         d="m 80,912.36218 c 0,16.56855 -17.90861,30 -40,30 -22.09139,0 -40,-13.43145 -40,-30 0,-16.56854 17.90861,-30 40,-30 22.09139,0 40,13.43146 40,30 z"
          sodipodi:ry="30"
          sodipodi:rx="40"
          sodipodi:cy="912.36218"
@@ -1586,13 +324,13 @@
     </g>
     <g
        id="g5897"
-       transform="translate(20,-20)"
+       transform="translate(210,-660)"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_grob_2.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150">
       <path
          transform="translate(9.2165899,15.668203)"
-         d="m 80,912.36218 a 40,30 0 1 1 -80,0 40,30 0 1 1 80,0 z"
+         d="m 80,912.36218 c 0,16.56855 -17.90861,30 -40,30 -22.09139,0 -40,-13.43145 -40,-30 0,-16.56854 17.90861,-30 40,-30 22.09139,0 40,13.43146 40,30 z"
          sodipodi:ry="30"
          sodipodi:rx="40"
          sodipodi:cy="912.36218"
@@ -1617,7 +355,8 @@
        id="g5907"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_grob_2.png"
        inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150">
+       inkscape:export-ydpi="150"
+       transform="translate(190,-640)">
       <text
          sodipodi:linespacing="125%"
          id="text5014"
@@ -1630,7 +369,7 @@
            id="tspan5016"
            sodipodi:role="line">data byte 1</tspan></text>
       <path
-         d="m 80,912.36218 a 40,30 0 1 1 -80,0 40,30 0 1 1 80,0 z"
+         d="m 80,912.36218 c 0,16.56855 -17.90861,30 -40,30 -22.09139,0 -40,-13.43145 -40,-30 0,-16.56854 17.90861,-30 40,-30 22.09139,0 40,13.43146 40,30 z"
          sodipodi:ry="30"
          sodipodi:rx="40"
          sodipodi:cy="912.36218"
@@ -1642,7 +381,7 @@
     </g>
     <g
        id="g5912"
-       transform="translate(-10,-20)"
+       transform="translate(180,-660)"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_grob_2.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150">
@@ -1658,7 +397,7 @@
            id="tspan5016-6"
            sodipodi:role="line">data byte 1</tspan></text>
       <path
-         d="m 80,912.36218 a 40,30 0 1 1 -80,0 40,30 0 1 1 80,0 z"
+         d="m 80,912.36218 c 0,16.56855 -17.90861,30 -40,30 -22.09139,0 -40,-13.43145 -40,-30 0,-16.56854 17.90861,-30 40,-30 22.09139,0 40,13.43146 40,30 z"
          sodipodi:ry="30"
          sodipodi:rx="40"
          sodipodi:cy="912.36218"
@@ -1669,8 +408,8 @@
          transform="matrix(1.1832445,0,0,0.99855031,47.00202,99.0185)" />
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20);stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 90,882.36218 c 34.84954,-24.24768 63.72107,-18.60533 90,0"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-20)"
+       d="m 280,242.36218 c 34.84954,-24.24768 63.72107,-18.60533 90,0"
        id="path5917"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -1678,8 +417,8 @@
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20);stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 240,912.36218 c 23.24808,23.41883 18.41527,42.70813 0,60"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-20)"
+       d="m 430,272.36218 c 23.24808,23.41883 18.41527,42.70813 0,60"
        id="path5919"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -1687,8 +426,8 @@
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20);stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 200,1017.3622 c -35.45168,19.0651 -69.44493,25.0044 -100,0"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-20)"
+       d="m 390,377.3622 c -35.45168,19.0651 -69.44493,25.0044 -100,0"
        id="path5921"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -1697,7 +436,7 @@
        inkscape:export-ydpi="150" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20)"
-       d="m 40,977.36218 c -20.02646,-27.98597 -6.792445,-37.17254 0,-50"
+       d="m 230,337.36218 c -20.02646,-27.98597 -6.79244,-37.17254 0,-50"
        id="path5923"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -1706,7 +445,7 @@
        inkscape:export-ydpi="150" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20)"
-       d="m 185,927.36218 c -28.9749,7.56628 -57.09383,11.70867 -80,-5"
+       d="m 375,287.36218 c -28.9749,7.56628 -57.09383,11.70867 -80,-5"
        id="path5925"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -1715,7 +454,7 @@
        inkscape:export-ydpi="150" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20)"
-       d="m 160,977.36218 c -21.13667,-5.77401 -42.81783,-13.8349 -70,-45"
+       d="m 350,337.36218 c -21.13667,-5.77401 -42.81783,-13.8349 -70,-45"
        id="path5927"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -1733,89 +472,14 @@
          id="tspan7197"
          x="249.60544"
          y="673.06616" /></text>
-    <text
-       xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="154"
-       y="670.36218"
-       id="text7199"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7201"
-         x="154"
-         y="670.36218"
-         style="font-size:8px">polyphonie</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="462"
-       y="628.36218"
-       id="text7203"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7205"
-         x="462"
-         y="628.36218">single</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20);stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 60,572.36218 c 50,-40 130.32275,-6.44541 120,74"
-       id="path7209"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="210"
-       y="642.36218"
-       id="text7174-4"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7176-9"
-         x="210"
-         y="642.36218">data(7 downto 4) = &quot;1010&quot;</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20);stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 40,1002.3622 c -50,0 -48.3386291,-64.02524 -50,-90.00002 -1.661371,-25.97478 18.4332359,-59.21662 40,-70 20,-10 50,-20 90,-20 36.24659,0 60,20 70,50"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend-20)"
+       d="m 230,362.3622 c -50,0 -48.33863,-64.02524 -50,-90.00002 -1.66137,-25.97478 18.43324,-59.21662 40,-70 20,-10 50,-20 90,-20 36.24659,0 60,20 70,50"
        id="path7432"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssc"
        inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_grob_2.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20)"
-       d="m 490,452.36218 c -59.88991,6.99695 -121.9316,7.53853 -160,80"
-       id="path7632"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150" />
-    <text
-       xml:space="preserve"
-       style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="480"
-       y="482.36218"
-       id="text7174-4-9"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/katrin/Documents/a_PA_docu/images/midi_control/fsm_detailliert.png"
-       inkscape:export-xdpi="150"
-       inkscape:export-ydpi="150"><tspan
-         sodipodi:role="line"
-         id="tspan7176-9-5"
-         x="480"
-         y="482.36218">data(7 downto 4) /= &quot;1010&quot;</tspan></text>
   </g>
 </svg>

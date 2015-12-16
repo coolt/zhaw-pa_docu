@@ -301,9 +301,25 @@ Der empfangene Notenwert wird mit den gespeicherten Notenwerten verglichen. Ist 
 \end{figure}
 
 \subsection{Implementation}
+Der Ablauf des Speicherns ist aus der Abbildung \ref{fig.polyphnie_ablauf}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.2\textwidth]{images/midi_interface/polyphnie_ablauf.png}
+	\caption{Ablauf Note speichern }
+	\label{fig.polyphnie_ablauf}
+\end{figure}
 
+Umgesetz wird das Suchen eines Speicherplatzes innerhalb der 10 Registern mit einer Input-Logik, die mit folgenden 3 Vergleichen arbeitet:
+\begin{enumerate}
+	\item Liegt der Notenwert in einem Register ? 
+	\item Ist ein Register unbenützt ?
+	\item Welches Register hat einen abgeschaltenen Notenwert ?
+\end{enumerate}
+Sobald eine Frage mit Ja beantwortet wird, wird der Registerindex gespeichert und als Output des Logik-Prozesses zur Verarbeitung weiter gegeben.\\
+\newline
+Durch den übermittelten Index-Wert weiss der Speicher-Prozess, in welches Register die neue Note gespeichert werden soll.\\
+Die Werte aller 10 Register werden am Ausgang parallel ausgegeben.
 
-bfasfjsldfjsdlfsj
 
 
 \subsection{Resultat Polyphonie Out-Block}
