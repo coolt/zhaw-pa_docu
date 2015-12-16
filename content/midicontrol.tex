@@ -10,21 +10,45 @@
 
 \chapter{MIDI Steuerung}\label{chap.midi}
 
-\section{Einteilen der Blöcke und definieren der Schnittstelen}
+\section{Blockschaltbild und Schnittstellen}
 
-Als erstes die Zusammenfassung der internen Blöcke. Die zwei entwickelten Blöcke \textbf{midi control} und \textbf{polyphonie out} sind grau markiert (siehe Abbildung \ref{fig.midi_interface_block} ). Gegeben ist der Block uart top. \\
+Als erstes die Zusammenfassung der internen Blöcke. Die zwei entwickelten Blöcke \textit{midi control} und \textit{polyphonie out} sind grau markiert (siehe Abbildung \ref{fig.midi_interface_block} ). Gegeben ist der Block uart top. \\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{images/midi_interface/midi_interface_block.png}
-	\caption{Blockschaltbild MIDI Interface}
+	\includegraphics[width=0.7\textwidth]{images/midi_interface/midi_interface_block.png}
+	\caption{Blockschaltbild Midi Interface}
 	\label{fig.midi_interface_block}
 \end{figure}
 
-Die Abbildung \ref{fig.top_synthesizer_block} (im Anhang \ref{chap.anhang_top_synthesizer}) zeigt, wie das zu entwickelnde MIDI Interface in die bestehenden Blöcke des Synthesizer-Projektes eingebaut wird. Die im Anhang direkt anschliessende Abbildung \ref{fig.top_synthesizer_detail} zeigt dann die geplante Umsetzung detaillierter.\\
 
+\textbf{Definition der Schnittstellen}\label{schnittstellen}
 
+\textbf{Uart Top Ausgang}
+\begin{itemize}
+	\item 8-Bit-Signal: Bytweise Dekodierung der Midi Daten 
+	\item 1-Bit-Signal: Übermittelt Gültigkeit der Daten
+\end{itemize}
 
+\textbf{Midi Control Ein- und Ausgang}
+\begin{itemize}
+	\item Empfangen von 8-Bit Midi Daten, \hspace*{20mm}Empfangen, ob Daten korrekt sind (1 Bit)
+	\item Übermittelt 9-Bit-Notenvektor (Abb.\ref{fig.Notenvektor}) \hspace*{10mm}Übermitteln, ob Daten korrekt (1 Bit)
+\end{itemize}
+
+\textbf{Polyphonie Out Ein- und Ausgang}
+\begin{itemize}
+	\item Eingang eines 9-Bit-Notenvektors \hspace*{22mm}Eingang, ob Daten gültig sind
+	\item Ausgabe von 10 Notenvektoren zu 9-Bit.
+\end{itemize}
+\bigskip
+Im vorgegebenen Konzept für Polyphonie out (siehe Unterkapitel \ref{konzept_plyphonie}) ist die Schnittstelle zum Polyphonie Out-Block als ein 9-Bit-Signal definiert. Das MSB dient als Flag, ob die übermittelte Note an oder ab ist.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.2\textwidth]{images/midi_interface/NotenVektor.png}
+	\caption{Aufbau Notenvektor}
+	\label{fig.Notenvektor}
+\end{figure}
 
 Als nächstes wird die MIDI 1.0 Spezifikation, erklärt, nach der Block \textit{midi control} aufgebaut ist. Die Umsetzung des \textit{polyphone out}-Blocks bildet den Abschluss dieses Kapitels.\\
 
@@ -63,7 +87,7 @@ Diese Anforderung ist wichtig beim Implementieren der \textit{finate state machi
 	\item ''1000 xxxx'': \hspace*{10mm}Definition NOTE OFF
 	\item ''1001 xxxx'': \hspace*{10mm}Definition NOTE ON
 	\item ''1010 xxxx'': \hspace*{10mm}Definition POLYPHONY
-	\item ''100x xxx'' \hspace*{11mm}Erste drei Bits der \textit{status bytes} NOTE ON (0x90) und NOTE OFF (0x80)
+	\item ''100x xxxx'': \hspace*{10mm}Erste drei Bits der \textit{status bytes} NOTE ON (0x90) und NOTE OFF (0x80)
 \end{itemize}
 %---5.2-----------------------------------------------------------------------
 \newpage
@@ -255,4 +279,38 @@ Der Kontroller erkennt die Note 02, schaltet diese an und gibt am Ausgang den Ve
 \end{itemize}
 
 
-\section{Umsetzung "polyphonie out"-Block}\label{sect.polyphonie_umsetzung}
+\section{Umsetzung Polyphone Out-Block}\label{sect.polyphonie_umsetzung}
+ 
+\subsection{Funktionsbeschreibung}
+Der Polyphone Out-Block speichert die empfangenen Signale in 10 Registern. Bei jeder neuen Note wird geprüft, ob der Wert im Register besteht und ob das ON/OFF-Bit der gespeicherten neu gesetzt werden muss. Der Block gibt 10 Noten parallel aus.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/midi_interface/polyphonie_blockschaltbild.png}
+	\caption{Polyphone Out-Block}
+	\label{fig.polyphnie_out_block}
+\end{figure}
+
+\subsection{Konzept}\label{konzept_plyphonie}
+Der empfangene Notenwert wird mit den gespeicherten Notenwerten verglichen. Ist eine Note vorhanden, wird das ON-OFF-Bit geprüft und aktualisiert. Keine Note darf zweimal gespeichert sein. Sind alle 10 Registerplätze besetzt, wird die neue Note in ein Register mit abgeschaltenem ON-OFF-Bit gesetzt.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/midi_interface/Konzept_Hans_polyphonie.png}
+	\caption{Konzept Polyphonie Block \cite{konzept_poly} }
+	\label{fig.polyphnie_konzept}
+\end{figure}
+
+\subsection{Implementation}
+
+
+bfasfjsldfjsdlfsj
+
+
+\subsection{Resultat Polyphonie Out-Block}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/midi_interface/tb_polyphonie.png}
+	\caption{Simulation des Blocks Polyphonie Out }
+	\label{fig.polyphnie_simulation}
+\end{figure}
