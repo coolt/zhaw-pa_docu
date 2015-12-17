@@ -18,7 +18,7 @@ In der Digitalen Signalverarbeitung ist ein \textit{glitch} ein bekanntes, ungew
 \end{quote}
 
 
-Abbildung \ref{fig.glitch.def} zeigt zwei \textit{glitches} in einem Ausgangssignal.\\
+Abbildung \ref{fig.glitch.def} zeigt zwei \textit{glitches} in einem Ausgangssignal.
 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/glitch/def_glitch_1.png}
@@ -37,9 +37,9 @@ Der Auslöser sind ungleichzeitig eintreffende Signale, die durch
 \item unterschiedliche Logik-Zeiten
 \end{enumerate}
 
-entstehen, und die in ein asynchrones Bauteil geführt werden. Der Dekoder im asynchronen Bauteil entschlüsselt dadurch kurzfristig einen falschen Wert. \\
+entstehen, und die in ein asynchrones Bauteil geführt werden. Der Dekoder im asynchronen Bauteil entschlüsselt dadurch kurzfristig einen falschen Wert.
 
-Abbilung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes enable-Signal (ena) zu einem anders verzögerten Flip-Flop-Eingangssignal (Q). Beide Signale sind mit der Taktfrequenz clk getaktet. Der Ausgang (out) des Flip-Flops weist aufgrund der unterschiedlichen Verzögerungen kurzzeitig \textit{glitches} auf. \\
+Abbildung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes enable-Signal (ena) zu einem anders verzögerten Flip-Flop-Eingangssignal (Q). Beide Signale sind mit der Taktfrequenz clk getaktet. Der Ausgang (out) des Flip-Flops weist aufgrund der unterschiedlichen Verzögerungen kurzzeitig \textit{glitches} auf. \\
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{images/glitch/def_glitch_3.png}
 	\caption{Asynchrone Eingangssignale führen zu Glitches}
@@ -52,7 +52,7 @@ Abbilung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes enable-Signal (ena
 
 
 \subsection{Konzept}
-Gliches werden durch Pfadverlängerung einzelner Werte erzeugt. Ein asynchroner Zähler erhält verzögerte Bitwerte. Zählt man binär auf 15, so kann sich beim Übergang von der Zahl 11 zu 12, die falsche Zahl 15, ergeben, sofern die zwei höheren Bits der Zahl 11 verzögert ankommen (siehe Abbildung \ref {fig.glitch.binaer_zahlen}).
+Glitches werden durch Pfadverlängerung einzelner Werte erzeugt. Ein asynchroner Zähler erhält verzögerte Bitwerte. Zählt man binär auf 15, so kann sich beim Übergang von der Zahl 11 zu 12, die falsche Zahl 15, ergeben, sofern die zwei höheren Bits der Zahl 11 verzögert ankommen (siehe Abbildung \ref {fig.glitch.binaer_zahlen}).
 
 \begin{figure}[H]
 	\includegraphics[width=0.3\textwidth]{images/glitch/konzept_verzoegerung.png}
@@ -62,10 +62,9 @@ Gliches werden durch Pfadverlängerung einzelner Werte erzeugt. Ein asynchroner 
 
 Die Verzögerung der zwei Bits, wird über Routing umgesetzt. 
 
-
-
 \subsection{Implementation} 
-Die Hardware ist das altera board De2 mit dem FPGA Cyclone II. Kompiliert wird das Projekt mit Quartus 13.0sp, der ältsten Quartus-Version, die den Cyclone II unterstützt.
+
+Die Hardware ist das Altera Board De2 mit dem FPGA Cyclone II. Kompiliert wird das Projekt mit Quartus 13.0sp, der ältesten Quartus-Version, die den Cyclone II unterstützt.
 
 Die Pfad\textit{verlängerung} wird über das Routing über die GPIO-Pins des Stecker 1 gemacht (siehe Abbildung \ref{fig.glitch.GPIO}. GPIO 1 ist der Stecker 1). Dekodiert die asynchrone Logik die Zahl 15, wird das  Reset-Signal (aus der Logik \lstinline|reset_counter\~{}2|) an den Zähler gesendet und der Zähler beginnt wieder von 0 an zu zählen. Produziert der Dekoder zur falschen Zeit einen Reset, so ist dies eine Fehlkodierung: ein \textit{glitch}.
 
@@ -76,7 +75,7 @@ Das RTL-Diagramm des asynchronen Zählers sieht wie folgt aus:
 	\label{fig.glitch.RTL_nurGlitch}
 \end{figure}
 
-Um die Lösung gegen \textit{glitches} aufzuzeigen, wird dem asynchronen Zähler zur Synchronisation ein Flip-Flop nachgeschalten. Dadurch werden die asychronen Zustände übersehen. 
+Um die Lösung gegen \textit{glitches} aufzuzeigen, wird dem asynchronen Zähler zur Synchronisation ein Flip-Flop nachgeschalten. Dadurch werden die asynchronen Zustände übersehen. 
 \begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/glitch/glitch_asynch_new.png}
 	\caption{Glitch-Zähler und synchroner Zähler dazu}

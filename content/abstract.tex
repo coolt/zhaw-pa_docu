@@ -12,10 +12,10 @@
 
 An important field in digital signal processing is the hardware-related programming language VHDL. In this thesis, two independent tasks have been drawn up and implemented using VHDL.
 
-On one hand was the inducing of hardware-related glitches and metastability, and on the other hand the implementation of a MIDI-interface, whose development is built on a text-based testbench.
+On one hand was the inducing of hardware-related glitches and metastability, and on the other hand the implementation of a MIDI-interface, whose development is built on a text-based test bench.
 
 By extending the paths of individual signals on a Cyclone II-FPGA it is possible to generate artificial glitches. Hence, some signals arrive delayed at the asynchronous decoder. Invalid information is processed and put on the signal lines, which occurs in so-called glitches.
 
 Metastable states are caused by clocking two VHDL logic blocks with two independent clocks, where no clock is a multiple of the other one. The output signal of the first block is connected as a asynchronous input of the second block. Since the two blocks work in a different clock domain, the finite state machine can fall in an undefined state, in other words the finite state machine is in a metastable state.
 
-The second part of this thesis is focused on the development of a midi interface, which is able to detect polyphony. The text-based testbench is used for test driven development of the midi controller. The midi interface detects and handles the status bytes NOTE ON, NOTE OFF and POLYPHONE. The VHDL entity polyphony out is able to process up to 10 pressed keys in parallel.
+The second part of this thesis is focused on the development of a midi interface, which is able to detect polyphony. The text-based test bench is used for test driven development of the midi controller. The midi interface detects and handles the status bytes NOTE ON, NOTE OFF and POLYPHONE. The VHDL entity polyphony out is able to process up to 10 pressed keys in parallel.

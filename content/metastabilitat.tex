@@ -30,13 +30,13 @@ Die Ursache unsicherer Ausgangswerte liegen darin, dass das Inputsignal eines Fl
 \end{quote}
 
 \begin{quote}
-''If the amplitude of the runt pulse is \textit{exactly the treshold level of the SET input of the output cell}, the cell will be driven to its metastable state. The metastable state is the condition that is roughly defined as ''half SET and half RESET'' \cite{F_metastability}
+''If the amplitude of the runt pulse is \textit{exactly the treshold level of the SET input of the output cell}, the cell will be driven to its metastable state. The metastable state is the condition that is roughly defined as \'half SET and half RESET\''' \cite{F_metastability}
 \end{quote}
 
 Trifft der anzulegende Wert zu spät ein wird die \textit{setup time} verletzt und wird der Signalwert zu früh entwendet, verletzt die \textit{hold time}. Metastabilität kann vermieden werden, wenn diese zwei Zeiten strikt eingehalten werden:
 
 \begin{quote}
-''Metastability is avoided by holding the information stable before and after the clock pulse  for a set period of time, called the setup time for the data line an the hold time for the control line.''\cite{ReferenceManual}
+''Metastability is avoided by holding the information stable before and after the clock pulse for a set period of time, called the setup time for the data line and the hold time for the control line.'' \cite{ReferenceManual}
 \end{quote}
 
 \begin{figure}[H]
@@ -45,13 +45,13 @@ Trifft der anzulegende Wert zu spät ein wird die \textit{setup time} verletzt u
 	\label{fig.metastabil.kritisches_zeitfenster}
 \end{figure}
 
-Um Metastabilität zu vermeiden, sollte die Logik möglichst klein, die Bauteile nahe beieinander und der Systemtakt an die längste Pfadzeit angepasst werden. Der maximal erlaubte Systemtakt kann in quartus mit dem Timequest Time Analyser abgefragt werden.
+Um Metastabilität zu vermeiden, sollte die Logik möglichst klein, die Bauteile nahe beieinander und der Systemtakt an die längste Pfadzeit angepasst werden. Der maximal erlaubte Systemtakt kann in Quartus mit dem Timequest Time Analyser abgefragt werden.
 
 \section{Metastabilität erzeugen}\label{sect.meatastabil_erzeugen}
 
 \subsection{Konzept}\label{sect.metastabil_ansatz}
 
-Aufgebaut wird ein System mit zwei \textit{clock domains}.  \textit{Clock domain 1}, Gebiet 1 genannt,  beinhaltet einen Zähler, der an die \textit{clock domain 2}, als Gebiet 2 bezeichnet, asynchrone Impulse sendet. Gebiet 2 verarbeitet diese Impulse in einer \textit{finate state machine}. Bei korrekter Funktionsweise wechset die \textit{fsm} zwischen den definierten \textit{states}. Funktioniert sie falsch, fällt die \textit{fsm} in einen \textit{state}, den sie nicht implementiert hat.
+Aufgebaut wird ein System mit zwei \textit{clock domains}.  \textit{Clock domain 1}, Gebiet 1 genannt,  beinhaltet einen Zähler, der an die \textit{Clock Domain 2}, als Gebiet 2 bezeichnet, asynchrone Impulse sendet. Gebiet 2 verarbeitet diese Impulse in einer \textit{finate state machine}. Bei korrekter Funktionsweise wechselt die \textit{fsm} zwischen den definierten \textit{states}. Funktioniert sie falsch, fällt die \textit{fsm} in einen \textit{state}, den sie nicht implementiert hat.
 
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{images/metastability/konzept.png}
@@ -61,7 +61,7 @@ Aufgebaut wird ein System mit zwei \textit{clock domains}.  \textit{Clock domain
 
 \subsection{Implementation}\label{sect.metastabil_implementation}
 
-Als Hardware wird das altera board DE2 genommen und mit der Software quartus 13.Osp1 gearbeitet. Da die zwei Takte nicht Vielfache voneinander sein dürfen, wird für den Zähler ein Takt von 27 MHz und für die \textit{fsm} ein Takt von 50 MHz gewählt. Der Takt des Zählers ist leicht schneller als die Hälfte des \textit{fsm}-Taktes und schiebt sich  vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der \textit{setup time} ist eine Frage der Zeit.
+Als Hardware wird das Altera Board DE2 genommen und mit der Software Quartus 13.Osp1 gearbeitet. Da die zwei Takte nicht Vielfache voneinander sein dürfen, wird für den Zähler ein Takt von 27 MHz und für die \textit{fsm} ein Takt von 50 MHz gewählt. Der Takt des Zählers ist leicht schneller als die Hälfte des \textit{fsm}-Taktes und schiebt sich  vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der \textit{setup time} ist eine Frage der Zeit.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/metastability/2_takte.png}
@@ -77,7 +77,7 @@ Die Zustandsüberprüfung erfolgt über das Ausgeben des aktuellen Zustands auf 
 	\item Zustand = s1\\
 	 Rote LED 1 ist an
 	\item Zustand = \textit{OTHERS}\\
-	 Grüne LED 17 ist an\\
+	 Grüne LED 17 ist an
 \end{itemize}
 
 Funktioniert die \textit{fsm}, blinken die zwei roten LEDs abwechslungsweise. Fällt die \textit{fsm} in einen undefinierten Zustand, leuchtet die grüne LED. Um die Ursache der Metastabilität, das Verletzten der \textit{setup time} zu verhindern, wird eine optionale Synchronisation durch Switch 17 eingebaut. Ist Switch 17  auf '1', wird der Puls der \textit{clock domain} 27 MHz durch ein Flip-Flop auf 50 MHz synchronisiert.
@@ -133,4 +133,3 @@ Im Zustand der Metastabilität sind die Pulse nicht synchronisiert und die rote 
 	\caption{Metastabiler Zustand}
 	\label{fig.metastabil.Metastabil}
 \end{figure}
-

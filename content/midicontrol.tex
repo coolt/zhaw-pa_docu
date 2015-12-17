@@ -59,7 +59,7 @@ Diese Anforderung ist wichtig beim Implementieren der \textit{finate state machi
 
 \subsubsection{Datenstruktur}
 
-Die Datenstruktur der zwei MIDI-Noten-Modi beginnt mit dem \textit{status byte} (grau in der Abbildung \ref{fig.testbench_single_Mode}). Es folgt der Notenwert (hier Dummy-Wert von 0x11 eingetragen) und die Geschwindigkeit. Letztere hat im \textit{single mode} keine spezfische Bedeutung, im \textit{polyphony mode} bestimmt die Geschwindigkeit, ob die Note an oder ab ist.
+Die Datenstruktur der zwei MIDI-Noten-Modi beginnt mit dem \textit{status byte} (grau in der Abbildung \ref{fig.testbench_single_Mode}). Es folgt der Notenwert (hier Dummy-Wert von 0x11 eingetragen) und die Geschwindigkeit. Letztere hat im \textit{single mode} keine spezifische Bedeutung, im \textit{polyphony mode} bestimmt die Geschwindigkeit, ob die Note an oder ab ist.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_interface/MIDI_Spezifikation.png}
@@ -71,7 +71,7 @@ Unterschiedlich zu behandeln ist die Funktion des \textit{status bytes}. Im \tex
 
 \begin{figure}[H]
 	\includegraphics[width=0.7\textwidth]{images/midi_interface/MIDI_Spezifikation_Datenfolge.png}
-	\caption{Blockschaltbild Device under Test}
+	\caption{Blockschaltbild Device unter Test}
 	\label{fig.testbench_polypphon_mode}
 \end{figure}
 
@@ -151,7 +151,7 @@ Vereinfacht verhält sich die \textit{fsm} wie in Abbildung \ref{fig.midi_fsm_sk
 Startpunkt der Verarbeitung ist das \textit{status byte} (grau hinterlegt). Danach führt die Verarbeitung durch die zwei \textit{data bytes}.\\
 In jedem Zustand, werden ungültige Daten verworfen, und führen zurück zu idle. Die Verarbeitung wird fortgesetzt, wenn das nächste \textit{status byt}e folgt.
 
-Nicht angeschrieben sind die Übergangsbedingungen: \lstinline|data_valid = '1'| wechselt zwischen den Zustänen und \lstinline|data_valid = '0'| verbleibt im Zustand. Die breiteren Pfeile heben die fehlerfreie Datenverarbeitung hervor.
+Nicht angeschrieben sind die Übergangsbedingungen: \lstinline|data_valid = '1'| wechselt zwischen den Zuständen und \lstinline|data_valid = '0'| verbleibt im Zustand. Die breiteren Pfeile heben die fehlerfreie Datenverarbeitung hervor.
 
 \subsection{Implementation der Finite State Machine}
 
@@ -211,7 +211,7 @@ Im \textit{polyphony mode} wird das zweite \textit{data byte}, die Geschwindigke
 
 \subsection{Implementierte Finite State Machine}
 
-Abbildung \ref{fig.midi_fsm_quartus_} zeigt die in quartus generierte \textit{fsm} des Blocks \textit{midi control}.
+Abbildung \ref{fig.midi_fsm_quartus_} zeigt die in Quartus generierte \textit{fsm} des Blocks \textit{midi control}.
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_control/fsm_midicontrol.png}
 	\caption{Implementierte fsm im Block Midi Control}
@@ -220,7 +220,7 @@ Abbildung \ref{fig.midi_fsm_quartus_} zeigt die in quartus generierte \textit{fs
 
 
 \subsection{Simulation Single Mode}
- Der Aufbau der \textit{testbench} und dadurch der Simlation wie auch der Input-Daten ist  in Kapitel \ref{chap.testen} eingehend beschrieben. Hier steht exemplarisch \textit{eine} Auswertung für den \textit{single mode} und im nächsten Unterkapitel für den \textit{polyphony mode}, damit das korrekte Funktionieren der Implementation dokumentiert ist.
+ Der Aufbau der \textit{Testbench} und dadurch der Simlation wie auch der Input-Daten ist  in Kapitel \ref{chap.testen} eingehend beschrieben. Hier steht exemplarisch \textit{eine} Auswertung für den \textit{single mode} und im nächsten Unterkapitel für den \textit{polyphony mode}, damit das korrekte Funktionieren der Implementation dokumentiert ist.
  
  
 \textbf{Input Daten} (Zeile 3, siehe Anhang \ref{chap.anhang_midi_input})
@@ -242,7 +242,7 @@ singl & 55 & 90 & 27 & 80 & 27 & 90 & 02 & 00 & 00
 \item Notenwert 27
 \item Note an
 \item Notenwert 02
-\item Dummywerte
+\item Dummy werte
 \end{itemize}
 
 \textbf{Erwartetes Resultat}
@@ -264,7 +264,7 @@ Der Kontroller erkennt die Note 27, schaltet diese an und gibt am Ausgang den Ve
 	\item Die Zustände werden bei \lstinline|rx_data_valid = '1'| geändert.
 \end{itemize}
 
-Die Simulation zeigt, dass die Notenwerte korrekt gespeichert sind und dass das An- und Abstellen der Noten funktioniert. Am Ausgang erscheint der zusammengesetzer Vektor aus den 8 Notenbits und einem vorangestellten Bit, das detektiert, ob die aktuelle Note an oder ab ist. 
+Die Simulation zeigt, dass die Notenwerte korrekt gespeichert sind und dass das An- und Abstellen der Noten funktioniert. Am Ausgang erscheint der zusammengesetzter Vektor aus den 8 Notenbits und einem vorangestellten Bit, das detektiert, ob die aktuelle Note an oder ab ist. 
 
 
 
@@ -273,8 +273,8 @@ Die Simulation zeigt, dass die Notenwerte korrekt gespeichert sind und dass das 
 \textbf{Input Daten} (Zeile 9, siehe Anhang \ref{chap.anhang_midi_input})
 
 {
-\renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
-\begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}} % @{} removes the left and right margin around the table
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}}
 polyp & 02 & 55 & 03 & 00 & 20 & 00 & 40 & 55 & 00
 \end{tabular*}
 }
@@ -326,7 +326,7 @@ Der Polyphone Out-Block speichert die empfangenen Signale in 10 Registern. Bei j
 
 \subsection{Konzept}\label{konzept_plyphonie}
 
-Der empfangene Notenwert wird mit den gespeicherten Notenwerten verglichen. Ist eine Note vorhanden, wird das ON-OFF-Bit geprüft und aktualisiert. Keine Note darf zweimal gespeichert sein. Sind alle 10 Registerplätze besetzt, wird die neue Note in ein Register mit abgeschaltenem ON-OFF-Bit gesetzt.
+Der empfangene Notenwert wird mit den gespeicherten Notenwerten verglichen. Ist eine Note vorhanden, wird das ON-OFF-Bit geprüft und aktualisiert. Keine Note darf zweimal gespeichert sein. Sind alle 10 Registerplätze besetzt, wird die neue Note in ein Register mit abgeschaltetem ON-OFF-Bit gesetzt.
 
 \begin{figure}[H]
 	\includegraphics[width=0.7\textwidth]{images/midi_interface/Konzept_Hans_polyphonie.png}
@@ -344,12 +344,12 @@ Der Ablauf des Speicher-Vorgangs der neuen Note ist aus der Abbildung \ref{fig.p
 	\label{fig.polyphnie_ablauf}
 \end{figure}
 
-Umgesetz wird das Suchen eines Speicherplatzes innerhalb der 10 Registern mit einer Input-Logik, die mit folgenden 3 Vergleichen arbeitet:
+Umgesetzt wird das Suchen eines Speicherplatzes innerhalb der 10 Registern mit einer Input-Logik, die mit folgenden 3 Vergleichen arbeitet:
 
 \begin{enumerate}
 	\item Liegt der Notenwert in einem Register ? 
-	\item Ist ein Register unbenützt ?
-	\item Welches Register hat einen abgeschaltenen Notenwert ?
+	\item Ist ein Register unbenutzt ?
+	\item Welches Register hat einen abgeschalteten Notenwert ?
 \end{enumerate}
 
 Sobald eine Frage mit Ja beantwortet wird, wird der Registerindex gespeichert und als Output des Logik-Prozesses zur Verarbeitung weiter gegeben.
@@ -373,8 +373,8 @@ Die Ziele sind:
 \textbf{Input Daten} (Zeile 3, 5, 7 und 9 siehe Anhang \ref{chap.anhang_midi_input})
 
 {
-\renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
-\begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}} % @{} removes the left and right margin around the table
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}}
 singl & 55 & 90 & 27 & 80 & 27 & 90 & 05 & 00 & 00\\
 singl & 55 & 90 & 73 & 80 & 73 & 90 & 16 & 00 & 00\\
 polyp & 71 & 55 & 02 & 55 & 33 & 55 & 08 & 00 & 00\\
