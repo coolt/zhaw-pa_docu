@@ -12,7 +12,7 @@
 
 \section{Das MIDI-Kommunikationsprotokoll}\label{sect.midi_spezification}
 
-Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \cite{Midi_specification}.
+Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \citep{Midi_specification}.
 
 \subsection{MIDI-Daten-Typen}\label{datenytpen}
 
@@ -31,16 +31,16 @@ Gemäss Spezifikation folgen einem \textit{status byte} ein oder zwei Bytes. Das
 Je nach dem \textit{status byte} werden die \textit{data byte} anders interpretiert. 
 
 \begin{quote}
-''Empfänger sollen so konzipiert sein, dass zuerst alle \textit{data bytes} empfangen werden und ein neues \textit{status byte} kommt. Danach werden ungültige Daten verworfen. Einzige Ausnahme ist der \textit{running status}, bei dem nicht bis zum Ende gewartet wird.''\cite{Midi_specification}.
+``Empfänger sollen so konzipiert sein, dass zuerst alle \textit{data bytes} empfangen werden und ein neues \textit{status byte} kommt. Danach werden ungültige Daten verworfen. Einzige Ausnahme ist der \textit{running status}, bei dem nicht bis zum Ende gewartet wird.'' \citep{Midi_specification}.
 \end{quote}
 
 \subsubsection*{Ungültige Bytes}
 
 \begin{quote}
-''Alle \textit{status bytes}, die nicht implementierte Funktionen enthalten und alle ihnen folgenden \textit{Data Byte}s sollen vom Empfänger verworfen werden.'' \cite{Midi_specification}
+``Alle \textit{status bytes}, die nicht implementierte Funktionen enthalten und alle ihnen folgenden \textit{Data Byte}s sollen vom Empfänger verworfen werden.'' \citep{Midi_specification}
 \end{quote}
 
-MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden\cite{Midi_specification}.\\
+MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden \citep{Midi_specification}.\\
 Diese Anforderung ist wichtig beim Implementieren der \textit{finate state machine} und der \textit{testbench} (siehe Kapitel \ref{chap.testen})
 
 \subsubsection*{Midi Bytes binär}\label{midi_binaer}
@@ -330,7 +330,7 @@ Der empfangene Notenwert wird mit den gespeicherten Notenwerten verglichen. Ist 
 
 \begin{figure}[H]
 	\includegraphics[width=0.7\textwidth]{images/midi_interface/Konzept_Hans_polyphonie.png}
-	\caption{Konzept Polyphonie Block \cite{konzept_poly} }
+	\caption{Konzept Polyphonie Block \citep{konzept_poly} }
 	\label{fig.polyphnie_konzept}
 \end{figure}
 

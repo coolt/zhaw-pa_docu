@@ -16,7 +16,7 @@ Im Idealfall wählt wählt ein Flip-Flop seinen Ausgangswert selbst (siehe Abbil
 
 \begin{figure}[H]
 	\includegraphics[width=0.4\textwidth]{images/metastability/metastability_2_IO.png}
-	\caption{Metastabilität schlimmster Fall \cite{F_metastability}}
+	\caption{Metastabilität schlimmster Fall \citep{F_metastability}}
 	\label{fig.metastabil.schlimmster_Fall}
 \end{figure}
 
@@ -26,17 +26,17 @@ Im Idealfall wählt wählt ein Flip-Flop seinen Ausgangswert selbst (siehe Abbil
 Die Ursache unsicherer Ausgangswerte liegen darin, dass das Inputsignal eines Flip-Flops zur falschen Zeit wechselt.
 
 \begin{quote}
-''If data inputs to a flip-flop are changing at the instant of the clock pulse, a problem known as \textit{metastability} may occur. In the metastable case, the flip-flop does not settle in to a stable state'' \cite{ReferenceManual}
+''If data inputs to a flip-flop are changing at the instant of the clock pulse, a problem known as \textit{metastability} may occur. In the metastable case, the flip-flop does not settle in to a stable state'' \citep{ReferenceManual}
 \end{quote}
 
 \begin{quote}
-''If the amplitude of the runt pulse is \textit{exactly the treshold level of the SET input of the output cell}, the cell will be driven to its metastable state. The metastable state is the condition that is roughly defined as \'half SET and half RESET\''' \cite{F_metastability}
+''If the amplitude of the runt pulse is \textit{exactly the treshold level of the SET input of the output cell}, the cell will be driven to its metastable state. The metastable state is the condition that is roughly defined as \'half SET and half RESET\''' \citep{F_metastability}
 \end{quote}
 
 Trifft der anzulegende Wert zu spät ein wird die \textit{setup time} verletzt und wird der Signalwert zu früh entwendet, verletzt die \textit{hold time}. Metastabilität kann vermieden werden, wenn diese zwei Zeiten strikt eingehalten werden:
 
 \begin{quote}
-''Metastability is avoided by holding the information stable before and after the clock pulse for a set period of time, called the setup time for the data line and the hold time for the control line.'' \cite{ReferenceManual}
+''Metastability is avoided by holding the information stable before and after the clock pulse for a set period of time, called the setup time for the data line and the hold time for the control line.'' \citep{ReferenceManual}
 \end{quote}
 
 \begin{figure}[H]

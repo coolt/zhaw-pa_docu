@@ -45,22 +45,22 @@ Bezeichnet ein Bauteil, das einen oder mehrere Eingangswert(e) gemäss implement
 
 \textbf{Durchlaufverzögerung}\\
 Wird englisch \textit{propagation delay} genannt und bezeichnet die Zeit, die Daten vom Eingang bis zum Ausgang des Bauteils brauchen.\\
-Die Durchlaufverzögerung beträgt beim Cylone IV 4 ns \cite{Handbook_Altera}.
+Die Durchlaufverzögerung beträgt beim Cylone IV 4 ns \citep{Handbook_Altera}.
 
 \textbf{Finite State Machine (fsm)}\\
-''A model of a computational system, consisting of a set of states, a set of possible inputs, and a rule to map each state to another state, or to itself, for any of the possible inputs.''\cite{fsm}\\
+''A model of a computational system, consisting of a set of states, a set of possible inputs, and a rule to map each state to another state, or to itself, for any of the possible inputs.'' \citep{fsm}\\
 Auf deutsch: ''Ein Model in Rechensystemen, das aus einem Satz aus Zuständen, möglichen Eingängen und Regeln wie man von einem Zustand zum nächsten, oder zu sich selbst, für alle möglichen Eingänge gelangt.''
 
 \textbf{Flip-Flops}\\
 Grundbaustein der Digitalen Logik. Das Flip-Flop speichert seinen Wert, den es am Eingang erhält am Ausgang.
 
 \textbf{Glitch}\\
-Im technischem Bereich bedeutet \textit{glitch} gemäss Cambridge Dictionairy ''a sudden unexpected increase in electrical power, especially one that causes a fault in an electronic system'' \cite{dictionair}.\\
+Im technischem Bereich bedeutet \textit{glitch} gemäss Cambridge Dictionairy ''a sudden unexpected increase in electrical power, especially one that causes a fault in an electronic system'' \citep{dictionair}.\\
 Auf deutsch: ''eine plötzliche, unerwartete Spannungserhöhung, die insbesondere ein Fehlverhalten im elektronischen System verursacht''.
 
 \textbf{Hold Time}\\
 Ist die minimale Zeit, in der die Inputdaten \textit{nach} der Taktflanke stabil sein müssen.\\
-Die \textit{hold time} beträgt beim  Cyclone IV E 0 ns \cite{Handbook_Altera}.
+Die \textit{hold time} beträgt beim  Cyclone IV E 0 ns \citep{Handbook_Altera}.
 
 \textbf{Hot Plug}\\
 Bezieht sich auf die Hardware-Umsetzung einer \textit{finite state machine}. Gewöhnlich braucht es für \begin{math} 2^n \end{math} Zustände n Flip-Flops. Bei Hot Plug braucht es für n Zustände n Flip-Flops, denn jeder neue Zustand wird durch eine '1' am n-ten Flip-Flop detektiert. Alle anderen Flip-Flop-Werte sind auf '0'. Die logische Schaltung für eine \textit{Hot Plug fsm} wird durch den direkten Bezug einer gesetzten '1' zum Zustand einfach.
@@ -83,7 +83,7 @@ Bezeichnet das Überarbeiten eines funktionierenden Codes. Ziele sind, den Code 
 
 \textbf{Setup Time} \\
 Minimale Zeit, in der Inputdaten stabil sein müssen \textit{bevor} eine Taktflanke die Daten triggert.\\
-Die \textit{setup time} beträgt beim Cyclone IV E 10 ns \cite{Handbook_Altera}
+Die \textit{setup time} beträgt beim Cyclone IV E 10 ns \citep{Handbook_Altera}
 
 \textbf{State}\\
 Bezeichnet den aktuellen Zustand einer \textit{finite state machine}.
