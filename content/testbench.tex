@@ -12,6 +12,7 @@
  \textit{Test Driven Development} bedeutet, dass vor oder parallel zur Entwicklung einer \textit{unit} (im Folgenden Block genannt) der \textit{unit test} entwickelt wird \citep{Testdriven}. Beim textbasierten Testen stammen die Befehle aus einer Input-Datei, und die Ergebnisse werden in einer Datei abgelegt. 
 
 \section{Device Under Test}\label{sec.testbench_DUT}
+
 Das Device Under Test (DUT) ist das MIDI Interface (siehe Abbildung \ref{fig.testbench}). Das Ziel ist, dass das MIDI-Signal in den Block geführt wird und am Ausgang 10 Notenvektoren anliegen mit je 8 Notenbits und einem Bit, das besagt, ob die Note an oder ab ist.
 
 \begin{figure}[H]
@@ -23,12 +24,12 @@ Das Device Under Test (DUT) ist das MIDI Interface (siehe Abbildung \ref{fig.tes
 Die \textit{testbench} wird mit Daten der Input-Datei gespiesen. Die Endversion der Input-Datei und der Testbericht liegen im Anhang \ref{chap.anhang_midi_input}. 
 In den Unterkapiteln wird der Aufbau der Input-Datei, das Entwickeln der Test-Fälle, und die Umsetzung im VHDL-Code beschrieben.
 
-
 \section{Struktur der Input-Datei}\label{sec.testbench_inputdatei} 
 
 Die Test-Datei ist zeilenweise strukturiert.
 
 \subsubsection{Verarbeitungsmodus} 
+
 Jede Zeile beginnt mit dem Verabreitungsmodus. Bei der Input-Datei besteht der Verarbeitungsmodus aus fünf Buchstaben.
 
 \begin{tabbing}
@@ -47,7 +48,6 @@ Die Tokenstruktur leitet sich aus der MIDI-Datenstruktur im \textit{polyphony mo
 
 In der \textit{testbench midi interface} haben Tokens folgende Bedeutung:
 
-
 {
 \renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
 \begin{tabular}{@{}*{10}{l}@{}} % @{} removes the left and right margin around the table
@@ -56,27 +56,28 @@ mode\_s	& Dummy & Status & Note & Status & Note & Status & Note & Dummy & Dummy
 \end{tabular}
 }
 
-Dummy ist die Bezeichnung für das Einlesen nicht relevanter Werte. Diese nicht relevanten Werte sind in der Input-Datei gesetzt, um die Verarbeitungsstruktur beim Einlesen der Token zu vereinfachen. Der Dummywert wird beim Einlesen verworfen.\\
+Dummy ist die Bezeichnung für das Einlesen nicht relevanter Werte. Diese nicht relevanten Werte sind in der Input-Datei gesetzt, um die Verarbeitungsstruktur beim Einlesen der Token zu vereinfachen. Der Dummywert wird beim Einlesen verworfen.
  
 \section{Aufstellen der Fehler}\label{sec.testbench_fehler} 
 
-Zu Beginn hatten die Testfälle nur drei Tokens und testeten die Grundfunktionen:\\
+Zu Beginn hatten die Testfälle nur drei Tokens und testeten die Grundfunktionen:
 
 single mode note an/ab\\
 singl 90 27\\ 
-singl 90 27\\
+singl 90 27
 
 polyphone note an/ab\\
 polyp 71 55\\
-polyp 71 00\\
+polyp 71 00
 
 Komplexere Testfälle zeigten, dass eine Test-Zeile mehr Tokens braucht. Die Endversion der Input-Datei kann mit einer Zeile bis 4 Noten an und abstellen.
-
 
 \subsection{Einzelne Noten testen}
  
 \subsubsection{Testfälle}
-Getestet sind auch Kombinationen unter den Fällen, die aus Übersichtlichkeit nicht alle aufgeschrieben werden.\\
+
+Getestet sind auch Kombinationen unter den Fällen, die aus Übersichtlichkeit nicht alle aufgeschrieben werden.
+
 \begin{itemize}
 \item Einzelne Note an, Geschwindigkeits Byte folgt
 \item Einzelne Note an, Geschwindigkeits Byte folgt nicht
@@ -139,8 +140,6 @@ In der Sequenz wird die Note 71, dann die Noten 02 und 33. Danach wird die Note 
 
 Im Verarbeitungsmodus Polyphonie sendet die \textit{testbench}  das \textit{status byte} "10100000" (0xA0) 
 
-
-
 \section{Code Testbench}\label{sec.code_testbench}
 
 Die automatisierte Datenverarbeitung erzeugt viele Werte (10 Noten mit je 9 Werten). Um einzelne Bits effizient zu setzen oder zu überprüfen, wird der Code einem \textit{refactoring} unterzogen.
@@ -178,7 +177,6 @@ type t_token_line is record
 type t_note_array is array (0 to 9) of std_logic_vector(8 downto 0);
 \end{lstlisting}
 
-
 \subsection{Prozess-Optimierung}
 
 Um die einzelnen Bits in den arrays zu setzen, braucht es in der Ablaufstruktur Optimierungen.
@@ -190,6 +188,7 @@ Um die einzelnen Bits in den arrays zu setzen, braucht es in der Ablaufstruktur 
 \end{itemize}
 
 \section{Ergebnisse Simulation}\label{sec.ergebnisse_tests}
+
 Die Ausgabe der Signale in die Output-Datei bezieht sich auf den Zustand am Ausgang des DUT. Damit auch die beiden internen Blöcke MIDI control und Polyphonie out korrekt funktionieren werden die Signale überprüft. Auch das Verhalten in den Blöcken entspricht den erwarteten Signalverläufen.
 
 \subsection{Block Midi Control}
