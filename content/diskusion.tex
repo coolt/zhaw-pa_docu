@@ -10,25 +10,15 @@
 
 \chapter{Diskussion und Ausblick}\label{chap.diskussion}
 
-Bespricht die erzielten Ergebnisse bezüglich ihrer ERwartbarkeit, Aussagekraft und Relevanz\\
-Interpretation und Validierung der Resultate\\
-Rückblick auf Aufgabenstellung: erreicht\ nicht erreicht\\
+Das Provozieren von \textit{glitch} und von \textit{metastability} ist vollständig umgesetzt. Für das entwickelte \textit{midi interface} fehlt die Integration des Blocks ins Synthesizer-Projekt. 
 
-Legt dar, wie die Resultate weiterhin genutzt werden können\\ an sie angeschlossen werden kann\\
+\section{Einbauen in das bestehende Synthesizer-Projekt}
 
-%----------------------------------------------------------------
+Ein erster Versuch, die 10 Noten über 10 \textit{DDS} auszugeben scheiterte aus zeitlichen Gründen. Das Anschliesen der 10 DDS ist gemacht, ebenso eine Testbench über das Top des Synthesizert. Die Umsetzng scheiterte an der Implementation ddes Mischers, der die 10 parallelen Noten zusammenfügt.
 
-Zwei unabhägige Projekte, unterschiedliche Hardware und Programme. Testbench braucht Zeit.
+Im Anhang befindet sich ein Block-Schaltbild, wie das midi interface in das bestehende Projekt eingebaut wird. 
 
-Ausstehend ist die Implementation in das bestehende Synthesizer-Projekt. Ein erster, schneller Versuch, die 10 Noten über 10 \textit{DDS} schnell auszugeben scheiterte, an der notwendigen Implementation eines Misches, der die 10 Noten zu einem Signal für den \textit{audio codec} zusammenfügt. 
-
-
-Sehr schad, die vielfälltigen Klangfarben. Interessant. 
+\section{Frequenzmodulation mit vielfälltiger Klangfarbe}
+Artikel zu empfehlen
 
 
-
-
-
-
-% Aus derr Einleitung------------------------------------------------------
-Als offener Punkt besteht die Implementation des \textit{midi interfaces} in das bestehende Synthesizer-Projekt. Die Schnittstellen sind im Anhang festgehalten und die notewnigen Implementationsschritte, wie das Ausweiten des bestehenden DDS auf 10 DDS sind im Projekt als Blöcke eingebaut. Aus zeitlichen Gründen konnte dieser letzte Schritt nicht mehr während der Projektarbeit zu Ende gebracht werden. 

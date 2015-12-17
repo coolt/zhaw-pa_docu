@@ -10,54 +10,6 @@
 
 \chapter{MIDI Steuerung}\label{chap.midi}
 
-\section{Blockschaltbild und Schnittstellen}
-
-Als erstes die Zusammenfassung der internen Blöcke. Die zwei entwickelten Blöcke \textit{midi control} und \textit{polyphonie out} sind grau markiert (siehe Abbildung \ref{fig.midi_interface_block} ). Gegeben ist der Block uart top.
-
-\begin{figure}[H]
-	\includegraphics[width=0.7\textwidth]{images/midi_interface/midi_interface_block.png}
-	\caption{Blockschaltbild Midi Interface}
-	\label{fig.midi_interface_block}
-\end{figure}
-
-\textbf{Definition der Schnittstellen}\label{schnittstellen}
-
-Uart Top Ausgang
-
-\begin{itemize}
-	\item 8-Bit-Signal: Bytweise Dekodierung der Midi Daten 
-	\item 1-Bit-Signal: Übermittelt Gültigkeit der Daten
-\end{itemize}
-
-Midi Control Ein- und Ausgang
-
-\begin{itemize}
-	\item Empfangen von 8-Bit Midi Daten,
-    \item Empfangen, ob Daten korrekt sind (1 Bit)
-	\item Übermittelt 9-Bit-Notenvektor (Abb.\ref{fig.Notenvektor})
-    \item Übermitteln, ob Daten korrekt (1 Bit)
-\end{itemize}
-
-Polyphonie Out Ein- und Ausgang
-
-\begin{itemize}
-	\item Eingang eines 9-Bit-Notenvektors
-    \item Eingang, ob Daten gültig sind
-	\item Ausgabe von 10 Notenvektoren zu 9-Bit.
-\end{itemize}
-\bigskip
-
-Im vorgegebenen Konzept für Polyphonie out (siehe Unterkapitel \ref{konzept_plyphonie}) ist die Schnittstelle zum Polyphonie Out-Block als ein 9-Bit-Signal definiert. Das MSB dient als Flag, ob die übermittelte Note an oder ab ist.
-
-\begin{figure}[H]
-	\includegraphics[width=0.2\textwidth]{images/midi_interface/NotenVektor.png}
-	\caption{Aufbau Notenvektor}
-	\label{fig.Notenvektor}
-\end{figure}
-
-Als nächstes wird die MIDI 1.0 Spezifikation, erklärt, nach der Block \textit{midi control} aufgebaut ist. Die Umsetzung des \textit{polyphone out}-Blocks bildet den Abschluss dieses Kapitels.
-
-\newpage
 \section{Das MIDI Kommunikationsprotokoll}\label{sect.midi_spezification}
 
 Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \cite{Midi_specification}.
@@ -72,7 +24,7 @@ MIDI behält einen Status, bis ein neues \textit{status byte} folgt. Dieses Verh
 
 \subsubsection*{Data Bytes}
 
-Gemäss Spezifikation folgen einem \textit{status byte} exakt ein oder zwei Bytes. Das MSB ist immer logisch '0'. Die Werte können von 0x00 bis 0x7F sein. Das bedeutet, dass MIDI maximal 128 Noten unterscheiden kann.
+Gemäss Spezifikation folgen einem \textit{status byte} ein oder zwei Bytes. Das MSB ist immer logisch '0'. Die Werte können von 0x00 bis 0x7F sein. Das bedeutet, dass MIDI maximal 128 Noten unterscheiden kann.
 
 \textit{Data bytes} können unterschiedliche Informationen erhalten. Im Kontroller sind Notenwerte, Geschwindigkeit des Anschalges relevant
 
@@ -122,6 +74,55 @@ Unterschiedlich zu behandeln ist die Funktion des \textit{status bytes}. Im \tex
 \end{figure}
 
 Wegen der unterschiedlichen Bedeutung der eingegangenen Token, behandelt die \textit{fsm} die zwei Noten-Modi und deren Noten- und Geschwindigkeitszustände unabhängig voneinander.
+
+
+\section{Blockschaltbild und Schnittstellen}
+
+Als erstes die Zusammenfassung der internen Blöcke. Die zwei entwickelten Blöcke \textit{midi control} und \textit{polyphonie out} sind grau markiert (siehe Abbildung \ref{fig.midi_interface_block} ). Gegeben ist der Block uart top.
+
+\begin{figure}[H]
+	\includegraphics[width=0.7\textwidth]{images/midi_interface/midi_interface_block.png}
+	\caption{Blockschaltbild Midi Interface}
+	\label{fig.midi_interface_block}
+\end{figure}
+
+\textbf{Definition der Schnittstellen}\label{schnittstellen}
+
+Uart Top Ausgang
+
+\begin{itemize}
+	\item 8-Bit-Signal: Bytweise Dekodierung der Midi Daten 
+	\item 1-Bit-Signal: Übermittelt Gültigkeit der Daten
+\end{itemize}
+
+Midi Control Ein- und Ausgang
+
+\begin{itemize}
+	\item Empfangen von 8-Bit Midi Daten,
+    \item Empfangen, ob Daten korrekt sind (1 Bit)
+	\item Übermittelt 9-Bit-Notenvektor (Abb.\ref{fig.Notenvektor})
+    \item Übermitteln, ob Daten korrekt (1 Bit)
+\end{itemize}
+
+Polyphonie Out Ein- und Ausgang
+
+\begin{itemize}
+	\item Eingang eines 9-Bit-Notenvektors
+    \item Eingang, ob Daten gültig sind
+	\item Ausgabe von 10 Notenvektoren zu 9-Bit.
+\end{itemize}
+\bigskip
+
+Im vorgegebenen Konzept für Polyphonie out (siehe Unterkapitel \ref{konzept_plyphonie}) ist die Schnittstelle zum Polyphonie Out-Block als ein 9-Bit-Signal definiert. Das MSB dient als Flag, ob die übermittelte Note an oder ab ist.
+
+\begin{figure}[H]
+	\includegraphics[width=0.2\textwidth]{images/midi_interface/NotenVektor.png}
+	\caption{Aufbau Notenvektor}
+	\label{fig.Notenvektor}
+\end{figure}
+
+Als nächstes wird die MIDI 1.0 Spezifikation, erklärt, nach der Block \textit{midi control} aufgebaut ist. Die Umsetzung des \textit{polyphone out}-Blocks bildet den Abschluss dieses Kapitels.
+
 
 
 
@@ -350,7 +351,7 @@ Sobald eine Frage mit Ja beantwortet wird, wird der Registerindex gespeichert un
 Durch den übermittelten Index-Wert weiss der Speicher-Prozess, in welches Register die neue Note gespeichert werden soll.\\
 Die Werte aller 10 Register werden am Ausgang parallel ausgegeben.
 
-\subsection{Resultat Polyphonie Out-Block}
+\subsection{Resultat Polyphonie Out-Block}\label{test_polypohne}
 
 Die Ziele sind:
 

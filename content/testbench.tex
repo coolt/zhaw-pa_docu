@@ -12,7 +12,7 @@
  \textit{Test Driven Development} bedeutet, dass vor oder parallel zur Entwicklung einer \textit{unit} (im Folgenden Block genannt) der \textit{unit-test} entwickelt wird\cite{Testdriven}. Beim textbasierten Testen stammen die Befehle aus einer Input-Datei, und die Ergebnisse werden in einer Datei abgelegt. 
 
 \section{Device Under Test}\label{sec.testbench_DUT}
-Das Device Under Test (DUT)  ist das midi interface. Das Ziel ist, dass das MIDI-Signal in den Block geführt wird und am Ausgang 10 Notenvektoren mit je 8 Notenbits und einem Bit, das besagt, ob die Note an oder ab ist.\\
+Das Device Under Test (DUT) ist das midi interface (siehe Abbildung \ref{fig.testbench}). Das Ziel ist, dass das MIDI-Signal in den Block geführt wird und am Ausgang 10 Notenvektoren mit je 8 Notenbits und einem Bit, das besagt, ob die Note an oder ab ist.\\
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_interface/testbench_midiinterface.png}
 	\caption{Blockschaltbild Device under Test}
@@ -40,7 +40,7 @@ polyp	\> 71 \> 55 \> \ldots{}
 \subsubsection{Tokenstruktur} 
 
 Nach dem Verarbeitungsmodus folgen die Daten. Jede Zeile hat gleichviele Datenpackete (Tokens). 
-Die \textit{testbench} ortet jedem Datenpaket innerhalb der Zeile eine Bedeutung zu. Je nach Verarbeitungsmodus ist die Bedeutung der Token anders.
+Die \textit{testbench} ortet jedem MIDI-Datenpaket (siehe \ref {datenytpen}, Beschreibung der MIDI-Daten) innerhalb der Zeile eine Bedeutung zu. Je nach Verarbeitungsmodus ist die Bedeutung der Token anders.
 
 Die \textit{testbench midi interface} an den zwei MIDI Datentypen, die im Unterkapitel \ref{datenytpen} detailliert beschrieben sind. Die Tokestruktur leitet sich aus der Datenreihenfolge im \textit{polyphony mode} und im \textit{single mode} ab (siehe  \ref{note_modes}). In der nachfolgenden zwei Token-Beispielen bezieht sich die obere Zeile auf den \textit{polyphony mode} und die untere auf den \textit{single mode}.
 
@@ -55,11 +55,11 @@ mode\_s	& Dummy & Status & Note & Status & Note & Status & Note & Dummy & Dummy
 \end{tabular}
 }
 
-Dummy wird gesetzt, um die Verarbeitungsstruktur zu vereinfachen. Jeder Dummywert wird beim Einlesen verworfen.\\
+Dummy ist die Bezeichnung für das Einlesen nicht relevanter Werte. Diese nicht relevanten Werte sind in der Input-Datei gesetzt, um die Verarbeitungsstruktur beim Einlesen der Token zu vereinfachen. Der Dummywert wird beim Einlesen verworfen.\\
  
 \section{Aufstellen der Fehler}\label{sec.testbench_fehler} 
 
-Die ersten Zeilen, sie sind ersetzt durch ausgefeiltere Datenstrukturen, hatten nur 3 Token und testeten die Grundfunktionen.\\
+Die ersten Zeilen, sie sind ersetzt durch komplexere Datenstrukturen, hat nur 3 Token und testet die Grundfunktionen.\\
 
 single mode note an/ab\\
 singl 90 27\\ 
@@ -206,7 +206,7 @@ Im \textit{polyphony mode} existieren die Zustände idle, note\_v, velocity\_v u
 
 \subsection{Block Polyphonie Out}
 Kriterien in der Polyphonie out sind, dass jede neue Note auf den nächt freien Register-Platz gelegt wird. Zudem soll keine Note zwei Registerplätze belegen. Zudem soll, wenn alle Register-Plätze einen Notenwert haben, die neue Note an einen Registerplatz mit aktuell abgeschaltener Note besetzen.
-Alle Kriterien sind erfüllt.\\
+Alle Kriterien sind erfüllt (siehe \ref {test_polypohne}, dort sind die getestetn Kriterien detailiert notiert.)\\
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_interface/tb_polyphonie.png}

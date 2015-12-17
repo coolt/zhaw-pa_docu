@@ -33,7 +33,7 @@ Die Ursache unsicherer Ausgangswerte liegen darin, dass das Inputsignal eines Fl
 ''If the amplitude of the runt pulse is \textit{exactly the treshold level of the SET input of the output cell}, the cell will be driven to its metastable state. The metastable state is the condition that is roughly defined as ''half SET and half RESET'' \cite{F_metastability}
 \end{quote}
 
-Trifft der anzulegende Wert zu spät ein wird die \textit{setup time}) verletzt und wird der Signalwert zu früh entwendet, verletzt die \textit{hold time}). Metastabilität kann vermieden werden, wenn diese zwei Zeiten strikt eingehalten werden:
+Trifft der anzulegende Wert zu spät ein wird die \textit{setup time} verletzt und wird der Signalwert zu früh entwendet, verletzt die \textit{hold time}. Metastabilität kann vermieden werden, wenn diese zwei Zeiten strikt eingehalten werden:
 
 \begin{quote}
 ''Metastabilit is avoided by holding the information stable before and after the clock pulse  for a set period of time, called the setup time for the data line an the hold time for the control line.''\cite{ReferenceManual}
@@ -51,7 +51,7 @@ Um Metastabilität zu vermeiden, sollte die Logik möglichst klein, die Bauteile
 
 \subsection{Konzept}\label{sect.metastabil_ansatz}
 
-Aufgebaut wird ein System mit zwei \textit{clock domains}. Eine \textit{clock domain}, Gebiet 1,  beinhaltet einen Zähler, der an das Gebiet 2 asynchrone Impulse sendet. Gebiet 2 verarbeitet diese Impulse in einer \textit{finate state machine}. Bei korrekter Funktionsweise wechset die \textit{fsm} zwischen den definierten \textit{states}. Funktioniert sie falsch, fällt die \textit{fsm} in einen \textit{state}, den sie nicht implementiert hat.
+Aufgebaut wird ein System mit zwei \textit{clock domains}.  \textit{Clock domain 1}, Gebiet 1 genannt,  beinhaltet einen Zähler, der an die \textit{clock domain 2}, als Gebiet 2 bezeichnet, asynchrone Impulse sendet. Gebiet 2 verarbeitet diese Impulse in einer \textit{finate state machine}. Bei korrekter Funktionsweise wechset die \textit{fsm} zwischen den definierten \textit{states}. Funktioniert sie falsch, fällt die \textit{fsm} in einen \textit{state}, den sie nicht implementiert hat.
 
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{images/metastability/konzept.png}
@@ -61,7 +61,7 @@ Aufgebaut wird ein System mit zwei \textit{clock domains}. Eine \textit{clock do
 
 \subsection{Umsetzung}\label{sect.metastabil_implementation}
 
-Als Hardware wird das altera development board De2 genommen und mit der Software quartus 13osp0 gearbeitet. Die die zwei Takte nicht Vielfache voneinander sein dürfen, wure für den Zähler ein Takt von 27 MHz und für die \textit{fsm} ein Takt von 50 MHz. Der Takt des Zählers ist leicht schneller als die Hälfte der fsm und schiebt sich  vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der \textit{setup time} ist eine Frage der Zeit.
+Als Hardware wird das altera board De2 genommen und mit der Software quartus 13osp0 gearbeitet. Da die zwei Takte nicht Vielfache voneinander sein dürfen, wure für den Zähler ein Takt von 27 MHz und für die \textit{fsm} ein Takt von 50 MHz. Der Takt des Zählers ist leicht schneller als die Hälfte des \textit{fsm}-Taktes und schiebt sich  vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der \textit{setup time} ist eine Frage der Zeit.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/metastability/2_takte.png}
@@ -115,13 +115,13 @@ CH 2 = Synchronisierter Puls
 
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{images/metastability/synchron_eng_2.png}
-	\caption{Unregelmässiger Wechsel zwischen Zustand s0 und Zustand s1}
+	\caption{Erster Teil des unregelmässigen Wechsel zwischen Zustand s0 und Zustand s1}
 	\label{fig.metastabil.Ergebnis_1}
 \end{figure}
 
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{images/metastability/synchron_eng_3.png}
-	\caption{Unregelmässiger Wechsel zwischen Zustand s0 und Zustand s1}
+	\caption{Zweiter Teil des unregelmässigen Wechsel zwischen Zustand s0 und Zustand s1}
 	\label{fig.metastabil.Ergebnis_2}
 \end{figure}
 
