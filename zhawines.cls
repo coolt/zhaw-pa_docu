@@ -123,7 +123,7 @@
 \renewcommand{\arraystretch}{1.5}
 
 \begin{tabular}{ p{3cm} l }
-\ifthenelse{\equal{\languagename}{\string ngerman}}{Autoren}{Authors} & \parbox[t]{5cm}{\@author} \\
+\ifthenelse{\equal{\languagename}{\string ngerman}}{Autorin}{Author} & \parbox[t]{5cm}{\@author} \\
 \end{tabular}
 
 %\vskip 1em
