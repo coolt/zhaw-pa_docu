@@ -10,8 +10,8 @@
 
 \chapter{Glitch}\label{chap.glitch}
 
-\section{Glitche in der Digitalen Signalverarbeitung}\label{sect.glitch_def}
-In der Digitalen Signalverarbeitung ist glitch ein bekanntes, ungewolltes Verhalten, das William I. Fletscher folgendermassen beschreibt:
+\section{Glitch in der Digitalen Signalverarbeitung}\label{sect.glitch_def}
+In der Digitalen Signalverarbeitung ist ein \textit{glitch} ein bekanntes, ungewolltes Verhalten, das William I. Fletscher folgendermassen beschreibt:
 
 \begin{quote}
 ''Als \textit{glitch}  wird eine ungewollte, flüchtige ''Signalspitze'' bezeichnet, die Zähler aufwärts zählt, Register löscht oder einen ungewollten Prozess startet.'' \cite{F_glitches}
@@ -37,9 +37,9 @@ Der Auslöser sind ungleichzeitig eintreffende Signale, die durch
 \item unterschiedliche Logik-Zeiten
 \end{enumerate}
 
-entstehen, und die in ein \textbf{asynchrones} Bauteil geführt werden. Der Dekoder im asynchronen Bauteil entschlüsselt dadurch kurzfristig einen falschen Wert. \\
+entstehen, und die in ein asynchrones Bauteil geführt werden. Der Dekoder im asynchronen Bauteil entschlüsselt dadurch kurzfristig einen falschen Wert. \\
 
-Abbilung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes (mit getaktetes) enable-Signal (ena) zu einem anders verzögerten (getakteten) Flip-Flop-Eingangssignal (Q). Der Ausgang (out) des Flip-Flops weist kurzzeitig Glitches auf. Die Taktfrequenz ist clk.\\
+Abbilung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes enable-Signal (ena) zu einem anders verzögerten Flip-Flop-Eingangssignal (Q). Beide Signale sind mit der Taktfrequenz clk getaktet. Der Ausgang (out) des Flip-Flops weist aufgrund der unterschiedlichen Verzögerungen kurzzeitig \textit{glitches} auf. \\
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{images/glitch/def_glitch_3.png}
 	\caption{Asynchrone Eingangssignale führen zu Glitches}
@@ -48,11 +48,11 @@ Abbilung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes (mit getaktetes) e
 
 
 \newpage
-\section{Glitches durch Pfadverzögerung}\label{sect.glitch_detect}
+\section{Glitch erzeugen}\label{sect.glitch_detect}
 
 
-\subsubsection{Konzept}
-Ein asynchroner Zähler erhält verzögerte Bitwerte. Zählt man binär auf 15, so kann sich beim Übergang von der Zahl 11 zu 12, die falsche Zahl 15, ergeben, sofern die zwei höheren Bits der Zahl 11 verzögert ankommen (siehe Abbildung \ref {fig.glitch.binaer_zahlen}).
+\subsection{Konzept}
+Gliches werden durch Pfadverlängerung einzelner Werte erzeugt. Ein asynchroner Zähler erhält verzögerte Bitwerte. Zählt man binär auf 15, so kann sich beim Übergang von der Zahl 11 zu 12, die falsche Zahl 15, ergeben, sofern die zwei höheren Bits der Zahl 11 verzögert ankommen (siehe Abbildung \ref {fig.glitch.binaer_zahlen}).
 
 \begin{figure}[H]
 	\includegraphics[width=0.3\textwidth]{images/glitch/konzept_verzoegerung.png}
@@ -64,12 +64,12 @@ Die Verzögerung der zwei Bits, wird über Routing umgesetzt.
 
 
 
-\subsubsection{Implementation} 
+\subsection{Implementation} 
 Die Hardware ist das altera board De2 mit dem FPGA Cyclone II. Kompiliert wird das Projekt mit Quartus 13.0sp, der ältsten Quartus-Version, die den Cyclone II unterstützt.
 
 Die Pfad\textit{verlängerung} wird über das Routing über die GPIO-Pins des Stecker 1 gemacht (siehe Abbildung \ref{fig.glitch.GPIO}. GPIO 1 ist der Stecker 1). Dekodiert die asynchrone Logik die Zahl 15, wird das  Reset-Signal (aus der Logik reset\_counter\~{}2) an den Zähler gesendet und der Zähler beginnt wieder von 0 an zu zählen. Produziert der Dekoder zur falschen Zeit einen Reset, so ist dies eine Fehlkodierung: ein \textit{glitch}.
 
-Das RTL-Diagramm des asynchronen Zählers sieht wiefolgt aus:
+Das RTL-Diagramm des asynchronen Zählers sieht wie folgt aus:
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/glitch/RTL_asynchron.png}
 	\caption{Asynchroner Zähler mit Routing erzeugt Glitch}
@@ -103,7 +103,8 @@ Der Reset des asynchronen Zählers (CH 1), der synchronisierte Reset (CH 2) und 
 	\label{fig.glitch.result_1}
 \end{figure}
 
- Das \textit{glitch} trifft in der im Übergang von der 11 zur 12 Periode (nach 240 ns) regelmässig auf. Dies ist das zu erwartende Ergebnis. Ein kurzzeitiges asynchrones Verhalten findet sich auch im Übergang von der 13 zur 14 Periode. Dies ist wenn der binäre Wert 1101 auf 1110 wechselt. Da die zwei niederwertigen Bits verzögert sind, ist das dekodierten des Wertes 1111 plausibel.\\
+ Das \textit{glitch} trifft in der im Übergang von der 11 zur 12 Periode (nach 240 ns) regelmässig auf. Dies ist das zu erwartende Ergebnis. Ein kurzzeitiges asynchrones Verhalten findet sich auch im Übergang von der 13 zur 14 Periode. Dies ist wenn der binäre Wert 1101 auf 1110 wechselt. Da die zwei niederwertigen Bits verzögert sind, ist das Dekodieren des Wertes 1111 plausibel.\\
+ 
 \begin{figure}[H]
 	\includegraphics[width=0.6\textwidth]{images/glitch/Glitch_2_timing.png}
 	\caption{Zeitanalyse Glitches}

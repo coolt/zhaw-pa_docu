@@ -25,7 +25,7 @@
 Das Glossar dient interessierten Software-Entwicklern, die elektrotechnik-spezifischen Worte zu verstehen.
 
 \textbf{Asynchrone Signale}\\
-Werden Signale in zugewiesen sind sie vorerst ungetaktet, asynchron. Es ist nicht definiert, \textit{wann} exakt das Signal den neuen Wert erhält. Erst wenn ein Signal durch ein Flip-Flop geführt wird, wird es getaktet und seine Signalzuweisung dadurch determinierbar.\\
+Werden Signale unmittelbar zugewiesen sind sie vorerst ungetaktet, asynchron. Es ist nicht definiert, \textit{wann} exakt das Signal den neuen Wert erhält. Erst wenn ein Signal durch ein Flip-Flop geführt wird, wird es getaktet und seine Signalzuweisung dadurch determinierbar.\\
 
 \textbf{Audio Codec}\\
 Bezeichnet im vorgegebenen Synthesizer-Projekt den, bezüglich dem FPGA, externen Audio-Baustein auf dem altera Development Board DE2-115. Es handelt sich um einen WM8731.\\
@@ -40,29 +40,29 @@ Bezeichnet ein Bauteil, das Eingangssignale gemäss einer Spezifikation verarbei
 Bedeutet Direct Digital Synthesis und bezeichnet das digitale Erzeugen von periodischen Signalen. Diese Signale können für die Tonerzeugung gebraucht werden. \\
 
 \textbf{Dekoder}\\
-Bezeichnet ein Bauteil, das einen odere mehrere Eingangswert(e) gemäss implementierter Logik in einen Ausganswert wandelt. \\
+Bezeichnet ein Bauteil, das einen odere mehrere Eingangswert(e) gemäss implementierter Logik in einen Ausgangswert wandelt. \\
 
 \textbf{Durchlaufverzögerung}\\
 Wird englisch \textit{propagation delay} genannt und bezeichnet die Zeit, die Daten vom Eingang bis zum Ausgang des Bauteils brauchen.\\
 Die Durchlaufverzögerung beträgt beim Cylone IV 4 ns \cite{Handbook_Altera}.\\
 
-\textbf{Finate State Machine (fsm)}\\
+\textbf{Finite State Machine (fsm)}\\
 ''A model of a computational system, consisting of a set of states, a set of possible inputs, and a rule to map each state to another state, or to itself, for any of the possible inputs.''\cite{fsm}\\
-Auf deutsch''Ein Model in Rechensystemen, das aus einem Satz aus Zuständen, möglichen Eingängen und Regeln wie man von einem Zustand zum nächsten, oder zu sich selbst, für alle möglichen Eingänge gelangt. ''\\
+Auf deutsch ''Ein Model in Rechensystemen, das aus einem Satz aus Zuständen, möglichen Eingängen und Regeln wie man von einem Zustand zum nächsten, oder zu sich selbst, für alle möglichen Eingänge gelangt. ''\\
 
 \textbf{Flip-Flops}\\
 Grundbaustein der Digitalen Logik. Das Flip-Flop speichert seinen Wert, den es am Eingang erhält am Ausgang.\\
 
 \textbf{Glitch}\\
-Im technischem Bereich bedeutet \textit{glitch} gemäss Cambridge Dictionaire ''a sudden unexpected increase in electrical power, especially one that causes a fault in an electronic system ''\cite{dictionair},\\
+Im technischem Bereich bedeutet \textit{glitch} gemäss Cambridge Dictionairy ''a sudden unexpected increase in electrical power, especially one that causes a fault in an electronic system ''\cite{dictionair},\\
 auf deutsch ''eine plötzliche, unerwartete Spannungserhöhung, die insbesondere ein Fehlverhalten im elektronischen System verursacht''.\\
 
 \textbf{Hold Time}\\
 Ist die minimale Zeit, in der die Inputdaten \textit{nach} der Taktflanke stabil sein müssen.\\
-Die hold-Zeit beträgt beim  Cyclone IV E 0 ns \cite{Handbook_Altera}.\\
+Die \textit{hold time} beträgt beim  Cyclone IV E 0 ns \cite{Handbook_Altera}.\\
 
 \textbf{Hot Plug}\\
-Bezieht sich auf die Hardware-Umsetzung einer \textit{finate state machine}. Gewöhnlich braucht es für \begin{math} 2^n \end{math} Zustände n Flip-Flops. Bei Hot Plug braucht es für n Zustände n Flip-Flops, denn jeder neue Zustand wird durch eine '1' am n-ten Flip-Flop detektiert. Alle anderen Flip-Flop-Werte sind auf '0'. Die logische Schaltung für eine \textit{Hot Plug fsm} wird durch den direkten Bezug einer gesetzten '1' zum Zustand einfach.
+Bezieht sich auf die Hardware-Umsetzung einer \textit{finite state machine}. Gewöhnlich braucht es für \begin{math} 2^n \end{math} Zustände n Flip-Flops. Bei Hot Plug braucht es für n Zustände n Flip-Flops, denn jeder neue Zustand wird durch eine '1' am n-ten Flip-Flop detektiert. Alle anderen Flip-Flop-Werte sind auf '0'. Die logische Schaltung für eine \textit{Hot Plug fsm} wird durch den direkten Bezug einer gesetzten '1' zum Zustand einfach.
 
 
 \textbf{Kathodenstrahl Osziloskop, KO}\\
@@ -72,7 +72,7 @@ Bezeichnet ein elektronisches Messgerät, das ein Signale analog als Spannungen 
 Bezeichnet in der  digitalen Signalverarbeitung einen unsicheren Zustand. Der Wert des Ausgangssignals ist nicht vorhersehbar, da beim Eingangssignal die Daten zu spät ankommen oder zu früh weggenommen werden.\\
 
 \textbf{Others}\\
-Bezeichnet in einem Swicht-Case in VHDL alle anderen Möglichkeiten, die nicht abgefragt werden. Es dient dem System einen definierten Zustand zu geben, falls etwas Unerwartetes eintrifft.\\
+Bezeichnet in einem Switch-Case in VHDL alle anderen Möglichkeiten, die nicht abgefragt werden. Es dient dem System einen definierten Zustand zu geben, falls etwas Unerwartetes eintrifft.\\
 
 \textbf{Pfadzeit}\\
 Bezeichnet die Zeit, die ein Signal von einem Flip-Flop zum nächsten braucht.\\
@@ -82,18 +82,18 @@ Bezeichnet das Überarbeiten eines funktionierenden Codes. Ziele sind, den Code 
 
 
 \textbf{Setup Time} \\
-Minimale Zeit, in der Inputdaten stabil sein müssen be\textit{vor} ein Taktflanke die Daten triggert.\\
-Die setup-Zeit beträgt beim Cyclone IV E 10 ns \cite{Handbook_Altera}\\
+Minimale Zeit, in der Inputdaten stabil sein müssen \textit{bevor} eine Taktflanke die Daten triggert.\\
+Die \textit{setup time} beträgt beim Cyclone IV E 10 ns \cite{Handbook_Altera}\\
 
 \textbf{State}\\
-Bezeichnet den aktuellen Zustan einer finale state machine. \\
+Bezeichnet den aktuellen Zustand einer \textit{finite state machine}. \\
 
-\textbf{Textbasierte Testbench}
+\textbf{Textbasierte Testbench}\\
 In VHDL wird die Simulation der Signale in einer Testbench aufgesetzt. In der Testbench werden die Signalanregungen, stimuli, definiert, und die zeitlichen Abläufe unter Signalen. Für eine Testbench ist eine eigene Software notwendig.\\
-Eine textbasierte Testbench liest die stimuli aus einem File ein. Zudem können im File die zu erwartenden Ergebnisse definiert sein.\\
+Eine textbasierte Testbench liest die stimuli und die zu erwartenden Ergebnisse aus einer Datei ein. Die Ergebnisse werden ebenfalls in eine Datei ausgegeben.\\
 
 \textbf{Token}\\
 Bezeichnen Elemente in einer Reihe von strukturierten Daten.\\
 
 \textbf{Quartus}\\
-IDE von altera zum Kompilieren, Synthesizieren und einbauen von IPs für die altera FPGAs.\\
+IDE von altera zum Kompilieren, Synthetisieren und Einbauen von IPs für die altera FPGAs.\\

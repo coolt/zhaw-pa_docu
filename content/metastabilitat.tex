@@ -12,7 +12,7 @@
 
 \section{Metastabiler Zustand}\label{sect.meatastabil_def}
 Metastabilität bedeutet, dass der Ausgang eines Flip-Flops nicht dem Eingang entsprechen \textit{muss}. In einem metastabilen Zustand kann ein Ausgang korrekt sein, muss aber nicht.
-Im Idealfall wählt wählt ein Flip-Flop seinen Ausgangswert selbst (siehe Abbildung \ref{fig.metastabil.schlimmster_Fal} oberes Signal). Im schlechten Fall “hängt” sich das Flip-Flop “auf” und toggelt permanent zwischen '0' und '1' (Abbildung \ref{fig.metastabil.schlimmster_Fal} unteres Signal).
+Im Idealfall wählt wählt ein Flip-Flop seinen Ausgangswert selbst (siehe Abbildung \ref{fig.metastabil.schlimmster_Fall} oberes Signal). Im schlechten Fall “hängt” sich das Flip-Flop “auf” und toggelt permanent zwischen '0' und '1' (Abbildung \ref{fig.metastabil.schlimmster_Fall} unteres Signal).
 
 \begin{figure}[H]
 	\includegraphics[width=0.4\textwidth]{images/metastability/metastability_2_IO.png}
@@ -36,7 +36,7 @@ Die Ursache unsicherer Ausgangswerte liegen darin, dass das Inputsignal eines Fl
 Trifft der anzulegende Wert zu spät ein wird die \textit{setup time} verletzt und wird der Signalwert zu früh entwendet, verletzt die \textit{hold time}. Metastabilität kann vermieden werden, wenn diese zwei Zeiten strikt eingehalten werden:
 
 \begin{quote}
-''Metastabilit is avoided by holding the information stable before and after the clock pulse  for a set period of time, called the setup time for the data line an the hold time for the control line.''\cite{ReferenceManual}
+''Metastability is avoided by holding the information stable before and after the clock pulse  for a set period of time, called the setup time for the data line an the hold time for the control line.''\cite{ReferenceManual}
 \end{quote}
 
 \begin{figure}[H]
@@ -45,7 +45,7 @@ Trifft der anzulegende Wert zu spät ein wird die \textit{setup time} verletzt u
 	\label{fig.metastabil.kritisches_zeitfenster}
 \end{figure}
 
-Um Metastabilität zu vermeiden, sollte die Logik möglichst klein, die Bauteile beieinander und der Systemtakt an die längste Pfadzeit angepasst werden. Der maximal erlaubte Systemtakt kann in quartus mit dem Timequest Time Analyser abgefragt werden.
+Um Metastabilität zu vermeiden, sollte die Logik möglichst klein, die Bauteile nahe beieinander und der Systemtakt an die längste Pfadzeit angepasst werden. Der maximal erlaubte Systemtakt kann in quartus mit dem Timequest Time Analyser abgefragt werden.
 
 \section{Metastabilität erzeugen}\label{sect.meatastabil_erzeugen}
 
@@ -59,9 +59,9 @@ Aufgebaut wird ein System mit zwei \textit{clock domains}.  \textit{Clock domain
 	\label{fig.metastabil.fsm}
 \end{figure}
 
-\subsection{Umsetzung}\label{sect.metastabil_implementation}
+\subsection{Implementation}\label{sect.metastabil_implementation}
 
-Als Hardware wird das altera board De2 genommen und mit der Software quartus 13osp0 gearbeitet. Da die zwei Takte nicht Vielfache voneinander sein dürfen, wure für den Zähler ein Takt von 27 MHz und für die \textit{fsm} ein Takt von 50 MHz. Der Takt des Zählers ist leicht schneller als die Hälfte des \textit{fsm}-Taktes und schiebt sich  vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der \textit{setup time} ist eine Frage der Zeit.
+Als Hardware wird das altera board DE2 genommen und mit der Software quartus 13.Osp1 gearbeitet. Da die zwei Takte nicht Vielfache voneinander sein dürfen, wird für den Zähler ein Takt von 27 MHz und für die \textit{fsm} ein Takt von 50 MHz gewählt. Der Takt des Zählers ist leicht schneller als die Hälfte des \textit{fsm}-Taktes und schiebt sich  vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der \textit{setup time} ist eine Frage der Zeit.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/metastability/2_takte.png}
@@ -80,7 +80,7 @@ Die Zustandsüberprüfung erfolgt über das Ausgeben des aktuellen Zustands auf 
 	 Grüne LED 17 ist an\\
 \end{itemize}
 
-Funktioniert die \textit{fsm}, blinken die zwei roten LEDs abwechslungsweise. Fällt die \textit{fsm} in einen undefinierten Zustand, leuchtet die grüne LED. Um die Ursache der Metastabilität, das Verletzten der \textit{setup time} zu verhindern, wird eine optionale Synchronisation durch Switch 17 eingebaut. Ist Swicht 17  auf '1', wird der Puls der \textit{clock domain} 27 MHz durch ein Flip-Flop auf 50 MHz synchronisiert.
+Funktioniert die \textit{fsm}, blinken die zwei roten LEDs abwechslungsweise. Fällt die \textit{fsm} in einen undefinierten Zustand, leuchtet die grüne LED. Um die Ursache der Metastabilität, das Verletzten der \textit{setup time} zu verhindern, wird eine optionale Synchronisation durch Switch 17 eingebaut. Ist Switch 17  auf '1', wird der Puls der \textit{clock domain} 27 MHz durch ein Flip-Flop auf 50 MHz synchronisiert.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/metastability/RtL_metastaibility.png}
@@ -89,13 +89,13 @@ Funktioniert die \textit{fsm}, blinken die zwei roten LEDs abwechslungsweise. F�
 \end{figure}
 
 \newpage
-\section{Resultat Metastabilität provozieren}\label{sect.meatastabil_proozieren}
+\section{Resultat}\label{sect.meatastabil_proozieren}
 
 Das Resultat ist, dass das Board unmittelbar nach Einstellen in den metastabilen Zustand fällt und die grüne LED leuchtet. Wird Reset gedrückt, folgt ein kurzes Aufblinken der zwei roten LEDs und wieder die grüne LED.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/metastability/metastabil.JPG}
-	\caption{Metastbiler Zustand}
+	\caption{Metastabiler Zustand}
 	\label{fig.metastabil.Ergebnis_Boardasynchron}
 \end{figure}
 
@@ -108,7 +108,7 @@ Wird die Synchronisations-Schaltung betätigt, leuchten beide roten LEDs auf. Di
 \end{figure}
 
 \newpage
-Wird das Wechseln zwischen den zwei states am KO ausgegeben, so erkennt man, da - weil der Takt 27 MHz kein Bruchteil von 50 Mhz - kein wiederkehrendes Muster der Wechsel zwischen den zwei Zuständen auftritt.
+Wird das Wechseln zwischen den zwei \textit{states} am KO ausgegeben, so erkennt man kein wiederkehrendes Muster im Wechseln. Der Grund ist, dass der Takt 27 MHz kein Bruchteil von 50 MHz.
 
 CH 1 = Rote LED\\
 CH 2 = Synchronisierter Puls
@@ -126,7 +126,7 @@ CH 2 = Synchronisierter Puls
 \end{figure}
 
 \newpage
-Im Zustand der Metastabilität sind die Pulse nicht synchronisier und die rote LED geht nicht an.
+Im Zustand der Metastabilität sind die Pulse nicht synchronisiert und die rote LED geht nicht an.
 
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{images/metastability/asynchron_en_.png}

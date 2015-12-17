@@ -15,11 +15,11 @@ Die hardwarenahe Programmiersprache VHDL ist ein wichtiger Bestandteil der digit
 
 \begin{itemize}
 \item Bilden zweier hardwarenahen Fehlerquellen: \textit{glitches} und \textit{metastability}
-	\item Implementation eines \textit{midi interfaces}, dessen Entwicklung auf einer \textit{texbasierten testbench} basiert
+	\item Implementation eines \textit{midi interfaces}, dessen Entwicklung auf einer \textit{textbasierten testbench} basiert
 \end{itemize} 
 
  \textit{Glitches} werden künstlich Herbeigeführt in dem auf einem Cylcone II-FPGA die Pfade einzelner Signale verlängert sind. Dadurch treffen Werte verzögert ein und der asynchrone \textit{decoder} verarbeitet falsche Werte. Falsche Signale gelangen auf die Leitung und sogenannte \textit{glitch} entstehen. 
 
-Der metastabilen Zustand in einem System entsteht, durch das Verletzen der \textit{setup} und \textit{hold time}. Forciert ist dies durch zwei unterschiedliche Takte zweier VHDL-Logik-Blöcke, deren Takt-Phasen nicht übereinstimmen. Das Ausgangssignal des ersten Logik-Blocks ist als asynchron Inpuls auf den zweiten Logik-Block geführt, der eine \textit{finate state machine} enthält. Dekodiert die \textit{fsm} keinen definierten Zustände, befindet sich das System in einen undefinierten Zustand. Metastabilität trifft ein.
+Der metastabilen Zustand in einem System entsteht, durch das Verletzen der \textit{setup} und \textit{hold time}. Forciert ist dies durch zwei unterschiedliche Takte zweier VHDL-Logik-Blöcke, deren Takt-Phasen nicht übereinstimmen. Das Ausgangssignal des ersten Logik-Blocks ist als asynchroner Inpuls auf den zweiten Logik-Block geführt, der eine \textit{finite state machine} enthält. Dekodiert die \textit{fsm} keinen definierten Zustand, befindet sich das System in einen undefinierten Zustand. Metastabilität trifft ein.
 
-Der zweiten Teil der Projektarbeit beinhaltet ein \textit{midi interface}, das Polyphonie detektiert. Die textbasierte \textit{testbench} begleitet die Entwicklung des \textit{midi controller}. Das \textit{midi interface} detektiert die \textit{status bytes} NOTE ON, NOTE OFF und POLYPHONY und die VHDL-Einheit \textit{polyphony} out gibt 10 gedrückte Noten parallel aus.
+Der zweiten Teil der Projektarbeit beinhaltet ein \textit{midi interface}, das Polyphonie detektiert. Die textbasierte \textit{testbench} begleitet die Entwicklung des \textit{midi controller}. Das \textit{midi interface} detektiert die \textit{status bytes} NOTE ON, NOTE OFF und POLYPHONY und die VHDL-Einheit \textit{polyphony out} gibt 10 gedrückte Noten parallel aus.

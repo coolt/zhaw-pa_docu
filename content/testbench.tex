@@ -12,7 +12,7 @@
  \textit{Test Driven Development} bedeutet, dass vor oder parallel zur Entwicklung einer \textit{unit} (im Folgenden Block genannt) der \textit{unit-test} entwickelt wird\cite{Testdriven}. Beim textbasierten Testen stammen die Befehle aus einer Input-Datei, und die Ergebnisse werden in einer Datei abgelegt. 
 
 \section{Device Under Test}\label{sec.testbench_DUT}
-Das Device Under Test (DUT) ist das midi interface (siehe Abbildung \ref{fig.testbench}). Das Ziel ist, dass das MIDI-Signal in den Block geführt wird und am Ausgang 10 Notenvektoren mit je 8 Notenbits und einem Bit, das besagt, ob die Note an oder ab ist.\\
+Das Device Under Test (DUT) ist das midi interface (siehe Abbildung \ref{fig.testbench}). Das Ziel ist, dass das MIDI-Signal in den Block geführt wird und am Ausgang 10 Notenvektoren anliegen mit je 8 Notenbits und einem Bit, das besagt, ob die Note an oder ab ist.\\
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_interface/testbench_midiinterface.png}
 	\caption{Blockschaltbild Device under Test}
@@ -39,10 +39,10 @@ polyp	\> 71 \> 55 \> \ldots{}
 
 \subsubsection{Tokenstruktur} 
 
-Nach dem Verarbeitungsmodus folgen die Daten. Jede Zeile hat gleichviele Datenpackete (Tokens). 
+Nach dem Verarbeitungsmodus folgen die Daten. Jede Zeile hat gleichviele Datenpakete (Tokens). 
 Die \textit{testbench} ortet jedem MIDI-Datenpaket (siehe \ref {datenytpen}, Beschreibung der MIDI-Daten) innerhalb der Zeile eine Bedeutung zu. Je nach Verarbeitungsmodus ist die Bedeutung der Token anders.
 
-Die \textit{testbench midi interface} an den zwei MIDI Datentypen, die im Unterkapitel \ref{datenytpen} detailliert beschrieben sind. Die Tokestruktur leitet sich aus der Datenreihenfolge im \textit{polyphony mode} und im \textit{single mode} ab (siehe  \ref{note_modes}). In der nachfolgenden zwei Token-Beispielen bezieht sich die obere Zeile auf den \textit{polyphony mode} und die untere auf den \textit{single mode}.
+Die Tokenstruktur leitet sich aus der MIDI-Datenstruktur im \textit{polyphony mode} und im \textit{single mode} ab (siehe  \ref{note_modes}). In den nachfolgenden zwei Token-Beispielen bezieht sich die obere Zeile auf den \textit{polyphony mode} und die untere auf den \textit{single mode}.
 
 In der \textit{testbench midi interface} haben Tokens folgende Bedeutung:
 
@@ -59,7 +59,7 @@ Dummy ist die Bezeichnung für das Einlesen nicht relevanter Werte. Diese nicht 
  
 \section{Aufstellen der Fehler}\label{sec.testbench_fehler} 
 
-Die ersten Zeilen, sie sind ersetzt durch komplexere Datenstrukturen, hat nur 3 Token und testet die Grundfunktionen.\\
+Zu Beginn hatten die Testfälle nur drei Tokens und testetn die Grundfunktionen:\\
 
 single mode note an/ab\\
 singl 90 27\\ 
@@ -69,7 +69,7 @@ polyphone note an/ab\\
 polyp 71 55\\
 polyp 71 00\\
 
-Bei der Polyphonie ist notwendig, dass die einzelene Note unabhängig von den anderen Noten an oder ab bleibt. Die Test-Reihe wird deshalb auf 4 Noten ausgedehnt.
+Komplexere Testfälle zeigten, dass eine Test-Zeile mehr Tokens braucht. Die Endversion der Input-Datei kann mit einer Zeile bis 4 Noten an und abstellen.
 
 
 \subsection{Einzelne Noten testen}
@@ -104,7 +104,7 @@ Die Sequenz bedeutet Note 27 an (0x90), dann ab (0x80) der Note 27 und am Schlus
 Überprüft (check) wird, ob am Ausgang die Noten 27 und 05 anliegen.\\
 Im \textit{single mode} ist die Geschwindigkeit für das An- oder Abstellen der Note nicht relevant und wird deshalb nicht als Befehl eingelesen. Die \textit{testbench} hängt nach jeder Note einen Dummy-Geschwindigkeitswert von 0x55 an.
 
-\subsubsection{Polyphonie testen }\label{polyphonitest}
+\subsection{Polyphonie testen }\label{polyphonitest}
 
 \subsubsection{Testfälle}
 
@@ -112,12 +112,12 @@ In der Polyphony können mehrere Noten hintereinander an- und nur einzelne davon
 
 \begin{itemize}
 \item Polyphoniestatus setzen, einzelne Note an
-\item Polyphoniestatus setzen, mehrere Note an
-\item Polyphoniestatus setzen, mehrere Note über mehrere Zeilen verteilt an
-\item Polyphoniestatus setzen, Note an, die bereit in Register ist
+\item Polyphoniestatus setzen, mehrere Noten an
+\item Polyphoniestatus setzen, mehrere Noten über mehrere Zeilen verteilt an
+\item Polyphoniestatus setzen, Note an, die bereits in Register ist
 \item Polyphoniestatus setzen, Note an, andere Note an, erste Note aus, dritte Note an
-\item Polyphoniestatus setzen, dritte Note aus, erste Note an, erste Nte an
-\item Polyphoniestatus setzen, singel Note an status setzen, Note ohne Geschwindigkeit senden
+\item Polyphoniestatus setzen, dritte Note aus, erste Note an, erste Note an
+\item Polyphoniestatus setzen, \textit{single note an} status setzen, Note ohne Geschwindigkeit senden
 \item Polyphoniestatus setzen, falsches Statusbyte senden, Note an, Note aus,
 \item Polyphoniestatus setzen, Reset, Note setzen
 \item Polyphoniestatus setzen, 10 Noten an
@@ -145,7 +145,8 @@ Die automatisierte Datenverarbeitung erzeugt viele Werte (10 Noten mit je 9 Wert
 
 Im Gegensatz zum hardwarenahen Code der VHDL-Blocks, bei denen arrays und loop explizit vermieden wurden, baute die \textit{testbench} bewusst auf softwarenahe Strukturen auf.
 
-\subsection{Erstellen eines Package}
+\subsection{Package}
+Damit in allen VHDL-Dateien die Arrays und Konstanten gebraucht werden können, werden diese Definitionen in einem Package zusammengefasst. Das Package kann wie eine Library zu Beginn einer VHDL-Datei eingebaut werden.
 \begin{itemize}
 	\item Werte der \textit{status bytes} als Konstanten
 	\item Ein- und Ausgänge als arrays
@@ -175,7 +176,7 @@ type t_note_array is array (0 to 9) of std_logic_vector(8 downto 0);
 \end{lstlisting}
 
 
-\subsection{Prozessoptimierung}
+\subsection{Prozess-Optimierung}
 
 Um die einzelnen Bits in den arrays zu setzen, braucht es in der Ablaufstruktur Optimierungen.
 
@@ -204,9 +205,9 @@ Im \textit{polyphony mode} existieren die Zustände idle, note\_v, velocity\_v u
 	\label{fig.test_midi:control}
 \end{figure} 
 
-\subsection{Block Polyphonie Out}
-Kriterien in der Polyphonie out sind, dass jede neue Note auf den nächt freien Register-Platz gelegt wird. Zudem soll keine Note zwei Registerplätze belegen. Zudem soll, wenn alle Register-Plätze einen Notenwert haben, die neue Note an einen Registerplatz mit aktuell abgeschaltener Note besetzen.
-Alle Kriterien sind erfüllt (siehe \ref {test_polypohne}, dort sind die getestetn Kriterien detailiert notiert.)\\
+\subsection{Block Polyphony Out}
+Kriterien in der Polyphonie out sind, dass jede neue Note auf den nächsten freien Register-Platz gelegt wird. Zudem soll keine Note zwei Registerplätze belegen. Zudem soll, wenn alle Register-Plätze einen Notenwert haben, die neue Note an einen Registerplatz mit aktuell abgeschalteter Note besetzen.
+Alle Kriterien (siehe \ref {test_polypohne}) sind erfüllt.\\
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_interface/tb_polyphonie.png}
