@@ -151,7 +151,7 @@ Vereinfacht verhält sich die \textit{fsm} wie in Abbildung \ref{fig.midi_fsm_sk
 Startpunkt der Verarbeitung ist das \textit{status byte} (grau hinterlegt). Danach führt die Verarbeitung durch die zwei \textit{data bytes}.\\
 In jedem Zustand, werden ungültige Daten verworfen, und führen zurück zu idle. Die Verarbeitung wird fortgesetzt, wenn das nächste \textit{status byt}e folgt.
 
-Nicht angeschrieben sind die Übergangsbedingungen: data\_valid = '1' wechselt zwischen den Zustänen und data\_valid = '0' verbleibt im Zustand. Die breiteren Pfeile heben die fehlerfreie Datenverarbeitung hervor.
+Nicht angeschrieben sind die Übergangsbedingungen: \lstinline|data_valid = '1'| wechselt zwischen den Zustänen und \lstinline|data_valid = '0'| verbleibt im Zustand. Die breiteren Pfeile heben die fehlerfreie Datenverarbeitung hervor.
 
 \subsection{Implementation der Finite State Machine}
 
@@ -258,10 +258,10 @@ Der Kontroller erkennt die Note 27, schaltet diese an und gibt am Ausgang den Ve
 \end{figure}
 
 \begin{itemize}
-	\item Das Signal rx\_data detektiert die Befehle (0x90) und (0x80).
+	\item Das Signal \lstinline|rx_data| detektiert die Befehle (0x90) und (0x80).
 	\item Der Controller interpretiert  \textit{single modus}. 
-	\item Die Zustandsabfolge ist korrekt: single, note\_s, velocity\_s.
-	\item Die Zustände werden bei rx\_data\_valid = '1' geändert.
+	\item Die Zustandsabfolge ist korrekt: \lstinline|single, note_s, velocity_s|.
+	\item Die Zustände werden bei \lstinline|rx_data_valid = '1'| geändert.
 \end{itemize}
 
 Die Simulation zeigt, dass die Notenwerte korrekt gespeichert sind und dass das An- und Abstellen der Noten funktioniert. Am Ausgang erscheint der zusammengesetzer Vektor aus den 8 Notenbits und einem vorangestellten Bit, das detektiert, ob die aktuelle Note an oder ab ist. 
@@ -303,12 +303,12 @@ Der Kontroller erkennt die Note 02, schaltet diese an und gibt am Ausgang den Ve
 \end{figure}
 
 \begin{itemize}
-	\item Das Signal rx\_data detektiert den Befehle (0xA0).
+	\item Das Signal \lstinline|rx_data| detektiert den Befehle (0xA0).
 	\item Der Controller interpretiert  \textit{polyphony mode}. 
-	\item Die Zustandsabfolge ist korrekt: polyphonie, note\_v, velocity\_v.
+	\item Die Zustandsabfolge ist korrekt: \lstinline|polyphonie, note_v, velocity_v|.
 	\item Der Controller wartet mit dem Setzen der Note am Ausgang, bis klar ist, ob die Note an oder ab ist.\\
 	Keine kurzfristig falschen Noten am Ausgang, die ab sind.
-	\item Zustände werden bei rx\_data\_valid = '1' die Zustände geändert.
+	\item Zustände werden bei \lstinline|rx_data_valid = '1'| die Zustände geändert.
 	\item Noten können beliebig an- und abgestellt werden
 \end{itemize}
 

@@ -190,14 +190,14 @@ Um die einzelnen Bits in den arrays zu setzen, braucht es in der Ablaufstruktur 
 Die Ausgabe der Signale in die Output-Datei bezieht sich auf den Zustand am Ausgang des DUT. Damit auch die beiden internen Blöcke midi control und polyphonie out korrekt funktionieren werden die Signale überprüft. Auch das Verhalten in den Blöcken entspricht den erwarteten Signalverläufen.\\
 
 \subsection{Block Midi Control}
-Gemäss der \textit{fsm} durchläuft der \textit{single mode}  die Zustände idle, note\_s, velocity\_s und geht dann zurück  in den idle-Zustand. Das Signal s\_note\_on wechselt nach einem \textit{status byte} von (0x90) auf on und nach (0x80) auf ab.
+Gemäss der \textit{fsm} durchläuft der \textit{single mode}  die Zustände \lstinline|idle|, \lstinline|note_s|, \lstinline|velocity_s| und geht dann zurück  in den idle-Zustand. Das Signal \lstinline|s_note_on| wechselt nach einem \textit{status byte} von (0x90) auf on und nach (0x80) auf ab.
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_control/wave_single.png}
 	\caption{Simulation Block Midi Control}
 	\label{fig.test_midi:control_single}
 \end{figure} 
 
-Im \textit{polyphony mode} existieren die Zustände idle, note\_v, velocity\_v und verbleibt in diesem Zustand. Nur durch ein \textit{status byte} (oder ungültige \textit{data bytes}) wird der Zustand der Polyphonie verlassen.
+Im \textit{polyphony mode} existieren die Zustände \lstinline|idle|, \lstinline|note_v|, \lstinline|velocity_v| und verbleibt in diesem Zustand. Nur durch ein \textit{status byte} (oder ungültige \textit{data bytes}) wird der Zustand der Polyphonie verlassen.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_control/wave_polyphonie.png}

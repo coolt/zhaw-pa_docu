@@ -67,7 +67,7 @@ Die Verzögerung der zwei Bits, wird über Routing umgesetzt.
 \subsection{Implementation} 
 Die Hardware ist das altera board De2 mit dem FPGA Cyclone II. Kompiliert wird das Projekt mit Quartus 13.0sp, der ältsten Quartus-Version, die den Cyclone II unterstützt.
 
-Die Pfad\textit{verlängerung} wird über das Routing über die GPIO-Pins des Stecker 1 gemacht (siehe Abbildung \ref{fig.glitch.GPIO}. GPIO 1 ist der Stecker 1). Dekodiert die asynchrone Logik die Zahl 15, wird das  Reset-Signal (aus der Logik reset\_counter\~{}2) an den Zähler gesendet und der Zähler beginnt wieder von 0 an zu zählen. Produziert der Dekoder zur falschen Zeit einen Reset, so ist dies eine Fehlkodierung: ein \textit{glitch}.
+Die Pfad\textit{verlängerung} wird über das Routing über die GPIO-Pins des Stecker 1 gemacht (siehe Abbildung \ref{fig.glitch.GPIO}. GPIO 1 ist der Stecker 1). Dekodiert die asynchrone Logik die Zahl 15, wird das  Reset-Signal (aus der Logik \lstinline|reset_counter\~{}2|) an den Zähler gesendet und der Zähler beginnt wieder von 0 an zu zählen. Produziert der Dekoder zur falschen Zeit einen Reset, so ist dies eine Fehlkodierung: ein \textit{glitch}.
 
 Das RTL-Diagramm des asynchronen Zählers sieht wie folgt aus:
 \begin{figure}[H]
@@ -83,7 +83,7 @@ Um die Lösung gegen \textit{glitches} aufzuzeigen, wird dem asynchronen Zähler
 	\label{fig.glitch.RTL_mit_synchr.Zaehler}
 \end{figure}
 
-Die Reset-Signale aus der Vergleichslogik (reset\_counter\~{}2) des asynchronen Zählers wie die des synchronisierten Zählers werden an die GPIO Steckers ausgegeben, ebenso der Systemtakt. In der Abbildung \ref{fig.glitch.GPIO}) wird das Signal des asynchronen Zählers als Glitch und das Signal des synchronisierten Zählers als Count benannt. In der GPIO-Pinbelegung sieht man auch die Nutzung der zwei oberen Pin-Reihen für das Routing (benannt mit Routing OUT, IN). Der Systemtakt wird als CLK ausgegeben.
+Die Reset-Signale aus der Vergleichslogik (\lstinline|reset_counter\~{}2|) des asynchronen Zählers wie die des synchronisierten Zählers werden an die GPIO Steckers ausgegeben, ebenso der Systemtakt. In der Abbildung \ref{fig.glitch.GPIO}) wird das Signal des asynchronen Zählers als Glitch und das Signal des synchronisierten Zählers als Count benannt. In der GPIO-Pinbelegung sieht man auch die Nutzung der zwei oberen Pin-Reihen für das Routing (benannt mit Routing OUT, IN). Der Systemtakt wird als CLK ausgegeben.
 
 \begin{figure}[H]
 	\includegraphics[width=0.5\textwidth]{images/glitch/GPIO_Belegung.png}
