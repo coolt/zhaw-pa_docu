@@ -12,101 +12,110 @@
 
 \section{Blockschaltbild und Schnittstellen}
 
-Als erstes die Zusammenfassung der internen Blöcke. Die zwei entwickelten Blöcke \textit{midi control} und \textit{polyphonie out} sind grau markiert (siehe Abbildung \ref{fig.midi_interface_block} ). Gegeben ist der Block uart top. \\
+Als erstes die Zusammenfassung der internen Blöcke. Die zwei entwickelten Blöcke \textit{midi control} und \textit{polyphonie out} sind grau markiert (siehe Abbildung \ref{fig.midi_interface_block} ). Gegeben ist der Block uart top.
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=0.7\textwidth]{images/midi_interface/midi_interface_block.png}
 	\caption{Blockschaltbild Midi Interface}
 	\label{fig.midi_interface_block}
 \end{figure}
 
-
 \textbf{Definition der Schnittstellen}\label{schnittstellen}
 
-\textbf{Uart Top Ausgang}
+Uart Top Ausgang
+
 \begin{itemize}
 	\item 8-Bit-Signal: Bytweise Dekodierung der Midi Daten 
 	\item 1-Bit-Signal: Übermittelt Gültigkeit der Daten
 \end{itemize}
 
-\textbf{Midi Control Ein- und Ausgang}
+Midi Control Ein- und Ausgang
+
 \begin{itemize}
-	\item Empfangen von 8-Bit Midi Daten, \hspace*{20mm}Empfangen, ob Daten korrekt sind (1 Bit)
-	\item Übermittelt 9-Bit-Notenvektor (Abb.\ref{fig.Notenvektor}) \hspace*{10mm}Übermitteln, ob Daten korrekt (1 Bit)
+	\item Empfangen von 8-Bit Midi Daten,
+    \item Empfangen, ob Daten korrekt sind (1 Bit)
+	\item Übermittelt 9-Bit-Notenvektor (Abb.\ref{fig.Notenvektor})
+    \item Übermitteln, ob Daten korrekt (1 Bit)
 \end{itemize}
 
-\textbf{Polyphonie Out Ein- und Ausgang}
+Polyphonie Out Ein- und Ausgang
+
 \begin{itemize}
-	\item Eingang eines 9-Bit-Notenvektors \hspace*{22mm}Eingang, ob Daten gültig sind
+	\item Eingang eines 9-Bit-Notenvektors
+    \item Eingang, ob Daten gültig sind
 	\item Ausgabe von 10 Notenvektoren zu 9-Bit.
 \end{itemize}
 \bigskip
+
 Im vorgegebenen Konzept für Polyphonie out (siehe Unterkapitel \ref{konzept_plyphonie}) ist die Schnittstelle zum Polyphonie Out-Block als ein 9-Bit-Signal definiert. Das MSB dient als Flag, ob die übermittelte Note an oder ab ist.
+
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=0.2\textwidth]{images/midi_interface/NotenVektor.png}
 	\caption{Aufbau Notenvektor}
 	\label{fig.Notenvektor}
 \end{figure}
 
-Als nächstes wird die MIDI 1.0 Spezifikation, erklärt, nach der Block \textit{midi control} aufgebaut ist. Die Umsetzung des \textit{polyphone out}-Blocks bildet den Abschluss dieses Kapitels.\\
-
+Als nächstes wird die MIDI 1.0 Spezifikation, erklärt, nach der Block \textit{midi control} aufgebaut ist. Die Umsetzung des \textit{polyphone out}-Blocks bildet den Abschluss dieses Kapitels.
 
 \newpage
 \section{Das MIDI Kommunikationsprotokoll}\label{sect.midi_spezification}
-Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \ref{Midi_specification}.
+
+Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \cite{Midi_specification}.
 
 \subsection{MIDI Daten Typen}\label{datenytpen}
+
 \subsubsection*{Status Bytes}
+
 \textit{Status bytes} sind 8 Bit lang und das MSB ist immer logisch '1'.  \textit{Status bytes} dienen dem Identifizerein der nachfolgenden \textit{data bytes}. Das \textit{status byte} definiert die Datenstruktur der folgenden \textit{data bytes}.
-\newline
-\newline
+
 MIDI behält einen Status, bis ein neues \textit{status byte} folgt. Dieses Verhalten ist als \textit{running status} bezeichnet. Dieses Verhalten ist für Polyphonie relevant, da der Zustand bleibt, bis dass ein neues \textit{status byte} folgt..
 
 \subsubsection*{Data Bytes}
+
 Gemäss Spezifikation folgen einem \textit{status byte} exakt ein oder zwei Bytes. Das MSB ist immer logisch '0'. Die Werte können von 0x00 bis 0x7F sein. Das bedeutet, dass MIDI maximal 128 Noten unterscheiden kann.
-\newline
-\newline
+
 \textit{Data bytes} können unterschiedliche Informationen erhalten. Im Kontroller sind Notenwerte, Geschwindigkeit des Anschalges relevant
-\newline
-\newline
+
 Je nachdem \textit{status byte} werden die \textit{data byte} anders interpretiert. 
-\newline
-\newline
-''Empfänger sollen so konzipiert sein, dass zuerst alle\textit{data bytes} empfangen werden und ein neues \textit{status byte} kommt. Danach werden ungültige Daten verworfen. Einzige Ausnahme ist der \textit{running status}. Bei dem nicht bis zum Ende gewartet wird.''\ref{Midi_specification}.\\
+
+\begin{quote}
+''Empfänger sollen so konzipiert sein, dass zuerst alle\textit{data bytes} empfangen werden und ein neues \textit{status byte} kommt. Danach werden ungültige Daten verworfen. Einzige Ausnahme ist der \textit{running status}. Bei dem nicht bis zum Ende gewartet wird.''\cite{Midi_specification}.
+\end{quote}
 
 \subsubsection*{Ungültige Bytes}
-''Alle \textit{status bytes}, die nicht implementierte Funktionen enthalten und alle ihnen folgenden \textit{Data Byte}s sollen vom Empfänger verworfen werden.''\ref{Midi_specification}.\\ MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden\ref{Midi_specification}.\\
-Diese Anforderung ist wichtig beim Implementieren der \textit{finate state machine} und der \textit{testbench} (siehe \ref{polyphonitest}) \\
+
+\begin{quote}
+''Alle \textit{status bytes}, die nicht implementierte Funktionen enthalten und alle ihnen folgenden \textit{Data Byte}s sollen vom Empfänger verworfen werden.'' \cite{Midi_specification}
+\end{quote}
+
+MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden\cite{Midi_specification}.\\
+Diese Anforderung ist wichtig beim Implementieren der \textit{finate state machine} und der \textit{testbench} (siehe \ref{chap.testen})
 
 \subsubsection*{Midi Bytes binär}\label{midi_binaer}
+
 \begin{itemize}
-	\item ''0xxx xxxx'': \hspace*{10mm}Definition \textit{data byte}
-	\item ''1xxx xxxx'': \hspace*{10mm}Definition \textit{status byte}		
-	\item ''1000 xxxx'': \hspace*{10mm}Definition NOTE OFF
-	\item ''1001 xxxx'': \hspace*{10mm}Definition NOTE ON
-	\item ''1010 xxxx'': \hspace*{10mm}Definition POLYPHONY
-	\item ''100x xxxx'': \hspace*{10mm}Erste drei Bits der \textit{status bytes} NOTE ON (0x90) und NOTE OFF (0x80)
+	\item \lstinline|''0xxx xxxx''|: Definition \textit{data byte}
+	\item \lstinline|''1xxx xxxx''|: Definition \textit{status byte}
+	\item \lstinline|''1000 xxxx''|: Definition NOTE OFF
+	\item \lstinline|''1001 xxxx''|: Definition NOTE ON
+	\item \lstinline|''1010 xxxx''|: Definition POLYPHONY
+	\item \lstinline|''100x xxxx''|: Erste drei Bits der \textit{status bytes} NOTE ON (0x90) und NOTE OFF (0x80)
 \end{itemize}
 %---5.2-----------------------------------------------------------------------
 \newpage
 \subsection{Zwei MIDI-Noten-Modi}\label{note_modes}
 \subsubsection{Datenstruktur}
-Die Datenstruktur der zwei MIDI-Noten-Modi beginnt mit dem \textit{status byte} (grau in der Abbildung \ref{fig.testbench_single_Mode}). Es folgt der Notenwert (hier einen Dummy-Wert von 0x11 eingetragen) und die Geschwindigkeit. Letztere hat im \textit{single mode} keine spezfiische Bedeutung, im \textit{polyphony mode} bestimmt die Geschwindigkeit, ob die Note an oder ab ist.\\
-
+Die Datenstruktur der zwei MIDI-Noten-Modi beginnt mit dem \textit{status byte} (grau in der Abbildung \ref{fig.testbench_single_Mode}). Es folgt der Notenwert (hier einen Dummy-Wert von 0x11 eingetragen) und die Geschwindigkeit. Letztere hat im \textit{single mode} keine spezfiische Bedeutung, im \textit{polyphony mode} bestimmt die Geschwindigkeit, ob die Note an oder ab ist.
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_interface/MIDI_Spezifikation.png}
 	\caption{MIDI Spezifikation für Datenstruktur einzelne Note und Polyphonie}
 	\label{fig.testbench_single_Mode}
 \end{figure}
 
-Unterschiedlich zu behandeln ist die Funktion des \textit{status bytes}. Im \textit{single mode} wird mit dem \textit{status byte} der Zustand an oder ab mitgegeben. Im \textit{polyphony mode} wird nur der Noten-Modus mitgeteilt und das \textit{status byte} hat keine weiteren Funktionalitäten. In der Abbildung wird der Platz von Note an oder ab bezüglich dem Noten-Byte durch graue Markierung veranschaulicht. Die zeitliche Reihenfolge der ist umgekehrt, was in der Token-Verarbeitung berücksichtigt werden muss.\\
+Unterschiedlich zu behandeln ist die Funktion des \textit{status bytes}. Im \textit{single mode} wird mit dem \textit{status byte} der Zustand an oder ab mitgegeben. Im \textit{polyphony mode} wird nur der Noten-Modus mitgeteilt und das \textit{status byte} hat keine weiteren Funktionalitäten. In der Abbildung wird der Platz von Note an oder ab bezüglich dem Noten-Byte durch graue Markierung veranschaulicht. Die zeitliche Reihenfolge der ist umgekehrt, was in der Token-Verarbeitung berücksichtigt werden muss.
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=0.7\textwidth]{images/midi_interface/MIDI_Spezifikation_Datenfolge.png}
 	\caption{Blockschaltbild Device under Test}
 	\label{fig.testbench_polypphon_mode}
@@ -130,43 +139,46 @@ Der Controller wird über eine \textit{finite state machine} implementiert. Ausg
 \smallskip
 Vereinfacht verhält sich die \textit{fsm} wie in Abbildung \ref{fig.midi_fsm_skizze} gezeigt. 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=0.3\textwidth]{images/midi_control/fsm_grob_2.png}
 	\caption{Skizze der fsm}
 	\label{fig.midi_fsm_skizze}
 \end{figure}
 
-Startpunkt der Verarbeitung ist das \textit{status byte} (grau hinterlegt). Danach führt die Verarbeitung durch die zwei \textit{data bytes}. \\
-In jedem Zustand, werden ungültige Daten verworfen, und führen zurück zu idle. Die Verarbeitung wird fortgesetzt, wenn das nächste \textit{status byt}e folgt.\\
-\newline
-Nicht angeschrieben sind die Übergangsbedingungen: data\_valid = '1' wechselt zwischen den Zustänen und data\_valid = '0' verbleibt im Zustand. Die breiteren Pfeile heben die fehlerfreie Datenverarbeitung hervor.\\
+Startpunkt der Verarbeitung ist das \textit{status byte} (grau hinterlegt). Danach führt die Verarbeitung durch die zwei \textit{data bytes}.\\
+In jedem Zustand, werden ungültige Daten verworfen, und führen zurück zu idle. Die Verarbeitung wird fortgesetzt, wenn das nächste \textit{status byt}e folgt.
+
+Nicht angeschrieben sind die Übergangsbedingungen: data\_valid = '1' wechselt zwischen den Zustänen und data\_valid = '0' verbleibt im Zustand. Die breiteren Pfeile heben die fehlerfreie Datenverarbeitung hervor.
 
 \subsection{Implementation Finate State Machine}
-Aufgrund der unterschiedlichen Datenstruktur für den \textit{polyphony mode} und den \textit{single mode} besitzen beide Noten-Modi ihre eigenen Zustände (siehe Abbildung \ref{fig.midi_fsm_detail}). \\ 
-\newline
+
+Aufgrund der unterschiedlichen Datenstruktur für den \textit{polyphony mode} und den \textit{single mode} besitzen beide Noten-Modi ihre eigenen Zustände (siehe Abbildung \ref{fig.midi_fsm_detail}).
+
 Die implementierten Zustände sind
+
 \begin{itemize}
-	\item idle: \hspace*{19mm}Alle nicht näher spezifizierten Vorfälle verwerfen
-	\item single: \hspace*{16mm}Eintreten in  \textit{single mode} durch \textit{status bytes} 0x80 oder 0x90
-	\item note\_s: \hspace*{15mm}Erstes \textit{data byte} im  \textit{single mode}
-	\item velocity\_s: \hspace*{10mm}Zweites \textit{data byte} im \textit{single mode}
-	\item polyphonie: \hspace*{8mm}Eintreten in polyphony mode durch status byte 0xA0
-	\item note\_v:  \hspace*{15mm}Erstes \textit{data byte} im  \textit{polyphony mode}
-	\item velocity\_v:  \hspace*{10mm}Zweites \textit{data byte} im  \textit{polyphony mode}
+	\item \lstinline|idle|: Alle nicht näher spezifizierten Vorfälle verwerfen
+	\item \lstinline|single|: Eintreten in  \textit{single mode} durch \textit{status bytes} 0x80 oder 0x90
+	\item \lstinline|note_s|: Erstes \textit{data byte} im  \textit{single mode}
+	\item \lstinline|velocity_s|: Zweites \textit{data byte} im \textit{single mode}
+	\item \lstinline|polyphonie|: Eintreten in polyphony mode durch status byte 0xA0
+	\item \lstinline|note_v|: Erstes \textit{data byte} im  \textit{polyphony mode}
+	\item \lstinline|velocity_v|: Zweites \textit{data byte} im  \textit{polyphony mode}
 \end{itemize}
 
+\bigskip
 
-\newpage
 Abbildung \ref{fig.midi_fsm_detail} definiert die Übergangsbedingungen. Drei generelle Verhaltensweisen sind vereinfacht angegeben:
 
 \begin{itemize}
-	\item data\_valid = '0'\hspace*{10mm}Im akutellen Zustand bleiben.\\
-	 \hspace*{34mm}Dargestellt mit Pfeil an Ort
-	\item data\_valid = '1'\hspace*{10mm}Grundbedingung für Zustandswechsel\\
-	\hspace*{34mm}Gilt implizit zu jedem Pfeil und dessen Bedingung dazu
-	\item data(7) = '1' and (data(7 downto 5) /=''100'' or data(7 downto 4)/= ''1010'') \hspace*{5mm} \\
-	\hspace*{34mm}\textit{Status bytes}, die nicht \textit{polyphony} oder \textit{single mode} bedeuten, verworfen\\
-	\hspace*{34mm}Dargestellt durch Pfeil oben rechts zu idle. Gilt für jeden Zustand
+	\item \lstinline|data_valid = '0'|\\
+        Im akutellen Zustand bleiben.\\
+        Dargestellt mit Pfeil an Ort
+	\item \lstinline|data_valid = '1'|\\
+        Grundbedingung für Zustandswechsel\\
+        Gilt implizit zu jedem Pfeil und dessen Bedingung dazu
+	\item \lstinline|data(7) = '1' and (data(7 downto 5) /=''100'' or data(7 downto 4)/= ''1010'')| \\
+        \textit{Status bytes}, die nicht \textit{polyphony} oder \textit{single mode} bedeuten, verworfen\\
+        Dargestellt durch Pfeil oben rechts zu idle. Gilt für jeden Zustand
 \end{itemize}
 \bigskip
 
@@ -174,7 +186,6 @@ Die Übergangsbedingungen detektiert die Binärstruktur der MIDI Daten, die im U
 
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_control/fsm_detailliert.png}
 	\caption{Übergänge der fsm}
 	\label{fig.midi_fsm_detail}
@@ -184,7 +195,7 @@ Alle drei Anforderungen \ref{anforderung_fsm}, die sich aus der Midi Spezifkatio
 \begin{enumerate}
 	\item Vor jedem \textit{data byte} muss ein \textit{status byte} eingegangen sein. Die \textit{finite state machine} fragt im \textit{idle} Zustand nur nach den \textit{status bytes}. Nach dem \textit{status bytes} erwartet die \textit{finate state machine} \textit{data bytes}. 
 	\item Die unterschiedliche Datenstruktur der zwei Noten-Modi ist mode-spefifisch implementiert:\\
-Im \textit{single mode} wird das vierte Bit des \textit{status bytes} zum Setzen von an und ab verwendet . \\
+Im \textit{single mode} wird das vierte Bit des \textit{status bytes} zum Setzen von an und ab verwendet.\\
 Im \textit{polyphony mode} wird das zweite \textit{data byte}, die Geschwindigkeit zum Setzen der Note auf an oder ab verwendet. \\ Geschwindigkeit = NULL ist als Note aus implementiert.\\
 	\item Ungültige Bytes sind verworfen, und die \textit{fsm }kehrt in den   \textit{idle} Zustand zurück.
 \end{enumerate}
@@ -197,7 +208,6 @@ Im \textit{polyphony mode} wird das zweite \textit{data byte}, die Geschwindigke
 \subsection{Implementierte Finate State Machine}
 Das ist die in quartus generierte \textit{fsm} des Blocks \textit{midi control}.
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_control/fsm_midicontrol.png}
 	\caption{Implementierte fsm im Block Midi Control}
 	\label{fig.midi_fsm_quartus_}
@@ -206,27 +216,35 @@ Das ist die in quartus generierte \textit{fsm} des Blocks \textit{midi control}.
 
 \subsection{Simulation Single Mode}
 
-\textbf{Input Daten} (Zeile 3, siehe Anhang \ref{chap.anhang_midi_input})\\
-singl 55 90 27 80 27 90 02 00 00
+\textbf{Input Daten} (Zeile 3, siehe Anhang \ref{chap.anhang_midi_input})
 
-\textbf{Beschreibung der Befehle}\\
-- 55 als Dummy-Velocity für alle Noten\\
-- Note an\\
-- Notenwert 27\\
-- Note ab\\
-- Notenwert 27\\
-- Note an\\
-- Notenwert 02\\
-- Dummywerte\\
+{
+\renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
+\begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}} % @{} removes the left and right margin around the table
+singl & 55 & 90 & 27 & 80 & 27 & 90 & 02 & 00 & 00
+\end{tabular*}
+}
 
-\textbf{Erwartetes Resultat}\\
-Der Kontroller erkennt die Note 27, schaltet diese an und gibt am Ausgang den Vektor ''Note-27-AN'' aus. Dieselbe Note wird nochmals detektiert, diesmal als ab und der Vektor am Ausgang zeigt ''Note-27-AB'' an. Die nächste Note hat den Wert 2 und wird auf AN gesetzt. Der Ausgang gibt ''Note-2-AN'' aus.\\
+\textbf{Beschreibung der Befehle}
 
+\begin{itemize}
+\item 55 als Dummy-Velocity für alle Noten
+\item Note an
+\item Notenwert 27
+\item Note ab
+\item Notenwert 27
+\item Note an
+\item Notenwert 02
+\item Dummywerte
+\end{itemize}
+
+\textbf{Erwartetes Resultat}
+
+Der Kontroller erkennt die Note 27, schaltet diese an und gibt am Ausgang den Vektor ''Note-27-AN'' aus. Dieselbe Note wird nochmals detektiert, diesmal als ab und der Vektor am Ausgang zeigt ''Note-27-AB'' an. Die nächste Note hat den Wert 2 und wird auf AN gesetzt. Der Ausgang gibt ''Note-2-AN'' aus.
 
 \newpage
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_control/wave_single.png}
 	\caption{fsm für single mode}
 	\label{fig.midicontrol_singlet}
@@ -244,146 +262,181 @@ Die Simulation zeigt, dass die Notenwerte korrekt gespeichert sind und dass das 
 
 
 \subsection{Simulation Polyphony Mode}
-\textbf{Input Daten} (Zeile 9, siehe Anhang \ref{chap.anhang_midi_input})\\
-polyp 02 55 03 00 20 00 40 55 00
 
-\textbf{Beschreibung der Befehle}\\
-- Notenwert 02\\
-- Note an\\
-- Notenwert 03\\
-- Note ab\\
-- Notenwert 02\\
-- Note ab\\
-- Notenwert 40\\
-- Note an\\
+\textbf{Input Daten} (Zeile 9, siehe Anhang \ref{chap.anhang_midi_input})
 
-\textbf{Erwartetes Resultat}\\
-Der Kontroller erkennt die Note 02, schaltet diese an und gibt am Ausgang den Vektor ''Note-02-AN'' aus. Die Note 03 wird detektiert, auf ab gesetzt und der Vektor am Ausgang zeigt ''Note-03-AB'' aus. Die nächste Note hat den Wert 2 und wird auf ab gesetzt. Der Ausgang gibt ''Note-2-Ab'' aus. Als letztes folgt die Note 40, die angestellt wird.\\
+{
+\renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
+\begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}} % @{} removes the left and right margin around the table
+polyp & 02 & 55 & 03 & 00 & 20 & 00 & 40 & 55 & 00
+\end{tabular*}
+}
+
+\textbf{Beschreibung der Befehle}
+
+\begin{itemize}
+\item Notenwert 02
+\item Note an
+\item Notenwert 03
+\item Note ab
+\item Notenwert 02
+\item Note ab
+\item Notenwert 4
+\item Note an
+\end{itemize}
+
+\textbf{Erwartetes Resultat}
+
+Der Kontroller erkennt die Note 02, schaltet diese an und gibt am Ausgang den Vektor ''Note-02-AN'' aus. Die Note 03 wird detektiert, auf ab gesetzt und der Vektor am Ausgang zeigt ''Note-03-AB'' aus. Die nächste Note hat den Wert 2 und wird auf ab gesetzt. Der Ausgang gibt ''Note-2-Ab'' aus. Als letztes folgt die Note 40, die angestellt wird.
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_control/wave_polyphonie.png}
 	\caption{fsm im polyphony mode}
 	\label{fig.midicontrol_polyphonie}
 \end{figure}
 
-
 \begin{itemize}
 	\item Das Signal rx\_data detektiert den Befehle (0xA0).
 	\item Der Controller interpretiert  \textit{polyphony mode}. 
 	\item Die Zustandsabfolge ist korrekt: polyphonie, note\_v, velocity\_v.
-	\item Der Controller wartet mit dem Setzen der Note am Ausgang, bis klar ist, ob die Note an oder ab ist. \\
+	\item Der Controller wartet mit dem Setzen der Note am Ausgang, bis klar ist, ob die Note an oder ab ist.\\
 	Keine kurzfristig falschen Noten am Ausgang, die ab sind.
 	\item Zustände werden bei rx\_data\_valid = '1' die Zustände geändert.
 	\item Noten können beliebig an- und abgestellt werden
 \end{itemize}
 
-
 \section{Umsetzung Polyphone Out-Block}\label{sect.polyphonie_umsetzung}
  
 \subsection{Funktionsbeschreibung}
-Der Polyphone Out-Block speichert die empfangenen Signale in 10 Registern. Bei jeder neuen Note wird geprüft, ob der Wert im Register besteht und ob das ON/OFF-Bit der gespeicherten neu gesetzt werden muss. Der Block gibt 10 Noten parallel aus.\\
+
+Der Polyphone Out-Block speichert die empfangenen Signale in 10 Registern. Bei jeder neuen Note wird geprüft, ob der Wert im Register besteht und ob das ON/OFF-Bit der gespeicherten neu gesetzt werden muss. Der Block gibt 10 Noten parallel aus.
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=0.5\textwidth]{images/midi_interface/polyphonie_blockschaltbild.png}
 	\caption{Polyphone Out-Block}
 	\label{fig.polyphnie_out_block}
 \end{figure}
 
 \subsection{Konzept}\label{konzept_plyphonie}
-Der empfangene Notenwert wird mit den gespeicherten Notenwerten verglichen. Ist eine Note vorhanden, wird das ON-OFF-Bit geprüft und aktualisiert. Keine Note darf zweimal gespeichert sein. Sind alle 10 Registerplätze besetzt, wird die neue Note in ein Register mit abgeschaltenem ON-OFF-Bit gesetzt.\\
+
+Der empfangene Notenwert wird mit den gespeicherten Notenwerten verglichen. Ist eine Note vorhanden, wird das ON-OFF-Bit geprüft und aktualisiert. Keine Note darf zweimal gespeichert sein. Sind alle 10 Registerplätze besetzt, wird die neue Note in ein Register mit abgeschaltenem ON-OFF-Bit gesetzt.
+
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=0.7\textwidth]{images/midi_interface/Konzept_Hans_polyphonie.png}
 	\caption{Konzept Polyphonie Block \cite{konzept_poly} }
 	\label{fig.polyphnie_konzept}
 \end{figure}
 
 \subsection{Implementation}
+
 Der Ablauf des Speicherns ist aus der Abbildung \ref{fig.polyphnie_ablauf}.
+
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=0.2\textwidth]{images/midi_interface/polyphnie_ablauf.png}
 	\caption{Ablauf Note speichern }
 	\label{fig.polyphnie_ablauf}
 \end{figure}
 
 Umgesetz wird das Suchen eines Speicherplatzes innerhalb der 10 Registern mit einer Input-Logik, die mit folgenden 3 Vergleichen arbeitet:
+
 \begin{enumerate}
 	\item Liegt der Notenwert in einem Register ? 
 	\item Ist ein Register unbenützt ?
 	\item Welches Register hat einen abgeschaltenen Notenwert ?
 \end{enumerate}
-Sobald eine Frage mit Ja beantwortet wird, wird der Registerindex gespeichert und als Output des Logik-Prozesses zur Verarbeitung weiter gegeben.\\
-\newline
+
+Sobald eine Frage mit Ja beantwortet wird, wird der Registerindex gespeichert und als Output des Logik-Prozesses zur Verarbeitung weiter gegeben.
+
 Durch den übermittelten Index-Wert weiss der Speicher-Prozess, in welches Register die neue Note gespeichert werden soll.\\
 Die Werte aller 10 Register werden am Ausgang parallel ausgegeben.
 
-
-
 \subsection{Resultat Polyphonie Out-Block}
-Das Ziel dieses Blocks ist, dass jeder Notenwert in ein anderes Register gespeichert wird und kein Notenwert zweimal abgelegt wird.\\
-An und Ab müssen in dasselbe Register gespeichert werden.\\
-Dieses Konzept ist unabdingbar für den \textit{polyphony mode} und stört die Notenausgabe im \textit{single mode} nicht. 
+
+Die Ziele sind:
+
+\begin{itemize}
+    \item dass jeder Notenwert in ein anderes Register gespeichert wird und kein Notenwert zweimal abgelegt wird.
+    \item An und Ab müssen in dasselbe Register gespeichert werden.
+    \item Dieses Konzept ist unabdingbar für den \textit{polyphony mode} und stört die Notenausgabe im \textit{single mode} nicht. 
+\end{itemize}
+
+
 \subsection{Simulation parallel Noten ausgeben}
-\textbf{Input Daten} (Zeile 3, 5, 7 und 9 siehe Anhang \ref{chap.anhang_midi_input})\\
-singl 55 90 27 80 27 90 05 00 00
-singl 55 90 73 80 73 90 16 00 00
-polyp 71 55 02 55 33 55 08 00 00
-polyp 20 55 03 00 20 00 40 55 00
 
-\textbf{Beschreibung der Befehle}\\
-- Dummywert Velocity 0x55
-- Note an \\
-- Notenwert 27\\
-- Note ab \\
-- Notenwert 27\\
-- Note an\\
-- Notenwert 05\\
+\textbf{Input Daten} (Zeile 3, 5, 7 und 9 siehe Anhang \ref{chap.anhang_midi_input})
 
-- Dummywert Velocity 0x55
-- Note an\\
-- Notenwert 73\\
-- Note ab\\
-- Notenwert 73\\
-- Note an\\
-- Notenwert 16\\
+{
+\renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
+\begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}} % @{} removes the left and right margin around the table
+singl & 55 & 90 & 27 & 80 & 27 & 90 & 05 & 00 & 00\\
+singl & 55 & 90 & 73 & 80 & 73 & 90 & 16 & 00 & 00\\
+polyp & 71 & 55 & 02 & 55 & 33 & 55 & 08 & 00 & 00\\
+polyp & 20 & 55 & 03 & 00 & 20 & 00 & 40 & 55 & 00
+\end{tabular*}
+}
 
-- Notenwert 71\\
-- Note an\\
-- Notenwert 02\\
-- Note an\\
-- Notenwert 33\\
-- Note an\\
-- Notenwert 08\\
-- Note ab\\
+\textbf{Beschreibung der Befehle}
 
-- Notenwert 20\\
-- Note an\\
-- Notenwert 03\\
-- Note ab\\
-- Notenwert 20\\
-- Note ab\\
-- Notenwert 40\\
-- Note an\\
+\begin{itemize}
+\item Dummywert Velocity 0x55
+\item Note an 
+\item Notenwert 27
+\item Note ab 
+\item Notenwert 27
+\item Note an
+\item Notenwert 05
+\end{itemize}
 
-\textbf{Erwartetes Resultat}\\
-Note 27 wird angestellt (Vektor ist 127), Note 27 wird abgestellt (Vektor ist 027). An und Abstellen sind in demselben Register abgelegt.\\
-Note 05 wird angestellt und in neuem Register abgelegt, da dieses Register unbenutzt ist.\\
-Note 73 wird angestellt und nachher abgestellt. Beides in neuem Register.\\
-Note 16 wird angestellt und in neues Register gelegt.\\
-Note 71 wird angestellt und in neues Register gelegt.\\
-Note 02 wird angestellt und in neues Register gelegt.\\
-Note 33 wird angestellt und in neues Register gelegt.\\
-Note 08 wird abgestellt. (Neues Register stört nicht)\\
-Note 20 wird angestellt und in neues Register gelegt.\\
-Note 03 wird abgestellt. (Neues Register stört nicht)\\
-Note 20 wird abgestellt. Muss im 20-Notenregister sein.\\
-Note 40 wird angestellt und in neues Register gelegt.\\
+\begin{itemize}
+\item Dummywert Velocity 0x55
+\item Note an
+\item Notenwert 73
+\item Note ab
+\item Notenwert 73
+\item Note an
+\item Notenwert 16
+\end{itemize}
+
+\begin{itemize}
+\item Notenwert 71
+\item Note an
+\item Notenwert 02
+\item Note an
+\item Notenwert 33
+\item Note an
+\item Notenwert 08
+\item Note ab
+\end{itemize}
+
+\begin{itemize}
+\item Notenwert 20
+\item Note an
+\item Notenwert 03
+\item Note ab
+\item Notenwert 20
+\item Note ab
+\item Notenwert 40
+\item Note an
+\end{itemize}
+
+\textbf{Erwartetes Resultat}
+
+\begin{itemize}
+\item Note 27 wird angestellt (Vektor ist 127), Note 27 wird abgestellt (Vektor ist 027). An und Abstellen sind in demselben Register abgelegt.
+\item Note 05 wird angestellt und in neuem Register abgelegt, da dieses Register unbenutzt ist.
+\item Note 73 wird angestellt und nachher abgestellt. Beides in neuem Register.
+\item Note 16 wird angestellt und in neues Register gelegt.
+\item Note 71 wird angestellt und in neues Register gelegt.
+\item Note 02 wird angestellt und in neues Register gelegt.
+\item Note 33 wird angestellt und in neues Register gelegt.
+\item Note 08 wird abgestellt. (Neues Register stört nicht).
+\item Note 20 wird angestellt und in neues Register gelegt.
+\item Note 03 wird abgestellt. (Neues Register stört nicht).
+\item Note 20 wird abgestellt. Muss im 20-Notenregister sein.
+\item Note 40 wird angestellt und in neues Register gelegt.
+\end{itemize}
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_interface/tb_polyphonie.png}
 	\caption{Simulation des Blocks Polyphonie Out }
 	\label{fig.polyphnie_simulation}

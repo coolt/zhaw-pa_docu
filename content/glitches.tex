@@ -11,7 +11,11 @@
 \chapter{Glitches}\label{chap.glitch}
 
 \section{Glitche in der Digitalen Signalverarbeitung}\label{sect.glitch_def}
-In der Digitalen Signalverarbeitung ist glitch ein bekannter Fehler, den William I. Fletscher folgendermassen beschreibt: ''Als \textit{glitch}  wird eine ungewollte, flüchtige ''Signalspitze'' bezeichnet, die Zähler aufwärts zählt, Register löscht oder einen ungewollten Prozess startet.'' \cite{F_glitches} \\
+In der Digitalen Signalverarbeitung ist glitch ein bekannter Fehler, den William I. Fletscher folgendermassen beschreibt:
+
+\begin{quote}
+''Als \textit{glitch}  wird eine ungewollte, flüchtige ''Signalspitze'' bezeichnet, die Zähler aufwärts zählt, Register löscht oder einen ungewollten Prozess startet.'' \cite{F_glitches}
+\end{quote}
 
 
 Abbildung \ref{fig.glitch.def} zeigt zwei \textit{glitches} in einem Ausgangssignal.\\
@@ -24,10 +28,15 @@ Abbildung \ref{fig.glitch.def} zeigt zwei \textit{glitches} in einem Ausgangssig
 
 
 \section{Ursache für Glitches}\label{sect.glitch_ursache}
-Der Auslöser sind ungleichzeitig eintreffende Signale, die durch \\
-1.) unterschiedlich lange Signalpfade, \\
-2.) unterschiedliche Durchlaufverzögerungen der vorangehenden Flip-Flops oder \\
-3.) unterschiedliche Logik-Zeiten \\
+
+Der Auslöser sind ungleichzeitig eintreffende Signale, die durch
+
+\begin{enumerate}
+\item unterschiedlich lange Signalpfade,
+\item unterschiedliche Durchlaufverzögerungen der vorangehenden Flip-Flops oder
+\item unterschiedliche Logik-Zeiten
+\end{enumerate}
+
 entstehen, und die in ein \textbf{asynchrones} Bauteil geführt werden. Der Dekoder im asynchronen Bauteil entschlüsselt dadurch kurzfristig einen falschen Wert. \\
 
 Abbilung \ref{fig.glitch.bild1} zeigt ein leicht verzögertes (getaktetes) enable-Signal zu einem anders verzögerten (getakteten) Flip-Flop-Eingangssignal Q. Der Ausgang des Flip-Flops weist kurzzeitig Glitches auf. \\

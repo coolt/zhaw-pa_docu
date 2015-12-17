@@ -14,7 +14,6 @@
 \section{Device Under Test}\label{sec.testbench_DUT}
 Das Device Under Test (DUT)  ist das midi interface. Das Ziel ist, dass das MIDI-Signal in den Block geführt wird und am Ausgang 10 Notenvektoren mit je 8 Notenbits und einem Bit, das besagt, ob die Note an oder ab ist.\\
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_interface/testbench_midiinterface.png}
 	\caption{Blockschaltbild Device under Test}
 	\label{fig.testbench}
@@ -31,28 +30,35 @@ Die Test-Datei ist zeilenweise strukturiert.
 \subsubsection{Verarbeitungsmodus} 
 Jede Zeile beginnt mit dem Verabreitungsmodus. Bei der Input-Datei besteht der Verarbeitungsmodus aus fünf Buchstaben.
 
-reset	\hspace{2mm} 00 \hspace*{2mm} 	00 \hspace*{2mm} 	..\\
-singl	\hspace{2mm} 90 \hspace*{2mm} 	27 \hspace*{2mm} 	..\\
-polyp	\hspace{1mm} 71 \hspace*{2mm} 	55 \hspace*{2mm} 	.. 
-
+\begin{tabbing}
+\hspace{4em} \= \hspace{2em} \= \hspace{2em} \=\kill
+reset	\> 00 \> 00 \> \ldots{}\\
+singl	\> 90 \> 27 \> \ldots{}\\
+polyp	\> 71 \> 55 \> \ldots{}
+\end{tabbing}
 
 \subsubsection{Tokenstruktur} 
+
 Nach dem Verarbeitungsmodus folgen die Daten. Jede Zeile hat gleichviele Datenpackete (Tokens). 
-Die \textit{testbench} ortet jedem Datenpaket innerhalb der Zeile eine Bedeutung zu. Je nach Verarbeitungsmodus ist die Bedeutung der Token anders.\\ 
+Die \textit{testbench} ortet jedem Datenpaket innerhalb der Zeile eine Bedeutung zu. Je nach Verarbeitungsmodus ist die Bedeutung der Token anders.
 
-
-Die \textit{testbench midi interface} an den zwei MIDI Datentypen, die im Unterkapitel \ref{datenytpen} detailliert beschrieben sind. Die Tokestruktur leitet sich aus der Datenreihenfolge im \textit{polyphony mode} und im \textit{single mode} ab (siehe  \ref{note_modes}). In der nachfolgenden zwei Token-Beispielen bezieht sich die obere Zeile auf den \textit{polyphony mode} und die untere auf den \textit{single mode}.  \\
+Die \textit{testbench midi interface} an den zwei MIDI Datentypen, die im Unterkapitel \ref{datenytpen} detailliert beschrieben sind. Die Tokestruktur leitet sich aus der Datenreihenfolge im \textit{polyphony mode} und im \textit{single mode} ab (siehe  \ref{note_modes}). In der nachfolgenden zwei Token-Beispielen bezieht sich die obere Zeile auf den \textit{polyphony mode} und die untere auf den \textit{single mode}.
 
 In der \textit{testbench midi interface} haben Tokens folgende Bedeutung:
 
 
-mode\_p	\hspace{1mm} Note \hspace*{4mm} 	Velocity	\hspace*{2mm} Note \hspace*{2mm}  Velocity \hspace*{2mm} 	Note \hspace*{2mm} 	Velocity \hspace*{2mm} 	Note \hspace*{2mm} 	Velocity \hspace*{2mm}  Anzahl Noten
-
-mode\_s	\hspace{1mm} Dummy \hspace*{2mm} 	Status	\hspace*{2mm} Note \hspace*{2mm}  Status \hspace*{4mm} 	Note \hspace*{2mm} 	Status \hspace*{3mm} 	Note \hspace*{3mm} 	Dummy \hspace*{2mm}  Dummy
+{
+\renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
+\begin{tabular}{@{}*{10}{l}@{}} % @{} removes the left and right margin around the table
+mode\_p	& Note & Velocity	& Note & Velocity & Note & Velocity & Note & Velocity & Anzahl Noten \\
+mode\_s	& Dummy & Status & Note & Status & Note & Status & Note & Dummy & Dummy
+\end{tabular}
+}
 
 Dummy wird gesetzt, um die Verarbeitungsstruktur zu vereinfachen. Jeder Dummywert wird beim Einlesen verworfen.\\
  
 \section{Aufstellen der Fehler}\label{sec.testbench_fehler} 
+
 Die ersten Zeilen, sie sind ersetzt durch ausgefeiltere Datenstrukturen, hatten nur 3 Token und testeten die Grundfunktionen.\\
 
 single mode note an/ab\\
@@ -82,23 +88,28 @@ Getestet sind auch Kombinationen unter den Fällen, die aus Übersichtlichkeit n
 \item Einzelne Note an, diverse andere Noten setzen, erst bei nächster Zeile erste Note ab
 \end{itemize}
 
-Zu jedem Testfall wird auf der nächsten Zeile das zu erwartende Resultat vorgegeben. Die testbench prüft die ausgegebene Notenwerte am Ausgang des midi interfaces mit den vorgegebenen Werten. \\
+Zu jedem Testfall wird auf der nächsten Zeile das zu erwartende Resultat vorgegeben. Die testbench prüft die ausgegebene Notenwerte am Ausgang des midi interfaces mit den vorgegebenen Werten.
 
-
-\underline{Beispielzeile}\\
-singl \hspace*{3mm} 55 \hspace*{4mm} 90 \hspace*{12mm}  27 \hspace*{6mm} 80 \hspace*{10mm} 27 \hspace*{6mm} 90 \hspace*{10mm} 05 \hspace*{6mm} 00 \hspace*{12mm} 00\\
-check \hspace*{2mm} 00 \hspace*{4mm} 00 \hspace*{12mm}  27 \hspace*{6mm} 00 \hspace*{10mm} 00 \hspace*{6mm} 00 \hspace*{10mm} 05 \hspace*{6mm} 00 \hspace*{12mm} 00\\
-
+Beispielzeile\\
+\rule{\textwidth}{0.4pt}\\
+{
+\renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
+\begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}} % @{} removes the left and right margin around the table
+singl & 55 & 90 & 27 & 80 & 27 & 90 & 05 & 00 & 00\\
+check & 00 & 00 & 27 & 00 & 00 & 00 & 05 & 00 & 00\\
+\end{tabular*}
+}
 
 Die Sequenz bedeutet Note 27 an (0x90), dann ab (0x80) der Note 27 und am Schluss an Note 05. \\
 Überprüft (check) wird, ob am Ausgang die Noten 27 und 05 anliegen.\\
-Im \textit{single mode} ist die Geschwindigkeit für das An- oder Abstellen der Note nicht relevant und wird deshalb nicht als Befehl eingelesen. Die \textit{testbench} hängt nach jeder Note einen Dummy-Geschwindigkeitswert von 0x55 an. \bigskip
-
+Im \textit{single mode} ist die Geschwindigkeit für das An- oder Abstellen der Note nicht relevant und wird deshalb nicht als Befehl eingelesen. Die \textit{testbench} hängt nach jeder Note einen Dummy-Geschwindigkeitswert von 0x55 an.
 
 \subsubsection{Polyphonie testen }\label{polyphonitest}
 
 \subsubsection{Testfälle}
-In der Polyphony können mehrere Noten hintereinander an- und nur einzelne davon wieder abgestellt werden. \\
+
+In der Polyphony können mehrere Noten hintereinander an- und nur einzelne davon wieder abgestellt werden.
+
 \begin{itemize}
 \item Polyphoniestatus setzen, einzelne Note an
 \item Polyphoniestatus setzen, mehrere Note an
@@ -112,11 +123,16 @@ In der Polyphony können mehrere Noten hintereinander an- und nur einzelne davon
 \item Polyphoniestatus setzen, 10 Noten an
 \item Polyphoniestatus setzen, 10 Noten in Register, eine ist aus. Neue Note an senden
 \end{itemize}
-\smallskip
 
-\underline{Beispielzeile}\\
-polyp \hspace*{2mm} 71 \hspace*{4mm} 55 \hspace*{12mm}  02 \hspace*{6mm} 55 \hspace*{10mm} 33 \hspace*{6mm} 55 \hspace*{10mm} 08 \hspace*{6mm} 00 \hspace*{12mm} 00\\
-check \hspace*{2mm} 71 \hspace*{4mm} 00 \hspace*{12mm}  02 \hspace*{6mm} 00 \hspace*{10mm} 33 \hspace*{6mm} 00 \hspace*{10mm} 00 \hspace*{6mm} 00 \hspace*{12mm} 03\\
+Beispielzeile\\
+\rule{\textwidth}{0.4pt}\\
+{
+\renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
+\begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}} % @{} removes the left and right margin around the table
+polyp & 71 & 55 & 02 & 55 & 33 & 55 & 08 & 00 & 00\\
+check & 71 & 00 & 02 & 00 & 33 & 00 & 00 & 00 & 03
+\end{tabular*}
+}
 
 In der Sequenz wird die Note 71, dann die Noten 02 und 33. Danach wird die Note 08 abgestellt. Die \textit{testbench} prüft am Ausgang, ob die Noten 71, 02 und 33 an sind. 
 
@@ -135,38 +151,38 @@ Im Gegensatz zum hardwarenahen Code der VHDL-Blocks, bei denen arrays und loop e
 	\item Ein- und Ausgänge als arrays
 	\item Tokenstruktur als record
 \end{itemize}
-\smallskip
 
+Bsp. Tokenstruktur
 
-Bsp. Tokenstruktur  \\  
+\begin{lstlisting}[language=vhdl]
+-- define midi_data
+type t_midi_data is record
+    token_note : std_logic_vector(7 downto 0);
+    token_attribut : std_logic_vector(7 downto 0);
+    end record;
 
--- define midi\_data\\
-type t\_midi\_data is record  \\                    
-\hspace*{12mm}        token\_note : std\_logic\_vector(7 downto 0);  \\                  
-\hspace*{12mm}        token\_attribut : std\_logic\_vector(7 downto 0);\\
-\hspace*{12mm}    end record;\\
+type t_midi_data_array is array (0 to 3) of t_midi_data;
 
-type t\_midi\_data\_array is array (0 to 3) of t\_midi\_data;\\
+-- define token structure
+type t_token_line is record
+    token_cmd : string(1 to 5);
+    t_midi_data : t_midi_data_array;
+    token_number : std_logic_vector(7 downto 0);
+    end record;
 
--- define token structure\\
-type t\_token\_line is record\\
-\hspace*{12mm}        token\_cmd : string(1 to 5);\\
-\hspace*{12mm}        t\_midi\_data : t\_midi\_data\_array;\\
-\hspace*{12mm}        token\_number : std\_logic\_vector(7 downto 0);\\
-\hspace*{12mm}    end record;\\
-
-       
--- array with note structure (input/output)     \\
-type t\_note\_array is array (0 to 9) of std\_logic\_vector(8 downto 0);\\
-
+-- array with note structure (input/output)
+type t_note_array is array (0 to 9) of std_logic_vector(8 downto 0);
+\end{lstlisting}
 
 
 \subsection{Prozessoptimierung}
+
 Um die einzelnen Bits in den arrays zu setzen, braucht es in der Ablaufstruktur Optimierungen.
+
 \begin{itemize}
 	\item loops iterieren durch die arrays
 	\item Einleseprozess wird vom Verarbeitungsprozess getrennt
-	\item Flags wie s\_read\_input\_finished <= '1' sichern das parallelle Datenverarbeiten
+	\item Flags wie \lstinline|s_read_input_finished <= '1'| sichern das parallelle Datenverarbeiten
 \end{itemize}
 
 \section{Ergebnisse Simulation}\label{sec.ergebnisse_tests}
@@ -175,7 +191,6 @@ Die Ausgabe der Signale in die Output-Datei bezieht sich auf den Zustand am Ausg
 \subsection{Block Midi Control}
 Gemäss der \textit{fsm} durchläuft der \textit{single mode}  die Zustände idle, note\_s, velocity\_s und geht dann zurück  in den idle-Zustand. Das Signal s\_note\_on wechselt nach einem \textit{status byte} von (0x90) auf on und nach (0x80) auf ab.
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_control/wave_single.png}
 	\caption{Simulation Block Midi Control}
 	\label{fig.test_midi:control_single}
@@ -184,7 +199,6 @@ Gemäss der \textit{fsm} durchläuft der \textit{single mode}  die Zustände idl
 Im \textit{polyphony mode} existieren die Zustände idle, note\_v, velocity\_v und verbleibt in diesem Zustand. Nur durch ein \textit{status byte} (oder ungültige \textit{data bytes}) wird der Zustand der Polyphonie verlassen.
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_control/wave_polyphonie.png}
 	\caption{Simulation Block Midi Control}
 	\label{fig.test_midi:control}
@@ -195,7 +209,6 @@ Kriterien in der Polyphonie out sind, dass jede neue Note auf den nächt freien 
 Alle Kriterien sind erfüllt.\\
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=1\textwidth]{images/midi_interface/tb_polyphonie.png}
 	\caption{Simulation Block Polyphonie Out}
 	\label{fig.test_polyphonie}
