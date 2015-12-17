@@ -26,13 +26,18 @@
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
+% enable for showing the geometry (and add "\layout" after "\begin{document}")
+%\usepackage[showframe]{geometry}
+\usepackage{layout}
 \usepackage{ifthen}
 \usepackage{url}
 \usepackage{scrpage2}
 \usepackage{scrhack}
 \usepackage{listings}
 \usepackage{pdfpages}
-
+\usepackage{enumitem}
+%\setlist{noitemsep} % no extra space around list items
+\setlist{nosep} % no extra space around lists and around list items
 
 % Definition of the layout of the document, pagesize and headings
 % -----------------------------------------------------------------
@@ -80,6 +85,10 @@
 \thispagestyle{empty}
 \pagestyle{empty}
 
+% ignore header and footer space for the title page
+\vspace*{-1in}%
+\enlargethispage{.5in}%
+
 % Place the logo on top left
 \begin{flushleft}
 	\ifthenelse{\equal{\languagename}{\string ngerman}}
@@ -87,17 +96,16 @@
 	{\includegraphics[height=30mm]{images/logos/en-zhaw-ines-rgb.png}} 
 \end{flushleft}
 
-\vskip 8em
-\vskip 3em
+\vskip 11em
 
 % Title of the report
 \begin{flushleft}
 	{\huge \textbf{\@title}}
-	\rule{\textwidth}{0.8mm}
+	%\rule{\textwidth}{0.8mm}
 \end{flushleft}
 
-\vskip 5em
-\vskip 2em
+
+\vfill
 
 % School and Institute
 \begin{flushleft}
@@ -118,12 +126,12 @@
 \ifthenelse{\equal{\languagename}{\string ngerman}}{Autoren}{Authors} & \parbox[t]{5cm}{\@author} \\
 \end{tabular}
 
-\vskip 1em
+%\vskip 1em
 \begin{tabular}{ p{3cm} l }
 \ifthenelse{\equal{\languagename}{\string ngerman}}{Hauptbetreuer}{betr} & \parbox[t]{5cm}{\betreuer} \\
 \end{tabular}
 
-\vskip 1em
+%\vskip 1em
 \begin{tabular}{ p{3cm} l }
 \ifthenelse{\equal{\languagename}{\string ngerman}}{Nebenbetreuer}{neben} & \parbox[t]{5cm}{\nebenbetreuer} \\
 \end{tabular}
@@ -165,24 +173,32 @@ Homepage: \url{http://www.ines.zhaw.ch}\newline
 
 \lstset{		
 		basicstyle=\small\ttfamily,
-		frame=single,
-		numbers=left,	
+		frame=none,
+		numbers=none,	
 		numberstyle=\tiny,
 		numberblanklines=true,
 		captionpos=b,
 		extendedchars=true,
 		float=ht,
 		showtabs=false,
-		tabsize=2,
+		tabsize=4,
 		showspaces=false,
 		showstringspaces=false,
 		breaklines=true,
-		backgroundcolor=\color{lgray},
+		backgroundcolor=\color{white},
 		keywordstyle=\color{lred}\bfseries, 
 		commentstyle=\color{lgreen}\ttfamily,
 		stringstyle=\color{lblue},
-		xleftmargin=0.5cm,
-		xrightmargin=0.5cm
+		xleftmargin=0.0cm,
+		xrightmargin=0.0cm
 }
 
 \lstloadlanguages{C++}
+
+% Document formatting
+% -----------------------------------------------------------------
+
+%\def\labelitemi{--} % dashes instead of bullets for the lists
+\renewcommand{\labelitemi}{$-$}
+\renewcommand{\labelitemii}{$-$}
+% \def\labelitemii{--} % dashes instead of bullets for the lists

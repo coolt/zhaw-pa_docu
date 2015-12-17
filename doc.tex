@@ -2,6 +2,7 @@
 \documentclass[ngerman]{zhawines}
 
 % Include
+\usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{scrpage2}
 \usepackage{listings}
@@ -15,8 +16,8 @@
 \usepackage[autostyle=true,german=quotes]{csquotes} % quotes
 \usepackage{cite}
 \usepackage[justification=raggedright,singlelinecheck=false]{caption}
-%\usepackage[pdfauthor={Katrin Bächli}, pdftitle={Projektarbeit HS15 Studiengang Elektrotechnik - Polyphonic DDS Synthesizer mit MIDI Steuerung}, colorlinks=true,linkcolor=black,citecolor=black,plainpages=false]{hyperref}
-\usepackage{breakurl}
+
+\usepackage[pdfauthor={Katrin BÃ¤chli}, pdftitle={Projektarbeit HS15 Studiengang Elektrotechnik - Polyphonic DDS Synthesizer mit MIDI Steuerung}, colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,plainpages=false]{hyperref}
 
 
 % \usepackage[latin1]{inputenc}    %Umlaute  -> Fehler: "option clash for package inputenc
@@ -27,7 +28,7 @@
 \begin{document}
 
 	\hbadness 10000
-%	\author{Katrin Bächli }  -> Fehler: Error: unicode char \u8:äch not set up for use with LaTeX \maketitle
+	\author{Katrin BÃ¤chli }%  -> Fehler: Error: unicode char \u8:Ã¤ch not set up for use with LaTeX \maketitle
 	\renewcommand{\betreuer}{Prof. Hans-Joachim Gelke}
 	\renewcommand{\nebenbetreuer}{Dr. Matthias Rosenthal}
 	\title{PA15\_gelk\_1 Polyphonic DDS Synthesizer mit MIDI Steuerung}

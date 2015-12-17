@@ -22,7 +22,6 @@ Jeder zu entwickelnde Block wird mit einer textbasierten \textit{testbench} gete
 
 \section{Aufgabenstellung}\label{sect.einleitung_ziele}
 Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabenstellung}. 
-
  
 \begin{itemize}
 	\item Erzeugung von Glitches mit einem Zähler und nachgeschaltetem Dekoder. Sichtbarmachung der Glitches mit einem Oszilloskop. Betätigen des asynchronen Resets vom Decoder aus.
@@ -31,17 +30,19 @@ Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabe
 \end{itemize}  
 
 
-Nach der Fertigstellen des ersten Teils, wird die Aufgabenstellung für den zweiten Teil präzisiert (siehe Anhang \ref{chap.anhang_aufgabenstellung_neu}).\\ 
+Nach der Fertigstellen des ersten Teils, wird die Aufgabenstellung für den zweiten Teil präzisiert (siehe Anhang \ref{chap.anhang_aufgabenstellung_neu}).
+
 \begin{itemize}
-\item Midi Interface for Keyboard für Polyphonie nach Konzept von gelk\\
-o   10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators\\
-o   10 On/Off Ausgänge Ton on/off\\
-o   UART wird geliefert von gelk\\
-o   VHDL wird von Grund auf neu erstellt.
+\item Midi Interface for Keyboard für Polyphonie nach Konzept von gelk
+\begin{itemize}
+    \item 10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators
+    \item 10 On/Off Ausgänge Ton on/off
+    \item UART wird geliefert von gelk
+    \item VHDL wird von Grund auf neu erstellt.
+\end{itemize}
 \item 10 DDS implementieren und mit Mischer mischen
 \item Script basierte Testbench. Testbench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
 \item Testbench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. Midi Poliphony Spec muss durch die Testbench unterstützt werden können. Velocity muss nicht unterstützt werden.
 \item Kein VHDL code ohne Testbench.
 \item Block level testbench. Unit Tests.
 \end{itemize}
-
