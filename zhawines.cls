@@ -100,46 +100,44 @@
 
 % Title of the report
 \begin{flushleft}
-	{\huge \textbf{\@title}}
+	%{\huge \textbf\sf{\@title}}
+    {\normalfont\sffamily\Huge\bfseries{\@title}}
 	%\rule{\textwidth}{0.8mm}
 \end{flushleft}
 
+\includegraphics[width=\textwidth]{images/simulation_1.png}
+%\includegraphics[width=\textwidth]{images/simulation_2.png}\\
+%\includegraphics[width=\textwidth]{images/simulation_original.png}
 
 \vfill
 
 % School and Institute
 \begin{flushleft}
-	\LARGE
+    \normalfont\sffamily\Large
 	\ifthenelse{\equal{\languagename}{\string ngerman}}
-	{\textsc{Zürcher Hochschule für Angewandte Wissenschaften}}
+	{\textsc{Zürcher Hochschule \\ für Angewandte Wissenschaften}}
 	{\textsc{Zurich University of Applied Sciences}} \\
-    \vspace*{1cm}
-    \Large
+    %\vspace*{1cm}
+    \vspace*{0.4cm}
+    %\Large
+    \normalsize
     \textsc{Institute of Embedded Systems}
 \end{flushleft}
 
 % Authors and Date
-\vskip 5em
-\renewcommand{\arraystretch}{1.5}
+%\vskip 5em
 
-\begin{tabular}{ p{3cm} l }
+{
+\normalfont\sffamily
+\renewcommand{\arraystretch}{2} % add more space between the rows
+\begin{tabular}{@{} p{3cm} l @{}}
 \ifthenelse{\equal{\languagename}{\string ngerman}}{Autorin}{Author} & \parbox[t]{5cm}{\@author} \\
-\end{tabular}
-
-%\vskip 1em
-\begin{tabular}{ p{3cm} l }
 \ifthenelse{\equal{\languagename}{\string ngerman}}{Hauptbetreuer}{betr} & \parbox[t]{5cm}{\betreuer} \\
-\end{tabular}
-
-%\vskip 1em
-\begin{tabular}{ p{3cm} l }
 \ifthenelse{\equal{\languagename}{\string ngerman}}{Nebenbetreuer}{neben} & \parbox[t]{5cm}{\nebenbetreuer} \\
+ & \\
+\ifthenelse{\equal{\languagename}{\string ngerman}}{Datum}{dat} & \parbox[t]{5cm}{\@date}
 \end{tabular}
-
-\vskip 1em
-\begin{tabular}{ p{3cm} l }
-\ifthenelse{\equal{\languagename}{\string ngerman}}{Datum}{dat} & \parbox[t]{5cm}{\@date} \\
-\end{tabular}
+}
 
 % Second page with the contact information
 \newpage
