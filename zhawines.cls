@@ -109,9 +109,9 @@
 
 \vskip 2em
 
-\includegraphics[width=\textwidth]{images/simulation_1.png}
-%\includegraphics[width=\textwidth]{images/simulation_2.png}\\
-%\includegraphics[width=\textwidth]{images/simulation_original.png}
+%\includegraphics[width=\textwidth]{images/simulation_1.png}
+%\includegraphics[width=\textwidth]{images/simulation_2.png}
+\includegraphics[width=\textwidth]{images/simulation_original_19.png}
 
 \vfill
 

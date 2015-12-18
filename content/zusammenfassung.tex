@@ -11,14 +11,14 @@
 \chapter*{Zusammenfassung}
 
 
-Die hardwarenahe Programmiersprache VHDL ist ein wichtiger Bestandteil der digitale Signalverarbeitung. Die Projektarbeit setzt zwei unabhängige Aufgaben in VHDL um.
+Die hardwarenahe Programmiersprache VHDL ist ein wichtiger Bestandteil der digitalen Signalverarbeitung. Die Projektarbeit setzt zwei unabhängige Aufgaben in VHDL um.
 
 \begin{itemize}
 \item Bilden zweier hardwarenahen Fehlerquellen: \textit{Glitches} und \textit{Metastability}
 	\item Implementation eines \textit{MIDI Interfaces}, dessen Entwicklung auf einer \textit{textbasierten Test Bench} basiert.
 \end{itemize} 
 
-\textit{Glitches} werden künstlich Herbeigeführt in dem auf einem Cylcone II-FPGA die Pfade einzelner Signale verlängert sind. Dadurch treffen Werte verzögert ein und der asynchrone \textit{Decoder} verarbeitet falsche Werte. Falsche Signale gelangen auf die Leitung und sogenannte Glitches entstehen. 
+Durch das Verlängern der Pfade einzelner Signale auf einem Cyclon3 II-FPGA werden \textit{Glitches} künstlich herbeigeführt. Da einzelne Werte verzögert eintreffen und verarbeitet der asynchrone \textit{Decoder} falsche Werte. Falsche Signale gelangen auf die Leitung und sogenannte Glitches entstehen. 
 
 Der metastabilen Zustand in einem System entsteht, durch das Verletzen der Setup und Hold Time. Forciert ist dies durch zwei unterschiedliche Takte zweier VHDL-Logik-Blöcke, deren Takt-Phasen nicht übereinstimmen. Das Ausgangssignal des ersten Logik-Blocks ist als asynchroner Impuls auf den zweiten Logik-Block geführt, der eine \textit{Finite State Machine} enthält. Dekodiert die FSM keinen definierten Zustand, befindet sich das System in einen undefinierten Zustand. Metastabilität trifft ein.
 
