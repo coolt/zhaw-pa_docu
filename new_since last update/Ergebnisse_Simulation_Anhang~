@@ -1,0 +1,43 @@
+Test row is 0: Mode reset.
+Ergebnis
+Reset good.
+
+Test row is 2: Mode is singl.
+Note set on 90
+Note out 27. Expected 27. Good.
+
+Note set off 80
+Note out 27. Expected 27. Good.
+
+Note set on 90
+Note out 05. Expected 05. Good.
+
+Reset circuit single.
+
+
+Test row is 4: Mode is singl.
+Note set on 90
+Note out 73. Expected 73. Good.
+
+Note set off 80
+Note out 73. Expected 73. Good.
+
+Note set on 90
+Note out 16. Expected 16. Good.
+
+Reset circuit single.
+
+ 
+Test row is 6: Mode is polyphony.
+Ergebnis
+Number of acitve notes 03. Good. 
+
+ 
+Test row is 8: Mode is polyphony.
+Ergebnis
+Number of acitve notes 04. Good. 
+
+ 
+Test row is 10: Mode is polyphony.
+Ergebnis
+Number of acitve notes 03. Good. 
