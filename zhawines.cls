@@ -56,12 +56,12 @@
 	\automark[section]{chapter}
 	\renewcommand{\chapterpagestyle}{scrheadings}
 	\ohead{\headmark}
-	\ihead{ZHAW - InES}
+	\ihead{Projektarbeit}
 
 
 
-	\cfoot{\thepage}
-	\ifoot{\the\day.\the\month.\the\year}
+	\ofoot{\thepage}
+	%\ifoot{\the\day.\the\month.\the\year}
 	%\setfootsepline{0.4pt}
 	%\setheadsepline{0.4pt}
 }
