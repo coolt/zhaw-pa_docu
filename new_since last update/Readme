@@ -1,0 +1,52 @@
+Read me
+
+Error message after BibteX execution (after compiling project before)
+----------------------------------------------------------------------------
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+The top-level auxiliary file: doc.aux
+The style file: abbrvnat.bst
+A level-1 auxiliary file: content/zusammenfassung.aux
+A level-1 auxiliary file: content/abstract.aux
+A level-1 auxiliary file: content/vorwort.aux
+A level-1 auxiliary file: content/einleitung.aux
+A level-1 auxiliary file: content/glitches.aux
+A level-1 auxiliary file: content/metastabilitat.aux
+A level-1 auxiliary file: content/midicontrol.aux
+I couldn't open auxiliary file content/testbench.aux
+---line 33 of file doc.aux
+ : \@input{content/testbench.aux
+ :                              }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: content/diskusion.aux
+I couldn't open auxiliary file content/verzeichnis.aux
+---line 35 of file doc.aux
+ : \@input{content/verzeichnis.aux
+ :                                }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: content/anhang.aux
+I found no \bibdata command---while reading file doc.aux
+Warning--I didn't find a database entry for "ReferenceManual"
+Warning--I didn't find a database entry for "F_glitches"
+Warning--I didn't find a database entry for "F_metastability"
+Warning--I didn't find a database entry for "Metastabil"
+Warning--I didn't find a database entry for "Midi_Braut"
+Warning--I didn't find a database entry for "Midi_specification"
+Warning--I didn't find a database entry for "konzept_poly"
+Warning--I didn't find a database entry for "synthesizer_1"
+Warning--I didn't find a database entry for "synthesizer_2"
+(There were 3 error messages)
+
+Process exited with error(s)
+--------------------------------------------------------------------------
+
+
+New Documents not addad in Latex-Structure:
+Added folder: 
+New since last update
+
+Inhalt:
+- Die neue Datei, die in content diskussion gehört
+- zwei neue Bilder, die ins verzeichnis: image/midi_interface/ gehören (ersetzten zwei alte Dateien)
+- reference.lib mit zwei neuen Einträgen und korriegierten Fehlern
+- Neues Bild, das in den Ordner image gehört und das im Anhang als letztes Anghängt werden soll unter dem Titel:
+RTL Top-Synthesizer

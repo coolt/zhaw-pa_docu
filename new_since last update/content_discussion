@@ -1,0 +1,33 @@
+\chapter{Diskussion und Ausblick}\label{chap.diskussion}
+
+Das Provozieren von \textit{glitch} und von \textit{metastability} ist vollständig umgesetzt. Für die entwickelte MIDI-Schnittstelle fehlt die Integration des Blocks ins Synthesizer-Projekt. 
+
+\section{Einbauen in das bestehende Synthesizer-Projekt}
+
+Die Schnittstellen für die Integration sind definiert (siehe Anhang \ref{chap.anhang_top_synthesizer}). Zwischen der MIDI-Schnittstelle und dem Audio Codec wird ein Block Tone-Generator eingebaut. Der Tone-Generator beihnaltet 3 Block-Einheiten, von denen zwei bereits im Synthesizer-Projekt aufgebaut sind: Einen Block Tone-Dekoder, einen Block FM-Synthesizer und einen Mixer (neu), weil insgesamt von den ersten zwei Block-Kategorien jeweils 10 Instanzen eingebaut werden (siehe Abbildung \ref{fig.top_synthesizer_detail}). 
+
+Bereits Umgebaut ist der Tone-Dekoder. Zur Ursprünglichen Auswahl, dass 12 Töne über die Schalter angestellt werden können, werden neu 127 dekodiert. Der FPGA-Schalter 13 dient zur Auswahl, ob man die Töne vom Keyboard (Schalter auf logisch '1') oder wie bisher von den restlichen 12 Schaltern auslösen will.
+Bereits implementiert ist die 10-fache Instanzierung der Ton-Dekoder und die 10-fache Ausführung des bestehenden FM-Synthese-Blocks. Die Instanzen sind ins Top-Level eingebaut und verbunden. Der Ausgang der 10 FM-Synthese-Blöcke führen auf einen Mixer. Von diesem besteht das Grundgerüst und einen ersten Ansatz, die 10 Signale über Addition zu einem Signal zusammen zu führen. Dieser Ansatz ist nicht ausgereift und muss überprüft werden.
+
+Durch dass der Mixer die Signale nicht zu einem vereinen konnte, konnte kein polyphones Signal an den Audio Codec übertragen werden. 
+
+\section{Frequenzmodulation mit vielfälltiger Klangfarbe}
+
+Was nicht implementiert ist, ist eine anspruchsvollere Frequenzmodulation mit vielfälltiger Klangfarbe, wie das das ursprüngliche Ziel war. Die implementierte Frequenzmodulation aus dem bestehenden Synthesizer-Projekt instanziert zwei DDS, den einen als Carrier und der andere für die Modulation. Zusätzlich zu dieser Grundstruktur ware die Implementation von Seitenbändern angedacht, die alle eigens verstärkt werden. (Konzept siehe \cite{synthesizer_1}, \cite{synthesizer_2}). Zu dieser spannenden Aufgabe kam es nicht mehr. Doch die bestehende Block-Struktur ermöglicht einen Ausbau.
+
+\section{Refactoring Synzhesizer-Projekt}
+
+Im bestehenden Synthesizer-Projekt sind gewisse Blocks direkt in das Top-Level eingebaut. Diese könnte man zu grösseren Einheiten gruppieren:
+\begin{enumerate}
+ \item Infrastructure (alle Clocks und IOs)
+ \item MIDI-Schnittstelle
+ \item Tone-Generator
+ \item Audio-Control (als Einheit über die vier VHDL-Audio-Blöcke)
+\end{enumerate}
+
+Beim Infrastructure-Block sind die Anschlüsse der Keys zu überarbeiten. Da sie teilweise nicht angeschlossen sind und nicht über die Synchronisation führen. Alle Takt könnte man im Infraststructure-Block als Zentrale generieren. Das bedeutet, dass auch die PLL und der Clock für den Audio Code (Signal BCK) in dem Infrastructure-Block integriert sind.
+
+Einen profesionelleren Eindruck könnten die Dateien machen, wenn die unterschiedlichen Dateien die gleiche Konvention für Header, Tab oder Space und für Kommentare brauchen. Generell stehen zu viele Kommentare in den Dateien und die Funktionsbeschreibungen sind knapp. Ein schnelleres Code-Verständnis könnten auch präzisere Namen der Blöcke bringen. Zur Zeit bestehen viele Namens-Konventionen, was die Interpretation der Funktion erschwert.
+
+Ein Refactoring würde den Code verständlicher machen und das Projekt als Ganzes aufwerten.
+
