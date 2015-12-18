@@ -96,14 +96,18 @@
 	{\includegraphics[height=30mm]{images/logos/en-zhaw-ines-rgb.png}} 
 \end{flushleft}
 
-\vskip 11em
+\vskip 2em
 
 % Title of the report
 \begin{flushleft}
 	%{\huge \textbf\sf{\@title}}
-    {\normalfont\sffamily\Huge\bfseries{\@title}}
+    {\normalfont\sffamily\Large{\@subtitle}}\\
+    \vspace*{0.4cm}
+    {\setlength{\baselineskip}{2em} \normalfont\sffamily\Huge{\@title}}
 	%\rule{\textwidth}{0.8mm}
 \end{flushleft}
+
+\vskip 2em
 
 \includegraphics[width=\textwidth]{images/simulation_1.png}
 %\includegraphics[width=\textwidth]{images/simulation_2.png}\\
