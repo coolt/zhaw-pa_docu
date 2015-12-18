@@ -47,6 +47,9 @@
 \renewcommand*{\chapterheadstartvskip}{\vspace{0.5cm}}
 %\renewcommand*{\chapterheadendvskip}{\vspace{0.5cm}}
 
+\renewcommand*{\chaptermarkformat}{} % remove the chapter number from the header
+\renewcommand*{\sectionmarkformat}{}
+
 \newcommand{\headings}{
 	\pagestyle{scrheadings}
 	\pagenumbering{arabic}

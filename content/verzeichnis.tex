@@ -10,11 +10,15 @@
 
 \chapter{Verzeichnis}\label{chap.verzeichnis}
 
+\renewcommand{\bibsection}{\section{\refname}} % add a number to the bibl section
 
 \bibliographystyle{plain}
 \makeatletter
 \renewcommand*\bib@heading{ \section{\refname}}
 \makeatother
+
+%\addcontentsline{toc}{section}{Literaturverzeichnis}
+%\printbibliography[heading=none]
 
 \bibliography{BibTex/references}
 
