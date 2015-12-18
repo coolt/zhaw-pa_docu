@@ -44,10 +44,10 @@ Bedeutet Direct Digital Synthesis und bezeichnet das digitale Erzeugen von perio
 Bezeichnet ein Bauteil, das einen oder mehrere Eingangswert(e) gemäss implementierter Logik in einen Ausgangswert wandelt.
 
 \textbf{Durchlaufverzögerung}\\
-Wird englisch \textit{propagation delay} genannt und bezeichnet die Zeit, die Daten vom Eingang bis zum Ausgang des Bauteils brauchen.\\
+Wird englisch \textit{Propagation Delay} genannt und bezeichnet die Zeit, die Daten vom Eingang bis zum Ausgang des Bauteils brauchen.\\
 Die Durchlaufverzögerung beträgt beim Cylone IV 4 ns \citep{Handbook_Altera}.
 
-\textbf{Finite State Machine (fsm)}\\
+\textbf{Finite State Machine (FSM)}\\
 ``A model of a computational system, consisting of a set of states, a set of possible inputs, and a rule to map each state to another state, or to itself, for any of the possible inputs.'' \citep{fsm}\\
 Auf deutsch: ``Ein Model in Rechensystemen, das aus einem Satz aus Zuständen, möglichen Eingängen und Regeln wie man von einem Zustand zum nächsten, oder zu sich selbst, für alle möglichen Eingänge gelangt.''
 
@@ -55,15 +55,15 @@ Auf deutsch: ``Ein Model in Rechensystemen, das aus einem Satz aus Zuständen, m
 Grundbaustein der Digitalen Logik. Das Flip-Flop speichert seinen Wert, den es am Eingang erhält am Ausgang.
 
 \textbf{Glitch}\\
-Im technischem Bereich bedeutet \textit{glitch} gemäss Cambridge Dictionairy ``a sudden unexpected increase in electrical power, especially one that causes a fault in an electronic system'' \citep{dictionair}.\\
+Im technischem Bereich bedeutet \textit{Glitch} gemäss Cambridge Dictionairy ``a sudden unexpected increase in electrical power, especially one that causes a fault in an electronic system'' \citep{dictionair}.\\
 Auf deutsch: ``eine plötzliche, unerwartete Spannungserhöhung, die insbesondere ein Fehlverhalten im elektronischen System verursacht''.
 
 \textbf{Hold Time}\\
 Ist die minimale Zeit, in der die Inputdaten \textit{nach} der Taktflanke stabil sein müssen.\\
-Die \textit{hold time} beträgt beim  Cyclone IV E 0 ns \citep{Handbook_Altera}.
+Die Hold Time beträgt beim  Cyclone IV E 0 ns \citep{Handbook_Altera}.
 
 \textbf{Hot Plug}\\
-Bezieht sich auf die Hardware-Umsetzung einer \textit{finite state machine}. Gewöhnlich braucht es für \begin{math} 2^n \end{math} Zustände n Flip-Flops. Bei Hot Plug braucht es für n Zustände n Flip-Flops, denn jeder neue Zustand wird durch eine '1' am n-ten Flip-Flop detektiert. Alle anderen Flip-Flop-Werte sind auf '0'. Die logische Schaltung für eine \textit{Hot Plug fsm} wird durch den direkten Bezug einer gesetzten '1' zum Zustand einfach.
+Bezieht sich auf die Hardware-Umsetzung einer \textit{Finite State Machine}. Gewöhnlich braucht es für \begin{math} 2^n \end{math} Zustände n Flip-Flops. Bei Hot Plug braucht es für n Zustände n Flip-Flops, denn jeder neue Zustand wird durch eine '1' am n-ten Flip-Flop detektiert. Alle anderen Flip-Flop-Werte sind auf '0'. Die logische Schaltung für eine \textit{Hot Plug FSM} wird durch den direkten Bezug einer gesetzten '1' zum Zustand einfach.
 
 
 \textbf{Kathodenstrahl Osziloskop, KO}\\
@@ -83,17 +83,17 @@ Bezeichnet das Überarbeiten eines funktionierenden Codes. Ziele sind, den Code 
 
 \textbf{Setup Time} \\
 Minimale Zeit, in der Inputdaten stabil sein müssen \textit{bevor} eine Taktflanke die Daten triggert.\\
-Die \textit{setup time} beträgt beim Cyclone IV E 10 ns \citep{Handbook_Altera}
+Die Setup Time beträgt beim Cyclone IV E 10 ns \citep{Handbook_Altera}
 
 \textbf{State}\\
-Bezeichnet den aktuellen Zustand einer \textit{finite state machine}.
+Bezeichnet den aktuellen Zustand einer Finite State Machine.
 
-\textbf{Textbasierte Testbench}\\
-In VHDL wird die Simulation der Signale in einer Testbench aufgesetzt. In der Testbench werden die Signalanregungen, Stimuli, definiert, und die zeitlichen Abläufe unter Signalen. Für eine Testbench ist eine eigene Software notwendig.\\
-Eine textbasierte Testbench liest die Stimuli und die zu erwartenden Ergebnisse aus einer Datei ein. Die Ergebnisse werden ebenfalls in eine Datei ausgegeben.
+\textbf{Textbasierte Test Bench}\\
+In VHDL wird die Simulation der Signale in einer Test Bench aufgesetzt. In der Test Bench werden die Signalanregungen, Stimuli, definiert, und die zeitlichen Abläufe unter Signalen. Für eine Test Bench ist eine eigene Software notwendig.\\
+Eine textbasierte Test Bench liest die Stimuli und die zu erwartenden Ergebnisse aus einer Datei ein. Die Ergebnisse werden ebenfalls in eine Datei ausgegeben.
 
 \textbf{Token}\\
 Bezeichnen Elemente in einer Reihe von strukturierten Daten.
 
 \textbf{Quartus}\\
-IDE von altera zum Kompilieren, Synthetisieren und Einbauen von IPs für die Altera FPGAs.
+IDE von Altera zum Kompilieren, Synthetisieren und Einbauen von IPs für die Altera FPGAs.

@@ -11,8 +11,9 @@
 \chapter{Metastabilität}\label{chap.metastabilitat}
 
 \section{Metastabiler Zustand}\label{sect.meatastabil_def}
+
 Metastabilität bedeutet, dass der Ausgang eines Flip-Flops nicht dem Eingang entsprechen \textit{muss}. In einem metastabilen Zustand kann ein Ausgang korrekt sein, muss aber nicht.
-Im Idealfall wählt wählt ein Flip-Flop seinen Ausgangswert selbst (siehe Abbildung \ref{fig.metastabil.schlimmster_Fall} oberes Signal). Im schlechten Fall “hängt” sich das Flip-Flop “auf” und toggelt permanent zwischen '0' und '1' (Abbildung \ref{fig.metastabil.schlimmster_Fall} unteres Signal).
+Im Idealfall wählt wählt ein Flip-Flop seinen Ausgangswert selbst (siehe Abbildung \ref{fig.metastabil.schlimmster_Fall} oberes Signal). Im schlechten Fall ``hängt'' sich das Flip-Flop “auf” und toggelt permanent zwischen \lstinline|'0'| und \lstinline|'1'| (Abbildung \ref{fig.metastabil.schlimmster_Fall} unteres Signal).
 
 \begin{figure}[H]
 	\includegraphics[width=0.4\textwidth]{images/metastability/metastability_2_IO.png}
@@ -33,7 +34,7 @@ Die Ursache unsicherer Ausgangswerte liegen darin, dass das Inputsignal eines Fl
 ``If the amplitude of the runt pulse is \textit{exactly the treshold level of the SET input of the output cell}, the cell will be driven to its metastable state. The metastable state is the condition that is roughly defined as `half SET and half RESET' '' \citep{F_metastability}
 \end{quote}
 
-Trifft der anzulegende Wert zu spät ein wird die \textit{setup time} verletzt und wird der Signalwert zu früh entwendet, verletzt die \textit{hold time}. Metastabilität kann vermieden werden, wenn diese zwei Zeiten strikt eingehalten werden:
+Trifft der anzulegende Wert zu spät ein wird die \textit{Setup Time} verletzt und wird der Signalwert zu früh entwendet, verletzt die \textit{Hold Time}. Metastabilität kann vermieden werden, wenn diese zwei Zeiten strikt eingehalten werden:
 
 \begin{quote}
 ``Metastability is avoided by holding the information stable before and after the clock pulse for a set period of time, called the setup time for the data line and the hold time for the control line.'' \citep{ReferenceManual}
@@ -51,7 +52,7 @@ Um Metastabilität zu vermeiden, sollte die Logik möglichst klein, die Bauteile
 
 \subsection{Konzept}\label{sect.metastabil_ansatz}
 
-Aufgebaut wird ein System mit zwei \textit{clock domains}.  \textit{Clock domain 1}, Gebiet 1 genannt,  beinhaltet einen Zähler, der an die \textit{Clock Domain 2}, als Gebiet 2 bezeichnet, asynchrone Impulse sendet. Gebiet 2 verarbeitet diese Impulse in einer \textit{finate state machine}. Bei korrekter Funktionsweise wechselt die \textit{fsm} zwischen den definierten \textit{states}. Funktioniert sie falsch, fällt die \textit{fsm} in einen \textit{state}, den sie nicht implementiert hat.
+Aufgebaut wird ein System mit zwei Clock Domains. \textit{Clock domain 1}, Gebiet 1 genannt,  beinhaltet einen Zähler, der an die \textit{Clock Domain 2}, als Gebiet 2 bezeichnet, asynchrone Impulse sendet. Gebiet 2 verarbeitet diese Impulse in einer \textit{finate State Machine}. Bei korrekter Funktionsweise wechselt die FSM zwischen den definierten States. Funktioniert sie falsch, fällt die FSM in einen State, den sie nicht implementiert hat.
 
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{images/metastability/konzept.png}
@@ -61,7 +62,7 @@ Aufgebaut wird ein System mit zwei \textit{clock domains}.  \textit{Clock domain
 
 \subsection{Implementation}\label{sect.metastabil_implementation}
 
-Als Hardware wird das Altera Board DE2 genommen und mit der Software Quartus 13.Osp1 gearbeitet. Da die zwei Takte nicht Vielfache voneinander sein dürfen, wird für den Zähler ein Takt von 27 MHz und für die \textit{fsm} ein Takt von 50 MHz gewählt. Der Takt des Zählers ist leicht schneller als die Hälfte des \textit{fsm}-Taktes und schiebt sich  vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der \textit{setup time} ist eine Frage der Zeit.
+Als Hardware wird das Altera Board DE2 genommen und mit der Software Quartus 13.Osp1 gearbeitet. Da die zwei Takte nicht Vielfache voneinander sein dürfen, wird für den Zähler ein Takt von 27 MHz und für die FSM ein Takt von 50 MHz gewählt. Der Takt des Zählers ist leicht schneller als die Hälfte des FSM-Taktes und schiebt sich  vorwärts (siehe Abbildung \ref{fig.metastabil.takte}). Das Verletzen der Setup Time ist eine Frage der Zeit.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/metastability/2_takte.png}
@@ -80,11 +81,11 @@ Die Zustandsüberprüfung erfolgt über das Ausgeben des aktuellen Zustands auf 
 	 Grüne LED 17 ist an
 \end{itemize}
 
-Funktioniert die \textit{fsm}, blinken die zwei roten LEDs abwechslungsweise. Fällt die \textit{fsm} in einen undefinierten Zustand, leuchtet die grüne LED. Um die Ursache der Metastabilität, das Verletzten der \textit{setup time} zu verhindern, wird eine optionale Synchronisation durch Switch 17 eingebaut. Ist Switch 17  auf '1', wird der Puls der \textit{clock domain} 27 MHz durch ein Flip-Flop auf 50 MHz synchronisiert.
+Funktioniert die FSM, blinken die zwei roten LEDs abwechslungsweise. Fällt die FSM in einen undefinierten Zustand, leuchtet die grüne LED. Um die Ursache der Metastabilität, das Verletzten der Setup Time zu verhindern, wird eine optionale Synchronisation durch Switch 17 eingebaut. Ist Switch 17  auf '1', wird der Puls der Clock Domain 27 MHz durch ein Flip-Flop auf 50 MHz synchronisiert.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/metastability/RtL_metastaibility.png}
-	\caption{RTL mit Synchronisations-Switch}
+	\caption{RTL mit Synchronisation-Switch}
 	\label{fig.metastabil.RtL}
 \end{figure}
 
@@ -99,16 +100,16 @@ Das Resultat ist, dass das Board unmittelbar nach Einstellen in den metastabilen
 	\label{fig.metastabil.Ergebnis_Boardasynchron}
 \end{figure}
 
-Wird die Synchronisations-Schaltung betätigt, leuchten beide roten LEDs auf. Die \textit{fsm} wechselt zwischen den states s0 und s1 hin und her. Das Verbleiben in den zwei definierten Zuständen s0 und s1 funktioniert auch nach einem Tag noch.
+Wird die Synchronisations-Schaltung betätigt, leuchten beide roten LEDs auf. Die FSM wechselt zwischen den States s0 und s1 hin und her. Das Verbleiben in den zwei definierten Zuständen s0 und s1 funktioniert auch nach einem Tag noch.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/metastability/synchronized.JPG}
-	\caption{Switchschalter ON: Rote LEDs leuchten}
+	\caption{Schalter ON: Rote LEDs leuchten}
 	\label{fig.metastabil.Ergebnis_BoardSynchron}
 \end{figure}
 
 \newpage
-Wird das Wechseln zwischen den zwei \textit{states} am KO ausgegeben, so erkennt man kein wiederkehrendes Muster im Wechseln. Der Grund ist, dass der Takt 27 MHz kein Bruchteil von 50 MHz.
+Wird das Wechseln zwischen den zwei States am KO ausgegeben, so erkennt man kein wiederkehrendes Muster im Wechseln. Der Grund ist, dass der Takt 27 MHz kein Bruchteil von 50 MHz.
 
 CH 1 = Rote LED\\
 CH 2 = Synchronisierter Puls

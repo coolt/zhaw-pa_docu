@@ -33,19 +33,19 @@ Am Ende soll eine Referenzimplementierung in Anlehnung an den Yamaha DX7 für da
 \chapter{Aufgabenspezifikation für den zweiten Teil}\label{chap.anhang_aufgabenstellung_neu}
 
 \begin{itemize}
-\item Midi Interface for Keyboard für Polyphonie nach Konzept von gelk
+\item Midi Interface for Keyboard für Polyphonie nach Konzept von Gelke
 \begin{itemize}
     \item 10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators\\
-    \item 10 On/Off Ausgänge Ton on/off\\
-    \item UART wird geliefert von gelk\\
+    \item 10 On/Off Ausgänge Ton On/Off\\
+    \item UART wird geliefert von Gelke\\
     \item VHDL wird von Grund auf neu erstellt.
 \end{itemize}
 \item 10 DDS implementieren und mit Mischer Mischen
-\item Script basierte Testbench. Testbench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
-\item Testbench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. Midi Poliphony Spec muss durch die Testbench unterstützt werden können. Velocity muss nicht unterstützt werden.
-\item FM Modulation – Tetstbench im Matlab
-\item Kein VHDL code ohne Testbench.
-\item Block Level Testbench. Unit Tests.
+\item Script basierte Test Bench. Test Bench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
+\item Test Bench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. Midi Poliphony Spec muss durch die Test Bench unterstützt werden können. Velocity muss nicht unterstützt werden.
+\item FM Modulation – Tetst Bench im Matlab
+\item Kein VHDL code ohne Test Bench.
+\item Block Level Test Bench. Unit Tests.
 \end{itemize}  
 
 Abgrenzung:
@@ -66,8 +66,8 @@ Zeitplan:
 Unterstützung:
 
 \begin{itemize}
-\item Midi Controller/gelk
-\item FM-Synthese/rosn
+\item Midi Controller/Gelke
+\item FM-Synthese/Rosenthal
 \end{itemize} 
 
 Falls Midi nicht zum geplanten Zeitpunkt fertig wird, wird FM-zurückgestellt. Alle oben genannten Punkte sind Pflicht.\\
@@ -77,9 +77,9 @@ Nicht Fertigstellung hat Einfluss auf die Benotung.
 
 \chapter{CD mit Projektdateien}\label{sect.anhang_cd}
 
-\chapter{In- und Output-Datei textbasierte Testbench}\label{chap.anhang_midi_input}
+\chapter{In- und Output-Datei textbasierte Test Bench}\label{chap.anhang_midi_input}
 
-\section*{Datei mit Testbefehlen für die Testbench}
+\section*{Datei mit Testbefehlen für die Test Bench}
 
 reset 00 00 00 00 00 00 00 00 00\\
 check 00 00 00 00 00 00 00 00 00\\
