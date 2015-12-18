@@ -10,16 +10,14 @@
 
 \chapter{Einleitung}\label{chap.einleitung}
 
-
 \section{Ausgangslage}\label{sect.einleitung_ausgangslage}
-Für den ersten Teil der Arbeit, die Timing Artifakte  \textit{glitch} und \textit{metastability} zu demonstrieren, gibt es wenige Referenzprojekte. Da die Zustände ungewollt sind, finden sie als Fehlerquellen Erwähnung in der Literatur\cite{ReferenceManual},  \cite{F_glitches}, \cite{F_metastability}. Nur ein Dokument wurde gefunden, das die Erzeugung von \textit{ metastability} behandelt\cite{Metastabil}. Aus diesem Grund bezieht sich der Nachweis der Timing Artifakte auf Anregungen und auf die Erfahrung von Prof. Hans-Joachim Gelke.
 
+Für den ersten Teil der Arbeit, die Timing Artifakte  \textit{Glitch} und \textit{Metastability} zu demonstrieren, gibt es wenige Referenzprojekte. Da die Zustände ungewollt sind, finden sie als Fehlerquellen Erwähnung in der Literatur \citep{ReferenceManual}, \citep{F_glitches}, \citep{F_metastability}. Nur ein Dokument wurde gefunden, das die Erzeugung von \textit{Metastability} behandelt \citep{Metastabil}. Aus diesem Grund bezieht sich der Nachweis der Timing Artifakte auf Anregungen und auf die Erfahrung von Prof. Hans-Joachim Gelke.
 
-Im zweiten Teil geht es um den Aufbau eines \textit{midi interfaces}. MIDI bedeutet \textit{musical instrument digital interface} und ist ein Standard, der die Beschaffenheit der Hardware wie auch das Kommunikationsprotokoll festlegt\cite{Midi_Braut}. Die MIDI Manufacturers Association dokumentiert die mehrfachen Erweiterungen des MIDI 1.0 Standard\cite{Midi_specification}. Diese Spezifikationen bildet die Grundlage für den Block \textit{midi control}. Am Institut for Embedded Systems besteht ein \textit{midi uart top}-Block in VHDL von Armin Weiss. In dieser Projektarbeit zu entwickeln sind die zwei Einheiten \textit{midi control}  und \textit{polyphony out}. Und anschliessend diese Blocks in das bestehende Synthesizer-Projekt einzubauen. Bei beiden Blocks basiert die Entwicklung auf einer textbasierten \textit{testbench}.
-
-
+Im zweiten Teil geht es um den Aufbau eines \textit{MIDI Interfaces}. MIDI bedeutet \textit{Musical Instrument Digital Interface} und ist ein Standard, der die Beschaffenheit der Hardware wie auch das Kommunikationsprotokoll festlegt \citep{Midi_Braut}. Die MIDI Manufacturers Association dokumentiert die mehrfachen Erweiterungen des MIDI 1.0 Standard \citep{Midi_specification}. Diese Spezifikationen bildet die Grundlage für den Block \textit{MIDI Control}. Am Institut for Embedded Systems besteht ein \textit{MIDI UART Top}-Block in VHDL von Armin Weiss. In dieser Projektarbeit zu entwickeln sind die zwei Einheiten \textit{MIDI Control} und \textit{Polyphony Out}. Und anschliessend diese Blocks in das bestehende Synthesizer-Projekt einzubauen. Bei beiden Blocks basiert die Entwicklung auf einer textbasierten Test Bench.
 
 \section{Aufgabenstellung}\label{sect.einleitung_ziele}
+
 Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabenstellung}. 
  
 \begin{itemize}
@@ -32,18 +30,18 @@ Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabe
 Nach Fertigstellen des ersten Teils, wird die Aufgabenstellung für den zweiten Teil präzisiert (siehe Anhang \ref{chap.anhang_aufgabenstellung_neu}).
 
 \begin{itemize}
-\item Midi Interface for Keyboard für Polyphonie nach Konzept von gelk
+\item Midi Interface for Keyboard für Polyphonie nach Konzept von Gelk
 \begin{itemize}
     \item 10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators
-    \item 10 On/Off Ausgänge Ton on/off
-    \item UART wird geliefert von gelk
+    \item 10 On/Off Ausgänge Ton On/Off
+    \item UART wird geliefert von Gelk
     \item VHDL wird von Grund auf neu erstellt.
 \end{itemize}
 \item 10 DDS implementieren und mit Mischer mischen
-\item Script basierte Testbench. Testbench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
-\item Testbench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. 
-\item Midi Poliphony Spec muss durch die Testbench unterstützt werden können. 
+\item Script basierte Test Bench. Test Bench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
+\item Test Bench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. 
+\item Midi Poliphony Spec muss durch die Test Bench unterstützt werden können. 
 \item Velocity muss nicht unterstützt werden.
-\item Kein VHDL code ohne Testbench.
-\item Block level testbench. Unit Tests.
+\item Kein VHDL code ohne Test Bench.
+\item Block level Test Bench. Unit Tests.
 \end{itemize}

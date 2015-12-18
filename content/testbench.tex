@@ -8,26 +8,29 @@
 %																%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Testbench}\label{chap.testen}
- \textit{Test Driven Development} bedeutet, dass vor oder parallel zur Entwicklung einer \textit{unit} (im Folgenden Block genannt) der \textit{unit-test} entwickelt wird\cite{Testdriven}. Beim textbasierten Testen stammen die Befehle aus einer Input-Datei, und die Ergebnisse werden in einer Datei abgelegt. 
+\chapter{Test Bench}\label{chap.testen}
+
+\textit{Test Driven Development} bedeutet, dass vor oder parallel zur Entwicklung einer \textit{Unit} (im Folgenden Block genannt) der \textit{Unit Test} entwickelt wird \citep{Test Driven}. Beim textbasierten Testen stammen die Befehle aus einer Input-Datei, und die Ergebnisse werden in einer Datei abgelegt. 
 
 \section{Device Under Test}\label{sec.testbench_DUT}
-Das Device Under Test (DUT) ist das midi interface (siehe Abbildung \ref{fig.testbench}). Das Ziel ist, dass das MIDI-Signal in den Block geführt wird und am Ausgang 10 Notenvektoren anliegen mit je 8 Notenbits und einem Bit, das besagt, ob die Note an oder ab ist.\\
+
+Das Device Under Test (DUT) ist das MIDI Interface (siehe Abbildung \ref{fig.testbench}). Das Ziel ist, dass das MIDI-Signal in den Block geführt wird und am Ausgang 10 Notenvektoren anliegen mit je 8 Notenbits und einem Bit, das besagt, ob die Note an oder ab ist.
+
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_interface/testbench_midiinterface.png}
 	\caption{Blockschaltbild Device under Test}
 	\label{fig.testbench}
 \end{figure} 
 
-Die \textit{testbench} wird mit Daten der Input-Datei gespiesen. Die Endversion der Input-Datei und der Testbericht liegen im Anhang \ref{chap.anhang_midi_input}. 
+Die \textit{Test Bench} wird mit Daten der Input-Datei gespiesen. Die Endversion der Input-Datei und der Testbericht liegen im Anhang \ref{chap.anhang_midi_input}. 
 In den Unterkapiteln wird der Aufbau der Input-Datei, das Entwickeln der Test-Fälle, und die Umsetzung im VHDL-Code beschrieben.
-
 
 \section{Struktur der Input-Datei}\label{sec.testbench_inputdatei} 
 
 Die Test-Datei ist zeilenweise strukturiert.
 
 \subsubsection{Verarbeitungsmodus} 
+
 Jede Zeile beginnt mit dem Verabreitungsmodus. Bei der Input-Datei besteht der Verarbeitungsmodus aus fünf Buchstaben.
 
 \begin{tabbing}
@@ -40,12 +43,11 @@ polyp	\> 71 \> 55 \> \ldots{}
 \subsubsection{Tokenstruktur} 
 
 Nach dem Verarbeitungsmodus folgen die Daten. Jede Zeile hat gleichviele Datenpakete (Tokens). 
-Die \textit{testbench} ortet jedem MIDI-Datenpaket (siehe \ref {datenytpen}, Beschreibung der MIDI-Daten) innerhalb der Zeile eine Bedeutung zu. Je nach Verarbeitungsmodus ist die Bedeutung der Token anders.
+Die Test Bench ortet jedem MIDI-Datenpaket (siehe \ref {datentypen}, Beschreibung der MIDI-Daten) innerhalb der Zeile eine Bedeutung zu. Je nach Verarbeitungsmodus ist die Bedeutung der Token anders.
 
-Die Tokenstruktur leitet sich aus der MIDI-Datenstruktur im \textit{polyphony mode} und im \textit{single mode} ab (siehe  \ref{note_modes}). In den nachfolgenden zwei Token-Beispielen bezieht sich die obere Zeile auf den \textit{polyphony mode} und die untere auf den \textit{single mode}.
+Die Tokenstruktur leitet sich aus der MIDI-Datenstruktur im Polyphony Mode und im Single Mode ab (siehe  \ref{note_modes}). In den nachfolgenden zwei Token-Beispielen bezieht sich die obere Zeile auf den Polyphony Mode und die untere auf den Single Mode.
 
-In der \textit{testbench midi interface} haben Tokens folgende Bedeutung:
-
+In der \textit{Test Bench MIDI Interface} haben Tokens folgende Bedeutung:
 
 {
 \renewcommand{\arraystretch}{1.0} % avoid the extra space between the rows
@@ -55,40 +57,41 @@ mode\_s	& Dummy & Status & Note & Status & Note & Status & Note & Dummy & Dummy
 \end{tabular}
 }
 
-Dummy ist die Bezeichnung für das Einlesen nicht relevanter Werte. Diese nicht relevanten Werte sind in der Input-Datei gesetzt, um die Verarbeitungsstruktur beim Einlesen der Token zu vereinfachen. Der Dummywert wird beim Einlesen verworfen.\\
+Dummy ist die Bezeichnung für das Einlesen nicht relevanter Werte. Diese nicht relevanten Werte sind in der Input-Datei gesetzt, um die Verarbeitungsstruktur beim Einlesen der Token zu vereinfachen. Der Dummywert wird beim Einlesen verworfen.
  
 \section{Aufstellen der Fehler}\label{sec.testbench_fehler} 
 
-Zu Beginn hatten die Testfälle nur drei Tokens und testetn die Grundfunktionen:\\
+Zu Beginn hatten die Testfälle nur drei Tokens und testeten die Grundfunktionen:
 
 single mode note an/ab\\
 singl 90 27\\ 
-singl 90 27\\
+singl 90 27
 
 polyphone note an/ab\\
 polyp 71 55\\
-polyp 71 00\\
+polyp 71 00
 
 Komplexere Testfälle zeigten, dass eine Test-Zeile mehr Tokens braucht. Die Endversion der Input-Datei kann mit einer Zeile bis 4 Noten an und abstellen.
-
 
 \subsection{Einzelne Noten testen}
  
 \subsubsection{Testfälle}
-Getestet sind auch Kombinationen unter den Fällen, die aus Übersichtlichkeit nicht alle aufgeschrieben werden.\\
+
+Getestet sind auch Kombinationen unter den Fällen, die aus Übersichtlichkeit nicht alle aufgeschrieben werden.
+
 \begin{itemize}
-\item Einzelne Note an, Geschwindigkeits Byte folgt
-\item Einzelne Note an, Geschwindigkeits Byte folgt nicht
+\item Einzelne Note an, Geschwindigkeit-Byte folgt
+\item Einzelne Note an, Geschwindigkeit-Byte folgt nicht
 \item Einzelne Note ab
 \item Einzelne Note an, direkt nach Reset
 \item Einzelne Note an, selbe Note nochmals an
-\item Einzelne Note an, wenn in \textit{polyphonie mode}
-\item Einzelne Note an, nach ungültigem status byte
+\item Einzelne Note an, wenn in Polyphony Mode
+\item Einzelne Note an, nach ungültigem Status Byte
 \item Einzelne Note an, andere Note an, erste Note ab
 \item Einzelne Note an, diverse andere Noten setzen, erst bei nächster Zeile erste Note ab
 \end{itemize}
 
-Zu jedem Testfall wird auf der nächsten Zeile das zu erwartende Resultat vorgegeben. Die testbench prüft die ausgegebene Notenwerte am Ausgang des midi interfaces mit den vorgegebenen Werten.
+Zu jedem Testfall wird auf der nächsten Zeile das zu erwartende Resultat vorgegeben. Die Test Bench prüft die ausgegebene Notenwerte am Ausgang des MIDI interfaces mit den vorgegebenen Werten.
 
 Beispielzeile\\
 \rule{\textwidth}{0.4pt}\\
@@ -101,8 +104,8 @@ check & 00 & 00 & 27 & 00 & 00 & 00 & 05 & 00 & 00\\
 }
 
 Die Sequenz bedeutet Note 27 an (0x90), dann ab (0x80) der Note 27 und am Schluss an Note 05. \\
-Überprüft (check) wird, ob am Ausgang die Noten 27 und 05 anliegen.\\
-Im \textit{single mode} ist die Geschwindigkeit für das An- oder Abstellen der Note nicht relevant und wird deshalb nicht als Befehl eingelesen. Die \textit{testbench} hängt nach jeder Note einen Dummy-Geschwindigkeitswert von 0x55 an.
+Überprüft (Check) wird, ob am Ausgang die Noten 27 und 05 anliegen.\\
+Im Single Mode ist die Geschwindigkeit für das An- oder Abstellen der Note nicht relevant und wird deshalb nicht als Befehl eingelesen. Die Test Bench hängt nach jeder Note einen Dummy-Geschwindigkeitswert von 0x55 an.
 
 \subsection{Polyphonie testen }\label{polyphonitest}
 
@@ -117,8 +120,8 @@ In der Polyphony können mehrere Noten hintereinander an- und nur einzelne davon
 \item Polyphoniestatus setzen, Note an, die bereits in Register ist
 \item Polyphoniestatus setzen, Note an, andere Note an, erste Note aus, dritte Note an
 \item Polyphoniestatus setzen, dritte Note aus, erste Note an, erste Note an
-\item Polyphoniestatus setzen, \textit{single note an} status setzen, Note ohne Geschwindigkeit senden
-\item Polyphoniestatus setzen, falsches Statusbyte senden, Note an, Note aus,
+\item Polyphoniestatus setzen, Single Note an Status setzen, Note ohne Geschwindigkeit senden
+\item Polyphoniestatus setzen, falsches Status Byte senden, Note an, Note aus,
 \item Polyphoniestatus setzen, Reset, Note setzen
 \item Polyphoniestatus setzen, 10 Noten an
 \item Polyphoniestatus setzen, 10 Noten in Register, eine ist aus. Neue Note an senden
@@ -134,23 +137,23 @@ check & 71 & 00 & 02 & 00 & 33 & 00 & 00 & 00 & 03
 \end{tabular*}
 }
 
-In der Sequenz wird die Note 71, dann die Noten 02 und 33. Danach wird die Note 08 abgestellt. Die \textit{testbench} prüft am Ausgang, ob die Noten 71, 02 und 33 an sind. 
+In der Sequenz wird die Note 71, dann die Noten 02 und 33. Danach wird die Note 08 abgestellt. Die Test Bench prüft am Ausgang, ob die Noten 71, 02 und 33 an sind. 
 
-Im Verarbeitungsmodus Polyphonie sendet die \textit{testbench}  das \textit{status byte} "10100000" (0xA0) 
+Im Verarbeitungsmodus Polyphonie sendet die Test Bench  das Status Byte \lstinline|"10100000" (0xA0)|
 
+\section{Code Test Bench}\label{sec.code_testbench}
 
+Die automatisierte Datenverarbeitung erzeugt viele Werte (10 Noten mit je 9 Werten). Um einzelne Bits effizient zu setzen oder zu überprüfen, wird der Code einem \textit{Refactoring} unterzogen.
 
-\section{Code Testbench}\label{sec.code_testbench}
-Die automatisierte Datenverarbeitung erzeugt viele Werte (10 Noten mit je 9 Werten). Um einzelne Bits effizient zu setzen oder zu überprüfen, wird der Code einem \textit{refactoring} unterzogen.
-
-Im Gegensatz zum hardwarenahen Code der VHDL-Blocks, bei denen arrays und loop explizit vermieden wurden, baute die \textit{testbench} bewusst auf softwarenahe Strukturen auf.
+Im Gegensatz zum hardwarenahen Code der VHDL-Blocks, bei denen Arrays und Loop explizit vermieden wurden, baute die Test Bench bewusst auf softwarenahe Strukturen auf.
 
 \subsection{Package}
+
 Damit in allen VHDL-Dateien die Arrays und Konstanten gebraucht werden können, werden diese Definitionen in einem Package zusammengefasst. Das Package kann wie eine Library zu Beginn einer VHDL-Datei eingebaut werden.
 \begin{itemize}
-	\item Werte der \textit{status bytes} als Konstanten
-	\item Ein- und Ausgänge als arrays
-	\item Tokenstruktur als record
+	\item Werte der Status Bytes als Konstanten
+	\item Ein- und Ausgänge als Arrays
+	\item Tokenstruktur als Record
 \end{itemize}
 
 Bsp. Tokenstruktur
@@ -175,29 +178,31 @@ type t_token_line is record
 type t_note_array is array (0 to 9) of std_logic_vector(8 downto 0);
 \end{lstlisting}
 
-
 \subsection{Prozess-Optimierung}
 
-Um die einzelnen Bits in den arrays zu setzen, braucht es in der Ablaufstruktur Optimierungen.
+Um die einzelnen Bits in den Arrays zu setzen, braucht es in der Ablaufstruktur Optimierungen.
 
 \begin{itemize}
-	\item loops iterieren durch die arrays
+	\item Loops iterieren durch die Arrays
 	\item Einleseprozess wird vom Verarbeitungsprozess getrennt
-	\item Flags wie \lstinline|s_read_input_finished <= '1'| sichern das parallelle Datenverarbeiten
+	\item Flags wie \lstinline|s_read_input_finished <= '1'| sichern die parallele Datenverarbeitung
 \end{itemize}
 
 \section{Ergebnisse Simulation}\label{sec.ergebnisse_tests}
-Die Ausgabe der Signale in die Output-Datei bezieht sich auf den Zustand am Ausgang des DUT. Damit auch die beiden internen Blöcke midi control und polyphonie out korrekt funktionieren werden die Signale überprüft. Auch das Verhalten in den Blöcken entspricht den erwarteten Signalverläufen.\\
+
+Die Ausgabe der Signale in die Output-Datei bezieht sich auf den Zustand am Ausgang des DUT. Damit auch die beiden internen Blöcke MIDI Control und Polyphonie out korrekt funktionieren werden die Signale überprüft. Auch das Verhalten in den Blöcken entspricht den erwarteten Signalverläufen.
 
 \subsection{Block Midi Control}
-Gemäss der \textit{fsm} durchläuft der \textit{single mode}  die Zustände idle, note\_s, velocity\_s und geht dann zurück  in den idle-Zustand. Das Signal s\_note\_on wechselt nach einem \textit{status byte} von (0x90) auf on und nach (0x80) auf ab.
+
+Gemäss der FSM durchläuft der Single Mode  die Zustände \lstinline|idle|, \lstinline|note_s|, \lstinline|velocity_s| und geht dann zurück  in den Idle-Zustand. Das Signal \lstinline|s_note_on| wechselt nach einem Status Byte von \lstinline|(0x90)| auf \lstinline|on| und nach \lstinline|(0x80)| auf \lstinline|ab|.
+
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_control/wave_single.png}
 	\caption{Simulation Block Midi Control}
 	\label{fig.test_midi:control_single}
 \end{figure} 
 
-Im \textit{polyphony mode} existieren die Zustände idle, note\_v, velocity\_v und verbleibt in diesem Zustand. Nur durch ein \textit{status byte} (oder ungültige \textit{data bytes}) wird der Zustand der Polyphonie verlassen.
+Im Polyphony Mode existieren die Zustände \lstinline|idle|, \lstinline|note_v|, \lstinline|velocity_v| und verbleibt in diesem Zustand. Nur durch ein Status Byte (oder ungültige Data Bytes) wird der Zustand der Polyphonie verlassen.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_control/wave_polyphonie.png}
@@ -206,12 +211,12 @@ Im \textit{polyphony mode} existieren die Zustände idle, note\_v, velocity\_v u
 \end{figure} 
 
 \subsection{Block Polyphony Out}
-Kriterien in der Polyphonie out sind, dass jede neue Note auf den nächsten freien Register-Platz gelegt wird. Zudem soll keine Note zwei Registerplätze belegen. Zudem soll, wenn alle Register-Plätze einen Notenwert haben, die neue Note an einen Registerplatz mit aktuell abgeschalteter Note besetzen.
-Alle Kriterien (siehe \ref {test_polypohne}) sind erfüllt.\\
+
+Kriterien in der Polyphonie out sind, dass jede neue Note auf den nächsten freien Register-Platz gelegt wird. Zudem soll keine Note zwei Registerplätze belegen. Zudem soll, wenn alle Register-Plätze einen Notenwert haben, die neue Note an einen Registerplatz mit aktuell abgeschalteter Note besetzen.\\
+Alle Kriterien (siehe \ref {test_polypohnie}) sind erfüllt.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{images/midi_interface/tb_polyphonie.png}
-	\caption{Simulation Block Polyphonie Out}
+	\caption{Simulation Block Polyphony Out}
 	\label{fig.test_polyphonie}
 \end{figure} 
-
