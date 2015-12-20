@@ -14,7 +14,7 @@
 
 Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \citep{Midi_specification}.
 
-\subsection{MIDI-Daten-Typen}\label{datenytpen}
+\subsection{MIDI-Daten-Typen}\label{datentypen}
 
 \subsubsection*{Status Bytes}
 
@@ -53,8 +53,7 @@ Diese Anforderung ist wichtig beim Implementieren der Finite State Machine und d
 	\item \lstinline|"1010 xxxx"|: Definition POLYPHONY
 	\item \lstinline|"100x xxxx"|: Erste drei Bits der Status Bytes NOTE ON (0x90) und NOTE OFF (0x80)
 \end{itemize}
-%---5.2-----------------------------------------------------------------------
-\newpage
+
 \subsection{Zwei MIDI-Noten-Modi}\label{note_modes}
 
 \subsubsection{Datenstruktur}
@@ -356,7 +355,7 @@ Sobald eine Frage mit Ja beantwortet wird, wird der Registerindex gespeichert un
 Durch den übermittelten Index-Wert weiss der Speicher-Prozess, in welches Register die neue Note gespeichert werden soll.\\
 Die Werte aller 10 Register werden am Ausgang parallel ausgegeben.
 
-\section{Resultat}\label{test_polypohne}
+\section{Resultat}\label{test_polypohnie}
 
 Die Ziele sind:
 
@@ -443,7 +442,7 @@ polyp & 20 & 55 & 03 & 00 & 20 & 00 & 40 & 55 & 00
 \end{itemize}
 
 \begin{figure}[H]
-	\includegraphics[width=1\textwidth]{images/midi_interface/tb_polyphonie.png}
+	\includegraphics[width=0.8\textwidth]{images/midi_interface/tb_polyphonie.png}
 	\caption{Simulation des Blocks Polyphonie Out }
 	\label{fig.polyphnie_simulation}
 \end{figure}

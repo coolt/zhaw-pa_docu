@@ -47,6 +47,9 @@
 \renewcommand*{\chapterheadstartvskip}{\vspace{0.5cm}}
 %\renewcommand*{\chapterheadendvskip}{\vspace{0.5cm}}
 
+\renewcommand*{\chaptermarkformat}{} % remove the chapter number from the header
+\renewcommand*{\sectionmarkformat}{}
+
 \newcommand{\headings}{
 	\pagestyle{scrheadings}
 	\pagenumbering{arabic}
@@ -56,12 +59,12 @@
 	\automark[section]{chapter}
 	\renewcommand{\chapterpagestyle}{scrheadings}
 	\ohead{\headmark}
-	\ihead{ZHAW - InES}
+	\ihead{Projektarbeit}
 
 
 
-	\cfoot{\thepage}
-	\ifoot{\the\day.\the\month.\the\year}
+	\ofoot{\thepage}
+	%\ifoot{\the\day.\the\month.\the\year}
 	%\setfootsepline{0.4pt}
 	%\setheadsepline{0.4pt}
 }
@@ -96,50 +99,52 @@
 	{\includegraphics[height=30mm]{images/logos/en-zhaw-ines-rgb.png}} 
 \end{flushleft}
 
-\vskip 11em
+\vskip 2em
 
 % Title of the report
 \begin{flushleft}
-	{\huge \textbf{\@title}}
+	%{\huge \textbf\sf{\@title}}
+    {\normalfont\sffamily\Large{\@subtitle}}\\
+    \vspace*{0.4cm}
+    {\setlength{\baselineskip}{2em} \normalfont\sffamily\Huge{\@title}}
 	%\rule{\textwidth}{0.8mm}
 \end{flushleft}
 
+\vskip 2em
+
+%\includegraphics[width=\textwidth]{images/simulation_1.png}
+%\includegraphics[width=\textwidth]{images/simulation_2.png}
+\includegraphics[width=\textwidth]{images/simulation_original_19.png}
 
 \vfill
 
 % School and Institute
 \begin{flushleft}
-	\LARGE
+    \normalfont\sffamily\Large
 	\ifthenelse{\equal{\languagename}{\string ngerman}}
-	{\textsc{Zürcher Hochschule für Angewandte Wissenschaften}}
+	{\textsc{Zürcher Hochschule \\ für Angewandte Wissenschaften}}
 	{\textsc{Zurich University of Applied Sciences}} \\
-    \vspace*{1cm}
-    \Large
+    %\vspace*{1cm}
+    \vspace*{0.4cm}
+    %\Large
+    \normalsize
     \textsc{Institute of Embedded Systems}
 \end{flushleft}
 
 % Authors and Date
-\vskip 5em
-\renewcommand{\arraystretch}{1.5}
+%\vskip 5em
 
-\begin{tabular}{ p{3cm} l }
+{
+\normalfont\sffamily
+\renewcommand{\arraystretch}{2} % add more space between the rows
+\begin{tabular}{@{} p{3cm} l @{}}
 \ifthenelse{\equal{\languagename}{\string ngerman}}{Autorin}{Author} & \parbox[t]{5cm}{\@author} \\
-\end{tabular}
-
-%\vskip 1em
-\begin{tabular}{ p{3cm} l }
 \ifthenelse{\equal{\languagename}{\string ngerman}}{Hauptbetreuer}{betr} & \parbox[t]{5cm}{\betreuer} \\
-\end{tabular}
-
-%\vskip 1em
-\begin{tabular}{ p{3cm} l }
 \ifthenelse{\equal{\languagename}{\string ngerman}}{Nebenbetreuer}{neben} & \parbox[t]{5cm}{\nebenbetreuer} \\
+ & \\
+\ifthenelse{\equal{\languagename}{\string ngerman}}{Datum}{dat} & \parbox[t]{5cm}{\@date}
 \end{tabular}
-
-\vskip 1em
-\begin{tabular}{ p{3cm} l }
-\ifthenelse{\equal{\languagename}{\string ngerman}}{Datum}{dat} & \parbox[t]{5cm}{\@date} \\
-\end{tabular}
+}
 
 % Second page with the contact information
 \newpage

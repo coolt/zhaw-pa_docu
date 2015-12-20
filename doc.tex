@@ -14,10 +14,12 @@
 \usepackage{float}
 \usepackage[toc,page]{appendix}
 %\usepackage[autostyle=true,german=swiss]{csquotes} % quotes
-\usepackage{natbib}
+%\usepackage[nottoc]{tocbibind}
+\usepackage[sectionbib]{natbib} % bibl will be a section and not a chapter
 \bibliographystyle{abbrvnat}
 \setcitestyle{authoryear,open={(},close={)}}
 \usepackage[justification=raggedright,singlelinecheck=false]{caption}
+\usepackage{helvet}
 
 \usepackage[pdfauthor={Katrin Bächli}, pdftitle={Projektarbeit HS15 Studiengang Elektrotechnik - Polyphonic DDS Synthesizer mit MIDI Steuerung}, colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,plainpages=false]{hyperref}
 
@@ -33,8 +35,8 @@
 	\author{Katrin Bächli }%  -> Fehler: Error: unicode char \u8:äch not set up for use with LaTeX \maketitle
 	\renewcommand{\betreuer}{Prof. Hans-Joachim Gelke}
 	\renewcommand{\nebenbetreuer}{Dr. Matthias Rosenthal}
-	\title{PA15\_gelk\_1 Polyphonic DDS Synthesizer mit MIDI Steuerung}
-	\subtitle{PA15\_gelk\_1 Polyphonic DDS Synthesizer mit MIDI Steuerung}
+	\title{Polyphonic DDS Synthesizer\\ mit MIDI Steuerung}
+	\subtitle{PA15\_gelk\_1}
 	\email{katrin.baechli@zhaw.ch}
 
 

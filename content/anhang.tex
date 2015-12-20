@@ -81,101 +81,152 @@ Nicht Fertigstellung hat Einfluss auf die Benotung.
 
 \section*{Datei mit Testbefehlen für die Test Bench}
 
-reset 00 00 00 00 00 00 00 00 00\\
-check 00 00 00 00 00 00 00 00 00\\
-singl 55 90 27 80 27 90 05 00 00\\
-check 00 00 27 00 00 00 05 00 00\\
-singl 55 90 73 80 73 90 16 00 00\\
-check 00 00 00 00 00 00 16 00 00\\
-polyp 71 55 02 55 33 55 08 00 00\\
-check 71 02 33 00 00 00 00 00 03\\
-polyp 20 55 03 00 20 00 40 55 00\\
-check 20 00 16 00 40 00 00 00 03\\
-polyp 71 00 16 55 20 55 33 00 00\\
-check 00 00 16 00 20 00 00 00 04\\
+\begin{verbatim}
+reset 00 00 00 00 00 00 00 00 00
+check 00 00 00 00 00 00 00 00 00
+singl 55 90 27 80 27 90 05 00 00
+check 00 00 27 00 00 00 05 00 00
+singl 55 90 73 80 73 90 16 00 00
+check 00 00 00 00 00 00 16 00 00
+polyp 71 55 02 55 33 55 08 00 00
+check 71 02 33 00 00 00 00 00 03
+polyp 20 55 03 00 20 00 40 55 00
+check 20 00 16 00 40 00 00 00 03
+polyp 71 00 16 55 20 55 33 00 00
+check 00 00 16 00 20 00 00 00 04
+\end{verbatim}
 
 \section*{Das Testergebnis in der Datei}
 
-Automatically generated outputfile\\
------------------------------------\\
------------------------------------\\
+\begin{verbatim}
+Automatically generated outputfile
+-----------------------------------
+-----------------------------------
 
 
-Read file with commands in\\
------------------------------------\\
-reset\\
-Read note:00\\
-Read attribut: 00\\
-Read note:00\\
-Read attribut: 00\\
-Read note:00\\
-Read attribut: 00\\
-Read note:00\\
-Read attribut: 00\\
-Read note number: 00\\
+Read file with commands in
+-----------------------------------
+reset
+Read note:00
+Read attribut: 00
+Read note:00
+Read attribut: 00
+Read note:00
+Read attribut: 00
+Read note:00
+Read attribut: 00
+Read note number: 00
 
-check\\
-Read note:00\\
-Read attribut: 00\\
-Read note:00\\
-Read attribut: 00\\
-Read note:00\\
-Read attribut: 00\\
-Read note:00\\
-Read attribut: 00\\
-Read note number: 00\\
+check
+Read note:00
+Read attribut: 00
+Read note:00
+Read attribut: 00
+Read note:00
+Read attribut: 00
+Read note:00
+Read attribut: 00
+Read note number: 00
 
-singl\\
-Read note:55\\
-Read attribut: 90\\
-Read note:27\\
-Read attribut: 80\\
-Read note:27\\
-Read attribut: 90\\
-Read note:05\\
-Read attribut: 00\\
-Read note number: 01\\
+singl
+Read note:55
+Read attribut: 90
+Read note:27
+Read attribut: 80
+Read note:27
+Read attribut: 90
+Read note:05
+Read attribut: 00
+Read note number: 01
 
-check\\
-Read note:00\\
-Read attribut: 00\\
-Read note:27\\
-Read attribut: 00\\
-Read note:00\\
-Read attribut: 00\\
-Read note:05\\
-Read attribut: 00\\
-Read note number: 01\\
+check
+Read note:00
+Read attribut: 00
+Read note:27
+Read attribut: 00
+Read note:00
+Read attribut: 00
+Read note:05
+Read attribut: 00
+Read note number: 01
+\end{verbatim}
 
 ... etc \\
 
-polyp\\
-Read note:02\\
-Read attribut: 55\\
-Read note:03\\
-Read attribut: 00\\
-Read note:20\\
-Read attribut: 00\\
-Read note:40\\
-Read attribut: 55\\
-Read note number: 03\\
+\begin{verbatim}
+polyp
+Read note:02
+Read attribut: 55
+Read note:03
+Read attribut: 00
+Read note:20
+Read attribut: 00
+Read note:40
+Read attribut: 55
+Read note number: 03
 
-check\\
-Read note:02\\
-Read attribut: 00\\
-Read note:16\\
-Read attribut: 00\\
-Read note:40\\
-Read attribut: 00\\
-Read note:00\\
-Read attribut: 00\\
-Read note number: 03\\
+check
+Read note:02
+Read attribut: 00
+Read note:16
+Read attribut: 00
+Read note:40
+Read attribut: 00
+Read note:00
+Read attribut: 00
+Read note number: 03
 
-Number of read lines from file: 12\\
-Finished read whole file\\
------------------------------------\\
------------------------------------\\
+Number of read lines from file: 12
+Finished read whole file
+-----------------------------------
+-----------------------------------
+\end{verbatim}
 
+\begin{verbatim}
+Test row is 0: Mode reset.
+Ergebnis
+Reset good.
+
+Test row is 2: Mode is singl.
+Note set on 90
+Note out 27. Expected 27. Good.
+
+Note set off 80
+Note out 27. Expected 27. Good.
+
+Note set on 90
+Note out 05. Expected 05. Good.
+
+Reset circuit single.
+
+
+Test row is 4: Mode is singl.
+Note set on 90
+Note out 73. Expected 73. Good.
+
+Note set off 80
+Note out 73. Expected 73. Good.
+
+Note set on 90
+Note out 16. Expected 16. Good.
+
+Reset circuit single.
+
+ 
+Test row is 6: Mode is polyphony.
+Ergebnis
+Number of acitve notes 03. Good. 
+
+ 
+Test row is 8: Mode is polyphony.
+Ergebnis
+Number of acitve notes 04. Good. 
+
+ 
+Test row is 10: Mode is polyphony.
+Ergebnis
+Number of acitve notes 03. Good. 
+\end{verbatim}
 
 \chapter{Blockschaltbild Top-Level Synthesizer-Projekt}\label{chap.anhang_top_synthesizer}
 
@@ -193,4 +244,12 @@ Hier ist das Konzept der Umsetzung des MIDI Interface detaillierter beschrieben:
 	\includegraphics[width=0.9\textwidth]{images/midi_interface/top_synthesizer_detail_scaled.png}
 	\caption{Top Synthesizer mit MIDI Interface: Detailansicht}
 	\label{fig.top_synthesizer_detail}
+\end{figure}
+
+\chapter{RTL Top-Synthesizer}\label{chap.anhang_rtl_top_synthesizer}
+
+\begin{figure}[H]
+	\includegraphics[width=0.9\textwidth]{images/midi_interface/RTL_10_Decoder_Mixwer.png}
+	\caption{RTL Synthesizer-Projekt}
+	\label{fig.rtl_top_synthesizer}
 \end{figure}
