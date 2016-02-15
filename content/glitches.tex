@@ -11,6 +11,7 @@
 \chapter{Glitch}\label{chap.glitch}
 
 \section{Glitch in der Digitalen Signalverarbeitung}\label{sect.glitch_def}
+
 In der Digitalen Signalverarbeitung ist ein \textit{glitch} ein bekanntes, ungewolltes Verhalten, das William I. Fletscher folgendermassen beschreibt:
 
 \begin{quote}
@@ -26,15 +27,14 @@ Abbildung \ref{fig.glitch.def} zeigt zwei Glitches in einem Ausgangssignal.
 	\label{fig.glitch.def}
 \end{figure}
 
-
 \section{Ursache für Glitches}\label{sect.glitch_ursache}
 
 Der Auslöser sind ungleichzeitig eintreffende Signale, die durch
 
 \begin{enumerate}
-\item unterschiedlich lange Signalpfade,
-\item unterschiedliche Durchlaufverzögerungen der vorangehenden Flip-Flops oder
-\item unterschiedliche Logik-Zeiten
+	\item unterschiedlich lange Signalpfade,
+	\item unterschiedliche Durchlaufverzögerungen der vorangehenden Flip-Flops oder
+	\item unterschiedliche Logik-Zeiten
 \end{enumerate}
 
 entstehen, und die in ein asynchrones Bauteil geführt werden. Der Dekoder im asynchronen Bauteil entschlüsselt dadurch kurzfristig einen falschen Wert.
@@ -103,7 +103,7 @@ Der Reset des asynchronen Zählers (CH 1), der synchronisierte Reset (CH 2) und 
 	\label{fig.glitch.result_1}
 \end{figure}
 
- Das Glitch trifft in der im Übergang von der 11 zur 12 Periode (nach 240 ns) regelmässig auf. Dies ist das zu erwartende Ergebnis. Ein kurzzeitiges asynchrones Verhalten findet sich auch im Übergang von der 13 zur 14 Periode. Dies ist wenn der binäre Wert 1101 auf 1110 wechselt. Da die zwei niederwertigen Bits verzögert sind, ist das Dekodieren des Wertes 1111 plausibel.\\
+Das Glitch trifft in der im Übergang von der 11 zur 12 Periode (nach 240 ns) regelmässig auf. Dies ist das zu erwartende Ergebnis. Ein kurzzeitiges asynchrones Verhalten findet sich auch im Übergang von der 13 zur 14 Periode. Dies ist wenn der binäre Wert 1101 auf 1110 wechselt. Da die zwei niederwertigen Bits verzögert sind, ist das Dekodieren des Wertes 1111 plausibel.\\
  
 \begin{figure}[H]
 	\includegraphics[width=0.6\textwidth]{images/glitch/Glitch_2_timing.png}

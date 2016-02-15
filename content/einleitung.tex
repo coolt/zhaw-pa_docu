@@ -22,7 +22,6 @@ Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabe
  
 \begin{itemize}
 	\item Erzeugung von Glitches mit einem Zähler und nachgeschaltetem Dekoder. Sichtbarmachung der Glitches mit einem Oszilloskop. Betätigen des asynchronen Resets vom Decoder aus.
-
 	\item Provozieren und sichtbarmachung von metastabilen Zuständen. Hierfür kann z.B. eine Schaltung mit zwei asynchronen externen Takten aufgebaut werden.
 \end{itemize}  
 
@@ -30,18 +29,18 @@ Die offizielle Aufgabenstellung befindet sich im Anhang \ref{chap.anhang_aufgabe
 Nach Fertigstellen des ersten Teils, wird die Aufgabenstellung für den zweiten Teil präzisiert (siehe Anhang \ref{chap.anhang_aufgabenstellung_neu}).
 
 \begin{itemize}
-\item Midi Interface for Keyboard für Polyphonie nach Konzept von Gelk
-\begin{itemize}
-    \item 10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators
-    \item 10 On/Off Ausgänge Ton On/Off
-    \item UART wird geliefert von Gelk
-    \item VHDL wird von Grund auf neu erstellt.
-\end{itemize}
-\item 10 DDS implementieren und mit Mischer mischen
-\item Script basierte Test Bench. Test Bench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
-\item Test Bench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. 
-\item Midi Poliphony Spec muss durch die Test Bench unterstützt werden können. 
-\item Velocity muss nicht unterstützt werden.
-\item Kein VHDL code ohne Test Bench.
-\item Block level Test Bench. Unit Tests.
+	\item Midi Interface for Keyboard für Polyphonie nach Konzept von Gelk
+	\begin{itemize}
+    	\item 10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators
+    	\item 10 On/Off Ausgänge Ton On/Off
+    	\item UART wird geliefert von Gelk
+   	 	\item VHDL wird von Grund auf neu erstellt.
+	\end{itemize}
+	\item 10 DDS implementieren und mit Mischer mischen
+	\item Script basierte Test Bench. Test Bench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
+	\item Test Bench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. 
+	\item Midi Poliphony Spec muss durch die Test Bench unterstützt werden können. 
+	\item Velocity muss nicht unterstützt werden.
+	\item Kein VHDL code ohne Test Bench.
+	\item Block level Test Bench. Unit Tests.
 \end{itemize}

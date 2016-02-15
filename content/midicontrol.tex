@@ -12,7 +12,7 @@
 
 \section{Das MIDI-Kommunikationsprotokoll}\label{sect.midi_spezification}
 
-Werden MIDI Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \citep{Midi_specification}.
+Werden MIDI-Daten übermittelt, so unterscheidet der Standard zwei Typen an Daten \citep{Midi_specification}.
 
 \subsection{MIDI-Daten-Typen}\label{datentypen}
 
@@ -40,7 +40,7 @@ Je nach dem Status Byte werden die Data Byte anders interpretiert.
 ``Alle Status Bytes, die nicht implementierte Funktionen enthalten und alle ihnen folgenden Data Bytes sollen vom Empfänger verworfen werden.'' \citep{Midi_specification}
 \end{quote}
 
-MIDI Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden \citep{Midi_specification}.\\
+MIDI-Geräte sollen ausdrücklich beim Ein- und Abstellen darauf bedacht sein, dass keine undefinierten Bytes gesendet werden \citep{Midi_specification}.\\
 Diese Anforderung ist wichtig beim Implementieren der Finite State Machine und der Test Bench (siehe Kapitel \ref{chap.testen})
 
 \subsubsection*{Midi Bytes binär}\label{midi_binaer}
@@ -79,7 +79,7 @@ Wegen der unterschiedlichen Bedeutung der eingegangenen Token, behandelt die FSM
 
 \section{MIDI-Steuerung: Blockschaltbild und Schnittstellen}
 
-Analog zum bestehenden Synthesizer-Projekt erhält der VHDL-Block einen englischen Namen: Die MIDI-Steuerung ist als Block mit dem Namen Midi Interface implementiert. Als erstes die Zusammenfassung der internen Blöcke. Die zwei entwickelten Blöcke Midi Control und Polyphony Out sind grau markiert (siehe Abbildung \ref{fig.midi_interface_block} ). Gegeben ist der Block UART top.
+Analog zum bestehenden Synthesizer-Projekt erhält der VHDL-Block einen englischen Namen: Die MIDI-Steuerung ist als Block mit dem Namen Midi Interface implementiert. Als erstes die Zusammenfassung der internen Blöcke. Die zwei entwickelten Blöcke Midi Control und Polyphony Out sind grau markiert (siehe Abbildung \ref{fig.midi_interface_block} ). Gegeben ist der Block UART Top.
 
 \begin{figure}[H]
 	\includegraphics[width=0.7\textwidth]{images/midi_interface/midi_interface_block.png}
@@ -92,7 +92,7 @@ Analog zum bestehenden Synthesizer-Projekt erhält der VHDL-Block einen englisch
 UART Top Ausgang
 
 \begin{itemize}
-	\item 8-Bit-Signal: Bytweise Dekodierung der Midi Daten 
+	\item 8-Bit-Signal: Byteweise Dekodierung der Midi Daten 
 	\item 1-Bit-Signal: Übermittelt Gültigkeit der Daten
 \end{itemize}
 
@@ -197,12 +197,12 @@ Die Übergangsbedingungen detektieren die Binärstruktur der MIDI-Daten, die im 
 Alle drei Anforderungen \ref{anforderung_fsm}, die sich aus der MIDI-Spezifkation ergeben, sind implementiert:
 
 \begin{enumerate}
-\item Vor jedem Data Byte muss ein Status Byte eingegangen sein. Die Finite State Machine fragt im Idle Zustand nur nach den Status Bytes. Nach dem Status Byte erwartet die Finite State Machine Data Bytes. 
-\item Die unterschiedliche Datenstruktur der zwei Noten-Modi ist Mode-spezifisch implementiert:\\
+	\item Vor jedem Data Byte muss ein Status Byte eingegangen sein. Die Finite State Machine fragt im Idle Zustand nur nach den Status Bytes. 	Nach dem Status Byte erwartet die Finite State Machine Data Bytes. 
+	\item Die unterschiedliche Datenstruktur der zwei Noten-Modi ist Mode-spezifisch implementiert:\\
 Im Single Mode wird das vierte Bit des Status Bytes zum Setzen von an und ab verwendet.\\
 Im Polyphony Mode wird das zweite Data Byte, die Geschwindigkeit zum Setzen der Note auf an oder ab verwendet.\\
 Geschwindigkeit = NULL ist als Note aus implementiert.
-\item Ungültige Bytes sind verworfen, und die FSM kehrt in den Idle-Zustand zurück.
+	\item Ungültige Bytes sind verworfen, und die FSM kehrt in den Idle-Zustand zurück.
 \end{enumerate}
 
 %------5.4------------------------------------------------------------
@@ -235,14 +235,14 @@ singl & 55 & 90 & 27 & 80 & 27 & 90 & 02 & 00 & 00
 \textbf{Beschreibung der Befehle}
 
 \begin{itemize}
-\item 55 als Dummy-Velocity für alle Noten
-\item Note an
-\item Notenwert 27
-\item Note ab
-\item Notenwert 27
-\item Note an
-\item Notenwert 02
-\item Dummy werte
+	\item 55 als Dummy-Velocity für alle Noten
+	\item Note an
+	\item Notenwert 27
+	\item Note ab
+	\item Notenwert 27
+	\item Note an
+	\item Notenwert 02
+	\item Dummy werte
 \end{itemize}
 
 \textbf{Erwartetes Resultat}
@@ -270,7 +270,7 @@ Die Simulation zeigt, dass die Notenwerte korrekt gespeichert sind und dass das 
 
 \textbf{Input Daten} (Zeile 9, siehe Anhang \ref{chap.anhang_midi_input})
 
-{
+{ % formating applies only inside of curly braces
 \renewcommand{\arraystretch}{1.0}
 \begin{tabular*}{\textwidth}{@{}@{\extracolsep{\fill}}*{10}{l}@{}}
 polyp & 02 & 55 & 03 & 00 & 20 & 00 & 40 & 55 & 00
@@ -280,14 +280,14 @@ polyp & 02 & 55 & 03 & 00 & 20 & 00 & 40 & 55 & 00
 \textbf{Beschreibung der Befehle}
 
 \begin{itemize}
-\item Notenwert 02
-\item Note an
-\item Notenwert 03
-\item Note ab
-\item Notenwert 02
-\item Note ab
-\item Notenwert 4
-\item Note an
+	\item Notenwert 02
+	\item Note an
+	\item Notenwert 03
+	\item Note ab
+	\item Notenwert 02
+	\item Note ab
+	\item Notenwert 4
+	\item Note an
 \end{itemize}
 
 \textbf{Erwartetes Resultat}
@@ -383,62 +383,62 @@ polyp & 20 & 55 & 03 & 00 & 20 & 00 & 40 & 55 & 00
 \textbf{Beschreibung der Befehle}
 
 \begin{itemize}
-\item Dummywert Velocity 0x55
-\item Note an 
-\item Notenwert 27
-\item Note ab 
-\item Notenwert 27
-\item Note an
-\item Notenwert 05
+	\item Dummywert Velocity 0x55
+	\item Note an 
+	\item Notenwert 27
+	\item Note ab 
+	\item Notenwert 27
+	\item Note an
+	\item Notenwert 05
 \end{itemize}
 
 \begin{itemize}
-\item Dummywert Velocity 0x55
-\item Note an
-\item Notenwert 73
-\item Note ab
-\item Notenwert 73
-\item Note an
-\item Notenwert 16
+	\item Dummywert Velocity 0x55
+	\item Note an
+	\item Notenwert 73
+	\item Note ab
+	\item Notenwert 73
+	\item Note an
+	\item Notenwert 16
 \end{itemize}
 
 \begin{itemize}
-\item Notenwert 71
-\item Note an
-\item Notenwert 02
-\item Note an
-\item Notenwert 33
-\item Note an
-\item Notenwert 08
-\item Note ab
+	\item Notenwert 71
+	\item Note an
+	\item Notenwert 02
+	\item Note an
+	\item Notenwert 33
+	\item Note an
+	\item Notenwert 08
+	\item Note ab
 \end{itemize}
 
 \begin{itemize}
-\item Notenwert 20
-\item Note an
-\item Notenwert 03
-\item Note ab
-\item Notenwert 20
-\item Note ab
-\item Notenwert 40
-\item Note an
+	\item Notenwert 20
+	\item Note an
+	\item Notenwert 03
+	\item Note ab
+	\item Notenwert 20
+	\item Note ab
+	\item Notenwert 40
+	\item Note an
 \end{itemize}
 
 \textbf{Erwartetes Resultat}
 
 \begin{itemize}
-\item Note 27 wird angestellt (Vektor ist 127), Note 27 wird abgestellt (Vektor ist 027). An und Abstellen sind in demselben Register abgelegt.
-\item Note 05 wird angestellt und in neuem Register abgelegt, da dieses Register unbenutzt ist.
-\item Note 73 wird angestellt und nachher abgestellt. Beides in neuem Register.
-\item Note 16 wird angestellt und in neues Register gelegt.
-\item Note 71 wird angestellt und in neues Register gelegt.
-\item Note 02 wird angestellt und in neues Register gelegt.
-\item Note 33 wird angestellt und in neues Register gelegt.
-\item Note 08 wird abgestellt. (Neues Register stört nicht).
-\item Note 20 wird angestellt und in neues Register gelegt.
-\item Note 03 wird abgestellt. (Neues Register stört nicht).
-\item Note 20 wird abgestellt. Muss im 20-Notenregister sein.
-\item Note 40 wird angestellt und in neues Register gelegt.
+	\item Note 27 wird angestellt (Vektor ist 127), Note 27 wird abgestellt (Vektor ist 027). An und Abstellen sind in demselben Register abgelegt.
+	\item Note 05 wird angestellt und in neuem Register abgelegt, da dieses Register unbenutzt ist.
+	\item Note 73 wird angestellt und nachher abgestellt. Beides in neuem Register.
+	\item Note 16 wird angestellt und in neues Register gelegt.
+	\item Note 71 wird angestellt und in neues Register gelegt.
+	\item Note 02 wird angestellt und in neues Register gelegt.
+	\item Note 33 wird angestellt und in neues Register gelegt.
+	\item Note 08 wird abgestellt. (Neues Register stört nicht).
+	\item Note 20 wird angestellt und in neues Register gelegt.
+	\item Note 03 wird abgestellt. (Neues Register stört nicht).
+	\item Note 20 wird abgestellt. Muss im 20-Notenregister sein.
+	\item Note 40 wird angestellt und in neues Register gelegt.
 \end{itemize}
 
 \begin{figure}[H]

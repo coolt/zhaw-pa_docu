@@ -103,20 +103,17 @@
 
 % Title of the report
 \begin{flushleft}
-	%{\huge \textbf\sf{\@title}}
-    {\normalfont\sffamily\Large{\@subtitle}}\\
+    {\normalfont\sffamily\Large{\@subtitle}}\\   % Number of project
     \vspace*{0.4cm}
-    {\setlength{\baselineskip}{2em} \normalfont\sffamily\Huge{\@title}}
-	%\rule{\textwidth}{0.8mm}
+    {\setlength{\baselineskip}{2em} \normalfont\sffamily\Huge{\@title}} % Title of project
 \end{flushleft}
 
 \vskip 2em
 
-%\includegraphics[width=\textwidth]{images/simulation_1.png}
-%\includegraphics[width=\textwidth]{images/simulation_2.png}
+% front page image
 \includegraphics[width=\textwidth]{images/simulation_original_19.png}
 
-\vfill
+\vfill % Align following lines to the bottom of the page
 
 % School and Institute
 \begin{flushleft}
@@ -124,16 +121,12 @@
 	\ifthenelse{\equal{\languagename}{\string ngerman}}
 	{\textsc{Zürcher Hochschule \\ für Angewandte Wissenschaften}}
 	{\textsc{Zurich University of Applied Sciences}} \\
-    %\vspace*{1cm}
     \vspace*{0.4cm}
-    %\Large
     \normalsize
     \textsc{Institute of Embedded Systems}
 \end{flushleft}
 
 % Authors and Date
-%\vskip 5em
-
 {
 \normalfont\sffamily
 \renewcommand{\arraystretch}{2} % add more space between the rows
@@ -166,7 +159,7 @@ Homepage: \url{http://www.ines.zhaw.ch}\newline
 
 
 
-% Listing
+% Code Listing
 % -----------------------------------------------------------------
 
 %listing colors
@@ -198,12 +191,10 @@ Homepage: \url{http://www.ines.zhaw.ch}\newline
 		xrightmargin=0.0cm
 }
 
-\lstloadlanguages{C++}
+\lstloadlanguages{C++}  % language
 
 % Document formatting
 % -----------------------------------------------------------------
 
-%\def\labelitemi{--} % dashes instead of bullets for the lists
-\renewcommand{\labelitemi}{$-$}
-\renewcommand{\labelitemii}{$-$}
-% \def\labelitemii{--} % dashes instead of bullets for the lists
+\renewcommand{\labelitemi}{$-$} % dashes instead of bullets for the lists
+\renewcommand{\labelitemii}{$-$} % dashes instead of bullets for the lists

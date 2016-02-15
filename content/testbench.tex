@@ -10,7 +10,7 @@
 
 \chapter{Test Bench}\label{chap.testen}
 
-\textit{Test Driven Development} bedeutet, dass vor oder parallel zur Entwicklung einer \textit{Unit} (im Folgenden Block genannt) der \textit{Unit Test} entwickelt wird \citep{Testdriven}. Beim textbasierten Testen stammen die Befehle aus einer Input-Datei, und die Ergebnisse werden in einer Datei abgelegt. 
+\textit{Test-Driven Development} bedeutet, dass vor oder parallel zur Entwicklung einer \textit{Unit} (im Folgenden Block genannt) der \textit{Unit Test} entwickelt wird \citep{Testdriven}. Beim textbasierten Testen stammen die Befehle aus einer Input-Datei, und die Ergebnisse werden in einer Datei abgelegt. 
 
 \section{Device Under Test}\label{sec.testbench_DUT}
 
@@ -80,15 +80,15 @@ Komplexere Testfälle zeigten, dass eine Test-Zeile mehr Tokens braucht. Die End
 Getestet sind auch Kombinationen unter den Fällen, die aus Übersichtlichkeit nicht alle aufgeschrieben werden.
 
 \begin{itemize}
-\item Einzelne Note an, Geschwindigkeit-Byte folgt
-\item Einzelne Note an, Geschwindigkeit-Byte folgt nicht
-\item Einzelne Note ab
-\item Einzelne Note an, direkt nach Reset
-\item Einzelne Note an, selbe Note nochmals an
-\item Einzelne Note an, wenn in Polyphony Mode
-\item Einzelne Note an, nach ungültigem Status Byte
-\item Einzelne Note an, andere Note an, erste Note ab
-\item Einzelne Note an, diverse andere Noten setzen, erst bei nächster Zeile erste Note ab
+	\item Einzelne Note an, Geschwindigkeit-Byte folgt
+	\item Einzelne Note an, Geschwindigkeit-Byte folgt nicht
+	\item Einzelne Note ab
+	\item Einzelne Note an, direkt nach Reset
+	\item Einzelne Note an, selbe Note nochmals an
+	\item Einzelne Note an, wenn in Polyphony Mode
+	\item Einzelne Note an, nach ungültigem Status Byte
+	\item Einzelne Note an, andere Note an, erste Note ab
+	\item Einzelne Note an, diverse andere Noten setzen, erst bei nächster Zeile erste Note ab
 \end{itemize}
 
 Zu jedem Testfall wird auf der nächsten Zeile das zu erwartende Resultat vorgegeben. Die Test Bench prüft die ausgegebene Notenwerte am Ausgang des MIDI interfaces mit den vorgegebenen Werten.
@@ -114,17 +114,17 @@ Im Single Mode ist die Geschwindigkeit für das An- oder Abstellen der Note nich
 In der Polyphony können mehrere Noten hintereinander an- und nur einzelne davon wieder abgestellt werden.
 
 \begin{itemize}
-\item Polyphoniestatus setzen, einzelne Note an
-\item Polyphoniestatus setzen, mehrere Noten an
-\item Polyphoniestatus setzen, mehrere Noten über mehrere Zeilen verteilt an
-\item Polyphoniestatus setzen, Note an, die bereits in Register ist
-\item Polyphoniestatus setzen, Note an, andere Note an, erste Note aus, dritte Note an
-\item Polyphoniestatus setzen, dritte Note aus, erste Note an, erste Note an
-\item Polyphoniestatus setzen, Single Note an Status setzen, Note ohne Geschwindigkeit senden
-\item Polyphoniestatus setzen, falsches Status Byte senden, Note an, Note aus,
-\item Polyphoniestatus setzen, Reset, Note setzen
-\item Polyphoniestatus setzen, 10 Noten an
-\item Polyphoniestatus setzen, 10 Noten in Register, eine ist aus. Neue Note an senden
+	\item Polyphoniestatus setzen, einzelne Note an
+	\item Polyphoniestatus setzen, mehrere Noten an
+	\item Polyphoniestatus setzen, mehrere Noten über mehrere Zeilen verteilt an
+	\item Polyphoniestatus setzen, Note an, die bereits in Register ist
+	\item Polyphoniestatus setzen, Note an, andere Note an, erste Note aus, dritte Note an
+	\item Polyphoniestatus setzen, dritte Note aus, erste Note an, erste Note an
+	\item Polyphoniestatus setzen, Single Note an Status setzen, Note ohne Geschwindigkeit senden
+	\item Polyphoniestatus setzen, falsches Status Byte senden, Note an, Note aus,
+	\item Polyphoniestatus setzen, Reset, Note setzen
+	\item Polyphoniestatus setzen, 10 Noten an
+	\item Polyphoniestatus setzen, 10 Noten in Register, eine ist aus. Neue Note an senden
 \end{itemize}
 
 Beispielzeile\\

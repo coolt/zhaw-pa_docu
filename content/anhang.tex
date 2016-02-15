@@ -33,41 +33,41 @@ Am Ende soll eine Referenzimplementierung in Anlehnung an den Yamaha DX7 für da
 \chapter{Aufgabenspezifikation für den zweiten Teil}\label{chap.anhang_aufgabenstellung_neu}
 
 \begin{itemize}
-\item Midi Interface for Keyboard für Polyphonie nach Konzept von Gelke
-\begin{itemize}
-    \item 10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators\\
-    \item 10 On/Off Ausgänge Ton On/Off\\
-    \item UART wird geliefert von Gelke\\
-    \item VHDL wird von Grund auf neu erstellt.
-\end{itemize}
-\item 10 DDS implementieren und mit Mischer Mischen
-\item Script basierte Test Bench. Test Bench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
-\item Test Bench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. Midi Poliphony Spec muss durch die Test Bench unterstützt werden können. Velocity muss nicht unterstützt werden.
-\item FM Modulation – Tetst Bench im Matlab
-\item Kein VHDL code ohne Test Bench.
-\item Block Level Test Bench. Unit Tests.
+	\item Midi Interface for Keyboard für Polyphonie nach Konzept von Gelke
+	\begin{itemize}
+    	\item 10 Frequenz Control Ausgänge zur Steuerung der Tonhöhe des Generators\\
+    	\item 10 On/Off Ausgänge Ton On/Off\\
+    	\item UART wird geliefert von Gelke\\
+    	\item VHDL wird von Grund auf neu erstellt.
+	\end{itemize}
+	\item 10 DDS implementieren und mit Mischer Mischen
+	\item Script basierte Test Bench. Test Bench erzeugt serielle Midi Daten, so wie sie auf dem DIN Stecker vorkommen (logisch)
+	\item Test Bench liest eine Testscript Datei ein, in welcher die Tastendrücke eines Keyboards abgebildet werden können. Midi Poliphony Spec muss durch die Test Bench unterstützt werden können. Velocity muss nicht unterstützt werden.
+	\item FM Modulation – Tetst Bench im Matlab
+	\item Kein VHDL code ohne Test Bench.
+	\item Block Level Test Bench. Unit Tests.
 \end{itemize}  
 
 Abgrenzung:
 
 \begin{itemize}
-\item Keine Hüllkurve
-\item Keine Ausgabe der Velocity aud Midi Controller
-\item Kein Bluetooth
+	\item Keine Hüllkurve
+	\item Keine Ausgabe der Velocity aud Midi Controller
+	\item Kein Bluetooth
 \end{itemize} 
 
 Zeitplan:
 
 \begin{itemize}
-\item 2.5 Wochen Midi Controller incl. 10 DDS
-\item 2.5 Wochen FM Synthese 
+	\item 2.5 Wochen Midi Controller incl. 10 DDS
+	\item 2.5 Wochen FM Synthese 
 \end{itemize} 
 
 Unterstützung:
 
 \begin{itemize}
-\item Midi Controller/Gelke
-\item FM-Synthese/Rosenthal
+	\item Midi Controller/Gelke
+	\item FM-Synthese/Rosenthal
 \end{itemize} 
 
 Falls Midi nicht zum geplanten Zeitpunkt fertig wird, wird FM-zurückgestellt. Alle oben genannten Punkte sind Pflicht.\\
@@ -151,7 +151,7 @@ Read attribut: 00
 Read note number: 01
 \end{verbatim}
 
-... etc \\
+...
 
 \begin{verbatim}
 polyp
